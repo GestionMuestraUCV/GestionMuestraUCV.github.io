@@ -1,3 +1,16 @@
+.center{
+  display: block;
+
+  /*width: 1024px;
+  height: 700px;
+  background: #ff4ce7;
+
+  position: absolute;
+  left:50%;
+	top:50%;
+  transform: translate(-50%,-40%);*/
+}
+
 .list{
   position: absolute;
   margin: 10px;
@@ -114,6 +127,9 @@ table {
   text-shadow: 2px 2px 5px black;
   left:45%;
 	top:20%;
+  /**/
+  /*left:40%;*/
+
 }
 
 
@@ -369,6 +385,26 @@ table {
     font-family: Verdana;
     font-weight: 700;
     word-wrap: break-word;
+  }
+
+
+
+}
+
+
+@media only screen and (min-width: 1536px){
+
+  .center{
+    display: block;
+
+    width: 1024px;
+    height: 700px;
+    background: #ff4ce7;
+
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-40%);
   }
 
 

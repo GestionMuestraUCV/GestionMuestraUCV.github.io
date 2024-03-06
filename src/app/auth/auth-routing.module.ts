@@ -5,13 +5,15 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SelectComponent } from './components/select/select.component';
+import { CreditsComponent } from './components/credits/credits.component';
 
 const routes: Routes = [
   {
     path:'auth', component: AuthComponent, children:[
     {path: 'login', component: LoginComponent},
     {path: 'signup', component: SignupComponent},
-    {path:'select', component: SelectComponent}
+    {path:'select', component: SelectComponent},
+    {path:'credits', component: CreditsComponent}
   ]}
 ];
 

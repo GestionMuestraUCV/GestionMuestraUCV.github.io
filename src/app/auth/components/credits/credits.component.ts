@@ -3,17 +3,13 @@ import { Auth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-select',
-  templateUrl: './select.component.html',
-  styleUrls: ['./select.component.css']
+  selector: 'app-credits',
+  templateUrl: './credits.component.html',
+  styleUrl: './credits.component.css'
 })
-export class SelectComponent {
+export class CreditsComponent {
   constructor(public auth: Auth, private router: Router){
 
-  }
-
-  Credits(){
-    this.router.navigate(['/auth/credits']);
   }
 
   Login(){
