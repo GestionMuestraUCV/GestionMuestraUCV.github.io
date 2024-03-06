@@ -1,0 +1,334 @@
+.main{
+
+  /*display: flex;
+  height: 100vh;*/
+  justify-content: center;
+  flex-direction: column;
+  position:absolute;
+  margin: 10px;
+  height: 95%;
+  width: 95%;
+  /*left: 35%;
+  top: 35%;*/
+}
+
+.subTituloText { /*SubTitulo Texto*/
+	color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
+	position:absolute;
+  margin: 0px;
+  /*width:300px;*/
+	height:64px;
+	font-family:Verdana;
+	font-size:56px;
+	letter-spacing:0;
+  text-shadow: 2px 2px 5px black;
+  left:50%;
+	top:20%;
+  transform: translate(-50%,0%);
+}
+
+.loginBox { /*login box*/
+  box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
+  width: 650px;
+  height: 300px;
+
+  flex-shrink: 0;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+/*
+.group1{
+  width: 500px;
+  left:30%;
+
+}*/
+
+
+.group2{
+  /*position:inherit;
+  width: 500px;
+  left:30%;
+  position: relative;
+  top: 75px;*/
+  display: inline;
+
+}
+
+.input-fields{
+  position:inherit;
+  /*width: 500px;*/
+  margin: 25px 10px;
+  /*left:30%;*/
+  top: 25px;
+}
+
+
+.Text{
+  display: inline;
+  font-family:Arial;
+  text-align:center;
+  font-size:24px;
+  font-weight: bold;
+
+}
+
+.Opcional{
+  display: inline;
+  font-family:Arial;
+  text-align:center;
+  font-size:18px;
+  /*color: rgb(119, 119, 119);*/
+
+}
+
+.red{
+  display: inline;
+  font-family:Arial;
+  text-align:center;
+  font-size:18px;
+  color: red;
+
+}
+
+textarea{
+  resize: none;
+  left: 92px;
+  margin: 10px;
+  font-family:Arial;
+  width: 85%;
+}
+
+.input-field{
+  /*margin: 10px;*/
+  height: 20px;
+  width: 35%;
+  /*left: 92px;*/
+  font-size:16px;
+}
+
+
+
+.print{
+  position: absolute;
+  top: 65%;
+  left: 75%;
+
+}
+
+svg{
+  position:absolute;
+  left: 44%;
+  top: 32%;
+
+}
+
+
+
+button {
+
+  border: none;
+  float: right;
+  background-color:rgba(62.00000010430813, 179.000004529953, 194.00000363588333, 1);
+  color:rgba(255, 255, 255, 1);
+  margin: 15px 0px;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  border-top-left-radius:30px;
+	border-top-right-radius:30px;
+	border-bottom-left-radius:30px;
+	border-bottom-right-radius:30px;
+}
+
+#volver{
+  font-size: 16px;
+  position: absolute;
+  left: 5%;
+  top: 65%; /*55%*/
+
+  border: none;
+  width:50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-image:url(../../../../assets/back-button-Edit4.png);
+
+
+}
+
+
+#barcode{
+
+  display: inline;
+  border: 2px solid rgb(0, 0, 0);
+  box-shadow: 2px 2px 5px black;
+
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+
+  .main{
+    /*display: flex;
+    height: 100vh;*/
+    justify-content: center;
+    flex-direction: column;
+    position:absolute;
+    width: 60%;
+    height: 20%;
+    left: 36%;
+    top: 60%;
+  }
+
+
+
+
+  .input-fields{
+    position:inherit;
+    width: 130px;
+    /*left:30%;*/
+    top: 25px;
+  }
+
+
+  .Text{
+    display: inline;
+    font-family:Arial;
+    text-align:center;
+    font-size:20px;
+
+  }
+
+  textarea{
+    resize: none;
+    left: 92px;
+    margin: 10px;
+    font-family:Arial;
+    width: 85%;
+  }
+
+  .input-field{
+    /*margin: 10px;*/
+    height: 20px;
+    width: 20px;
+    /*left: 92px;*/
+    font-size:16px;
+  }
+
+
+
+  .print{
+    position:absolute;
+    /*width: 120px;*/
+    left:33%;
+    top:45%;
+    font-size: 16px;
+    /*top:20%;*/
+
+  }
+
+  #test{
+    position:absolute;
+    left:30%;
+    top:60%;
+    display:none;
+
+  }
+
+  #codes{
+    position:absolute;
+    left: 30%;
+    top: 35%;
+
+  }
+
+ svg{
+    /*position:inherit;*/
+    position:absolute;
+    left: 25%;
+    top: 30%;
+    margin: 15px 0px;
+
+
+  }
+
+  .space{
+    /*position:absolute;*/
+
+    height: 200px;
+
+  }
+
+  /*#barcode0{
+    position:relative;
+    top: 200px;
+    height: 500px;
+    display: none;
+
+  }*/
+
+
+ #barcode{
+
+    display: inline;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 2px 2px 5px black;
+
+  }
+
+
+
+
+  button {
+
+
+    border: none;
+    float: right;
+    background-color:rgba(62.00000010430813, 179.000004529953, 194.00000363588333, 1);
+    color:rgba(255, 255, 255, 1);
+    margin: 15px 0px;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-top-left-radius:30px;
+    border-top-right-radius:30px;
+    border-bottom-left-radius:30px;
+    border-bottom-right-radius:30px;
+
+
+  }
+
+
+  #volver{
+    font-size: 16px;
+    position: absolute;
+    left: 28%;
+    top: 70%;
+
+    border: none;
+    width:36px;
+    height: 36px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-image:url(../../../../assets/back-button-Edit4.png);
+  }
+
+}
+
