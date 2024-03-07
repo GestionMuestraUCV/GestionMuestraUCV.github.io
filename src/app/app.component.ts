@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import {Auth, createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword, signOut} from '@angular/fire/auth'
 import { Firestore, enableIndexedDbPersistence } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
@@ -22,8 +22,11 @@ export class AppComponent {
         console.error('The current browser does not support all of the features required to enable persistence');
       }
     });*/
+    /*this.installPWA();*/
 
   }
+
+
 
 
 
@@ -40,6 +43,29 @@ export class AppComponent {
     });
 
   }
+
+
+  /*
+  public promptEvent: any;
+
+  @HostListener('window:beforeinstallprompt', ['$event'])
+  onbeforeinstallprompt(e: { preventDefault: () => void; }) {
+    e.preventDefault();
+    this.promptEvent = e;
+  }
+
+  public installPWA() {
+    this.promptEvent.prompt();
+  }
+
+  public shouldInstall(): boolean {
+    return !this.isRunningStandalone() && this.promptEvent;
+  }
+
+  public isRunningStandalone(): boolean {
+    return (window.matchMedia('(display-mode: standalone)').matches);
+  }
+  */
 
 
 
