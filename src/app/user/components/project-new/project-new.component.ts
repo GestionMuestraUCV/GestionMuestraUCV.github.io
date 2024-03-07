@@ -44,14 +44,14 @@ export class ProjectNewComponent {
     let array: any=[];
     let projectCode = this.randomCode();
     let integrantesArr= value.integrantes.split(/[\s,]+/);
-    const dbInstance = doc(this.firestore, 'projects',projectCode); //value.id
+    const dbInstance = doc(this.firestore, 'projects', value.name); //value.id
     //
 
-    const docSnap= await getDoc(dbInstance);
+    /*const docSnap= await getDoc(dbInstance);
     if(docSnap){ //
       alert('Needs a Unique Code');
 
-    }else {
+    }else {*/
 
       setDoc(dbInstance,
         {
@@ -68,7 +68,7 @@ export class ProjectNewComponent {
         .catch((err) => {
           alert(err.message)
         })
-    }
+    /*}*/
 
   }
 
