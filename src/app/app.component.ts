@@ -24,6 +24,8 @@ export class AppComponent {
     });*/
     /*this.installPWA();*/
 
+    console.log('inside app component');
+
   }
 
 

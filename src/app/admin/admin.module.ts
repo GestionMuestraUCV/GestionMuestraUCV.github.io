@@ -12,4 +12,9 @@ import { AdminComponent } from './admin.component';
     CommonModule
   ]
 })
-export class AdminModule { }
+export class AdminModule {
+  public Hello(){
+    console.log("hello")
+  }
+
+}

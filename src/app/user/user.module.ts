@@ -29,7 +29,7 @@ import { ClientsInfoComponent } from './components/clients-info/clients-info.com
 import { UnidadProduccionAllComponent } from './components/unidad-produccion-all/unidad-produccion-all.component';
 import { BarcodeNewComponent } from './components/barcode-new/barcode-new.component';
 
-LOAD_WASM().subscribe((res: any) => console.log('LOAD_WASM', res))
+//LOAD_WASM().subscribe((res: any) => console.log('LOAD_WASM', res))
 
 
 

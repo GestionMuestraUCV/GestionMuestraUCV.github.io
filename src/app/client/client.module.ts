@@ -16,7 +16,7 @@ import { UnidadProduccionInfoComponent } from './component/unidad-produccion-inf
 import { PerfilComponent } from './component/perfil/perfil.component';
 import { PerfilEditComponent } from './component/perfil-edit/perfil-edit.component';
 
-LOAD_WASM().subscribe((res: any) => console.log('LOAD_WASM', res))
+//LOAD_WASM().subscribe((res: any) => console.log('LOAD_WASM', res))
 
 @NgModule({
   declarations: [

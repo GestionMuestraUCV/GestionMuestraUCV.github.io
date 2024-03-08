@@ -1,13 +1,14 @@
 .base{
-  position:absolute;
+  /*position:absolute;*/
   margin: 0px;
   width: 100%;
   height: 100%;
   top: 0px;
   left: 0px;
   background-repeat: repeat;
-  background-image:url(../assets/CaptureLeafRepeat.png);
-  opacity: 0.10;
+  background-image:url(../assets/CaptureLeafRepeatOpacity40.png);
+  /*background-image:url(../assets/CaptureLeafRepeat.png);
+  opacity: 0.10;*/
 }
 
 /*

@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Auth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
+import { AdminModule } from 'src/app/admin/admin.module';
+import { PromptComponent } from 'src/app/prompt/prompt.component';
+import { PwaService } from 'src/app/services/pwa.service';
 
 @Component({
   selector: 'app-select',
@@ -9,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class SelectComponent {
   constructor(public auth: Auth, private router: Router){
+
 
   }
 

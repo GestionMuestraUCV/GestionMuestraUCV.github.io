@@ -14,8 +14,9 @@
 .list{
   position: absolute;
   margin: 10px;
-  left:35%;
+  left:15%;
 	top:38%;
+
 
 }
 
@@ -70,7 +71,7 @@ table {
   cursor: pointer;
   width: 153px;
   height: 36px;
-  left: 49%;
+  left: 45%;
   top: 30%;
   position: absolute;
   background: #4C9EFF;
@@ -125,7 +126,7 @@ table {
 	font-size:56px;
 	letter-spacing:0;
   text-shadow: 2px 2px 5px black;
-  left:45%;
+  left:40%;
 	top:20%;
   /**/
   /*left:40%;*/
@@ -391,23 +392,81 @@ table {
 
 }
 
-/*
+
 @media only screen and (min-width: 1536px){
 
   .center{
     display: block;
 
-    width: 1024px;
-    height: 700px;
-    background: #ff4ce7;
+    width: 1200px;
+    /*background: #ff4ce7;*/
 
     position: absolute;
     left:50%;
     top:50%;
-    transform: translate(-50%,-40%);
+    transform: translate(-50%,-60%);
   }
 
 
 
+  .scanbutton{
+    position: relative;
+    width: 153px;
+    height: 36px;
+    left: 49%;
+    top: 22%;
+    position: absolute;
+    background: #4C9EFF;
+    border-radius: 30px;
+    box-shadow:2px 2px 5px black;
+  }
+
+  .scantext{
+    cursor: pointer;
+    width: 126px;
+    margin-top: 10px;
+    margin-left: 15px;
+    height: 16px;
+    /*left: 50%;
+    top: 31%;*/
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-family: Verdana;
+    font-weight: 700;
+    word-wrap: break-word;
+  }
+
+
+  .subTituloText { /*SubTitulo Texto*/
+    color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
+    position: relative;
+    margin: 0px;
+    width:400px;
+    height:64px;
+    font-family:Verdana;
+    font-size:56px;
+    letter-spacing:0;
+    text-shadow: 2px 2px 5px black;
+    left:500px;
+    top:0%;
+    /**/
+    /*left:40%;*/
+
+  }
+
+  .list{
+    position: relative;
+    width: 1000px;
+    margin: 10px;
+    left:200px;
+    top:100px;
+
+  }
+
+
+
+
 }
-*/
+

@@ -82,12 +82,16 @@ export class BarcodeNewComponent {
         codigo: value.codigo,
       }
       )
-      .then(() => {
+      /*.then(() => {
         alert('Data Sent')
       })
       .catch((err) => {
         alert(err.message)
-      })
+      })*/
+
+    if(value.id){
+
+
 
       dbInstance = doc(this.firestore, 'projects',value.id);
 
@@ -96,9 +100,13 @@ export class BarcodeNewComponent {
           name: value.id
         }
         )
-        .catch((err) => {
+        /*.catch((err) => {
           alert(err.message)
-        })
+        })*/
+
+    }
+
+    if(value.ud){
 
       dbInstance = doc(this.firestore, 'unidad-produccion', value.ud);
 
@@ -107,9 +115,11 @@ export class BarcodeNewComponent {
         codigo: value.ud
       }
       )
-      .catch((err) => {
+      /*.catch((err) => {
         alert(err.message)
-      })
+      })*/
+
+    }
 
 
 
