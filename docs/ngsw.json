@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1709760428995,
+  "timestamp": 1709886444434,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -12,11 +12,11 @@
       },
       "urls": [
         "/index.html",
-        "/main.f6b4c1c2fc379cbe.js",
+        "/main.78f1ec5fdb724915.js",
         "/manifest.webmanifest",
         "/polyfills.19ce6d8af341de05.js",
         "/runtime.f2b5f3586c673412.js",
-        "/styles.ef46db3751d8e999.css"
+        "/styles.f1925a80fcd893f4.css"
       ],
       "patterns": []
     },
@@ -28,11 +28,13 @@
         "ignoreVary": true
       },
       "urls": [
-        "/CaptureLeafRepeat.9580363f86481f4f.png",
+        "/CaptureLeafRepeatOpacity40.fa59cc5e435e5925.png",
         "/Edit.1c3b33dbc7a0ce7c.png",
         "/Imprimir.5707a7d8e20080ab.png",
         "/Logo-Agronomia2.2ed90bcafa53fa56.png",
         "/assets/CaptureLeafRepeat.png",
+        "/assets/CaptureLeafRepeatOpacity10.png",
+        "/assets/CaptureLeafRepeatOpacity40.png",
         "/assets/Edit.png",
         "/assets/EditList.png",
         "/assets/Imprimir.png",
@@ -84,11 +86,13 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/CaptureLeafRepeat.9580363f86481f4f.png": "c7d2cb5d4c3d96eee28303074ab9fbe4ee213ff4",
+    "/CaptureLeafRepeatOpacity40.fa59cc5e435e5925.png": "0db21eb0c414307e71283a3fe874340543c88e3b",
     "/Edit.1c3b33dbc7a0ce7c.png": "1c9cdc3ec69ac8556c319dd90e83108fd52f98c7",
     "/Imprimir.5707a7d8e20080ab.png": "cedeee2afb743470a74d5ada563fe11d6c910389",
     "/Logo-Agronomia2.2ed90bcafa53fa56.png": "c11a8831ee0c496fd0608fc72d1be73298748a84",
     "/assets/CaptureLeafRepeat.png": "c7d2cb5d4c3d96eee28303074ab9fbe4ee213ff4",
+    "/assets/CaptureLeafRepeatOpacity10.png": "91e1dd18aa10fe450d94888789ee1e12dd7097a4",
+    "/assets/CaptureLeafRepeatOpacity40.png": "0db21eb0c414307e71283a3fe874340543c88e3b",
     "/assets/Edit.png": "1c9cdc3ec69ac8556c319dd90e83108fd52f98c7",
     "/assets/EditList.png": "3d75280861b7afdcd382ba61ee95ff336c5912d5",
     "/assets/Imprimir.png": "cedeee2afb743470a74d5ada563fe11d6c910389",
@@ -132,14 +136,14 @@
     "/clipboard.008357a0b24034e8.png": "2b85200774157c9e502d1c039fe871586be2f660",
     "/home.a5ce65d54c28e165.png": "28ac3230b9a7621ae010c60c881e63f8c7c85fd0",
     "/image_7.2e20c6c16e8ce206.png": "221e1a0bcfde3fc18fb2e367f405497c64b748a3",
-    "/index.html": "7de8a57e9808082ce665a77a28fdde766551bcc5",
+    "/index.html": "7d6568be3d3e794f12d56e2acf0c8337b41a891a",
     "/info.f631e6664ac6fa77.png": "9de63dca797b8e77bd7e2ffea58f77d88c605854",
     "/logo_ucv_bg2_1.32a61806277cba42.png": "5f4ff5044ce5402244fab3de3c0668dbb4c092e6",
-    "/main.f6b4c1c2fc379cbe.js": "bf7b8c45f33f40e0c194ca2f1bc2b668eec1932b",
+    "/main.78f1ec5fdb724915.js": "2a4f92aebfbb5d27cabbc6f843ee6c2526733ece",
     "/manifest.webmanifest": "15280ea447b36ef038af857615ec23389806c194",
     "/polyfills.19ce6d8af341de05.js": "9de17a020f122eef2486e4e84fa43f4708491116",
     "/runtime.f2b5f3586c673412.js": "cfbf374cdca22ec31ae2c9de6fb21eb5a93cb23e",
-    "/styles.ef46db3751d8e999.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    "/styles.f1925a80fcd893f4.css": "a0a8ba3055c48ab9909657d14f97ae2a4345f5be"
   },
   "navigationUrls": [
     {
