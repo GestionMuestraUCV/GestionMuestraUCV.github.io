@@ -18,6 +18,7 @@ export class PwaService {
   public initPwaPrompt() {
     console.log("chosing");
     if (this.platform.ANDROID) {
+      console.log('android');
       window.addEventListener('beforeinstallprompt', (event: any) => {
         event.preventDefault();
         this.promptEvent = event;
@@ -25,15 +26,17 @@ export class PwaService {
       });
     }
     if (this.platform.IOS) {
+      console.log('ios');
       const isInStandaloneMode = ('standalone' in window.navigator) && (window.navigator['standalone']);
       if (!isInStandaloneMode) {
         this.openPromptComponent('ios');
       }
     }
+    console.log('endchoose');
   }
 
   private openPromptComponent(mobileType: 'ios' | 'android') {
-    timer(3000)
+    timer(2000)
       .pipe(take(1))
       .subscribe(() => this.bottomSheet.open(PromptComponent, { data: { mobileType, promptEvent: this.promptEvent } }));
   }

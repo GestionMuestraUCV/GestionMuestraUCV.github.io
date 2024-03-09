@@ -1,0 +1,75 @@
+/*.base{
+  left: 0vw;
+  top: 0vh;
+  margin: 0;
+  width: 100vw;
+  height: 100px;
+
+  background-color:white;
+
+}*/
+
+/*
+:host {
+  background: white;
+}*/
+
+.android-prompt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  .install{
+    background-color: #4c8bf5;
+    color: white;
+    border-radius: 5px;
+    border-color: #4c8bf5;
+    margin: 5px;
+    padding: 5px;
+    font-family:Arial;
+    text-align:center;
+    font-size:18px;
+
+
+  }
+
+  .close{
+    background-color: white;
+    color: #4c8bf5;
+    border-radius: 5px;
+    border-color: lightgrey;
+    margin: 5px;
+    padding: 5px;
+    font-family:Arial;
+    text-align:center;
+    font-size:18px;
+
+  }
+
+
+}
+
+
+.ios-prompt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .close-ios-inv {
+    position: absolute;
+    right: 0px;
+    top: 0;
+  }
+  div {
+    text-align: center;
+    padding: 10px 25px 0;
+    mat-icon {
+      position: relative;
+      top: -7px;
+    }
+  }
+  img {
+    display: inline;
+  }
+}

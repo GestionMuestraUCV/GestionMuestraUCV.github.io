@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1709927984424,
+  "timestamp": 1709952571586,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -12,7 +12,7 @@
       },
       "urls": [
         "/index.html",
-        "/main.a697eaba5c7755cd.js",
+        "/main.ebcee1085a14d44d.js",
         "/manifest.webmanifest",
         "/polyfills.19ce6d8af341de05.js",
         "/runtime.f2b5f3586c673412.js",
@@ -140,10 +140,10 @@
     "/clipboard.008357a0b24034e8.png": "2b85200774157c9e502d1c039fe871586be2f660",
     "/home.a5ce65d54c28e165.png": "28ac3230b9a7621ae010c60c881e63f8c7c85fd0",
     "/image_7.2e20c6c16e8ce206.png": "221e1a0bcfde3fc18fb2e367f405497c64b748a3",
-    "/index.html": "7d6efa7277f716fbc23ced7e5e8af11ecb55a58c",
+    "/index.html": "c197dfaf98d9db5c718ac977d49426056644131a",
     "/info.f631e6664ac6fa77.png": "9de63dca797b8e77bd7e2ffea58f77d88c605854",
     "/logo_ucv_bg2_1.32a61806277cba42.png": "5f4ff5044ce5402244fab3de3c0668dbb4c092e6",
-    "/main.a697eaba5c7755cd.js": "283e19ebb22c595c7798f1f8c75061835941b417",
+    "/main.ebcee1085a14d44d.js": "f879d0429b896803bb591e3800c730b9b4c73e40",
     "/manifest.webmanifest": "15280ea447b36ef038af857615ec23389806c194",
     "/polyfills.19ce6d8af341de05.js": "9de17a020f122eef2486e4e84fa43f4708491116",
     "/runtime.f2b5f3586c673412.js": "cfbf374cdca22ec31ae2c9de6fb21eb5a93cb23e",
