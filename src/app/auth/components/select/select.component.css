@@ -71,6 +71,7 @@ button{
 	border: none;
   /*float: right;*/
   background-color:rgba(62.00000010430813, 179.000004529953, 194.00000363588333, 1);
+  box-shadow:2px 2px 5px black;
   color:rgba(255, 255, 255, 1);
   position:absolute;
 	left:45%;
