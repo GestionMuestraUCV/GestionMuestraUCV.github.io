@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Auth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
+import { Platform } from '@angular/cdk/platform';
 import { AdminModule } from 'src/app/admin/admin.module';
 import { PromptComponent } from 'src/app/prompt/prompt.component';
 import { PwaService } from 'src/app/services/pwa.service';
@@ -11,7 +12,12 @@ import { PwaService } from 'src/app/services/pwa.service';
   styleUrls: ['./select.component.css']
 })
 export class SelectComponent {
-  constructor(public auth: Auth, private router: Router){
+  public myValue:any;
+  constructor(public auth: Auth, private router: Router, private platform: Platform){
+    /*const installTest = document.getElementById('installTest');
+    //installTest!.style.display="none";
+    installTest!.style.visibility="hidden";*/
+    //this.platform.ANDROID
 
 
   }
