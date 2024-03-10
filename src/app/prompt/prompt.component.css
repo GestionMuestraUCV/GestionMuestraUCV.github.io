@@ -9,27 +9,52 @@
 
 }*/
 
-/*
-:host {
-  background: white;
-}*/
+/**/
+
+::ng-deep .mat-bottom-sheet-container {
+  --mat-bottom-sheet-container-background-color: white!important;
+  --mat-bottom-sheet-container-text-color: rgba(0, 0, 0, 0.87) !important;
+  /*border-bottom-left-radius: 50px !important;
+  border-bottom-right-radius: 50px !important;*/
+  padding: 25px 2px !important;
+  min-width: 95vw !important;
+  min-height: 15vh !important;
+  margin: 0 auto;
+  box-sizing: border-box !important;
+  display: block !important;
+  /*outline: 2px dashed #F12942 !important;
+  outline-width: 3px;
+  outline-offset: 5px;
+  overflow: auto;*/
+}
+
+/**/
+
 
 .android-prompt {
+  position:relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /*
+  left: 16px;
+  margin: -8px -16px;
+  margin-left: -20px;
+  padding-right: 32px;
+  background-color: white;
+  */
 
 
   .install{
     background-color: #4c8bf5;
     color: white;
     border-radius: 5px;
-    border-color: #4c8bf5;
     margin: 5px;
-    padding: 5px;
+    padding: 5px 10px;
     font-family:Arial;
     text-align:center;
     font-size:18px;
+    /*min-width: 190px;*/
 
 
   }
@@ -38,12 +63,13 @@
     background-color: white;
     color: #4c8bf5;
     border-radius: 5px;
-    border-color: lightgrey;
+    border: 5px;
     margin: 5px;
-    padding: 5px;
+    padding: 5px 10px;
     font-family:Arial;
     text-align:center;
     font-size:18px;
+    min-width: 75px;
 
   }
 

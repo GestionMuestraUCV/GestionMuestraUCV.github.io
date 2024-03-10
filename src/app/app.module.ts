@@ -78,6 +78,7 @@ export function basicLoader(){
     MatIconModule,
     MatCardModule,
     MatIconModule,
+    MatButtonModule,
     BrowserAnimationsModule,
     CommonModule,
     RouterModule,
@@ -124,6 +125,7 @@ export function basicLoader(){
 export class AppModule {
 
   //constructor(pwaService: PwaService){pwaService.initPwaPrompt();}
+
 
 
 
