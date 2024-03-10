@@ -25,6 +25,7 @@ export class PwaService {
         this.openPromptComponent('android');
       });
     }
+    /*
     if (this.platform.IOS) {
       console.log('ios');
       const isInStandaloneMode = ('standalone' in window.navigator) && (window.navigator['standalone']);
@@ -32,7 +33,7 @@ export class PwaService {
         this.openPromptComponent('ios');
       }
     }
-    console.log('endchoose');
+    console.log('endchoose');*/
   }
 
   private openPromptComponent(mobileType: 'ios' | 'android') {
