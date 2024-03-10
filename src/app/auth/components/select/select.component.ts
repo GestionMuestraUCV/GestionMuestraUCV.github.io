@@ -22,7 +22,9 @@ export class SelectComponent {
     installTest!.style.visibility="hidden";*/
     //this.platform.ANDROID
     //this.platform.IOS
-    if (this.platform.IOS) {this.isIOS=true}
+
+    /*if (this.platform.IOS) {this.isIOS=true;}*/
+
     window.addEventListener('beforeinstallprompt', (event: any) => {
       event.preventDefault();
       this.promptEvent = event;
