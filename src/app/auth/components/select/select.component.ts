@@ -23,7 +23,7 @@ export class SelectComponent {
     //this.platform.ANDROID
     //this.platform.IOS
 
-    if (this.platform.IOS) {this.isIOS=true;}
+    /*if (this.platform.IOS) {this.isIOS=true;}*/
 
     window.addEventListener('beforeinstallprompt', (event: any) => {
       event.preventDefault();

@@ -12,7 +12,7 @@
     <button id="signup" (click) = "Signup()">Sign Up</button>
   </div>
   <div >
-    <button mat-button [hidden]="isIOS" class="installButton"  (click)="installPwa()">Install</button>
+    <button [hidden]="isIOS" class="installButton"  (click)="installPwa()">Install</button>
   </div>
   <div [hidden]="!isIOS" class="install">
     <span>Para instalar en tu dispositivo móvil, pulsa el boton de inicio “Compartir”
