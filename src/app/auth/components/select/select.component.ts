@@ -23,7 +23,7 @@ export class SelectComponent {
     //this.platform.ANDROID
     //this.platform.IOS
 
-    /*if (this.platform.IOS) {this.isIOS=true;}*/
+    if (this.platform.IOS) {this.isIOS=true;}
 
     window.addEventListener('beforeinstallprompt', (event: any) => {
       event.preventDefault();
@@ -52,7 +52,7 @@ export class SelectComponent {
   }
 
   public installPwa(): void {
-    console.log("click");
+    //console.log("click");
     /*window.addEventListener('beforeinstallprompt', (event: any) => {
       event.preventDefault();
       this.promptEvent = event;

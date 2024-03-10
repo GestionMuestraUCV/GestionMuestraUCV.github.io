@@ -5,14 +5,14 @@
 
 <div class="base">
   <div>
-    <button id="login" (click)= "Login()">Log In</button>
+    <button id="login" (click)= "Login()">Iniciar Sesión</button>
   </div>
   <div></div>
   <div >
-    <button id="signup" (click) = "Signup()">Sign Up</button>
+    <button id="signup" (click) = "Signup()">Registrarse</button>
   </div>
   <div >
-    <button [hidden]="isIOS" class="installButton"  (click)="installPwa()">Install</button>
+    <button [hidden]="isIOS" class="installButton"  (click)="installPwa()">Instalar</button>
   </div>
   <div [hidden]="!isIOS" class="install">
     <span>Para instalar en tu dispositivo móvil, pulsa el boton de inicio “Compartir”
