@@ -66,7 +66,34 @@ button{
 	font-size:64px;
 	letter-spacing:0;
 }
+
+.installButton {
+	border: none;
+  /*float: right;*/
+  background-color:rgba(62.00000010430813, 179.000004529953, 194.00000363588333, 1);
+  color:rgba(255, 255, 255, 1);
+  position:absolute;
+	left:45%;
+	top:77%;
+  /*margin: 15px 0px;*/
+  padding-bottom: 5px;
+  padding-top: 5px;
+  width:200px;
+	height:60px;
+
+  text-align: center;
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  border-top-left-radius:30px;
+	border-top-right-radius:30px;
+	border-bottom-left-radius:30px;
+	border-bottom-right-radius:30px;
+}
+
 .install {
+  /*visibility: hidden;*/
 	color:rgba(0, 0, 0, 1);
 	width:30%;
 	/*height:30%;*/
@@ -230,6 +257,32 @@ p{
     font-size:32px;
     letter-spacing:0;
   }
+
+  .installButton {
+    border: none;
+    /*float: right;*/
+    background-color:rgba(62.00000010430813, 179.000004529953, 194.00000363588333, 1);
+    box-shadow:2px 2px 5px black;
+    color:rgba(255, 255, 255, 1);
+    position:absolute;
+    left:30%;
+    top:77%;
+    /*margin: 15px 0px;*/
+    padding-bottom: 5px;
+    padding-top: 5px;
+    width:120px;
+    height:50px;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-top-left-radius:30px;
+    border-top-right-radius:30px;
+    border-bottom-left-radius:30px;
+    border-bottom-right-radius:30px;
+  }
   .install {
     color:rgba(0, 0, 0, 1);
     width: 70%;
@@ -239,7 +292,7 @@ p{
     top:75%;
     font-family:Arial;
     text-align:center;
-    font-size:12px;
+    font-size:14px;
     letter-spacing:0;
     font-weight: bold;
   }
@@ -262,8 +315,9 @@ p{
     border-bottom-right-radius:5px;
   }
   #share {
-    width:12px;
-    height:14px;
+    width:16px;
+    height:18px;
+    padding-top: 3px;
     /*display: inline;
     position:absolute;
     left:805px;

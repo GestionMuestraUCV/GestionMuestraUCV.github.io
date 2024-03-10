@@ -11,12 +11,18 @@
   <div >
     <button id="signup" (click) = "Signup()">Sign Up</button>
   </div>
-  <div [hidden]="myValue" class="install" id="installTest">
+  <div >
+    <button mat-button [hidden]="isIOS" class="installButton"  (click)="installPwa()">Install</button>
+  </div>
+  <div [hidden]="!isIOS" class="install">
     <span>Para instalar en tu dispositivo móvil, pulsa el boton de inicio “Compartir”
     <img id="share" src="../../../../assets/share.png" alt="share">
-    en IOS o el boton “Menú”  <img id="menu" src="../../../../assets/menu.png" alt="menu">
-    en Androi, y selecionar “Agregar a inicio”</span>
+    <!--
+    en IOS o el boton “Menú”  <img id="menu" src="../../../../assets/menu.png" alt="menu"> en Androi,
+    -->
+    y selecionar “Agregar a inicio”</span>
   </div>
+
 
 
 

@@ -13,11 +13,24 @@ import { PwaService } from 'src/app/services/pwa.service';
 })
 export class SelectComponent {
   public myValue:any;
+  public isIOS:boolean= false;
+  private promptEvent: any;
+
   constructor(public auth: Auth, private router: Router, private platform: Platform){
-    /*const installTest = document.getElementById('installTest');
+    /*const installTest = document.getElementByClassName('install');
     //installTest!.style.display="none";
     installTest!.style.visibility="hidden";*/
     //this.platform.ANDROID
+    //this.platform.IOS
+    if (this.platform.IOS) {this.isIOS=true}
+    window.addEventListener('beforeinstallprompt', (event: any) => {
+      event.preventDefault();
+      this.promptEvent = event;
+      //event.prompt();
+      console.log("promptEvent");
+
+    });
+
 
 
   }
@@ -34,6 +47,18 @@ export class SelectComponent {
   Signup(){
     this.router.navigate(['/auth/signup']);
     //window.location.href='#/auth/login';
+  }
+
+  public installPwa(): void {
+    console.log("click");
+    /*window.addEventListener('beforeinstallprompt', (event: any) => {
+      event.preventDefault();
+      this.promptEvent = event;
+      //event.prompt();
+      console.log("prompt");
+
+    });*/
+    this.promptEvent.prompt();
   }
 
 }
