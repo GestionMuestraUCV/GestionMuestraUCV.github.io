@@ -13,8 +13,10 @@ import { PwaService } from 'src/app/services/pwa.service';
 })
 export class SelectComponent {
   public myValue:any;
-  public isIOS:boolean= false;
+  public hidInstText:boolean= true;
+  public hidInstBut:boolean= false;
   private promptEvent: any;
+
 
   constructor(public auth: Auth, private router: Router, private platform: Platform){
     /*const installTest = document.getElementByClassName('install');
@@ -23,7 +25,12 @@ export class SelectComponent {
     //this.platform.ANDROID
     //this.platform.IOS
 
-    if (this.platform.IOS) {this.isIOS=true;}
+    if (this.platform.IOS) {this.hidInstText=false; this.hidInstBut=true;}
+    if (this.platform.ANDROID) {this.hidInstText=true; this.hidInstBut=false;}
+
+    window.addEventListener("appinstalled", () => {
+      this.disableInAppInstallPrompt();
+    });
 
     window.addEventListener('beforeinstallprompt', (event: any) => {
       event.preventDefault();
@@ -35,6 +42,20 @@ export class SelectComponent {
 
 
 
+    /*
+
+    */
+
+
+
+  }
+
+
+
+  disableInAppInstallPrompt() {
+    //installPrompt = null;
+    //installButton.setAttribute("hidden", "");
+    this.hidInstBut=true;
   }
 
   Credits(){
