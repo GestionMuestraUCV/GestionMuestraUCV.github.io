@@ -111,8 +111,9 @@ export function basicLoader(){
   ],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy},
+    {provide: APP_INITIALIZER, useFactory: initializer, deps: [PwaService], multi: true},
     //{provide: MAT_BOTTOM_SHEET_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},
-    //{provide: APP_INITIALIZER, useFactory: initializer, deps: [PwaService], multi: true},
+
 
     //{provide: APP_INITIALIZER, useFactory: initializerZ, deps: [PwaService], multi: true},
 
