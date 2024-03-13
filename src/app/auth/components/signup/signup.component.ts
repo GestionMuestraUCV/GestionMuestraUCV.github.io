@@ -41,6 +41,7 @@ export class SignupComponent {
       alert(err.message);
      });
      this.addData(value);
+     this.Login();
   }
 
   addData(value: any) {

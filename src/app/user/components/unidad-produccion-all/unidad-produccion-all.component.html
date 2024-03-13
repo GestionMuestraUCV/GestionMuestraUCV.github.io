@@ -27,7 +27,7 @@
       <td>{{ item.coordenadas}}</td>
 
       <td>
-        <button class="muestras" (click)="Muestras( pid, item.codigo)"></button>
+        <button class="muestras" (click)="Muestras( item.project, item.codigo)"></button>
         <button class="detalles" (click)="infoUnidad(item.codigo)"></button>
         <button class="edit" (click)="editUnidad(item.codigo)"></button>
 
@@ -35,6 +35,11 @@
 
     </tr>
   </table>
+
+
+  <button class="boton" id="agregar" (click)="newUnidad(pid)">
+    Agregar
+  </button>
 
 
 </div>

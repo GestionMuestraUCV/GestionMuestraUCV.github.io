@@ -1,6 +1,6 @@
 .list{
   position: absolute;
-  left:38%;
+  left:34%;
 	top:38%;
 }
 
@@ -112,6 +112,7 @@ table {
 
 .subTituloText { /*SubTitulo Texto*/
 	color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
+  text-shadow: 2px 2px 5px black;
 	position:absolute;
   margin: 0px;
   /*width:300px;*/
@@ -298,6 +299,7 @@ table {
 
   .subTituloText { /*SubTitulo Texto*/
     color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
+    text-shadow: 2px 2px 5px black;
     position:absolute;
     margin: 0px;
     /*width:300px;*/

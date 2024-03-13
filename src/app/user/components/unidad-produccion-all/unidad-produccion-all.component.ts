@@ -15,6 +15,7 @@ export class UnidadProduccionAllComponent {
   public pid: any;
 
   constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore) {
+    //this.pid=" ";
     this.getData();
     //this.MyQuery();
   }

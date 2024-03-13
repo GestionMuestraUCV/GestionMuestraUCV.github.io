@@ -490,3 +490,38 @@ img{
 
 
 }
+
+@media only screen and (min-width: 1536px){
+
+
+  .loginBox {
+    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
+    width: 700px;
+    height: 500px;
+    flex-shrink: 0;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-40%);
+
+  }
+
+
+
+  .subTituloText {
+
+    position: absolute;
+    left:50%;
+    transform: translate(-50%, 0%);
+  }
+
+
+  .boton {
+    position: absolute;
+    left:50%;
+    transform: translate(235px, 0px);
+
+  }
+
+}

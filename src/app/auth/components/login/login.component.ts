@@ -68,10 +68,10 @@ export class LoginComponent {
         if(info['role']=="Adminitrador"){
           this.router.navigate(['/admin']);
         }else if(info['role']=="Investigador"){
-          this.router.navigate(['/user/projects']);
+          this.router.navigate(['/user/unidad-produccion-all']); // '/user/projects'
         }
         else if(info['role']=="Cliente"){
-          this.router.navigate(['/client/projects']);
+          this.router.navigate(['/client/unidad-produccion-all']); // '/client/projects'
         }
         else{
           ;

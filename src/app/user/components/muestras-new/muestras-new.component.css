@@ -2,7 +2,7 @@
   box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
   width: 75%;
-  height: 70%;
+  height: 73%;
   flex-shrink: 0;
   position:absolute;
   left:15%;
@@ -65,13 +65,14 @@ button{
 
 .subTituloText{
   color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
+  text-shadow: 2px 2px 5px black;
 	position:absolute;
   margin: 0px;
 	font-family:Verdana;
 	font-size:48px;
 	letter-spacing:0;
   left:35%;
-	top:15%;
+	top:17%;
 
 }
 
@@ -442,5 +443,43 @@ img{
 
 
 
+}
+
+
+
+
+@media only screen and (min-width: 1536px){
+
+
+  .loginBox {
+    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
+    width: 1000px;
+    height: 660px;
+    flex-shrink: 0;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-35%);
+
+  }
+
+
+
+  .subTituloText {
+
+    position: absolute;
+    left:50%;
+    transform: translate(-50%, 0%);
+  }
+
+  /*
+  .boton {
+    position: absolute;
+    left:50%;
+    transform: translate(310px, 0px);
+
+  }
+  */
 }
 

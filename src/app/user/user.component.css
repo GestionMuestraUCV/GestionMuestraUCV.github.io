@@ -26,7 +26,7 @@ button{
 .homeBox {/*Home box*/
 	background-color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
 	border-right: 4px solid white;
-	width:15%;
+	width: 20%;/*15%;*/
 	height:10%;
 	position:absolute;
 	left:0px;
@@ -45,10 +45,10 @@ button{
 }
 .tituloBox { /*Titulo box*/
 	background-color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
-	width:85%;
+	width:80%; /*85%*/
 	height:10%;
 	position:absolute;
-	left:15%;
+	left:20%; /*15%*/
 	top:0%;
 	text-align:center;
 }
@@ -109,9 +109,10 @@ button{
 
 }
 
+
 #cerrarText{
   cursor: pointer;
-  width: 15%;
+  width: 20%; /*15%;*/
   position:absolute;
   left:0%;
   top:10%;
@@ -122,19 +123,20 @@ button{
 
 
 #ProyectosText{
+  visibility: hidden;
   cursor: pointer;
-  width: 17%;
+  width: 17%; /*17%;*/
   position:absolute;
-  left:15%;
+  left:20%; /*15%;*/
   top:10%;
   border-right: 4px solid white;
 }
 
 #UnidadText{
   cursor: pointer;
-  width: 17%;
+  width: 20%; /*17%;*/
   position:absolute;
-  left:32%;
+  left:20%;/*32%;*/
   top:10%;
   border-right: 4px solid white;
 
@@ -142,9 +144,9 @@ button{
 
 #MuestrasText{
   cursor: pointer;
-  width: 17%;
+  width: 20%; /*17%;*/
   position:absolute;
-  left:49%;
+  left:40%;/*49%;*/
   top:10%;
   border-right: 4px solid white;
 }
@@ -153,9 +155,9 @@ button{
 
 #ClientesText{
   cursor: pointer;
-  width: 17%;
+  width: 20%; /*17%;*/
   position:absolute;
-  left:66%;
+  left:60%; /*66%;*/
   top:10%;
   border-right: 4px solid white;
 
@@ -163,9 +165,9 @@ button{
 
 #CodigoText{
   cursor: pointer;
-  width: 17%;
+  width: 20%; /*17%;*/
   position:absolute;
-  left:83%;
+  left:80%;/*83%;*/
   top:10%;
 
 }
@@ -223,10 +225,10 @@ button{
   }
   .tituloBox { /*Titulo box*/
     background-color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
-    width:85%;
+    width:80%;/*85%;*/
     height:15%;
     position:absolute;
-    left:15%;
+    left:20%; /*15%;*/
     top:0%;
     text-align:center;
   }
@@ -301,7 +303,7 @@ button{
 
   #cerrarText{
     cursor: pointer;
-    width: 15%;
+    width: 20%; /*15%;*/
     position:absolute;
     left:0%;
     top:15%;
@@ -310,8 +312,9 @@ button{
 
 
   #ProyectosText{
+    visibility: hidden;
     cursor: pointer;
-    width: 17%;
+    width: 20%; /*17%;*/
     position:absolute;
     left:15%;
     top:15%;
@@ -321,9 +324,9 @@ button{
 
   #UnidadText{
     cursor: pointer;
-    width: 17%;
+    width: 20%; /*17%;*/
     position:absolute;
-    left:32%;
+    left:20%;/*32%;*/
     top:15%;
     border-right: 2px solid white;
 
@@ -331,9 +334,9 @@ button{
 
   #MuestrasText{
     cursor: pointer;
-    width: 17%;
+    width: 20%; /*17%;*/
     position:absolute;
-    left:49%;
+    left:40%;/*49%;*/
     top:15%;
     border-right: 2px solid white;
   }
@@ -342,18 +345,18 @@ button{
 
   #ClientesText{
     cursor: pointer;
-    width: 17%;
+    width: 20%; /*17%;*/
     position:absolute;
-    left:66%;
+    left:60%;/*66%;*/
     top:15%;
     border-right: 2px solid white;
   }
 
   #CodigoText{
     cursor: pointer;
-    width: 17%;
+    width: 20%; /*17%;*/
     position:absolute;
-    left:83%;
+    left:80%;/*83%;*/
     top:15%;
   }
 

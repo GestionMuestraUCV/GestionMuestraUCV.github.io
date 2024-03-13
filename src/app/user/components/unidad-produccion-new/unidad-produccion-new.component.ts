@@ -60,7 +60,7 @@ export class UnidadProduccionNewComponent {
         coordenadas: value.coordenadas,
         sintomas: value.sintomas,
         comentarios: value.comentarios,
-        project: this.pid
+        //project: this.pid
       }
 
       )
