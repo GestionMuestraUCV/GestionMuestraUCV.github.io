@@ -38,11 +38,13 @@ button{
 
 #login {
 	background-color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
-	width:45%;
-	height:15%;
+	box-shadow:2px 2px 5px black;
+  width:600px;
+	height:150px;
 	position:absolute;
-	left:30%;
 	top:25%;
+  left:50%;/*30%;*/
+  transform: translate(-50%,0%);
 	border-radius:30px;
   border-width: 0;
 	color:rgba(255, 255, 255, 1);
@@ -53,11 +55,13 @@ button{
 }
 #signup {
 	background-color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
-	width:45%;
-	height:15%;
+	box-shadow:2px 2px 5px black;
+  width:600px;
+	height:150px;
 	position:absolute;
-	left:30%;
 	top:50%;
+  left:50%;/*30%;*/
+  transform: translate(-50%,0%);
 	border-radius:30px;
   border-width: 0;
 	color:rgba(255, 255, 255, 1);
@@ -74,8 +78,9 @@ button{
   box-shadow:2px 2px 5px black;
   color:rgba(255, 255, 255, 1);
   position:absolute;
-	left:43%;
 	top:77%;
+  left:50%;/*43%;*/
+  transform: translate(-50%,0%);
   /*margin: 15px 0px;*/
   padding-bottom: 5px;
   padding-top: 5px;
@@ -96,11 +101,13 @@ button{
 .install {
   /*visibility: hidden;*/
 	color:rgba(0, 0, 0, 1);
-	width:30%;
+	width:375px;
 	/*height:30%;*/
 	position:absolute;
-	left:42%;
 	top:77%;
+  left:50%;/*42%;*/
+  transform: translate(-50%,0%);
+
 	font-family:Arial;
 	text-align:center;
 	font-size:20px;

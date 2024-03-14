@@ -1,8 +1,12 @@
 .list{
   position: absolute;
-  left:34%;
-	top:38%;
+  /*width: auto;*/
+	top:32%;
+  left:50%;
+  transform: translate(-50%,0%);
 }
+
+/*34%*/
 
 
 td {
@@ -66,8 +70,9 @@ table {
 .scanbutton{
   width: 153px;
   height: 36px;
-  left: 49%;
   top: 30%;
+  left:50%;/*49%;*/
+  transform: translate(-50%,0%);
   position: absolute;
   background: #4C9EFF;
   border-radius: 30px;
@@ -116,8 +121,9 @@ table {
 	font-family:Verdana;
 	font-size:48px;
 	letter-spacing:0;
-  left:45%;
 	top:20%;
+  left:50%; /*45*/
+  transform: translate(-50%,0%);
 }
 
 
