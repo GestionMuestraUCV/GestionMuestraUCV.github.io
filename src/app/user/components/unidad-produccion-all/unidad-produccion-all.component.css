@@ -190,11 +190,11 @@ table {
 @media only screen and (max-width: 768px) {
 
   .list{
+    transform: none;
     position: absolute;
     left: 2%;
-    top:40%;
+    top:45%;
     text-overflow: ellipsis;
-    transform: none;
   }
 
 
@@ -258,7 +258,7 @@ table {
     height: 36px;
     transform: none;
     left: 35%;
-    top: 33%;
+    top: 35%;
     position: absolute;
     background: #4C9EFF;
     border-radius: 30px;
