@@ -238,6 +238,7 @@ p{
     width:70%;
     height:15%;
     margin: 0px;
+    transform: none;
     position:absolute;
     left:15%;/*36%;*/
     top:25%;
@@ -254,6 +255,7 @@ p{
     width:70%;
     height:15%;
     margin: 0px;
+    transform: none;
     position:absolute;
     left:15%;/*36%;*/
     top:50%;
@@ -295,6 +297,7 @@ p{
     color:rgba(0, 0, 0, 1);
     width: 70%;
     height:10%;
+    transform: none;
     position:absolute;
     left:15%;
     top:75%;

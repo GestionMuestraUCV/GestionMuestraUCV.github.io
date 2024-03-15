@@ -183,6 +183,7 @@ table {
     left: 5%;
     top:40%;
     text-overflow: ellipsis;
+    transform: none;
   }
 
 
@@ -242,9 +243,10 @@ table {
 
 
   .scanbutton{
+    transform: none;
     width: 153px;
     height: 36px;
-    left: 35%;
+    left: 30%;
     top: 30%;
     position: absolute;
     background: #4C9EFF;
@@ -252,6 +254,7 @@ table {
   }
 
   .scantext{
+    transform: none;
     cursor: pointer;
     width: 126px;
     margin-top: 10px;
@@ -294,6 +297,7 @@ table {
     color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
     text-shadow: 2px 2px 5px black;
     position:absolute;
+    transform: none;
     margin: 0px;
     /*width:300px;*/
     height:64px;
