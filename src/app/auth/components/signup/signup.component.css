@@ -397,8 +397,8 @@ button{
   .boton { /*boton*/
     background-color:rgba(62.00000010430813, 179.000004529953, 194.00000363588333, 1);
     color:rgba(255, 255, 255, 1);
-    width:20%;
-    height:5%;
+    /*width:20%;
+    height:5%;*/
     position:absolute;
     border-width: 0;
     border-top-left-radius:30px;
@@ -407,7 +407,7 @@ button{
     border-bottom-right-radius:30px;
     font-size:16px;
     left:60%;
-    top:75%;
+    top:74;/*75%;*/
   }
   .botonText { /*registrar text*/
     color:rgba(255, 255, 255, 1);

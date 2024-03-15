@@ -287,18 +287,18 @@ button{
   .boton { /*boton*/
     background-color:rgba(62.00000010430813, 179.000004529953, 194.00000363588333, 1);
     color:rgba(255, 255, 255, 1);
-    width:20%;
-    height:5%;
+    /*width:20%;
+    height:5%;*/
     border-width: 0;
     border-top-left-radius:30px;
     border-top-right-radius:30px;
     border-bottom-left-radius:30px;
     border-bottom-right-radius:30px;
-    font-size:12px;
-    /*transform: none;*/
+    font-size:16px;
+    transform: none;
     position:absolute;
     left:60%;
-    top:28%;/*65%;*/
+    top:27%;/*65%;*/
   }
   .botonText { /*registrar text*/
     color:rgba(255, 255, 255, 1);
