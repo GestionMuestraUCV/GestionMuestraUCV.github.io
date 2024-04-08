@@ -35,13 +35,13 @@ button{
 }
 
 .homeBox {/*Home box*/
-	background-color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
-	border-right: 4px solid white;
-	width:20%;
+	background-color:#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
+	/*border-right: 4px solid white;*/
+	width:25%;
 	height:10%;
 	position:absolute;
   cursor: pointer;
-	left:0px;
+	left:75%;/*0px;*/
 	top:0%;
 	text-align:center;
 }
@@ -49,18 +49,37 @@ button{
 	color:rgba(255, 255, 255, 1);
 	display: inline-block;
   	vertical-align: middle;
-  	line-height: 250%;
+  	/*line-height: 280%;*/
 	font-family:Verdana;
-	font-size:40px;
+	font-size:32px;
 	letter-spacing:0;
+	position:absolute;
+  right:20px;
+	top:30%;
+
+}
+.UserLogo { /*Home text*/
+  position:absolute;
+
+  top:30%;
+  right:175px;
+
+  width:36px;
+  height:36px;
+  text-align:center;
+  background-image:url(../../assets/userWhite.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+
+  /*display: none;*/
 
 }
 .tituloBox { /*Titulo box*/
-	background-color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
-	width:80%;
+	background-color:#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
+	width:100%;
 	height:10%;
 	position:absolute;
-	left:20%;
+	left:0%; /*20%;*/
 	top:0%;
 	text-align:center;
 }
@@ -68,17 +87,20 @@ button{
 	color:rgba(255, 255, 255, 1);
 	display: inline-block;
   	vertical-align: middle;
-  	line-height: 250%;
+  	line-height: 225%;
 	font-family:Verdana;
+  font-weight: bold;
 	font-size:40px;
 	letter-spacing:0;
+  /*position:absolute;
+  left:40%;*/
 }
-.logoCiens { /*Logo Ciens*/
+.logoAgro { /*Logo Ciens*/ /*Logo Agro*/
 	width:100px;
 	height:69px;
 	position:absolute;
-	left: 90%;
-	top: 1.5%;
+	left: 140px;
+	top: 1%;
 	background-image:url(../../assets/Logo-Agronomia2.png);
 	background-repeat:no-repeat;
 	background-size:cover;
@@ -87,12 +109,14 @@ button{
 	width:69px;
 	height:69px;
 	position:absolute;
-	left: 22%;
-	top: 1.5%;
+	left: 30px;
+	top: 1%;
 	background-image:url(../../assets/logo_ucv_bg2_1.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
+
+
 
 
 
@@ -102,7 +126,7 @@ button{
 
 
   .homeBox {/*Home box*/
-    background-color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
+    background-color:#0A9217;
     border-right: 4px solid white;
     width:20%;
     height:15%;
@@ -124,8 +148,27 @@ button{
 
   }
 
+
+  .UserLogo { /*Home text*/
+    position:absolute;
+
+    top:30%;
+    /*right:175px;*/
+    left:25%;
+
+    width:36px;
+    height:36px;
+    text-align:center;
+    background-image:url(../../assets/userWhite.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+
+    /*display: none;*/
+
+  }
+
   .homeLogo { /*Home text*/
-    position:relative;
+    /*position:relative;
 
     top:30%;
     left:25%;
@@ -135,13 +178,13 @@ button{
     text-align:center;
     background-image:url(../../assets/home.png);
     background-repeat:no-repeat;
-    background-size:cover;
+    background-size:cover;*/
 
-    /*display: none;*/
+    display: none;
 
   }
   .tituloBox { /*Titulo box*/
-    background-color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
+    background-color:#0A9217;/*#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
     width:80%;
     height:15%;
     position:absolute;
@@ -160,7 +203,7 @@ button{
     letter-spacing:0px;
   }
 
-  .logoCiens { /*Logo Ciens*/
+  .logoAgro { /*Logo Ciens*/
     width:45px;
     height:35px;
     position:absolute;

@@ -2,8 +2,8 @@
   position: absolute;
   /*min-width: max-content;*/
 	top:32%;
-  left:50%;
-  transform: translate(-50%,0%);
+  left:45%;
+  transform: translate(-25%,0%);
 }
 
 /*34%*/
@@ -112,7 +112,7 @@ table {
 }
 
 .subTituloText { /*SubTitulo Texto*/
-	color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
+	color:#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
   text-shadow: 2px 2px 5px black;
 	position:absolute;
   margin: 0px;
@@ -293,7 +293,7 @@ table {
 
   .subTituloText { /*SubTitulo Texto*/
     transform: none;
-    color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
+    color:#0A9217; /*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
     text-shadow: 2px 2px 5px black;
     position:absolute;
     margin: 0px;
@@ -303,7 +303,7 @@ table {
     font-size:32px;
     letter-spacing:0;
     left:30%;
-    top:22%;
+    top:30%;
   }
 
 

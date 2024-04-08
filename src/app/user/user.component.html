@@ -1,20 +1,5 @@
 <p>user works!</p>
 
-<div  class="navbar">
-
-  <div  class="tituloBox"><span  class="tituloText">Gestion de Muestras</span></div>
-  <div  class="logoCiens"></div>
-  <div  class="logoUcv"></div>
-
-  <div  class="homeBox">
-    <span  class="homeText">Home</span>
-    <div  class="homeLogo"></div>
-  </div>
-
-</div>
-
-<button class="salir" (click)="Home()"></button>
-
 <div class="navbar2">
   <div class="navbar2Box" ></div>
   <!--
@@ -24,16 +9,79 @@
   <div style="width: 47px; height: 0px; transform: rotate(90deg); transform-origin: 0 0; border: 2px white solid"></div>
   <div style="width: 47px; height: 0px; transform: rotate(90deg); transform-origin: 0 0; border: 2px white solid"></div>
   -->
-  <div class="navbar2Text" id="cerrarText" (click)="handleSignOut()">CERRAR SESIÓN</div>
+  <div class="navbar2Text" id="cerrarText" (click)="handleSignOut()">
+    <img src="../../assets/logout-2.png" alt="Out" width="50" height="50">
+    <br>
+    Cerrar Sesión
+  </div>
 
-  <div class="navbar2Text" id="UnidadText" (click)="Unidades()"><div class="center">UNIDADES</div></div>
-  <div class="navbar2Text" id="ProyectosText" (click)="Projectos()"><div class="center">PROYECTOS</div></div>
-  <div class="navbar2Text" id="MuestrasText" (click)="Muestras()"><div class="center">MUESTRAS</div></div>
-  <div class="navbar2Text" id="ClientesText" (click)="Clientes()"><div class="center">CLIENTES</div></div>
+  <div class="navbar2Text" id="UnidadText" (click)="Unidades()">
+    <img src="../../assets/shovel2.png" alt="Shovel" width="50" height="50">
+    <br>
+    Unidades de Producción
+  </div>
+  <!--
+  <div class="navbar2Text" id="ProyectosText" (click)="Projectos()">
+    <div class="center">PROYECTOS</div>
+  </div>
+  -->
+  <div class="navbar2Text" id="MuestrasText" (click)="Muestras()">
+    <img src="../../assets/prueba-de-sangre.png" alt="Shovel" width="50" height="50">
+    <br>
+    Muestras
+  </div>
+  <div class="navbar2Text" id="ClientesText" (click)="Clientes()">
+    <img src="../../assets/Clientes2.png" alt="Shovel" width="50" height="50">
+    <br>
+    Clientes
+  </div>
 
-  <div class="navbar2Text" id="CodigoText" (click)="Codigo()">GENERAR CODIGO</div>
+  <div class="navbar2Text" id="CodigoText" (click)="Codigo()">
+    <img src="../../assets/Scan.png" alt="Shovel" width="50" height="50">
+    <br>
+    Generar Codigo
+  </div>
 
 
 </div>
+
+
+
+
+
+<div  class="navbar">
+  <!--
+  <div  class="tituloBox"><span  class="tituloText">Gestion de Muestras</span></div>
+  <div  class="logoCiens"></div>
+  <div  class="logoUcv"></div>
+
+  <div  class="homeBox">
+    <span  class="homeText">Home</span>
+    <div  class="homeLogo"></div>
+  </div>
+  -->
+
+  <div  class="tituloBox">
+    <span  class="tituloText">Gestion de Muestras</span>
+
+  </div>
+  <div  class="logoAgro"></div>
+  <div  class="logoUcv"></div>
+
+
+
+  <div  class="homeBox" >
+    <div  class="UserLogo"></div>
+
+    <span  class="homeText">Usuario</span>
+    <div  class="homeLogo"></div>
+  </div>
+
+</div>
+
+<!--
+<button class="salir" (click)="Home()"></button>
+-->
+
 
 <router-outlet></router-outlet>

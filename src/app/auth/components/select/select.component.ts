@@ -14,7 +14,7 @@ import { PwaService } from 'src/app/services/pwa.service';
 export class SelectComponent {
   public myValue:any;
   public hidInstText:boolean= true;
-  public hidInstBut:boolean= false;
+  public hidInstBut:boolean= true;/* false */
   private promptEvent: any;
 
 

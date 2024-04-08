@@ -1,8 +1,30 @@
+
+/*
+::ng-deep mat-tooltip-component{
+  background-color: black;
+  color: blue;
+  position:relative;
+  left:330px;
+	top:230px;
+  border-radius: 3px;
+
+}
+
+::ng-deep .muestras-tooltip {
+  background-color: black;
+  color: white;
+  position:relative;
+  left:330px;
+	top:230px;
+  border-radius: 3px;
+}*/
+
+
 .list{
   position: absolute;
   left:50%;/*34%;*/
 	top:38%;
-  transform: translate(-50%,0%);
+  transform: translate(-30%,0%);
 }
 
 
@@ -70,7 +92,7 @@ table {
   height: 36px;
   left: 50%;
   top: 30%;
-  transform: translate(-50%,0%);
+  transform: translate(0%,0%);
   position: absolute;
   background: #4C9EFF;
   box-shadow:2px 2px 5px black;
@@ -114,7 +136,7 @@ table {
 }
 
 .subTituloText { /*SubTitulo Texto*/
-	color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
+	color:#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
   text-shadow: 2px 2px 5px black;
 	position:absolute;
   margin: 0px;
@@ -125,7 +147,7 @@ table {
 	letter-spacing:0;
   left:50%;/*45%;*/
 	top:20%;
-  transform: translate(-50%,0%);
+  transform: translate(-35%,0%);
 }
 
 
@@ -139,6 +161,29 @@ table {
   cursor: pointer;
   background-image:url(../../../../assets/Edit.png);
 }
+.edit:hover .edit-tip {
+  display: block;
+  opacity: 1;
+  transition: 0.5s;
+}
+.edit-tip{
+  display: none;
+  position: relative;
+  background-color: rgb(47, 48, 51);
+  color: white;
+  padding: 5px 5px;
+  width: fit-content;
+  margin: 5px;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 100;
+  border-radius: 3px;
+
+  font-weight: bold;
+  font-family:'Trebuchet MS', sans-serif;
+}
 
 .muestras{
   border: none;
@@ -149,6 +194,35 @@ table {
   background-repeat: no-repeat;
   cursor: pointer;
   background-image:url(../../../../assets/clipboard.png);
+}
+.muestras:hover .muestras-tip {
+  display: block;
+  opacity: 1;
+  transition: 0.5s;
+}
+.muestras-tip{
+  display: none;
+  position: relative;
+  background-color: rgb(47, 48, 51);
+  color: white;
+  padding: 5px 5px;
+  width: fit-content;
+  margin: 5px;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 100;
+  border-radius: 3px;
+  line-height: 1.6;
+
+  font-weight: bold;
+  font-family:'Trebuchet MS', sans-serif;
+
+  /*font-size: 12px;*/
+  /*font-family: Inter;*/
+
+
 }
 
 
@@ -163,6 +237,30 @@ table {
   background-image:url(../../../../assets/info.png);
 }
 
+.detalles:hover .detalles-tip {
+  display: block;
+  opacity: 1;
+  transition: 0.5s;
+}
+.detalles-tip{
+  display: none;
+  position: relative;
+  background-color: rgb(47, 48, 51);
+  color: white;
+  padding: 5px 5px;
+  width: fit-content;
+  margin: 5px;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 100;
+  border-radius: 3px;
+
+  font-weight: bold;
+  font-family:'Trebuchet MS', sans-serif;
+}
+
 .imprimir{
   border: none;
   background-color: #D9D9D9;
@@ -173,6 +271,7 @@ table {
   cursor: pointer;
   background-image:url(../../../../assets/Imprimir.png);
 }
+
 
 
 .salir{
@@ -193,7 +292,7 @@ table {
     transform: none;
     position: absolute;
     left: 2%;
-    top:45%;
+    top:50%;
     text-overflow: ellipsis;
   }
 
@@ -258,7 +357,7 @@ table {
     height: 36px;
     transform: none;
     left: 35%;
-    top: 35%;
+    top: 40%;
     position: absolute;
     background: #4C9EFF;
     border-radius: 30px;
@@ -305,7 +404,7 @@ table {
   }
 
   .subTituloText { /*SubTitulo Texto*/
-    color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
+    color:#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
     text-shadow: 2px 2px 5px black;
     margin: 0px;
     width:200px;
@@ -316,7 +415,7 @@ table {
     transform: none;
     position:absolute;
     left:30%;
-    top:22%;
+    top:28%;
 
 
   }
@@ -367,6 +466,35 @@ table {
     height:10%;
     left: 0%;
     top: 0%
+  }
+
+  .muestras-tip{
+    margin: 5px;
+    position: relative;
+    top: -50px;
+    left: -40px;
+    font-size: 10px;
+
+    /*font-family: Inter;*/
+
+  }
+
+  .detalles-tip{
+    font-size: 10px;
+    position: relative;
+    top: -28px;
+    left: -48px;
+    /*font-family: Inter;*/
+
+  }
+
+  .edit-tip{
+    font-size: 10px;
+    position: relative;
+    top: -28px;
+    left: -33px;
+    /*font-family: Inter;*/
+
   }
 
 

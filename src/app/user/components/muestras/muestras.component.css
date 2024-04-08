@@ -129,7 +129,7 @@ table {
 }
 
 .subTituloText { /*SubTitulo Texto*/
-	color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
+	color:#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
 	position:absolute;
   margin: 0px;
   /*width:300px;*/
@@ -154,6 +154,30 @@ table {
   background-image:url(../../../../assets/Edit.png);
 }
 
+.edit:hover .edit-tip {
+  display: block;
+  opacity: 1;
+  transition: 0.5s;
+}
+.edit-tip{
+  display: none;
+  position: relative;
+  background-color: rgb(47, 48, 51);
+  color: white;
+  padding: 5px 5px;
+  width: fit-content;
+  margin: 5px;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 100;
+  border-radius: 3px;
+
+  font-weight: bold;
+  font-family:'Trebuchet MS', sans-serif;
+}
+
 .detalles{
   border: none;
   background-color: #D9D9D9;
@@ -165,6 +189,30 @@ table {
   background-image:url(../../../../assets/info.png);
 }
 
+.detalles:hover .detalles-tip {
+  display: block;
+  opacity: 1;
+  transition: 0.5s;
+}
+.detalles-tip{
+  display: none;
+  position: relative;
+  background-color: rgb(47, 48, 51);
+  color: white;
+  padding: 5px 5px;
+  width: fit-content;
+  margin: 5px;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 100;
+  border-radius: 3px;
+
+  font-weight: bold;
+  font-family:'Trebuchet MS', sans-serif;
+}
+
 .imprimir{
   border: none;
   background-color: #D9D9D9;
@@ -174,6 +222,30 @@ table {
   background-repeat: no-repeat;
   cursor: pointer;
   background-image:url(../../../../assets/Imprimir.png);
+}
+
+.imprimir:hover .imprimir-tip {
+  display: block;
+  opacity: 1;
+  transition: 0.5s;
+}
+.imprimir-tip{
+  display: none;
+  position: relative;
+  background-color: rgb(47, 48, 51);
+  color: white;
+  padding: 5px 5px;
+  width: fit-content;
+  margin: 5px;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 100;
+  border-radius: 3px;
+
+  font-weight: bold;
+  font-family:'Trebuchet MS', sans-serif;
 }
 
 
@@ -208,7 +280,7 @@ table {
   .list{
     position: absolute;
     left: 5%;
-    top:40%;
+    top:45%;
     text-overflow: ellipsis;
   }
 
@@ -271,8 +343,8 @@ table {
   .scanbutton{
     width: 153px;
     height: 36px;
-    left: 35%;
-    top: 30%;
+    left: 30%;
+    top: 35%;
     position: absolute;
     background: #4C9EFF;
     border-radius: 30px;
@@ -321,12 +393,14 @@ table {
 
     position: absolute;
     left: 0%;
+    width: 30px;
+    height: 30px;
     /*top: 60%;*/
 
   }
 
   .subTituloText { /*SubTitulo Texto*/
-    color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
+    color:#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
     position:absolute;
     margin: 0px;
     /*width:300px;*/
@@ -335,7 +409,7 @@ table {
     font-size:32px;
     letter-spacing:0;
     left:30%;
-    top:22%;
+    top:27%;
   }
 
 

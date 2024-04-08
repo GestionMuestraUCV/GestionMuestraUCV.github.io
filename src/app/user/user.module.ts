@@ -29,6 +29,15 @@ import { ClientsInfoComponent } from './components/clients-info/clients-info.com
 import { UnidadProduccionAllComponent } from './components/unidad-produccion-all/unidad-produccion-all.component';
 import { BarcodeNewComponent } from './components/barcode-new/barcode-new.component';
 
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import {provideNativeDateAdapter} from '@angular/material/core';
+
+
+//import { NgbAlertModule, NgbDatepickerModule, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
+
+
 //LOAD_WASM().subscribe((res: any) => console.log('LOAD_WASM', res))
 
 
@@ -61,11 +70,15 @@ import { BarcodeNewComponent } from './components/barcode-new/barcode-new.compon
     UnidadProduccionAllComponent,
 
   ],
+  providers: [provideNativeDateAdapter()],
   imports: [
     CommonModule,
     UserRoutingModule,
     FormsModule,
-    NgxScannerQrcodeModule
+    NgxScannerQrcodeModule,
+    MatTooltipModule
+    //MatNativeDateModule,
+    //MatDatepickerModule
   ]
 })
 export class UserModule { }

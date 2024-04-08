@@ -5,13 +5,13 @@
 <h1 class="subTituloText">Muestras</h1>
 
 <div class="scanbutton" >
-  <div class="scantext" (click)="Scan()">SCAN</div>
+  <div class="scantext" (click)="Scan()">ESCANEAR</div>
 </div>
 
 
 
 <div class="list">
-  <div class="projectBlock" (click)="infoUnidad(up)">Unidad de Produccion</div>
+  <!--<div class="projectBlock" (click)="infoUnidad(up)">Unidad de Produccion</div>-->
   <table>
     <tr>
       <th> Codigo </th>
@@ -30,9 +30,15 @@
       <td>{{ item.coordenadas}}</td>
 
       <td>
-        <button class="detalles" (click)="infoMuestra(item.codigo)"></button>
-        <button class="edit" (click)="editMuestra(item.codigo)"></button>
-        <button class="imprimir" (click)="Barcode(item.codigo)"></button>
+        <button class="detalles" (click)="infoMuestra(item.codigo)">
+          <div class="detalles-tip">Información</div>
+        </button>
+        <button class="edit" (click)="editMuestra(item.codigo)">
+          <div class="edit-tip">Editar</div>
+        </button>
+        <button class="imprimir" (click)="Barcode(item.codigo)">
+          <div class="imprimir-tip">Imprimir</div>
+        </button>
 
       </td>
 

@@ -13,19 +13,35 @@ export class PrintComponent {
   public item: any;
 
   constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore) {
+    /*this.generateBarcode(this.item);
+    window.print();*/
 
+    /*this.sleep(3000);
+    window.print();*/
   }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     this.route.params.subscribe(param =>{
       this.item=param;
       console.log(param);
       this.generateBarcode(param);
 
+      /*this.sleep(1000);
+      window.print();
+      */
+
     })
+    await this.sleep(500);
+    window.print();
 
 
   }
+
+  async sleep(ms: number): Promise<void> {
+    return new Promise(
+        (resolve) => setTimeout(resolve, ms));
+  }
+
 
   generateBarcode(value: any){
     var text = value.id;
@@ -45,7 +61,9 @@ export class PrintComponent {
 
     }
 
-    window.print();
+    /*this.sleep(10000);
+
+    window.print();*/
   }
 
 }

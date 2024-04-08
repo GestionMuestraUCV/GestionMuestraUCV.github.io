@@ -3,7 +3,9 @@
 <h1 class="subTituloText">Unidades de Producción </h1>
 
 <div class="scanbutton"  >
-  <div class="scantext" (click)="Scan()">SCAN</div>
+  <div class="scantext" (click)="Scan()">
+    ESCANEAR
+  </div>
 </div>
 
 
@@ -27,9 +29,34 @@
       <td>{{ item.coordenadas}}</td>
 
       <td>
-        <button class="muestras" (click)="Muestras( item.project, item.codigo)"></button>
-        <button class="detalles" (click)="infoUnidad(item.codigo)"></button>
-        <button class="edit" (click)="editUnidad(item.codigo)"></button>
+        <!--
+        <button mat-raised-button
+          id="someElement"
+          (mouseenter)="setTooltip($event)"
+          (click)="Muestras( item.project, item.codigo)"
+          matTooltip="Listar Muestras"
+          [matTooltipPositionAtOrigin]="true"
+          [matTooltipPosition]="'left'"
+          aria-label="Botón que muestra información sobre herramientas cuando se pasa el cursor sobre él."
+          matTooltipClass="muestras-tooltip"
+
+          class="muestras" >
+          </button>
+        -->
+
+
+        <button class="muestras"(click)="Muestras( item.project, item.codigo)">
+          <div class="muestras-tip">Listar Muestras</div>
+        </button>
+
+
+        <button class="detalles" (click)="infoUnidad(item.codigo)">
+          <div class="detalles-tip">Información</div>
+        </button>
+
+        <button class="edit" (click)="editUnidad(item.codigo)">
+          <div class="edit-tip">Editar</div>
+        </button>
 
       </td>
 

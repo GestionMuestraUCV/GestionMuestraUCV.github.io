@@ -2,6 +2,8 @@ import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@
 import { Auth } from '@angular/fire/auth';
 import { Firestore, collection, doc, getDocs, setDoc } from '@angular/fire/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
+import { DatePickerComponent } from 'ng2-date-picker/lib/date-picker.module';
+
 
 @Component({
   selector: 'app-muestras-new',
@@ -14,6 +16,8 @@ export class MuestrasNewComponent {
   public pid: any;
   public res: any="";
   public static text: string = "";
+
+
 
   @ViewChild('geo') geo: any;//ElementRef | undefined;
   public htmlToAdd: any;

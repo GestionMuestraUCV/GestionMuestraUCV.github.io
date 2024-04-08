@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Auth, signOut } from '@angular/fire/auth';
 import { Firestore, collection, deleteDoc, doc, getDocs, query, updateDoc, where } from '@angular/fire/firestore';
-import { ActivatedRoute, Router } from '@angular/router'
+import { MatTooltip } from '@angular/material/tooltip';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-unidad-produccion-all',
@@ -10,15 +11,44 @@ import { ActivatedRoute, Router } from '@angular/router'
 })
 export class UnidadProduccionAllComponent {
 
+
   public data: any = [];
   public item: any;
   public pid: any;
+  //public tooltip: any;
+  //public tooltipComponent: any;
 
-  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore) {
+  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore, private elem: ElementRef) {
     //this.pid=" ";
     this.getData();
+
+
     //this.MyQuery();
   }
+
+  //@ViewChild('#cdk-describedby-message-ng-1-2', {static: true, read: MatTooltip}) tooltipComponent: MatTooltip | undefined;
+
+  //@ViewChild('ElementRefName') element: ElementRef | undefined;
+
+
+
+  /*setTooltip(event: MouseEvent): void {
+
+    //this.tooltip = tooltip;
+      let elements = document.querySelectorAll('.cdk-describedby-message-container');
+      console.log(elements[0]);
+      //var el = new Element(document.querySelectorAll('.cdk-describedby-message-container'));
+      elements = this.elem.nativeElement.querySelectorAll('.list');
+      console.log(elements[0]);
+      let el =elements[0];
+      //let rect= el.getBoundingClientRect();
+      //console.log(rect);
+      let rect=el.getClientRects();
+      console.log(rect);
+      //console.log(this.tooltipComponent);
+      console.log(event.clientX);
+      //this.tooltipComponent?.show(0, {x: event.clientX, y: event.clientY });
+  }*/
 
   ngOnInit(): void {
     this.route.params.subscribe(param =>{
@@ -30,6 +60,10 @@ export class UnidadProduccionAllComponent {
       //this.generateBarcode(param);
 
     })
+
+
+
+
     //this.getData();
     //.MyQuery();
 
@@ -84,6 +118,7 @@ export class UnidadProduccionAllComponent {
   }
 
   Muestras(id: any, up:any){
+
     this.router.navigate(['user/muestras/'+ id+'/'+ up ]);
     //window.location.href='#/auth/login';
   }

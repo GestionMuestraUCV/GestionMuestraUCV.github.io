@@ -11,7 +11,7 @@
 
 
 .subTituloText { /*SubTitulo Texto*/
-	color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
+	color:#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
 	position:absolute;
   margin: 0px;
   /*width:300px;*/
