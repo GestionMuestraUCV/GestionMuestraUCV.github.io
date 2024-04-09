@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
-import { Auth } from '@angular/fire/auth';
+import { Auth, getAuth, onAuthStateChanged } from '@angular/fire/auth';
 import { Firestore, collection, doc, getDocs, setDoc } from '@angular/fire/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -19,6 +19,7 @@ export class UnidadProduccionNewComponent {
   public htmlToAdd: any;
   @Input() something !: any;
   @Output() somethingChange= new EventEmitter<any>();
+  public email: string ="";
 
   constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore){
     //this.getData();
@@ -39,7 +40,9 @@ export class UnidadProduccionNewComponent {
   }
 
   handleRegister(value: any){
+    console.log(value);
      this.addData(value);
+     this.Home();
   }
 
   addData(value: any) {
@@ -47,19 +50,25 @@ export class UnidadProduccionNewComponent {
     const dbInstance = doc(this.firestore, 'unidad-produccion', value.codigo);
     //if (typeof value.cliente === 'undefined') value.cliente ="";
 
+    const gauth = getAuth();
+    onAuthStateChanged(gauth, (user) => {
+      if (user) {
+        if(user.email){this.email= user.email;}
+      }
+    });
+
     //setDoc(dbInstance, value)
     setDoc(dbInstance,
       {
         codigo: value.codigo,
         cliente: value.cliente,
-        fecha: value.fecha,
-        cultivo: value.cultivo,
-        tipo: value.tipo,
-        fitopatogeno: value.fitopatogeno,
+        localidad: value.localidad,
         estado: value.estado,
+        altitud: value.altitud,
         coordenadas: value.coordenadas,
-        sintomas: value.sintomas,
-        comentarios: value.comentarios,
+        tempmax: value.tempmax,
+        tempmin: value.tempmin,
+        precipitacion: value.precipitacion
         //project: this.pid
       }
 
@@ -140,6 +149,11 @@ export class UnidadProduccionNewComponent {
 
 
 
+  }
+
+  Home(){
+    this.router.navigate(['user/unidad-produccion-all']);
+    //window.location.href='#/auth/login';
   }
 
 

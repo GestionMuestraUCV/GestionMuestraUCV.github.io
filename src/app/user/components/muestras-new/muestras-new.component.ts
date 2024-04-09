@@ -1,5 +1,5 @@
 import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
-import { Auth } from '@angular/fire/auth';
+import { Auth, getAuth, onAuthStateChanged } from '@angular/fire/auth';
 import { Firestore, collection, doc, getDocs, setDoc } from '@angular/fire/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DatePickerComponent } from 'ng2-date-picker/lib/date-picker.module';
@@ -16,6 +16,7 @@ export class MuestrasNewComponent {
   public pid: any;
   public res: any="";
   public static text: string = "";
+  public email: string ="";
 
 
 
@@ -47,6 +48,15 @@ export class MuestrasNewComponent {
   }
 
   addData(value: any) {
+    const gauth = getAuth();
+    //console.log(gauth);
+
+    onAuthStateChanged(gauth, (user) => {
+      if (user) {
+        if(user.email){this.email= user.email;}
+      }
+    });
+
     //const dbInstance = collection(this.firestore, 'users');
     const dbInstance = doc(this.firestore, 'muestras', value.codigo);
     //if (typeof value.cliente === 'undefined') value.cliente ="";
@@ -64,7 +74,7 @@ export class MuestrasNewComponent {
         coordenadas: value.coordenadas,
         sintomas: value.sintomas,
         comentarios: value.comentarios,
-        project: this.pid
+        //project: this.pid
       }
 
       )

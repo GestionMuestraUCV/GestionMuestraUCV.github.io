@@ -64,7 +64,7 @@ export class MuestrasEditComponent {
         coordenadas: value.coordenadas,
         sintomas: value.sintomas,
         comentarios: value.comentarios,
-        project: this.pid
+        //project: this.pid
       }
 
       )
@@ -191,7 +191,7 @@ export class MuestrasEditComponent {
 
   Home(){
 
-    this.router.navigate(['user/projects']);
+    this.router.navigate(['user/unidad-produccion-all']);
     //window.location.href='#/auth/login';
   }
 

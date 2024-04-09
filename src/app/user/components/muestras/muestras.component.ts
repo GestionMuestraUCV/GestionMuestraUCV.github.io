@@ -22,12 +22,12 @@ export class MuestrasComponent {
 
   ngOnInit(): void {
     this.route.params.subscribe(param =>{
-      this.item=param['id'];
+      //this.item=param['id'];
       //this.pid=param['id'];
       this.up=param['up'];
 
       console.log(param);
-      console.log(param['id']);
+      //console.log(param['id']);
       //this.generateBarcode(param);
 
     })
@@ -127,11 +127,11 @@ export class MuestrasComponent {
 
   async MyQuery(){
     //let str="Project 10";
-    let str=this.item;
-    this.pid=str;
+    //let str=this.item;
+    //this.pid=str;
     let unidad=this.up;
-    console.log(str);
-    const q = query(collection(this.firestore, "muestras"), where("project", "==",str), where("unidad", "==", unidad));
+    //console.log(str);
+    const q = query(collection(this.firestore, "muestras"), where("unidad", "==", unidad)); // where("project", "==",str), where("unidad", "==", unidad)
 
 
     getDocs(q)

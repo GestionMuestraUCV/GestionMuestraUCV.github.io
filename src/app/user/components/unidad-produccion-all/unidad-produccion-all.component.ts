@@ -119,7 +119,7 @@ export class UnidadProduccionAllComponent {
 
   Muestras(id: any, up:any){
 
-    this.router.navigate(['user/muestras/'+ id+'/'+ up ]);
+    this.router.navigate(['user/muestras/'+ up ]); //+ id+'/'+ up
     //window.location.href='#/auth/login';
   }
 
@@ -134,7 +134,7 @@ export class UnidadProduccionAllComponent {
   }
 
   newUnidad(id: string){
-    this.router.navigate(['user/unidad-produccion-new/'+ id]);
+    this.router.navigate(['user/unidad-produccion-new']);
     //window.location.href='#/auth/login';
   }
 

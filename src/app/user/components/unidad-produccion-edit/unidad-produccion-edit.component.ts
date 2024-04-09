@@ -57,15 +57,14 @@ export class UnidadProduccionEditComponent {
       {
         codigo: value.codigo,
         cliente: value.cliente,
-        fecha: value.fecha,
-        cultivo: value.cultivo,
-        tipo: value.tipo,
-        fitopatogeno: value.fitopatogeno,
+        localidad: value.localidad,
         estado: value.estado,
+        altitud: value.altitud,
         coordenadas: value.coordenadas,
-        sintomas: value.sintomas,
-        comentarios: value.comentarios,
-        project: this.pid
+        tempmax: value.tempmax,
+        tempmin: value.tempmin,
+        precipitacion: value.precipitacion
+        //project: this.pid
       }
 
       )
@@ -192,7 +191,7 @@ export class UnidadProduccionEditComponent {
 
   Home(){
 
-    this.router.navigate(['user/projects']);
+    this.router.navigate(['user/unidad-produccion-all']);
     //window.location.href='#/auth/login';
   }
 
