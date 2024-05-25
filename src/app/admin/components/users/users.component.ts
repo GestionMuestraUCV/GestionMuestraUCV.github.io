@@ -1,3 +1,4 @@
+import { NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Auth, signOut } from '@angular/fire/auth';
 import { Firestore, collection, deleteDoc, doc, getDocs, updateDoc } from '@angular/fire/firestore';
@@ -5,11 +6,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-admin',
-  templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.css']
+  selector: 'app-users',
+  templateUrl: './users.component.html',
+  styleUrl: './users.component.css'
 })
-export class AdminComponent implements OnInit {
+export class UsersComponent {
   public data: any = []
   constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore) {
     this.getData()
@@ -26,8 +27,8 @@ export class AdminComponent implements OnInit {
 
   }
 
-  Users(){
-    this.router.navigate(['/admin/users']);
+  NewUser(){
+    this.router.navigate(['/admin/user-new']);
   }
 
   getData() {

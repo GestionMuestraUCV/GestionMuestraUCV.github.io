@@ -1,13 +1,12 @@
 .loginBox { /*login box*/
-  box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
-  width: 75%;
-  height: 30%;
-  flex-shrink: 0;
-  position:absolute;
-  left:15%;
-  top:30%;
-
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
+	width:520px;
+	height:250px;
+	position:absolute;
+	top:38%;
+  left:60%;/*39.2%;*/
+  transform: translate(-50%,0%);
 }
 
 .main{
@@ -64,14 +63,15 @@ button{
 }
 
 .subTituloText{
-  color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
+  color:#0A9217;
 	position:absolute;
   margin: 0px;
 	font-family:Verdana;
 	font-size:48px;
 	letter-spacing:0;
-  left:35%;
 	top:20%;
+  left:60%;/*39.2%;*/
+  transform: translate(-50%,0%);
 
 }
 
@@ -233,14 +233,42 @@ img{
     box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
     width: 75%;
-    height: 50%;
+    height: 40%;
     flex-shrink: 0;
+    transform: none;
     position:absolute;
-    left:15%;
-    top:30%;
+    /*left:15%;
+    top:30%;*/
+    /*top:45%;*/
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,0);
+
 
   }
 
+  .input-fields{
+    font-size: 12px;
+  }
+
+  .main{
+    width: 75%;
+    /*height: 50%;*/
+    flex-shrink: 0;
+    margin-left: 5px;
+    position:absolute;
+    top:0%;
+
+  }
+
+  .Text{
+    color:rgba(0, 0, 0, 1);
+    width:25%;
+    height:25px;
+    font-family: Arial;
+    font-size:14px;
+    letter-spacing:0;
+  }
 
   .list{
     position: absolute;
@@ -353,8 +381,9 @@ img{
   }
 
   .subTituloText { /*SubTitulo Texto*/
-    color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
-    position:absolute;
+    color:#0A9217;
+    text-shadow: 2px 2px 5px black;
+
     margin: 0px;
     width:100%;
     height:64px;
@@ -362,8 +391,17 @@ img{
     text-align: center;
     font-size:32px;
     letter-spacing:0;
-    left:0%;
-    top:22%;
+    left:35%;
+    top:30%;
+
+    transform: none;
+    position:absolute;
+    /*left:15%;
+    top:30%;*/
+    /*top:45%;*/
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,0);
   }
 
 
@@ -416,4 +454,37 @@ img{
 
 
 
+}
+
+
+@media only screen and (min-width: 1536px){
+
+
+  .loginBox {
+
+    position: absolute;
+    top:38%;
+    left:50%;
+    transform: translate(-50%,-36%);
+
+  }
+
+
+
+  .subTituloText {
+
+    position: absolute;
+    top:20%;
+    left:50%;/*39.2%;*/
+    transform: translate(-50%,0%);
+  }
+
+  /*
+  .boton {
+    position: absolute;
+    left:50%;
+    transform: translate(310px, 0px);
+
+  }
+  */
 }

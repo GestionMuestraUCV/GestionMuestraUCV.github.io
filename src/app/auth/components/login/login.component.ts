@@ -66,7 +66,7 @@ export class LoginComponent {
         console.log(info['role']);
 
         if(info['role']=="Adminitrador"){
-          this.router.navigate(['/admin']);
+          this.router.navigate(['/admin/users']);
         }else if(info['role']=="Investigador"){
           this.router.navigate(['/user/unidad-produccion-all']); // '/user/projects'
         }

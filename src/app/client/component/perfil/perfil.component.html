@@ -3,7 +3,7 @@
 
 <h1 class="subTituloText">Informacion del Cliente</h1>
 
-<div  class="loginBox">
+<div  class="loginBox"></div>
 
   <form #loginForm="ngForm" (ngSubmit)="handleRegister(loginForm.value)">
     <div class="main">
@@ -33,10 +33,14 @@
         <span class="input-field" > {{item.direccion}}</span>
       </div>
 
+
+
+      <button class="boton" (click)="editClients()">Editar Cliente</button>
     </div>
 
 
-  </form>
-</div>
 
-<button class="boton" (click)="editClients()">Editar Cliente</button>
+  </form>
+
+
+

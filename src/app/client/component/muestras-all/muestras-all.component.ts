@@ -109,7 +109,7 @@ export class MuestrasAllComponent {
   }
 
   infoMuestra(id: any){
-    this.router.navigate(['user/muestras-info/'+ id]);
+    this.router.navigate(['client/muestras-info/'+ id]);
     //window.location.href='#/auth/login';
   }
 

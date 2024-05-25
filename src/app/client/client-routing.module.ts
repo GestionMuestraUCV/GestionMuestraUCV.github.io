@@ -8,6 +8,7 @@ import { UnidadProduccionAllComponent } from './component/unidad-produccion-all/
 import { UnidadProduccionInfoComponent } from './component/unidad-produccion-info/unidad-produccion-info.component';
 import { PerfilComponent } from './component/perfil/perfil.component';
 import { PerfilEditComponent } from './component/perfil-edit/perfil-edit.component';
+import { MuestrasInfoComponent } from './component/muestras-info/muestras-info.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,7 @@ const routes: Routes = [
     {path: 'muestras-all', component: MuestrasAllComponent},
     {path: 'muestras/:id', component: MuestrasComponent},
     {path: 'unidad-produccion-all', component: UnidadProduccionAllComponent},
-    {path: 'muestras-info/:id', component: MuestrasComponent},
+    {path: 'muestras-info/:id', component: MuestrasInfoComponent},
     {path: 'unidad-produccion-info/:id', component: UnidadProduccionInfoComponent},
     {path: 'perfil', component: PerfilComponent},
     {path: 'perfil-edit', component: PerfilEditComponent}

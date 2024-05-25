@@ -1,24 +1,27 @@
 .loginBox { /*login box*/
-  box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
-  width: 75%;
-  height: 25%;
-  flex-shrink: 0;
-  position:absolute;
-  left:15%;
-  top:30%;
-
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
+	width:500px;
+	height:250px;
+	position:absolute;
+	top:38%;
+  left:53%;/*39.2%;*/
+  transform: translate(-50%,0%);
 }
 
 .main{
-  /*display: flex;
-  height: 100vh;*/
+  display: flex;
+  /*height: 100vh;*/
   justify-content: center;
+  align-items: center;
   flex-direction: column;
+  width:450px;
+	height:250px;
+  /**/
   position:absolute;
-  width: 90%;
-  left: 5%;
-  top: 3%;
+	top:38%;
+  left:54%;/*39.2%;*/
+  transform: translate(-50%,0%);
 }
 
 
@@ -64,14 +67,15 @@ button{
 }
 
 .subTituloText{
-  color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
+  color:#0A9217;
 	position:absolute;
   margin: 0px;
 	font-family:Verdana;
 	font-size:48px;
 	letter-spacing:0;
-  left:35%;
 	top:20%;
+  left:50%;/*39.2%;*/
+  transform: translate(-35%,0%);
 
 }
 
@@ -186,19 +190,24 @@ img{
 
 
 .boton { /*boton*/
-  background-color:rgba(62.00000010430813, 179.000004529953, 194.00000363588333, 1);
+	background-color:rgba(62.00000010430813, 179.000004529953, 194.00000363588333, 1);
   color:rgba(255, 255, 255, 1);
-  /*width:10%;
-  height:4%;*/
-  position:absolute;
+	/*width:10%;
+	height:4%;*/
+  width: 80px;
+  height: 45px;
+
   border-width: 0;
-  border-top-left-radius:30px;
-  border-top-right-radius:30px;
-  border-bottom-left-radius:30px;
-  border-bottom-right-radius:30px;
+	border-top-left-radius:30px;
+	border-top-right-radius:30px;
+	border-bottom-left-radius:30px;
+	border-bottom-right-radius:30px;
   font-size:16px;
-  left:80%;
-  top: 58%;
+  position:absolute;
+  left:81%;
+	top:105%;
+	/*left:59.5%;
+	top:59%;*/
 }
 
 .botonText { /*registrar text*/
@@ -233,14 +242,37 @@ img{
     box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
     width: 75%;
-    height: 50%;
+    height: 35%;
     flex-shrink: 0;
     position:absolute;
-    left:15%;
-    top:30%;
+    /*left:15%;
+    top:30%;*/
+    top:45%;
 
   }
 
+  .input-fields{
+    font-size: 12px;
+  }
+
+  .main{
+    width: 75%;
+    height: 35%;
+    flex-shrink: 0;
+    margin-left: 5px;
+    position:absolute;
+    top:45%;
+
+  }
+
+  .Text{
+    color:rgba(0, 0, 0, 1);
+    width:25%;
+    height:25px;
+    font-family: Arial;
+    font-size:14px;
+    letter-spacing:0;
+  }
 
   .list{
     position: absolute;
@@ -353,7 +385,9 @@ img{
   }
 
   .subTituloText { /*SubTitulo Texto*/
-    color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
+    color:#0A9217;
+    text-shadow: 2px 2px 5px black;
+
     position:absolute;
     margin: 0px;
     width:100%;
@@ -362,8 +396,8 @@ img{
     text-align: center;
     font-size:32px;
     letter-spacing:0;
-    left:0%;
-    top:22%;
+    left:35%;
+    top:30%;
   }
 
 

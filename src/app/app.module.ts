@@ -74,7 +74,6 @@ export function basicLoader(){
     SafePipe
   ],
   imports: [
-    MatBottomSheetModule,
     MatToolbarModule,
     MatIconModule,
     MatCardModule,

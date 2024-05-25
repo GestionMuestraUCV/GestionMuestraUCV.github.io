@@ -28,8 +28,8 @@ div .data {
 .screen{
 
   display: block;
-  height: 50%;
-  width: 50%;
+  height: 55%;
+  width: 55%;
   margin-left: auto;
   margin-right: auto;
 
@@ -37,9 +37,9 @@ div .data {
 
 .container{
   top: 25%;
-  width: 100%;
+  width: 85%;
   position: absolute;
-  left: 0%;
+  left: 15%;
 
 }
 
@@ -89,5 +89,19 @@ div .data {
 
   }
 
+
+}
+
+
+@media only screen and (min-width: 1536px) {
+  .screen{
+
+    display: block;
+    height: 40%;
+    width:  40%;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
 
 }

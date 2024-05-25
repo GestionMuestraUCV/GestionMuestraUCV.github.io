@@ -24,12 +24,13 @@ button{
 }
 
 .homeBox {/*Home box*/
-	background-color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
-	border-right: 4px solid white;
-	width:20%;
+	background-color:#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
+	/*border-right: 4px solid white;*/
+	width:25%;
 	height:10%;
 	position:absolute;
-	left:0px;
+  cursor: pointer;
+	left:75%;/*0px;*/
 	top:0%;
 	text-align:center;
 }
@@ -37,18 +38,21 @@ button{
 	color:rgba(255, 255, 255, 1);
 	display: inline-block;
   	vertical-align: middle;
-  	line-height: 250%;
+  	/*line-height: 280%;*/
 	font-family:Verdana;
-	font-size:40px;
+	font-size:32px;
 	letter-spacing:0;
+	position:absolute;
+  right:20px;
+	top:30%;
 
 }
 .tituloBox { /*Titulo box*/
-	background-color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
-	width:80%;
+	background-color:#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
+	width:100%;
 	height:10%;
 	position:absolute;
-	left:20%;
+	left:0%; /*20%;*/
 	top:0%;
 	text-align:center;
 }
@@ -56,10 +60,13 @@ button{
 	color:rgba(255, 255, 255, 1);
 	display: inline-block;
   	vertical-align: middle;
-  	line-height: 250%;
+  	line-height: 225%;
 	font-family:Verdana;
+  font-weight: bold;
 	font-size:40px;
 	letter-spacing:0;
+  /*position:absolute;
+  left:40%;*/
 }
 .logoCiens { /*Logo Ciens*/
 	width:100px;
@@ -75,18 +82,22 @@ button{
 	width:69px;
 	height:69px;
 	position:absolute;
-	left: 22%;
-	top: 1.5%;
+	left: 30px;
+	top: 1%;
 	background-image:url(../../assets/logo_ucv_bg2_1.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
 
+
 .navbar2Box{
-  width: 100%;
-  height: 47px;
-  background: #3EC28F;
-  border-top: 4px solid white;
+  width: 320px;
+  height: 90%;
+  background: #ffffff;
+  /*border-top: 4px solid white;*/
+  /*box-shadow:2px 2px 5px black;*/
+  box-shadow: 0px 0px 6px 10px rgba(0, 0, 0, 0.25);
+
   position:absolute;
   left:0%;
   top:10%;
@@ -94,66 +105,88 @@ button{
 
 .navbar2Text{
   /*background: #3EC28F;*/
-  height: 47px;
-  color: #FFFFFF;
-  font-size: 20px;
+  height: 4.5%;
+  color: #000000;
+  font-size: 16px;
   font-family: Verdana;
   font-weight: 600;
   word-wrap: break-word;
-  text-align: center;
+  /*text-align: center;*/
   display: inline-block;
   	vertical-align: middle;
   	line-height: 240%;
-  border-top: 4px solid white;
+  /*border-top: 4px solid white;*/
+  padding-top: 5px;
+  padding-left: 20px;
 
 }
 
-#usernameText{
-  cursor: pointer;
-  width: 20%;
-  position:absolute;
-  left:80%;
-  top:10%;
 
-}
+
 
 
 
 #ProyectosText{
+  visibility: hidden;
   cursor: pointer;
-  width: 20%;
+  width: 17%; /*17%;*/
   position:absolute;
-  left:20%;
-  top:10%;
-  border-right: 4px solid white;
-}
-
-#MuestrasText{
-  cursor: pointer;
-  width: 20%;
-  position:absolute;
-  left:60%;
+  left:20%; /*15%;*/
   top:10%;
   border-right: 4px solid white;
 }
 
 #UnidadText{
   cursor: pointer;
-  width: 20%;
+  width: 300; /*17%;*/
   position:absolute;
-  left:40%;
-  top:10%;
-  border-right: 4px solid white;
+  left:0%;/*20%;/*32%;*/
+  top:12%;
+  /*border-right: 4px solid white;*/
+
 }
+
+#MuestrasText{
+  cursor: pointer;
+  width: 300; /*17%;*/
+  position:absolute;
+  left:0%;/*40%;/*49%;*/
+  top:22%;
+  /*border-right: 4px solid white;*/
+}
+
+
+
+#ClientesText{
+  cursor: pointer;
+  width: 300;/*17%;*/
+  position:absolute;
+  left:0%;/*60%; /*66%;*/
+  top:32%;
+ /* border-right: 4px solid white;*/
+
+}
+
+#CodigoText{
+  cursor: pointer;
+  width: 300; /*17%;*/
+  position:absolute;
+  left:0%;/*80%;/*83%;*/
+  top:42%;
+
+}
+
 
 #cerrarText{
   cursor: pointer;
-  width: 20%;
+  width: 300; /*15%;*/
   position:absolute;
   left:0%;
-  top:10%;
-  border-right: 4px solid white;
+  top:32%;
+  /*border-right: 4px solid white;*/
 }
+
+
 
 .salir{
   cursor: pointer;
@@ -168,13 +201,52 @@ button{
 
 
 
+.UserLogo { /*Home text*/
+  position:absolute;
+
+  top:30%;
+  right:175px;
+
+  width:36px;
+  height:36px;
+  text-align:center;
+  background-image:url(../../assets/userWhite.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+
+  /*display: none;*/
+
+}
+.logoAgro { /*Logo Ciens*/ /*Logo Agro*/
+	width:100px;
+	height:69px;
+	position:absolute;
+	left: 140px;
+	top: 1%;
+	background-image:url(../../assets/Logo-Agronomia2.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+
+img{
+  position: relative;
+  top:20px;
+}
+
+br{
+  display: none;
+}
+
+
+
 @media only screen and (max-width: 768px) {
 
 
 
   .homeBox {/*Home box*/
-    background-color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
-    border-right: 2px solid white;
+    background-color:#0A9217;
+    border-right: 4px solid white;
     width:20%;
     height:15%;
     position:absolute;
@@ -183,13 +255,20 @@ button{
 
   }
   .homeText { /*Home text*/
+    /*color:rgba(255, 255, 255, 1);
+    display: inline-block;
+      vertical-align: middle;
+      line-height: 250%;
+    font-family:Verdana;
+    font-size:32px;
+    letter-spacing:0;*/
 
     display: none;
 
   }
 
   .homeLogo { /*Home text*/
-    position:relative;
+    /*position:relative;
 
     top:30%;
     left:25%;
@@ -199,13 +278,13 @@ button{
     text-align:center;
     background-image:url(../../assets/home.png);
     background-repeat:no-repeat;
-    background-size:cover;
+    background-size:cover;*/
 
-    /*display: none;*/
+    display: none;
 
   }
   .tituloBox { /*Titulo box*/
-    background-color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
+    background-color:#0A9217;/*#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
     width:80%;
     height:15%;
     position:absolute;
@@ -223,12 +302,14 @@ button{
     font-size:32px;
     letter-spacing:0px;
   }
+
+
   .logoCiens { /*Logo Ciens*/
     width:45px;
     height:35px;
     position:absolute;
     left: 85%;
-    top: 1.5%;
+    top: 5%;
     background-image:url(../../assets/Logo-Agronomia2.png);
     background-repeat:no-repeat;
     background-size:cover;
@@ -238,18 +319,18 @@ button{
     height:35px;
     position:absolute;
     left: 22%;
-    top: 1.5%;
+    top: 5%;
     background-image:url(../../assets/logo_ucv_bg2_1.png);
     background-repeat:no-repeat;
     background-size:cover;
   }
 
-
   .navbar2Box{
     width: 100%;
-    height: 5%;
-    background: #3EC28F;
-    border-top: 2px solid white;
+    height: 66px;
+    background: #ffffff;
+    /*border-top: 2px solid white;*/
+    box-shadow: 0px 0px 6px 10px rgba(0, 0, 0, 0.25);
     position:absolute;
     left:0%;
     top:15%;
@@ -257,9 +338,9 @@ button{
 
   .navbar2Text{
     /*background: #3EC28F;*/
-    height: 5%;
-    color: #FFFFFF;
-    font-size: 10px;
+    height: 28px;
+    color: #000000;
+    font-size: 8px;
     font-family: Verdana;
     font-weight: 600;
     word-wrap: break-word;
@@ -267,72 +348,83 @@ button{
     display: inline-block;
       vertical-align: middle;
       line-height: 1.6; /*240%;*/
-    border-top: 2px solid white;
+    /*border-top: 2px solid white;*/
+    padding-top: 7px;
+    padding-left: 0px;
 
   }
 
-  #usernameText{
+  .center{
+    position: relative;
+    top:18%;
+
+  }
+
+
+
+
+  #cerrarText{
     cursor: pointer;
-    width: 20%;
+    width: 15%; /*15%;*/
     position:absolute;
-    left:80%;
+    left:0%;
     top:15%;
-    padding-top: 7px;
+    padding-left: 3%;
+    border-right: 2px solid white;
+  }
+
+
+  #ProyectosText{
+    visibility: hidden;
+    cursor: pointer;
+    width: 20%; /*17%;*/
+    position:absolute;
+    left:15%;
+    top:15%;
+    border-right: 2px solid white;
 
   }
 
   #UnidadText{
     cursor: pointer;
-    width: 20%;
+    width: 20%; /*17%;*/
     position:absolute;
-    left:40%;
+    left:40%;/*20%;/*32%;*/
     top:15%;
     border-right: 2px solid white;
-    padding-top: 7px;
 
-
-  }
-
-
-
-  #ProyectosText{
-    cursor: pointer;
-    width: 20%;
-    position:absolute;
-    left:20%;
-    top:15%;
-    border-right: 2px solid white;
-    padding-top: 7px;
   }
 
   #MuestrasText{
     cursor: pointer;
-    width: 20%;
+    width: 20%; /*17%;*/
     position:absolute;
-    left:60%;
+    left:79%;/*40%;/*49%;*/
     top:15%;
     border-right: 2px solid white;
-    padding-top: 7px;
   }
+
+
 
   #ClientesText{
     cursor: pointer;
-    width: 20%;
+    width: 20%; /*17%;*/
     position:absolute;
-    left:80%;
-    top:15%;
-    padding-top: 7px;
-
-  }
-
-  #cerrarText{
-    cursor: pointer;
-    width: 20%;
-    position:absolute;
-    left:0%;
+    left:60%;/*66%;*/
     top:15%;
     border-right: 2px solid white;
   }
+
+  #CodigoText{
+    cursor: pointer;
+    width: 15%; /*17%;*/
+    position:absolute;
+    left:80%;/*83%;*/
+    top:15%;
+    padding-left: 3%;
+
+  }
+
 
 
 
@@ -350,10 +442,48 @@ button{
 
 
 
+  .UserLogo { /*Home text*/
+    position:absolute;
+
+    top:30%;
+    /*right:175px;*/
+    left:25%;
+
+    width:36px;
+    height:36px;
+    text-align:center;
+    background-image:url(../../assets/userWhite.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+
+    /*display: none;*/
+
+  }
 
 
+  .logoAgro { /*Logo Ciens*/
+    width:45px;
+    height:35px;
+    position:absolute;
+    left: 84%;
+    top: 5%;
+    background-image:url(../../assets/Logo-Agronomia2.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
 
 
+  img{
+    position: relative;
+    top:0px;
+    width:20px;
+    height:20px;
+
+  }
+
+  br{
+    display: inline;
+  }
 
 
 
