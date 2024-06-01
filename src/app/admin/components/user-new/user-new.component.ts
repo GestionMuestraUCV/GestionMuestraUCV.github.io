@@ -53,7 +53,7 @@ export class UserNewComponent {
     //const dbInstance = collection(this.firestore, 'users');
     const dbInstance = doc(this.firestore, 'users', value.email);
     if(value.password == value.confirmpassword){
-      if(value.role=='Invetigador'||value.role=='Cliente'){
+      if(value.role=='Investigador'||value.role=='Cliente'){
         setDoc(dbInstance, {
           'email': value.email,
           'role': value.role,

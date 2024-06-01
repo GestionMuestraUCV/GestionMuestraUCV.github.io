@@ -55,15 +55,16 @@ export class LoginComponent {
       res=response.user.email;
       //console.log(res)
       const q = query(collection(this.firestore, "users"), where("email", "==", res));
-      console.log(this.auth.currentUser?.email);
+      //console.log(this.auth.currentUser?.email);
 
 
       const querySnapshot = await getDocs(q);
       querySnapshot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
-        console.log(doc.id, " => ", doc.data());
+        //console.log(doc.id, " => ", doc.data());
         let info=doc.data();
-        console.log(info['role']);
+        //console.log(info['role']);
+        //console.log(info['email']);
 
         if(info['role']=="Adminitrador"){
           this.router.navigate(['/admin/users']);

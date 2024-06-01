@@ -35,6 +35,16 @@ button{
 
 }
 
+.Orange{
+  cursor: pointer;
+  /*text-decoration: underline;
+  color: orange;*/
+}
+
+.Orange:hover{
+  text-decoration: underline;
+  color: orange;
+}
 
 #login {
 	background-color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);

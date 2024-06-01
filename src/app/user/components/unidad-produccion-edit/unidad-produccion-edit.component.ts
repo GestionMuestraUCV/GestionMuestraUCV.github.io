@@ -173,19 +173,29 @@ export class UnidadProduccionEditComponent {
   */
 
   deleteData(id: string) {
-    let str=this.x;
-    const dataToDelete = doc(this.firestore, 'unidad-produccion', str);
-    //console.log(id);
-    //console.log(dataToDelete);
-    deleteDoc(dataToDelete)
-    .then(() => {
-      alert('Data Deleted');
-      //this.getData()
-      this.router.navigate(['user/unidad-produccion/'+this.pid]);
-    })
-    .catch((err) => {
-      alert(err.message)
-    })
+
+    let text = "Seguro que desea eliminar esta Unidad de Producción?";
+    if (confirm(text) == true) {
+      //text = "You pressed OK!";
+      let str=this.x;
+      const dataToDelete = doc(this.firestore, 'unidad-produccion', str);
+      //console.log(id);
+      //console.log(dataToDelete);
+      deleteDoc(dataToDelete)
+      .then(() => {
+        alert('Data Deleted');
+        //this.getData()
+        this.router.navigate(['user/unidad-produccion/'+this.pid]);
+      })
+      .catch((err) => {
+        alert(err.message)
+      })
+
+
+    } else {
+      //text = "You canceled!";
+      ;
+    }
 
   }
 
