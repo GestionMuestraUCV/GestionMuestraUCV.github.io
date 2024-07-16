@@ -325,7 +325,7 @@ img{
     box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
     width: 95%;
-    height: 57%;
+    height: 75%;
     flex-shrink: 0;
     position:absolute;
     left:2.5%;
@@ -513,8 +513,6 @@ img{
 
 
 
-
-
   .detalles{
     border: none;
     background-color: #D9D9D9;
@@ -549,43 +547,8 @@ img{
   .loginBox {
     box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
-    width: 700px;
-    height: 500px;
-    flex-shrink: 0;
-    position: absolute;
-    left:50%;
-    top:50%;
-    transform: translate(-50%,-40%);
-
-  }
-
-
-
-  .subTituloText {
-
-    position: absolute;
-    left:50%;
-    transform: translate(-50%, 0%);
-  }
-
-
-  .boton {
-    position: absolute;
-    left:50%;
-    transform: translate(235px, 0px);
-
-  }
-
-}
-
-@media only screen and (min-width: 1536px){
-
-
-  .loginBox { /*login box*/
-    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
-    background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
     width: 65%;
-    height: 70%;
+    height: 60%;
     flex-shrink: 0;
     position:absolute;
     left:30%;
@@ -602,14 +565,19 @@ img{
     transform: translate(-50%, 0%);
   }
 
-  /*
   .boton {
     position: absolute;
     left:50%;
-    transform: translate(310px, 0px);
+    transform: translate(310px, 15px);
 
   }
-  */
+
+  .botonrojo {
+    position: absolute;
+    transform: translate(0px, 15px);
+
+  }
+
 
 }
 
