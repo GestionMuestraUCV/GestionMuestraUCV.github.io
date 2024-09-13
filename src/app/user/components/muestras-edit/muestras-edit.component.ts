@@ -186,7 +186,9 @@ export class MuestrasEditComponent {
       .then(() => {
         alert('Data Deleted');
         //this.getData()
-        this.router.navigate(['user/muestras/'+this.pid]);
+        //this.router.navigate(['user/muestras/'+this.pid]);
+        //this.router.navigate(['user/unidad-produccion-all']);
+        this.Home();
       })
       .catch((err) => {
         alert(err.message)

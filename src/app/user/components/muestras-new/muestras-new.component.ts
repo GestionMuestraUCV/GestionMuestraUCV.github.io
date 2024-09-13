@@ -45,21 +45,25 @@ export class MuestrasNewComponent {
 
   handleRegister(value: any){
      this.addData(value);
+     this.Home();
   }
 
   addData(value: any) {
-    const gauth = getAuth();
+    //const gauth = getAuth();
+
     //console.log(gauth);
 
-    onAuthStateChanged(gauth, (user) => {
+    /*onAuthStateChanged(gauth, (user) => {
       if (user) {
         if(user.email){this.email= user.email;}
       }
-    });
+    });*/
 
     //const dbInstance = collection(this.firestore, 'users');
     const dbInstance = doc(this.firestore, 'muestras', value.codigo);
     //if (typeof value.cliente === 'undefined') value.cliente ="";
+
+    console.log(value);
 
     //setDoc(dbInstance, value)
     setDoc(dbInstance,
@@ -74,7 +78,7 @@ export class MuestrasNewComponent {
         coordenadas: value.coordenadas,
         sintomas: value.sintomas,
         comentarios: value.comentarios,
-        //project: this.pid
+        unidad: this.pid
       }
 
       )
@@ -99,6 +103,11 @@ export class MuestrasNewComponent {
       })
   }
 
+  Home(){
+
+    this.router.navigate(['user/unidad-produccion-all']);
+    //window.location.href='#/auth/login';
+  }
 
   showPosition(position: any) {
     /*

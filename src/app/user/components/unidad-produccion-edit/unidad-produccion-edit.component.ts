@@ -161,7 +161,7 @@ export class UnidadProduccionEditComponent {
         console.log(doc.id, " => ", doc.data());
         //
         this.res=this.item.coordenadas;
-        this.pid=this.item.project;
+        //this.pid=this.item.project;
       });
     }
   }
@@ -185,7 +185,7 @@ export class UnidadProduccionEditComponent {
       .then(() => {
         alert('Data Deleted');
         //this.getData()
-        this.router.navigate(['user/unidad-produccion/'+this.pid]);
+        this.router.navigate(['user/unidad-produccion-all']);
       })
       .catch((err) => {
         alert(err.message)
