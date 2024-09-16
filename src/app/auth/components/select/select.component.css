@@ -38,7 +38,7 @@ button{
 .Orange{
   cursor: pointer;
   /*text-decoration: underline;
-  color: orange;*/
+  font-weight: bold;*/
 }
 
 .Orange:hover{
