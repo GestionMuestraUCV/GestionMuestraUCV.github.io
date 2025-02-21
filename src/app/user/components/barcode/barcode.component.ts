@@ -29,7 +29,7 @@ export class BarcodeComponent {
       code=param['id'];
       //this.pid=param['id'];
 
-      //console.log(param);
+      console.log(param);
       //console.log(param['id']);
       //this.generateSVG(1,code);
       //this.sleep(1000);

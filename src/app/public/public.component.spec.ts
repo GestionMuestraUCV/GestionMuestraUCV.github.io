@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PublicComponent } from './public.component';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 describe('PublicComponent', () => {
   let component: PublicComponent;
@@ -8,7 +10,8 @@ describe('PublicComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PublicComponent]
+      declarations: [PublicComponent],
+      imports: [ FormsModule, RouterModule],
     });
     fixture = TestBed.createComponent(PublicComponent);
     component = fixture.componentInstance;

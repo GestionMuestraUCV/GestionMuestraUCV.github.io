@@ -38,7 +38,7 @@ export class ClientsComponent {
     getDocs(dbInstance)
       .then((response) => {
         this.data = [...response.docs.map((item) => {
-          return { ...item.data(), id: item.id }
+          return { ...item.data() as any, id: item.id }
         })]
       })
   }

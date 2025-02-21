@@ -86,6 +86,7 @@ export function basicLoader(){
     AppRoutingModule,
     FormsModule,
     AuthModule,
+
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
