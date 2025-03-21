@@ -78,7 +78,8 @@ export class MuestrasNewComponent {
         coordenadas: value.coordenadas,
         sintomas: value.sintomas,
         comentarios: value.comentarios,
-        unidad: this.pid
+        unidad: this.pid,
+        lote: value.lote
       }
 
       )

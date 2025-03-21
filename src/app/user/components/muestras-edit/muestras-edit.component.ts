@@ -3,6 +3,7 @@ import { Auth } from '@angular/fire/auth';
 import { Firestore, collection, deleteDoc, doc, getDocs, getFirestore, query, setDoc, updateDoc, where } from '@angular/fire/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-muestras-edit',
@@ -23,7 +24,7 @@ export class MuestrasEditComponent {
   @Input() something !: any;
   @Output() somethingChange= new EventEmitter<any>();
 
-  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore,  private location: Location){
+  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore,  private location: Location, private datePipe: DatePipe){
     //this.getData();
     //this.MyQuery();
   }
@@ -51,6 +52,7 @@ export class MuestrasEditComponent {
     //const dbInstance = collection(this.firestore, 'users');
     console.log(value);
     const dbInstance = doc(this.firestore, 'muestras', value.codigo);
+    value.fecha= this.datePipe.transform(value.fecha, 'dd/MM/yyyy')
 
     updateDoc(dbInstance,
       {
@@ -64,6 +66,7 @@ export class MuestrasEditComponent {
         coordenadas: value.coordenadas,
         sintomas: value.sintomas,
         comentarios: value.comentarios,
+        lote: value.lote
         //project: this.pid
       }
 
