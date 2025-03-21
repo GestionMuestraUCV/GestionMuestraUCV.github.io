@@ -47,12 +47,12 @@ export class PrintComponent {
     var text = value.id;
     let number =value.num;
 
-    JsBarcode("#barcode", text, {
+    /*JsBarcode("#barcode", text, {
         format: "CODE128"
-    });
+    });*/
 
 
-    for(let i=1;i<number; i++){
+    for(let i=1;i<=number; i++){
       let str= "#barcode" + i;
       console.log(str);
       JsBarcode(str, text, {//"#barcode"
