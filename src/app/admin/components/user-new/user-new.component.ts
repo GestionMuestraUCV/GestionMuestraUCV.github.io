@@ -42,7 +42,8 @@ export class UserNewComponent {
         console.log(response.user)
      })
      .catch((err) =>{
-      alert(err.message);
+      //alert(err.message);
+      alert("Email no valido");
      });
      this.addData(value);
      this.Users();
