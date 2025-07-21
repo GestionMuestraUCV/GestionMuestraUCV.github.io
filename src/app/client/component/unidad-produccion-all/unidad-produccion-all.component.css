@@ -132,6 +132,46 @@ table {
   background-image:url(../../../../assets/Edit.png);
 }
 
+.muestras{
+  border: none;
+  background-color: #D9D9D9;
+  width:25px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-image:url(../../../../assets/clipboard.png);
+}
+.muestras:hover .muestras-tip {
+  display: block;
+  opacity: 1;
+  transition: 0.5s;
+}
+.muestras-tip{
+  display: none;
+  position: relative;
+  background-color: rgb(47, 48, 51);
+  color: white;
+  padding: 5px 5px;
+  width: max-content; /*fit-content;*/
+  margin: 5px;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 100;
+  border-radius: 3px;
+  /*line-height: 1.6;*/
+
+  font-weight: bold;
+  font-family:'Trebuchet MS', sans-serif;
+
+  /*font-size: 12px;*/
+  /*font-family: Inter;*/
+
+
+}
+
 .detalles{
   border: none;
   background-color: #D9D9D9;
@@ -154,6 +194,30 @@ table {
   cursor: pointer;
   background-image:url(../../../../assets/Imprimir.png);
 }
+.detalles:hover .detalles-tip {
+  display: block;
+  opacity: 1;
+  transition: 0.5s;
+}
+.detalles-tip{
+  display: none;
+  position: relative;
+  background-color: rgb(47, 48, 51);
+  color: white;
+  padding: 5px 5px;
+  width: fit-content;
+  margin: 5px;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 100;
+  border-radius: 3px;
+
+  font-weight: bold;
+  font-family:'Trebuchet MS', sans-serif;
+}
+
 
 
 .salir{

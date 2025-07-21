@@ -134,7 +134,7 @@ button{
 
 .navbar2Box{
   width: 320px;
-  height: 90%;
+  height: 100%;
   background: #ffffff;
   /*border-top: 4px solid white;*/
   /*box-shadow:2px 2px 5px black;*/
@@ -142,7 +142,7 @@ button{
 
   position:absolute;
   left:0%;
-  top:10%;
+  top:0px;
 }
 
 .navbar2Text{
@@ -164,26 +164,23 @@ button{
 }
 
 
-
-
-
-
+/*
 #ProyectosText{
   visibility: hidden;
   cursor: pointer;
-  width: 17%; /*17%;*/
+  width: 17%;
   position:absolute;
-  left:20%; /*15%;*/
+  left:20%;
   top:10%;
   border-right: 4px solid white;
-}
+}*/
 
 #UnidadText{
   cursor: pointer;
   width: 300; /*17%;*/
   position:absolute;
   left:0%;/*20%;/*32%;*/
-  top:12%;
+  top: 7em;
   /*border-right: 4px solid white;*/
 
 }
@@ -193,7 +190,7 @@ button{
   width: 300; /*17%;*/
   position:absolute;
   left:0%;/*40%;/*49%;*/
-  top:22%;
+  top: 12em;
   /*border-right: 4px solid white;*/
 }
 
@@ -204,7 +201,7 @@ button{
   width: 300;/*17%;*/
   position:absolute;
   left:0%;/*60%; /*66%;*/
-  top:32%;
+  top:16em;
  /* border-right: 4px solid white;*/
 
 }
@@ -214,7 +211,7 @@ button{
   width: 300; /*17%;*/
   position:absolute;
   left:0%;/*80%;/*83%;*/
-  top:42%;
+  top:20em;
 
 }
 
@@ -224,7 +221,7 @@ button{
   width: 300; /*15%;*/
   position:absolute;
   left:0%;
-  top:52%;
+  top:24em;
   /*border-right: 4px solid white;*/
 }
 

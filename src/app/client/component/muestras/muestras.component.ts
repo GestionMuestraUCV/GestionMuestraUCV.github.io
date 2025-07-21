@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Auth, signOut } from '@angular/fire/auth';
+import { Auth, getAuth, onAuthStateChanged, signOut } from '@angular/fire/auth';
 import { Firestore, collection, deleteDoc, doc, getDocs, query, updateDoc, where } from '@angular/fire/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -11,25 +11,27 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class MuestrasComponent {
 
   public data: any = [];
-
+  public dataTem : any;
+  public arr : any = [];
   public item: any;
   public pid: any;
+  public up: any;
 
   constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore) {
     //this.getData();
-    this.MyQuery();
+    //this.MyQuery();
   }
 
   ngOnInit(): void {
     this.route.params.subscribe(param =>{
-      this.item=param['id'];
+      this.up=param['up'];
 
-      console.log(param);
-      console.log(param['id']);
+      //console.log(param);
+      //console.log(param['id']);
       //this.generateBarcode(param);
 
     })
-    //this.getData();
+    this.getData();
     this.MyQuery();
 
   }
@@ -78,7 +80,7 @@ export class MuestrasComponent {
 
   Home(){
 
-    this.router.navigate(['client/projects']);
+    this.router.navigate(['user/projects']);
     //window.location.href='#/auth/login';
   }
 
@@ -116,19 +118,18 @@ export class MuestrasComponent {
 
   async MyQuery(){
     //let str="Project 10";
-    let str=this.item;
-    this.pid=str;
-    console.log(str);
-    const q = query(collection(this.firestore, "muestras"), where("project", "==",str));
+    //let str=this.item;
+    //this.pid=str;
+    let unidad=this.up;
+    //console.log(str);
+    const q = query(collection(this.firestore, "muestras"), where("unidad", "==", unidad)); // where("project", "==",str), where("unidad", "==", unidad)
 
 
     getDocs(q)
       .then((response) => {
         this.data = [...response.docs.map((item) => {
           return { ...item.data(), id: item.id }
-
         })]
-
         //console.log(this.data.length);
         /*if(this.data.length==0){
           //alert(err.message);
@@ -159,6 +160,7 @@ export class MuestrasComponent {
         //this.data=doc;
       });
       //console.log("done");
+
 
 
   }

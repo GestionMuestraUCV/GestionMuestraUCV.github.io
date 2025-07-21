@@ -112,6 +112,12 @@ export class UnidadProduccionAllComponent {
     //window.location.href='#/auth/login';
   }
 
+  Muestras(id: any, up:any){
+
+    this.router.navigate(['client/muestras/'+ up ]); //+ id+'/'+ up
+    //window.location.href='#/auth/login';
+  }
+
 
 
   async MyQuery(){
@@ -120,7 +126,7 @@ export class UnidadProduccionAllComponent {
     let temail: string;
     let arrTemp:any=[];
     temail="";
-    console.log(gauth);
+    //console.log(gauth);
     onAuthStateChanged(gauth, async (user) => {
       if (user) {
         console.log(user.email);
@@ -131,11 +137,11 @@ export class UnidadProduccionAllComponent {
           //email="giorgosmorakis@hotmail.com";
           //console.log(temail == "giorgosmorakis@hotmail.com");
 
-          const q = query(collection(this.firestore, "projects"), where("cliente", "==", temail));
-
+          //const q = query(collection(this.firestore, "projects"), where("cliente", "==", temail));
+          const q = query(collection(this.firestore, "unidad-produccion"), where("cliente", "==", temail));
           getDocs(q)
           .then((response) => {
-            this.dataTem = [...response.docs.map((item) => {
+            this.data= [...response.docs.map((item) => {
               return { ...item.data(), id: item.id }
 
             })]
@@ -153,7 +159,7 @@ export class UnidadProduccionAllComponent {
             //this.data=doc;
           });
           console.log(this.dataTem.length);
-          //console.log(this.data);
+          console.log(this.data);
           console.log(this.dataTem[0].name);
           let lengthArr = this.dataTem.length;
           console.log(lengthArr );
@@ -167,46 +173,42 @@ export class UnidadProduccionAllComponent {
           console.log(arrTemp);
 
 
+
         }
 
-      }
-
-      //
-
-      console.log("next");
-      console.log(arrTemp);
-      let str=this.item;
-      this.pid=str;
-      //console.log(str);
-      const p = query(collection(this.firestore, "unidad-produccion"), where("project", "in",arrTemp));
+        //console.log("next");
+        //console.log(arrTemp);
+        //let str=this.item;
+        //this.pid=str;
+        //console.log(str);
+        //const p = query(collection(this.firestore, "unidad-produccion"), where("project", "in",arrTemp));
 
 
-      getDocs(p)
+        /*etDocs(p)
         .then((response) => {
           this.data = [...response.docs.map((item) => {
             return { ...item.data(), id: item.id }
           })]
           //console.log(this.data.length);
-          /*if(this.data.length==0){
+          //if(this.data.length==0){
             //alert(err.message);
-            console.log("empty");
+            //console.log("empty");
 
-          };*/
-        })
-
-
+          //};
+        })*/
 
 
 
-      /*const querySnapshot = await getDocs(q);
-      querySnapshot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
-        console.log(doc.id, " => ", doc.data());
-
-      });*/
 
 
-      const querySnapshot = await getDocs(p)
+        /*const querySnapshot = await getDocs(q);
+        querySnapshot.forEach((doc) => {
+          // doc.data() is never undefined for query doc snapshots
+          console.log(doc.id, " => ", doc.data());
+
+        });*/
+        /*
+        const querySnapshot = await getDocs(p)
 
         querySnapshot.forEach((doc) => {
           // doc.data() is never undefined for query doc snapshots
@@ -215,8 +217,9 @@ export class UnidadProduccionAllComponent {
           //this.list= doc;
           //this.data=doc;
         });
-        //console.log("done");
+        //console.log("done");*/
 
+      }
 
 
 

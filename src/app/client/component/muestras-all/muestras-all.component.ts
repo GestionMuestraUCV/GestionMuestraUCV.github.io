@@ -25,8 +25,8 @@ export class MuestrasAllComponent {
     this.route.params.subscribe(param =>{
       this.item=param['id'];
 
-      console.log(param);
-      console.log(param['id']);
+      //console.log(param);
+      //console.log(param['id']);
       //this.generateBarcode(param);
 
     })
