@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1753069567659,
+  "timestamp": 1740037717811,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -12,11 +12,11 @@
       },
       "urls": [
         "/index.html",
-        "/main.41d58a261d95138e.js",
+        "/main.2bb8c21c72ff0beb.js",
         "/manifest.json",
         "/manifest.webmanifest",
-        "/polyfills.08125764f6ea2508.js",
-        "/runtime.c5808586f4bfcd67.js",
+        "/polyfills.328c37cf4a694c12.js",
+        "/runtime.ae1b2e509d97564a.js",
         "/styles.a8e9e30c5010f653.css"
       ],
       "patterns": []
@@ -33,10 +33,6 @@
         "/Edit.1c3b33dbc7a0ce7c.png",
         "/Imprimir.5707a7d8e20080ab.png",
         "/Logo-Agronomia2.2ed90bcafa53fa56.png",
-        "/assets/Barcode Generate Transperant.psd",
-        "/assets/Barcode Generate White.png",
-        "/assets/Barcode Generate.psd",
-        "/assets/BarcodeAdd.png",
         "/assets/CaptureLeafRepeat.png",
         "/assets/CaptureLeafRepeatOpacity01.png",
         "/assets/CaptureLeafRepeatOpacity05.png",
@@ -105,10 +101,6 @@
     "/Edit.1c3b33dbc7a0ce7c.png": "1c9cdc3ec69ac8556c319dd90e83108fd52f98c7",
     "/Imprimir.5707a7d8e20080ab.png": "cedeee2afb743470a74d5ada563fe11d6c910389",
     "/Logo-Agronomia2.2ed90bcafa53fa56.png": "c11a8831ee0c496fd0608fc72d1be73298748a84",
-    "/assets/Barcode Generate Transperant.psd": "5471f344f8e3b972a2724c3c1b8cc28cec6ffa01",
-    "/assets/Barcode Generate White.png": "ade22969208ded3f7758dc89fc01716e786b32c0",
-    "/assets/Barcode Generate.psd": "54f0bb8095a447213217d74357d95ab3e31f0183",
-    "/assets/BarcodeAdd.png": "dad0b07abf087233cb4a905be19d6f337162872a",
     "/assets/CaptureLeafRepeat.png": "c7d2cb5d4c3d96eee28303074ab9fbe4ee213ff4",
     "/assets/CaptureLeafRepeatOpacity01.png": "3f0722fd8845b61bf5788ec22319221bd090a94b",
     "/assets/CaptureLeafRepeatOpacity05.png": "dd526d8862832a0721a6870eb5c08f4ba2068c7d",
@@ -164,14 +156,14 @@
     "/back-button-Edit4.8567daeed3ab1418.png": "dcbd472de8c207b0d1f4cea2f26b87c6f87fd4ff",
     "/clipboard.008357a0b24034e8.png": "2b85200774157c9e502d1c039fe871586be2f660",
     "/image_7.2e20c6c16e8ce206.png": "221e1a0bcfde3fc18fb2e367f405497c64b748a3",
-    "/index.html": "0c69b1cde770e9efd71c74d98cef52e97bc3b7a9",
+    "/index.html": "57a8ffb2df0f654bf0d535bf18c01a4ccd0b1a41",
     "/info.f631e6664ac6fa77.png": "9de63dca797b8e77bd7e2ffea58f77d88c605854",
     "/logo_ucv_bg2_1.32a61806277cba42.png": "5f4ff5044ce5402244fab3de3c0668dbb4c092e6",
-    "/main.41d58a261d95138e.js": "9c811771652292e9be4802b377f48dd5fbc1fe0a",
+    "/main.2bb8c21c72ff0beb.js": "a55fdeaa1fe50ef4731fd321873876eab1c083f2",
     "/manifest.json": "aec25172baa8c694224a57c7741fafda93f6bc87",
     "/manifest.webmanifest": "15280ea447b36ef038af857615ec23389806c194",
-    "/polyfills.08125764f6ea2508.js": "146d606ae1ee7def015c137600a85bcc307b90bf",
-    "/runtime.c5808586f4bfcd67.js": "2d26abc7ac531329fbc8cf14786dfc0b8b94f003",
+    "/polyfills.328c37cf4a694c12.js": "38e015104c1b8bfa713641efa65b0a44eff44f28",
+    "/runtime.ae1b2e509d97564a.js": "9af2ff527937208b90b010cf3c4ef1f4c482a6b8",
     "/styles.a8e9e30c5010f653.css": "40dcb6add6d1c57d16c26e0fab0d904e3cb78f61",
     "/userWhite.1acab0fe6d96dff4.png": "e95ef3b29abaa14f138422722dffb1a6b1cdebc0"
   },
