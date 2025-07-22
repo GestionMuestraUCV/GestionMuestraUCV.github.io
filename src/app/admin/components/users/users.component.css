@@ -1,7 +1,7 @@
 .list{
   position: absolute;
   left:50%;
-	top:30%;
+	top: 18em;
   transform: translate(-40%,0%);
 }
 
@@ -56,12 +56,14 @@ button {
 	font-size:48px;
 	letter-spacing:0;
   left:50%;
-	top:15%;
+	top:3em;
   transform: translate(-50%,0%);
 }
 
 .NewUser{
   width: 140px;
+  position: absolute;
+  right: 0px;
 }
 
 
