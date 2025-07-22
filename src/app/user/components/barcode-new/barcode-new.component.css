@@ -29,14 +29,14 @@
 
 .loginBox { /*login box*/
   box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
+  background-color:#D9D9D9;
   width: 625px;
   height: 225px;
 
   flex-shrink: 0;
   position:absolute;
   top: 50%;
-  left: 53%;
+  left: 56%;
   transform: translate(-50%, -50%);
 
 }
@@ -223,7 +223,7 @@ button {
     box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
     width:75%;
-    height:50%;
+    height:35%;
     transform: none;
     position:absolute;
     left:10%;
@@ -278,7 +278,7 @@ button {
     position:absolute;
     /*width: 120px;*/
     left:57%;
-    top:75%;
+    top:73%;
     font-size: 16px;
     /*top:20%;*/
 

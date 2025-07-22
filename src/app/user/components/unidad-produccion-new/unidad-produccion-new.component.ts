@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core
 import { Auth, getAuth, onAuthStateChanged } from '@angular/fire/auth';
 import { Firestore, collection, doc, getDocs, setDoc } from '@angular/fire/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-unidad-produccion-new',
@@ -21,7 +22,7 @@ export class UnidadProduccionNewComponent {
   @Output() somethingChange= new EventEmitter<any>();
   public email: string ="";
 
-  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore){
+  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore, private location: Location){
     //this.getData();
   }
   ngOnInit(): void {
@@ -154,6 +155,10 @@ export class UnidadProduccionNewComponent {
   Home(){
     this.router.navigate(['user/unidad-produccion-all']);
     //window.location.href='#/auth/login';
+  }
+
+  backPage(){
+    this.location.back();
   }
 
 

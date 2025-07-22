@@ -1,14 +1,17 @@
 .loginBox { /*login box*/
   box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
-  width: 75%;
-  height: 30%;
+  width: 65%;
+  height:30%;
   flex-shrink: 0;
   position:absolute;
-  left:15%;
-  top:30%;
+  left:50%;
+  top:25%;
+  transform: translate(-30%,0%);
 
 }
+
+
 
 .main{
   /*display: flex;
@@ -42,8 +45,18 @@ textarea{
   margin: 10px;
   width: 85%;
   height: 20px;
-  left: 92px;
+  position: relative;
+  left: 0px;
 }
+
+.input-field-2{
+  margin: 0px;
+  /*width: 85%;*/
+  height: 20px;
+  position: relative;
+  left: 0px;
+}
+
 
 #cordenadas{
   width: 78%;
@@ -64,14 +77,16 @@ button{
 }
 
 .subTituloText{
-  color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
+  color:#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
+  text-shadow: 2px 2px 5px black;
 	position:absolute;
   margin: 0px;
 	font-family:Verdana;
 	font-size:48px;
 	letter-spacing:0;
-  left:35%;
-	top:20%;
+  left:50%;/*35%;*/
+	top:17%;
+  transform: translate(-50%,0%);
 
 }
 
@@ -101,7 +116,7 @@ button{
 
 .Text{
   color:rgba(0, 0, 0, 1);
-	width:25%;
+	width:143px;
 	height:25px;
 	font-family: Arial;
 	font-size:20px;
@@ -109,17 +124,15 @@ button{
 }
 
 
-/*usuario box*/
+
+#email { /*usuario box*/
 /*background-color:rgba(255, 255, 255, 1);*/
-/*
-#email {
   width:15%;
   height:3%;
   position:absolute;
   left:49%;
   top:48.5%;
 }
-*/
 
 .userText { /*usuario text*/
   color:rgba(0, 0, 0, 1);
@@ -162,6 +175,7 @@ button{
 
 .bUbicacion{
   display: inline;
+  margin-left: 5px;
   width: 28px;
   height: 27px;
   flex-shrink: 0;
@@ -232,30 +246,48 @@ img{
   .loginBox { /*login box*/
     box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
-    width: 85%;
-    height: 50%;
+    width: 95%;
+    height: 30%;
     flex-shrink: 0;
     position:absolute;
-    left:7%;
-    top:30%;
+    left:2.5%;
+    top:38%;
+    transform: none;
+
+  }
+
+  .input-fields{
+    display: flex;
+    align-items: center;
+    width: 100%;
+
 
   }
 
   .input-field{
     margin: 10px;
     margin-left: 20px;
-    width: 85%;
+    /*width: 85%;*/
     height: 20px;
-    left: 92px;
+    left: 0px;
   }
 
+
+  .blank{
+    width: 100%;
+    height: 16px;
+    /*color:rgba(255, 255, 255, 1);*/
+    position:absolute;
+    left:0%;
+    top: 110%;
+  }
 
   .Text{
     color:rgba(0, 0, 0, 1);
     width:25%;
     height:20px;
     font-family: Arial;
-    font-size:16px;
+    font-size:14px;
     letter-spacing:0;
   }
 
@@ -363,12 +395,12 @@ img{
     /*box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);*/
     position: absolute;
     left: 75%;
-    top: 110%;
+    top: 100%;
     border: none;
     float: right;
     background-color:rgba(62.00000010430813, 179.000004529953, 194.00000363588333, 1);
     color:rgba(255, 255, 255, 1);
-    margin: 10px 0px;
+    margin: 20px 0px;
     padding: 0px;
     text-align: center;
     text-decoration: none;
@@ -381,7 +413,7 @@ img{
   }
 
   .subTituloText { /*SubTitulo Texto*/
-    color:rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);
+    color:#0A9217; /*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
     position:absolute;
     margin: 0px;
     width:100%;
@@ -391,7 +423,8 @@ img{
     font-size:32px;
     letter-spacing:0;
     left:0%;
-    top:22%;
+    top:28%;
+    transform: none;
   }
 
 
@@ -445,3 +478,42 @@ img{
 
 
 }
+
+
+
+
+@media only screen and (min-width: 1536px){
+
+
+  .loginBox {
+    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
+    width: 850px;
+    height: 600px;
+    flex-shrink: 0;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-35%);
+
+  }
+
+
+
+  .subTituloText {
+
+    position: absolute;
+    left:50%;
+    transform: translate(-50%, 0%);
+  }
+
+  /*
+  .boton {
+    position: absolute;
+    left:50%;
+    transform: translate(310px, 0px);
+
+  }
+  */
+}
+
