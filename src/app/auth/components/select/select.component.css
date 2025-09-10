@@ -88,8 +88,9 @@ button{
   box-shadow:2px 2px 5px black;
   color:rgba(255, 255, 255, 1);
   position:absolute;
-	top:77%;
-  left:50%;/*43%;*/
+  left:46%;
+	top:76%;
+
   transform: translate(-50%,0%);
   /*margin: 15px 0px;*/
   padding-bottom: 5px;
@@ -364,8 +365,8 @@ p{
     box-shadow:2px 2px 5px black;
     color:rgba(255, 255, 255, 1);
     position:absolute;
-    left:30%;
-    top:77%;
+    left: 46%;
+    top:76%;
     /*margin: 15px 0px;*/
     padding-bottom: 5px;
     padding-top: 5px;
