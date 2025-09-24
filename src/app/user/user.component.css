@@ -42,21 +42,36 @@ button{
 	position:absolute;
 	left:0%; /*20%;*/
 	top:0%;
-	text-align:center;
+  display: flex; /* Enables Flexbox */
+  flex-direction: column; /* Stacks children vertically */
+  justify-content: center; /* Centers items along the main axis (vertically in this case) */
+  align-items: center; /* Centers items along the cross axis (horizontally in this case) */
 }
 .tituloText { /*Titulo Texto*/
 	color:rgba(255, 255, 255, 1);
-	display: inline-block;
-  	vertical-align: middle;
-  	line-height: 2.4em;
+	display: block;
+  line-height: 0.5em;
 	font-family:Verdana;
   font-weight: bold;
 	font-size:40px;
 	letter-spacing:0;
-  cursor: pointer;
-  /*position:absolute;
+  /*cursor: pointer;
+  position:absolute;
   left:40%;*/
 }
+.tituloSubText { /*Titulo Texto*/
+	color:rgba(255, 255, 255, 1);
+	display: block;
+  line-height: 1.2em;
+	font-family:Verdana;
+  font-weight: bold;
+	font-size:20px;
+	letter-spacing:0;
+  /*cursor: pointer;
+  sposition:absolute;
+  left:40%;*/
+}
+
 
 .logoAgro { /*Logo Ciens*/ /*Logo Agro*/
 	width:100px;
@@ -130,19 +145,37 @@ button{
 
 
 /**/
+.navbar2 {
+  height: 100vh;
+  width: 320px;
+  position: absolute;/*fixed;*/
+  top: 0;
+  left: 0;
+}
 
 
 .navbar2Box{
-  width: 320px;
-  height: 100%;
   background: #ffffff;
+  box-shadow: 0px 0px 6px 10px rgba(0, 0, 0, 0.25); /*2px 2px 5px black;*/
   /*border-top: 4px solid white;*/
-  /*box-shadow:2px 2px 5px black;*/
-  box-shadow: 0px 0px 6px 10px rgba(0, 0, 0, 0.25);
 
-  position:absolute;
-  left:0%;
-  top:0px;
+  height: 100vh;  /*100%;*/
+  /* This sets the height to 100% of the viewport height */
+  width: 320px;
+  position: fixed; /*absolute;*/
+  /* Keeps the navbar in place even when the user scrolls */
+  top: 0;
+  left: 0;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Aligns content to the start of the container */
+  align-items: center; /* Horizontally centers the items */
+  padding-top: 15em; /* Add top padding to move the first element down */
+
+  z-index: -10;
+
 }
 
 .navbar2Text{
@@ -153,13 +186,14 @@ button{
   font-family: Verdana;
   font-weight: 600;
   word-wrap: break-word;
-  /*text-align: center;*/
-  display: inline-block;
+  text-align: center;
+ /* display: inline-block;
   	vertical-align: middle;
   	line-height: 240%;
   /*border-top: 4px solid white;*/
   padding-top: 5px;
   padding-left: 20px;
+
 
 }
 
@@ -196,7 +230,7 @@ button{
 
 
 
-#ClientesText{
+#ResultText{
   cursor: pointer;
   width: 300;/*17%;*/
   position:absolute;
@@ -206,7 +240,7 @@ button{
 
 }
 
-#CodigoText{
+#ClientesText{
   cursor: pointer;
   width: 300; /*17%;*/
   position:absolute;
@@ -216,7 +250,7 @@ button{
 }
 
 
-#cerrarText{
+#CodigoText{
   cursor: pointer;
   width: 300; /*15%;*/
   position:absolute;
@@ -224,6 +258,17 @@ button{
   top:24em;
   /*border-right: 4px solid white;*/
 }
+
+#cerrarText{
+  cursor: pointer;
+  width: 300;/*17%;*/
+  position:absolute;
+  left:0%;/*60%; /*66%;*/
+  top:28em;
+ /* border-right: 4px solid white;*/
+
+}
+
 
 
 
@@ -246,9 +291,7 @@ img{
   top:20px;
 }
 
-br{
-  display: none;
-}
+
 
 
 
@@ -319,24 +362,42 @@ br{
   }
 
 
-  .tituloBox { /*Titulo box*/
+
+  .tituloBox {
+    /* Existing properties for mobile */
     /*background-color:#0A9217;*//*#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
-    width:80%;
-    height:6.75em;
-    position:absolute;
-    left:20%;
-    top:0%;
-    text-align:center;
+    width: 80%;
+    height: 6.75em;
+    position: absolute;
+    left: 20%;
+    top: 0%;
+    /* Add flexbox properties for consistent centering */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  .tituloText { /*Titulo Texto*/
-    color:rgba(255, 255, 255, 1);
-    line-height: 1.6;
-    display: inline-block;
-      vertical-align: middle;
-      /*line-height: 250%;*/
-    font-family:Verdana;
-    font-size:32px;
-    letter-spacing:0px;
+
+  .tituloText {
+    /* Simplified styles to work with flexbox */
+    color: rgba(255, 255, 255, 1);
+    font-family: Verdana;
+    font-size: 32px;
+    letter-spacing: 0px;
+    line-height: normal; /* Use normal to let flexbox handle spacing */
+    display: block;
+    text-align: center; /* Ensure horizontal alignment */
+  }
+
+  .tituloSubText {
+    /* Simplified styles to work with flexbox */
+    color: rgba(255, 255, 255, 1);
+    font-family: Verdana;
+    font-size: 20px;
+    letter-spacing: 0px;
+    line-height: normal; /* Use normal to let flexbox handle spacing */
+    display: block;
+    text-align: center; /* Ensure horizontal alignment */
   }
 
 
