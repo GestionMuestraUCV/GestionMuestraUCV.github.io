@@ -1,6 +1,6 @@
 .list{
   position: absolute;
-	top:38%;
+	top:30%;
   left:50%;/*38%;*/
   transform: translate(-40%,0%);
 }

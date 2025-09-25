@@ -44,6 +44,12 @@ export class UserComponent {
     //window.location.href='#/auth/login';
   }
 
+  Resultados(){
+
+    this.router.navigate(['user/resultados']);
+    //window.location.href='#/auth/login';
+  }
+
   Clientes(){
     this.router.navigate(['user/clients']);
 
@@ -57,6 +63,10 @@ export class UserComponent {
   Codigo(){
     this.router.navigate(['user/barcode-new']);
 
+  }
+
+  Scan(){
+    this.router.navigate(['user/scan']);
   }
 
 

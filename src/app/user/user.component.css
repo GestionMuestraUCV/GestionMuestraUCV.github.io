@@ -209,6 +209,10 @@ button{
   border-right: 4px solid white;
 }*/
 
+
+
+
+
 #UnidadText{
   cursor: pointer;
   width: 300; /*17%;*/
@@ -259,12 +263,22 @@ button{
   /*border-right: 4px solid white;*/
 }
 
+#ScanText{
+  cursor: pointer;
+  width: 300; /*17%;*/
+  position:absolute;
+  left:0%;/*20%;/*32%;*/
+  top: 28em;
+  /*border-right: 4px solid white;*/
+
+}
+
 #cerrarText{
   cursor: pointer;
   width: 300;/*17%;*/
   position:absolute;
   left:0%;/*60%; /*66%;*/
-  top:28em;
+  top:32em;
  /* border-right: 4px solid white;*/
 
 }

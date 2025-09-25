@@ -11,27 +11,27 @@
   <div style="width: 47px; height: 0px; transform: rotate(90deg); transform-origin: 0 0; border: 2px white solid"></div>
   <div style="width: 47px; height: 0px; transform: rotate(90deg); transform-origin: 0 0; border: 2px white solid"></div>
   -->
-  <div class="navbar2Text" id="cerrarText" (click)="handleSignOut()">
-    <img src="../../assets/logout-2.png" alt="Out" width="50" height="50">
 
-    Cerrar Sesión
-  </div>
 
-  <div class="navbar2Text" id="UnidadText" (click)="Unidades()">
-    <img src="../../assets/shovel2.png" alt="Shovel" width="50" height="50">
-    Unidades de Producción
-  </div>
+
   <!--
   <div class="navbar2Text" id="ProyectosText" (click)="Projectos()">
     <div class="center">PROYECTOS</div>
   </div>
   -->
+
+
+  <div class="navbar2Text" id="UnidadText" (click)="Unidades()">
+    <img src="../../assets/shovel2.png" alt="Shovel" width="50" height="50">
+    Unidades de Producción
+  </div>
+
   <div class="navbar2Text" id="MuestrasText" (click)="Muestras()">
     <img src="../../assets/prueba-de-sangre.png" alt="Shovel" width="50" height="50">
     Muestras
   </div>
 
-  <div class="navbar2Text" id="ResultText" (click)="Muestras()">
+  <div class="navbar2Text" id="ResultText" (click)="Resultados()">
     <img src="../../assets/Resultados.png" alt="Shovel" width="50" height="50">
     Resultados
   </div>
@@ -41,12 +41,19 @@
     Clientes
   </div>
 
-
-
   <div class="navbar2Text" id="CodigoText" (click)="Codigo()">
     <img src="../../assets/BarcodeAdd.png" alt="Shovel" width="50" height="50">
-    <!-- <img src="../../assets/Scan.png" alt="Shovel" width="50" height="50"> -->
     Generar Codigo
+  </div>
+
+  <div class="navbar2Text" id="ScanText" (click)="Scan()">
+    <img src="../../assets/Scan.png" alt="Shovel" width="50" height="50">
+    Escanear
+  </div>
+
+  <div class="navbar2Text" id="cerrarText" (click)="handleSignOut()">
+    <img src="../../assets/logout-2.png" alt="Out" width="50" height="50">
+    Cerrar Sesión
   </div>
 
 

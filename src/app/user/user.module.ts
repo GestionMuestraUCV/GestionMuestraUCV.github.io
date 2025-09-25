@@ -28,6 +28,7 @@ import { ClientsEditComponent } from './components/clients-edit/clients-edit.com
 import { ClientsInfoComponent } from './components/clients-info/clients-info.component';
 import { UnidadProduccionAllComponent } from './components/unidad-produccion-all/unidad-produccion-all.component';
 import { BarcodeNewComponent } from './components/barcode-new/barcode-new.component';
+import { ResultadosComponent } from './resultados/resultados.component';
 
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -57,6 +58,7 @@ import {provideNativeDateAdapter} from '@angular/material/core';
     ProjectEditComponent,
     MuestrasInfoComponent,
     MuestrasAllComponent,
+    ResultadosComponent,
     ProjectInfoComponent,
     UnidadProduccionComponent,
     UnidadProduccionNewComponent,

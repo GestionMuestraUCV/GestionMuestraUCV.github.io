@@ -12,6 +12,7 @@ import { Location } from '@angular/common';
 })
 export class BarcodeNewComponent {
 
+  //unidadProduccionNombres: string[] = [];
   public data: any = []
   public res: any;
   public item: any;
@@ -21,6 +22,7 @@ export class BarcodeNewComponent {
   }
 
   ngOnInit(): void {
+    //await this.getUnidadProduccionNombres();
     let code;
     this.route.params.subscribe(param =>{
       this.item=param['id'];
@@ -54,6 +56,19 @@ export class BarcodeNewComponent {
 
 
   }
+
+
+  /*
+  async getUnidadProduccionNombres() {
+    const unidadesRef = collection(this.firestore, 'unidad-produccion');
+    const querySnapshot = await getDocs(unidadesRef);
+
+    this.unidadProduccionNombres = querySnapshot.docs.map(doc => {
+      // Asume que cada documento tiene un campo 'nombre'
+      const data = doc.data() as any;
+      return data.nombre;
+    });
+  */
 
 
 //
