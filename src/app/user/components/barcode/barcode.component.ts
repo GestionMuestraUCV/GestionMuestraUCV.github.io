@@ -101,7 +101,8 @@ export class BarcodeComponent {
 
 
   toPrint(num:number){
-    this.router.navigate(['/print/'+ this.res+'/'+ num]);
+    //this.router.navigate(['/print/'+ this.res+'/'+ num]);
+    window.open('#/print/'+ this.res+'/'+ num, '_blank');
 
   }
 
