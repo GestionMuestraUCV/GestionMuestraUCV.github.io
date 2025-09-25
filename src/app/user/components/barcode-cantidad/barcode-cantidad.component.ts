@@ -50,7 +50,8 @@ export class BarcodeCantidadComponent {
   }
 
   toPrint(){
-    this.router.navigate(['/print/'+ this.res]);
+    //this.router.navigate(['/print/'+ this.res]);
+    window.open('/print/' + this.res, '_blank');
 
   }
 

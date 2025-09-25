@@ -1,6 +1,6 @@
 {
-  "name": "Gestion de Muestras",
-  "short_name": "Gestion Muestrass",
+  "name": "ClinPlant",
+  "short_name": "ClinPlant",
   "theme_color":"#3EC28F",
   "background_color":"#FFFFFF",
   "display": "standalone",

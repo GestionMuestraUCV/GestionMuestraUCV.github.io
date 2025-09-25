@@ -1,3 +1,17 @@
+/*
+.base{
+  background: white;
+
+}
+*/
+
+.print-page {
+  /*
+  width: 100vw;
+  min-height: 100vh;
+  */
+  background: white;
+}
 
 #barcode1{
   position:absolute;
