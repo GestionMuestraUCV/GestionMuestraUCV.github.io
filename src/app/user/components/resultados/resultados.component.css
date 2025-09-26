@@ -137,7 +137,7 @@ table {
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
-  background-image:url(../../../assets/Edit.png);
+  background-image:url(../../../../assets/Edit.png);
 }
 
 .edit:hover .edit-tip {
@@ -172,7 +172,7 @@ table {
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
-  background-image:url(../../../assets/info.png);
+  background-image:url(../../../../assets/info.png);
 }
 
 .detalles:hover .detalles-tip {
@@ -208,7 +208,7 @@ table {
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
-  background-image:url(../../../assets/Imprimir.png);
+  background-image:url(../../../../assets/Imprimir.png);
 }
 
 .imprimir:hover .imprimir-tip {
@@ -389,7 +389,7 @@ table {
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
-    background-image:url(../../../assets/Edit.png);
+    background-image:url(../../../../assets/Edit.png);
   }
 
   .muestras{
@@ -400,7 +400,7 @@ table {
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
-    background-image:url(../../../assets/clipboard.png);
+    background-image:url(../../../../assets/clipboard.png);
   }
 
   .imprimir{
@@ -411,7 +411,7 @@ table {
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
-    background-image:url(../../../assets/Imprimir.png);
+    background-image:url(../../../../assets/Imprimir.png);
   }
 
 
@@ -423,7 +423,7 @@ table {
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
-    background-image:url(../../../assets/info.png);
+    background-image:url(../../../../assets/info.png);
   }
 
 

@@ -4,6 +4,7 @@ import { Firestore, collection, deleteDoc, doc, getDocs, getFirestore, query, se
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { DatePipe } from '@angular/common';
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 @Component({
   selector: 'app-muestras-edit',
@@ -18,6 +19,8 @@ export class MuestrasEditComponent {
   public x: any;
   public pid: any;
   public static text: string = "";
+
+  public fotoUrls: { inicial?: string; tipico?: string; tardios?: string } = {};
 
   @ViewChild('geo') geo: any;//ElementRef | undefined;
   public htmlToAdd: any;
@@ -42,15 +45,38 @@ export class MuestrasEditComponent {
 
   }
 
+
+  async onFileSelected(event: any, etapa: 'inicial' | 'tipico' | 'tardios') {
+      const file: File = event.target.files[0];
+      if (file) {
+        const storage = getStorage();
+        const storageRef = ref(storage, `muestras/${this.res}/${etapa}/${file.name}`);
+        try {
+          const uploadResult = await uploadBytes(storageRef, file);
+          const imageUrl = await getDownloadURL(uploadResult.ref);
+
+          // Guardar la URL en la propiedad del componente
+          this.fotoUrls[etapa] = imageUrl;
+
+          alert(`Imagen de ${etapa} subida con éxito.`);
+        } catch (error) {
+          console.error("Error al subir la imagen:", error);
+          alert("Ocurrió un error al guardar la imagen.");
+        }
+      }
+    }
+
+
   handleRegister(value: any){
     //console.log(value);
-    this.addData(value);
+    //this.addData(value);
+    this.addData( { ...value, fotos: this.fotoUrls });
     this.Home();
   }
 
   async addData(value: any) {
     //const dbInstance = collection(this.firestore, 'users');
-    console.log(value);
+    //console.log(value);
     const dbInstance = doc(this.firestore, 'muestras', value.codigo);
     value.fecha= this.datePipe.transform(value.fecha, 'dd/MM/yyyy')
 
@@ -66,7 +92,8 @@ export class MuestrasEditComponent {
         coordenadas: value.coordenadas,
         sintomas: value.sintomas,
         comentarios: value.comentarios,
-        lote: value.lote
+        lote: value.lote,
+        fotos: value.fotos
         //project: this.pid
       }
 
@@ -168,6 +195,10 @@ export class MuestrasEditComponent {
       });
     }
   }
+
+  backPage(){
+      this.location.back();
+    }
 
 
   /*

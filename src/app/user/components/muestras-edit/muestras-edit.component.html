@@ -80,6 +80,25 @@
       </div>
 
 
+
+      <h2 class="subTituloSeccion">Soporte Fotográfico</h2>
+
+      <div class="input-fields">
+        <span class="Text">Iniciales:</span>
+        <input name="foto-inicial" type="file" (change)="onFileSelected($event, 'inicial')" class="input-field-2">
+      </div>
+
+      <div class="input-fields">
+        <span class="Text">Típico:</span>
+        <input name="foto-tipico" type="file" (change)="onFileSelected($event, 'tipico')" class="input-field-2">
+      </div>
+
+      <div class="input-fields">
+        <span class="Text">Tardíos:</span>
+        <input name="foto-tardios" type="file" (change)="onFileSelected($event, 'tardios')" class="input-field-2">
+      </div>
+
+
       <div class="input-fields">
         <span  class="Text">Síntomas:</span>
         <input name="sintomas" ngModel placeholder="Síntomas" id="sintomas" type="sintomas" class="input-field" [(ngModel)]= "item.sintomas"/>
@@ -101,7 +120,9 @@
 
 
 
-      <button class="boton">Editar Muestra</button>
+      <button class="boton" id="volver" (click)="backPage()"></button>
+
+      <button class="boton">Guardar</button>
 
       <button class="botonrojo" (click)="deleteData(item.id)">
         Eliminar
