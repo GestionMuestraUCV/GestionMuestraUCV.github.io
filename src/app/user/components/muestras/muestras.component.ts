@@ -22,13 +22,10 @@ export class MuestrasComponent {
 
   ngOnInit(): void {
     this.route.params.subscribe(param =>{
-      //this.item=param['id'];
-      //this.pid=param['id'];
+
       this.up=param['up'];
 
-      console.log(param);
-      //console.log(param['id']);
-      //this.generateBarcode(param);
+
 
     })
     //this.getData();
@@ -37,7 +34,6 @@ export class MuestrasComponent {
   }
 
   getData() {
-    //console.log(this.auth.currentUser)
     const dbInstance = collection(this.firestore, 'muestras');
     getDocs(dbInstance)
       .then((response) => {
@@ -163,7 +159,7 @@ export class MuestrasComponent {
 
       querySnapshot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
-        console.log(doc.id, " => ", doc.data());
+        //console.log(doc.id, " => ", doc.data());
         //console.log("here2");
         //this.list= doc;
         //this.data=doc;

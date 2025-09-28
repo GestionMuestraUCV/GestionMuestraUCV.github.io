@@ -35,23 +35,23 @@
 
       <div class="input-fields">
         <span  class="Text">Tipo:</span>
-        <input list="tipos" name="tipo" ngModel placeholder="Tipo" id="tipo" type="tipo" class="input-field" >
-        <datalist id="tipos">
-          <option value="Hibrido">
-          <option value="Variedad">
-          <option value="Clone">
-        </datalist>
+        <select list="tipos" name="tipo" ngModel placeholder="Tipo" id="tipo" type="tipo" class="input-field" >
+          <option value="" disabled selected>Seleccione un estado</option>
+          <option value="Hibrido"> Hibrido </option>
+          <option value="Variedad"> Variedad </option>
+          <option value="Clone"> Clone </option>
+        </select>
       </div>
 
 
       <div class="input-fields">
         <span  class="Text">Fitopatógeno:</span>
-        <input list="fitopatogenos" name="fitopatogeno" ngModel placeholder="Fitopatógeno" id="fitopatogeno" type="fitopatogeno" class="input-field" />
-        <datalist id="fitopatogenos">
-          <option value="Hongos">
-          <option value="Bacterias">
-          <option value="Virus">
-        </datalist>
+        <select list="fitopatogenos" name="fitopatogeno" ngModel placeholder="Fitopatógeno" id="fitopatogeno" type="fitopatogeno" class="input-field" >
+          <option value="" disabled selected>Seleccione un estado</option>
+          <option value="Hongos"> Hongos </option>
+          <option value="Bacterias"> Bacterias </option>
+          <option value="Virus"> Virus </option>
+        </select>
       </div>
 
       <!--

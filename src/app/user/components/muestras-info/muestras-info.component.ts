@@ -3,6 +3,7 @@ import { Auth } from '@angular/fire/auth';
 import { Firestore, collection, deleteDoc, doc, getDocs, query, setDoc, where } from '@angular/fire/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { getStorage, ref, getDownloadURL } from "firebase/storage";
 
 @Component({
   selector: 'app-muestras-info',
@@ -15,6 +16,7 @@ export class MuestrasInfoComponent {
   public res: any;
   public item: any;
   public text: any;
+  public fotoUrls: { inicial?: string; tipico?: string; tardios?: string } = {}; // Nueva propiedad
 
   @ViewChild('geo') geo: any;//ElementRef | undefined;
   public htmlToAdd: any;
@@ -70,39 +72,20 @@ export class MuestrasInfoComponent {
 
 
   showPosition(position: any) {
-    /*
-      const p: HTMLParagraphElement = this.renderer.createElement('p');
-      p.innerHTML = "add new"
-      this.renderer.appendChild(this.div.nativeElement, p)
-    */
+
     console.log(position.coords.latitude);
     console.log(position.coords.longitude);
-    //console.log(res);
-    //MuestrasNewComponent.lat= position.coords.latitude;
-    //this.somethingChange.emit(position.coords.latitude);
-    //console.log(position.coords.longitude);
-    //this.something=position.coords.latitude;
-    //this.somethingChange.emit(this.something);
-    //var text = position.coords.latitude;
-    //this.geo=text;
+
     var x = position.coords.latitude;
     var y = position.coords.longitude;
     //MuestrasNewComponent.text = x+", "+ y;
-    //console.log(MuestrasNewComponent.text);
 
-
-
-
-    //x.innerHTML = "Latitude: " + position.coords.latitude +
-    //"<br>Longitude: " + position.coords.longitude;
   }
 
   async getLocation() {
-    //d1.nativeElement.insertAdjacentHTML('beforeend', '<div class="two">two</div>');
-    //console.log("click");
+
     var test = "...";
     this.res=test;
-    //console.log(this.res);
 
 
 
@@ -133,9 +116,15 @@ export class MuestrasInfoComponent {
     const querySnapshot = await getDocs(q);
     if(!querySnapshot.empty){
       querySnapshot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
         this.item=doc.data();
-        console.log(doc.id, " => ", doc.data());
+
+        this.fotoUrls = {
+          inicial: this.item.fotoInicial,
+          tipico: this.item.fotoTipico,
+          tardios: this.item.fotoTardios
+        };
+
+
       });
     }
 
@@ -148,10 +137,6 @@ export class MuestrasInfoComponent {
   }
 
 
-  /*
-    <div class="one" [innerHtml]="htmlToAdd"></div>
-    this.htmlToAdd = '<div class="two">two</div>';
-  */
 
   deleteData(id: string) {
     const dataToDelete = doc(this.firestore, 'users', id);

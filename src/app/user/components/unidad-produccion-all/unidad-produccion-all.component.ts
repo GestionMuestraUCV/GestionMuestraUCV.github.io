@@ -55,9 +55,7 @@ export class UnidadProduccionAllComponent {
       //this.item=param['id'];
       this.pid=param['id'];
 
-      console.log(param);
-      console.log(param['id']);
-      //this.generateBarcode(param);
+
 
     })
 
@@ -159,7 +157,7 @@ export class UnidadProduccionAllComponent {
     //let str="Project 10";
     let str=this.pid;
     //this.pid=str;
-    console.log(str);
+    //console.log(str);
     const q = query(collection(this.firestore, "unidad-produccion"), where("project", "==",str));
 
 
@@ -193,7 +191,7 @@ export class UnidadProduccionAllComponent {
 
       querySnapshot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
-        console.log(doc.id, " => ", doc.data());
+        //console.log(doc.id, " => ", doc.data());
         //console.log("here2");
         //this.list= doc;
         //this.data=doc;

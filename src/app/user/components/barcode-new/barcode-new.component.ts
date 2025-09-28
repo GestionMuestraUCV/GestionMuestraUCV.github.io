@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Auth } from '@angular/fire/auth';
-import { Firestore, doc, setDoc } from '@angular/fire/firestore';
+import { Firestore, collection, doc, getDocs, setDoc } from '@angular/fire/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as JsBarcode from 'jsbarcode';
 import { Location } from '@angular/common';
@@ -13,12 +13,13 @@ import { Location } from '@angular/common';
 export class BarcodeNewComponent {
 
   //unidadProduccionNombres: string[] = [];
+  unidadProduccionNombres: string[] = [];
   public data: any = []
   public res: any;
   public item: any;
   public num: number = 1;
   constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore, private location: Location) {
-
+    this.getUnidadesProduccion();
   }
 
   ngOnInit(): void {
@@ -26,10 +27,7 @@ export class BarcodeNewComponent {
     let code;
     this.route.params.subscribe(param =>{
       this.item=param['id'];
-      code=param['id'];
-      //this.pid=param['id'];
-      //this.generateSVG(1,code);
-      //this.sleep(1000);
+      code=param['id'];;
       this.generateBarcode(code);
 
     })
@@ -39,7 +37,7 @@ export class BarcodeNewComponent {
   }
 
   handleRegister(value: any){
-    console.log(value.codigo);
+    //console.log(value.codigo);
     this.addData(value);
     this.Barcode(value.codigo);
 
@@ -55,6 +53,14 @@ export class BarcodeNewComponent {
     });
 
 
+  }
+
+
+  async getUnidadesProduccion() {
+    const querySnapshot = await getDocs(collection(this.firestore, 'unidad-produccion'));
+    querySnapshot.forEach((doc) => {
+      this.unidadProduccionNombres.push(doc.data()['codigo']);
+    });
   }
 
 
@@ -95,6 +101,7 @@ export class BarcodeNewComponent {
     setDoc(dbInstance,
       {
         codigo: value.codigo,
+        unidad: value.ud
       }
       )
       /*.then(() => {
@@ -104,23 +111,8 @@ export class BarcodeNewComponent {
         alert(err.message)
       })*/
 
-    if(value.id){
 
-
-
-      dbInstance = doc(this.firestore, 'projects',value.id);
-
-      setDoc(dbInstance,
-        {
-          name: value.id
-        }
-        )
-        /*.catch((err) => {
-          alert(err.message)
-        })*/
-
-    }
-
+    /*
     if(value.ud){
 
       dbInstance = doc(this.firestore, 'unidad-produccion', value.ud);
@@ -130,11 +122,9 @@ export class BarcodeNewComponent {
         codigo: value.ud
       }
       )
-      /*.catch((err) => {
-        alert(err.message)
-      })*/
 
     }
+    */
 
 
 

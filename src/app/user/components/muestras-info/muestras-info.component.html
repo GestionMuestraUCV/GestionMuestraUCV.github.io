@@ -46,12 +46,6 @@
         <span class="input-field"> {{item.fitopatogeno}}</span>
       </div>
 
-      <!--
-      <div class="input-fields">
-        <span  class="Text">Estado:</span>
-        <span class="input-field"> {{item.estado}}</span>
-      </div>
-      -->
 
       <div class="input-fields">
         <span  class="Text">Lote:</span>
@@ -70,6 +64,28 @@
         <span class="input-field"> {{item.coordenadas}}</span>
       </div>
       -->
+
+
+      <div class="input-fields">
+        <span class="Text">Fotos:</span>
+      </div>
+
+      <div class="input-fields" *ngIf="fotoUrls.inicial">
+        <span class="Text">Inicial:</span>
+        <img [src]="fotoUrls.inicial" alt="Foto Inicial" style="width: 200px; height: auto;">
+      </div>
+
+      <div class="input-fields" *ngIf="fotoUrls.tipico">
+        <span class="Text">Típico:</span>
+        <img [src]="fotoUrls.tipico" alt="Foto Típica" style="width: 200px; height: auto;">
+      </div>
+
+      <div class="input-fields" *ngIf="fotoUrls.tardios">
+        <span class="Text">Tardíos:</span>
+        <img [src]="fotoUrls.tardios" alt="Foto Tardía" style="width: 200px; height: auto;">
+      </div>
+
+
 
       <div class="input-fields">
         <span  class="Text">Síntomas:</span>
@@ -93,6 +109,7 @@
 
 
 <button class="boton" (click)="editMuestra()">Editar Muestra</button>
+<button id="volver" (click)="backPage()"></button>
 
 
 

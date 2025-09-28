@@ -40,11 +40,45 @@
       </div>
 
 
-
+      <!--
       <div class="input-fields">
         <span  class="Text">Estado:</span>
         <input name="estado" ngModel placeholder="Estado" id="estado" type="estado" class="input-field" [(ngModel)]= "item.estado"  />
       </div>
+      -->
+
+      <div class="input-fields">
+        <span class="Text">Estado:</span>
+        <select name="estado" ngModel placeholder="Estado" id="estado" class="input-field" [(ngModel)]="item.estado">
+          <option value="" disabled selected>Seleccione un estado</option>
+          <option value="Amazonas">Amazonas</option>
+          <option value="Anzoátegui">Anzoátegui</option>
+          <option value="Apure">Apure</option>
+          <option value="Aragua">Aragua</option>
+          <option value="Barinas">Barinas</option>
+          <option value="Bolívar">Bolívar</option>
+          <option value="Carabobo">Carabobo</option>
+          <option value="Cojedes">Cojedes</option>
+          <option value="Delta Amacuro">Delta Amacuro</option>
+          <option value="Dependencias Federales">Dependencias Federales</option>
+          <option value="Distrito Capital">Distrito Capital</option>
+          <option value="Falcón">Falcón</option>
+          <option value="Guárico">Guárico</option>
+          <option value="La Guaira">La Guaira</option>
+          <option value="Lara">Lara</option>
+          <option value="Mérida">Mérida</option>
+          <option value="Miranda">Miranda</option>
+          <option value="Monagas">Monagas</option>
+          <option value="Nueva Esparta">Nueva Esparta</option>
+          <option value="Portuguesa">Portuguesa</option>
+          <option value="Sucre">Sucre</option>
+          <option value="Táchira">Táchira</option>
+          <option value="Trujillo">Trujillo</option>
+          <option value="Yaracuy">Yaracuy</option>
+          <option value="Zulia">Zulia</option>
+        </select>
+      </div>
+
 
       <div class="input-fields">
         <span  class="Text">Altitud:</span>
@@ -72,12 +106,17 @@
 
 
 
-      <button class="boton">Editar Unidad</button>
+      <button class="boton">Guardar</button>
 
-      <button class="botonrojo" (click)="deleteData(item.id)">
+      <button type="button" class="botonrojo" (click)="deleteData(item.id)">
         Eliminar
       </button>
+
+      <button type="button" id="volver" (click)="backPage()"></button>
+
     </div>
+
+
 
     <div class="blank"></div>
 

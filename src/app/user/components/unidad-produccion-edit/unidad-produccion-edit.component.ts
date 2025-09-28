@@ -32,8 +32,8 @@ export class UnidadProduccionEditComponent {
   ngOnInit(): void {
     this.route.params.subscribe(param =>{
       this.x=param['id'];
-      console.log(param);
-      console.log(param['id']);
+      //console.log(param);
+      //console.log(param['id']);
       //this.generateBarcode(param);
 
     })
@@ -75,7 +75,7 @@ export class UnidadProduccionEditComponent {
       .catch((err) => {
         alert(err.message)
       })
-      console.log(this.pid)
+      //console.log(this.pid)
 
 
   }
@@ -93,39 +93,17 @@ export class UnidadProduccionEditComponent {
 
 
   showPosition(position: any) {
-    /*
-      const p: HTMLParagraphElement = this.renderer.createElement('p');
-      p.innerHTML = "add new"
-      this.renderer.appendChild(this.div.nativeElement, p)
-    */
-    console.log(position.coords.latitude);
-    console.log(position.coords.longitude);
-    //console.log(res);
-    //unidad-produccionNewComponent.lat= position.coords.latitude;
-    //this.somethingChange.emit(position.coords.latitude);
-    //console.log(position.coords.longitude);
-    //this.something=position.coords.latitude;
-    //this.somethingChange.emit(this.something);
-    //var text = position.coords.latitude;
-    //this.geo=text;
+
     var x = position.coords.latitude;
     var y = position.coords.longitude;
     UnidadProduccionEditComponent.text = x+", "+ y;
-    //console.log(unidad-produccionNewComponent.text);
 
-
-
-
-    //x.innerHTML = "Latitude: " + position.coords.latitude +
-    //"<br>Longitude: " + position.coords.longitude;
   }
 
   async getLocation() {
-    //d1.nativeElement.insertAdjacentHTML('beforeend', '<div class="two">two</div>');
-    //console.log("click");
+
     var test = "...";
     this.res=test;
-    //console.log(this.res);
 
 
 
@@ -135,12 +113,11 @@ export class UnidadProduccionEditComponent {
 
 
     } else {
-      //x.innerHTML = "Geolocation is not supported by this browser.";
       console.log("error");
     }
     setTimeout(() => {
       this.res= UnidadProduccionEditComponent.text;
-      console.log(this.res);
+      //console.log(this.res);
       }
       ,1000);
 
@@ -158,7 +135,7 @@ export class UnidadProduccionEditComponent {
       querySnapshot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
         this.item=doc.data();
-        console.log(doc.id, " => ", doc.data());
+        //console.log(doc.id, " => ", doc.data());
         //
         this.res=this.item.coordenadas;
         //this.pid=this.item.project;

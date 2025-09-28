@@ -34,11 +34,7 @@ export class MuestrasNewComponent {
   ngOnInit(): void {
     this.route.params.subscribe(param =>{
       this.pid=param['id'];
-      //this.pid=param['id'];
 
-      //console.log(param);
-      //console.log(param['id']);
-      //this.generateBarcode(param);
 
     })
     //this.getData();
@@ -73,22 +69,11 @@ export class MuestrasNewComponent {
   }
 
   addData(value: any) {
-    //const gauth = getAuth();
 
-    //console.log(gauth);
 
-    /*onAuthStateChanged(gauth, (user) => {
-      if (user) {
-        if(user.email){this.email= user.email;}
-      }
-    });*/
-
-    //const dbInstance = collection(this.firestore, 'users');
 
     const dbInstance = doc(this.firestore, 'muestras', value.codigo);
-    //if (typeof value.cliente === 'undefined') value.cliente ="";
-    //console.log(value);
-    //setDoc(dbInstance, value)
+
     setDoc(dbInstance,
       {
         codigo: value.codigo,
@@ -133,40 +118,39 @@ export class MuestrasNewComponent {
     //window.location.href='#/auth/login';
   }
 
+  convertDecimalToDMS(decimal: number, isLatitude: boolean): string {
+    const degrees = Math.floor(Math.abs(decimal));
+    const minutesDecimal = (Math.abs(decimal) - degrees) * 60;
+    const minutes = Math.floor(minutesDecimal);
+    const seconds = (minutesDecimal - minutes) * 60;
+
+    let direction = '';
+    if (isLatitude) {
+      direction = decimal >= 0 ? 'N' : 'S';
+    } else {
+      direction = decimal >= 0 ? 'E' : 'W';
+    }
+
+    // Usar toFixed para limitar los decimales de los segundos
+    return `${degrees}° ${minutes}' ${seconds.toFixed(2)}'' ${direction}`;
+  }
+
   showPosition(position: any) {
-    /*
-      const p: HTMLParagraphElement = this.renderer.createElement('p');
-      p.innerHTML = "add new"
-      this.renderer.appendChild(this.div.nativeElement, p)
-    */
-    //console.log(position.coords.latitude);
-   //console.log(position.coords.longitude);
-    //console.log(res);
-    //MuestrasNewComponent.lat= position.coords.latitude;
-    //this.somethingChange.emit(position.coords.latitude);
-    //console.log(position.coords.longitude);
-    //this.something=position.coords.latitude;
-    //this.somethingChange.emit(this.something);
-    //var text = position.coords.latitude;
-    //this.geo=text;
-    var x = position.coords.latitude;
-    var y = position.coords.longitude;
+
+    var latitud = position.coords.latitude;
+    var longitud= position.coords.longitude;
+
+    var x = latitud.toFixed(6);
+    var y = longitud.toFixed(6);
+
+
     MuestrasNewComponent.text = x+", "+ y;
-    console.log(MuestrasNewComponent.text);
 
-
-
-
-    //x.innerHTML = "Latitude: " + position.coords.latitude +
-    //"<br>Longitude: " + position.coords.longitude;
   }
 
   async getLocation() {
-    //d1.nativeElement.insertAdjacentHTML('beforeend', '<div class="two">two</div>');
-    //console.log("click");
     var test = "...";
     this.res=test;
-    //console.log(this.res);
 
 
 

@@ -286,9 +286,6 @@ img{
   }
 
   .main{
-    /*display: flex;
-    height: 100vh;
-    text-align: center;*/
     justify-content: center;
     flex-direction: column;
     position:absolute;
@@ -299,7 +296,7 @@ img{
 
   .Text{
     color:rgba(0, 0, 0, 1);
-   /* width:25%;*/
+
     height:20px;
     font-family: Arial;
     font-size:16px;
@@ -307,10 +304,12 @@ img{
   }
 
   .loginBox { /*login box*/
+    margin: 3px;
+    padding: auto;
     box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
     width: 90%;
-    height: 52%;
+    height: 35%;
     flex-shrink: 0;
     position:absolute;
     left:5%;
@@ -413,7 +412,7 @@ img{
     /*box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);*/
     position: absolute;
     left: 67%;
-    top: 90%;
+    top: 72%;
     border: none;
     float: right;
     background-color:rgba(62.00000010430813, 179.000004529953, 194.00000363588333, 1);
@@ -507,6 +506,17 @@ img{
     left: 0%;
     top: 0%
   }
+
+
+  #volver{
+  position: absolute;
+  left: 5%;
+  top: 72%;
+  width: 35px;
+  height:35px;
+
+}
+
 
 
 

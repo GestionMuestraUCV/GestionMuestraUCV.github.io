@@ -123,7 +123,7 @@ button{
   position:absolute;
 
   top: 1.85em;
-  right:10.94em;
+  right:15em;
 
   width:36px;
   height:36px;
@@ -175,11 +175,9 @@ button{
   padding-top: 15em; /* Add top padding to move the first element down */
 
   z-index: -10;
-
 }
 
 .navbar2Text{
-  /*background: #3EC28F;*/
   height: 4.5%;
   color: #000000;
   font-size: 16px;
@@ -187,49 +185,25 @@ button{
   font-weight: 600;
   word-wrap: break-word;
   text-align: center;
- /* display: inline-block;
-  	vertical-align: middle;
-  	line-height: 240%;
-  /*border-top: 4px solid white;*/
   padding-top: 5px;
   padding-left: 20px;
-
-
 }
-
-
-/*
-#ProyectosText{
-  visibility: hidden;
-  cursor: pointer;
-  width: 17%;
-  position:absolute;
-  left:20%;
-  top:10%;
-  border-right: 4px solid white;
-}*/
-
-
-
-
 
 #UnidadText{
   cursor: pointer;
-  width: 300; /*17%;*/
+  width: 300;
   position:absolute;
-  left:0%;/*20%;/*32%;*/
+  left:0%;
   top: 7em;
-  /*border-right: 4px solid white;*/
 
 }
 
 #MuestrasText{
   cursor: pointer;
-  width: 300; /*17%;*/
+  width: 300;
   position:absolute;
-  left:0%;/*40%;/*49%;*/
+  left:0%;
   top: 12em;
-  /*border-right: 4px solid white;*/
 }
 
 
@@ -238,9 +212,8 @@ button{
   cursor: pointer;
   width: 300;/*17%;*/
   position:absolute;
-  left:0%;/*60%; /*66%;*/
+  left:0%;
   top:16em;
- /* border-right: 4px solid white;*/
 
 }
 
@@ -312,8 +285,7 @@ img{
 @media only screen and (max-width: 768px) {
 
 
-.homeBox {/*Home box*/
-    /*background-color:#0A9217;*/
+.homeBox {
     border-right: 4px solid white;
     width:20%;
     height:6.75em;
@@ -322,14 +294,7 @@ img{
     top:0%;
 
   }
-  .homeText { /*Home text*/
-    /*color:rgba(255, 255, 255, 1);
-    display: inline-block;
-      vertical-align: middle;
-      line-height: 250%;
-    font-family:Verdana;
-    font-size:32px;
-    letter-spacing:0;*/
+  .homeText {
 
     display: none;
 
@@ -358,18 +323,19 @@ img{
     width:45px;
     height:35px;
     position:absolute;
-    left: 84%;
-    top: 2.2em;
+    left: 88%;
+    top: 3.7em;
     background-image:url(../../assets/Logo-Agronomia2.png);
     background-repeat:no-repeat;
     background-size:cover;
   }
+
   .logoUcv { /*Logo Ucv*/
     width:35px;
     height:35px;
     position:absolute;
-    left: 24%;
-    top: 2.2em;
+    left: 23%;
+    top: 3.7em;
     background-image:url(../../assets/logo_ucv_bg2_1.png);
     background-repeat:no-repeat;
     background-size:cover;
@@ -378,8 +344,6 @@ img{
 
 
   .tituloBox {
-    /* Existing properties for mobile */
-    /*background-color:#0A9217;*//*#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
     width: 80%;
     height: 6.75em;
     position: absolute;
@@ -437,6 +401,12 @@ img{
 
 /**/
 
+.navbar2 {
+  width: 100%;
+
+}
+
+
 
   .navbar2Box{
     width: 100%;
@@ -447,6 +417,7 @@ img{
     position:absolute;
     left:0%;
     top:6.75em;
+    padding-top: 0em;
   }
 
   .navbar2Text{
@@ -476,9 +447,10 @@ img{
 
 
 
+
   #cerrarText{
     cursor: pointer;
-    width: 15%; /*15%;*/
+    width: 10%; /*15%;*/
     position:absolute;
     left:0%;
     top:13.5em;
@@ -487,22 +459,11 @@ img{
   }
 
 
-  #ProyectosText{
-    visibility: hidden;
-    cursor: pointer;
-    width: 20%; /*17%;*/
-    position:absolute;
-    left:15%;
-    top:13.5em;
-    border-right: 2px solid white;
-
-  }
-
   #UnidadText{
     cursor: pointer;
-    width: 20%; /*17%;*/
+    width: 15%;
     position:absolute;
-    left:20%;/*32%;*/
+    left:15%;/*32%;*/
     top:13.5em;
     border-right: 2px solid white;
 
@@ -510,38 +471,57 @@ img{
 
   #MuestrasText{
     cursor: pointer;
-    width: 20%; /*17%;*/
+    width: 15%; /*17%;*/
     position:absolute;
-    left:40%;/*49%;*/
+    left:30%;/*49%;*/
     top:13.5em;
     border-right: 2px solid white;
   }
 
+  #ResultText{
+    cursor: pointer;
+    width: 12%;/*17%;*/
+    position:absolute;
+    left:45%;
+    top:13.5em;
 
+  }
 
   #ClientesText{
     cursor: pointer;
-    width: 20%; /*17%;*/
+    width: 13%;
     position:absolute;
-    left:60%;/*66%;*/
+    left:58%;
     top:13.5em;
     border-right: 2px solid white;
   }
 
+
   #CodigoText{
     cursor: pointer;
-    width: 15%; /*17%;*/
+    width: 10%;
     position:absolute;
-    left:80%;/*83%;*/
-    top:13em;
+    left:70%;
+    top:13.5em;
     padding-left: 3%;
+
+  }
+  #ScanText{
+    cursor: pointer;
+    width: 10%;
+    position:absolute;
+    left:87%;
+    top: 13.5em;
 
   }
 
 
 
 
-  .salir{
+
+
+
+.salir{
     cursor: pointer;
     border: none;
     background: none;
@@ -551,7 +531,6 @@ img{
     left: 0%;
     top: 0%
   }
-
 
 
 

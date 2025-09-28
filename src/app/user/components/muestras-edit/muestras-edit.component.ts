@@ -35,8 +35,8 @@ export class MuestrasEditComponent {
   ngOnInit(): void {
     this.route.params.subscribe(param =>{
       this.x=param['id'];
-      console.log(param);
-      console.log(param['id']);
+      //console.log(param);
+      //console.log(param['id']);
       //this.generateBarcode(param);
 
     })
@@ -48,9 +48,12 @@ export class MuestrasEditComponent {
 
   async onFileSelected(event: any, etapa: 'inicial' | 'tipico' | 'tardios') {
       const file: File = event.target.files[0];
+      console.log(etapa);
+      console.log(file);
       if (file) {
         const storage = getStorage();
-        const storageRef = ref(storage, `muestras/${this.res}/${etapa}/${file.name}`);
+        const storageRef = ref(storage, `muestras/${etapa}/${file.name}`);
+
         try {
           const uploadResult = await uploadBytes(storageRef, file);
           const imageUrl = await getDownloadURL(uploadResult.ref);
@@ -105,7 +108,7 @@ export class MuestrasEditComponent {
       .catch((err) => {
         alert(err.message)
       })
-      console.log(this.pid)
+      //console.log(this.pid)
 
 
   }
@@ -121,33 +124,63 @@ export class MuestrasEditComponent {
 
   }
 
+  convertDecimalToDMS(decimal: number, isLatitude: boolean): string {
+      const degrees = Math.floor(Math.abs(decimal));
+      const minutesDecimal = (Math.abs(decimal) - degrees) * 60;
+      const minutes = Math.floor(minutesDecimal);
+      const seconds = (minutesDecimal - minutes) * 60;
+
+      let direction = '';
+      if (isLatitude) {
+        direction = decimal >= 0 ? 'N' : 'S';
+      } else {
+        direction = decimal >= 0 ? 'E' : 'W';
+      }
+
+      return `${degrees}° ${minutes}' ${seconds.toFixed(2)}'' ${direction}`;
+
+    }
 
   showPosition(position: any) {
-    /*
-      const p: HTMLParagraphElement = this.renderer.createElement('p');
-      p.innerHTML = "add new"
-      this.renderer.appendChild(this.div.nativeElement, p)
-    */
-    console.log(position.coords.latitude);
-    console.log(position.coords.longitude);
-    //console.log(res);
-    //MuestrasNewComponent.lat= position.coords.latitude;
-    //this.somethingChange.emit(position.coords.latitude);
+
+    //console.log(position.coords.latitude);
     //console.log(position.coords.longitude);
-    //this.something=position.coords.latitude;
-    //this.somethingChange.emit(this.something);
-    //var text = position.coords.latitude;
-    //this.geo=text;
-    var x = position.coords.latitude;
-    var y = position.coords.longitude;
+
+
+    var latitud = position.coords.latitude;
+    var longitud = position.coords.longitude;
+
+
+    /*const degrees = Math.floor(Math.abs(latitud));
+    const minutesDecimal = (Math.abs(latitud) - degrees) * 60;
+    const minutes = Math.floor(minutesDecimal);
+    const seconds = (minutesDecimal - minutes) * 60;
+
+    let direction = '';
+    direction = x >= 0 ? 'N' : 'S';
+
+    const formattedLatitude = `${degrees}° ${minutes}' ${seconds.toFixed(2)}'' ${direction}`;
+
+
+    console.log("x:");
+    console.log(formattedLatitude);*/
+
+
+    var x = latitud.toFixed(6);
+    var y = longitud.toFixed(6);
+
+
     MuestrasEditComponent.text = x+", "+ y;
-    //console.log(MuestrasNewComponent.text);
+
+    //const formattedLatitude = this.convertDecimalToDMS(latitud, true);
+    //const formattedLongitude = this.convertDecimalToDMS(longitud, false);
+
+
+    //MuestrasEditComponent.text = `${formattedLatitude}, ${formattedLongitude}`;
 
 
 
 
-    //x.innerHTML = "Latitude: " + position.coords.latitude +
-    //"<br>Longitude: " + position.coords.longitude;
   }
 
   async getLocation() {
@@ -170,7 +203,7 @@ export class MuestrasEditComponent {
     }
     setTimeout(() => {
       this.res= MuestrasEditComponent.text;
-      console.log(this.res);
+      //console.log(this.res);
       }
       ,1000);
 
@@ -188,8 +221,20 @@ export class MuestrasEditComponent {
       querySnapshot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
         this.item=doc.data();
-        console.log(doc.id, " => ", doc.data());
+        //console.log(doc.id, " => ", doc.data());
+
+        /*if (this.item.fecha) {
+          this.item.fecha = this.datePipe.transform(this.item.fecha.toDate(), 'yyyy-MM-dd');
+        }*/
         //
+        /*
+        const date = this.item.fecha.toDate();
+        const formattedDate = date.toISOString().split('T')[0];
+        this.item.fecha = formattedDate;
+       */
+
+        //
+
         this.res=this.item.coordenadas;
         this.pid=this.item.project;
       });
