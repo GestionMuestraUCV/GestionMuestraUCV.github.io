@@ -1,28 +1,10 @@
 
-/*
-::ng-deep mat-tooltip-component{
-  background-color: black;
-  color: blue;
-  position:relative;
-  left:330px;
-	top:230px;
-  border-radius: 3px;
 
-}
-
-::ng-deep .muestras-tooltip {
-  background-color: black;
-  color: white;
-  position:relative;
-  left:330px;
-	top:230px;
-  border-radius: 3px;
-}*/
 
 
 .list{
   position: absolute;
-  left:50%;/*34%;*/
+  left:55%;/*34%;*/
 	top:30%;
   transform: translate(-30%,0%);
 }
@@ -145,7 +127,7 @@ table {
 	font-family:Verdana;
 	font-size:48px;
 	letter-spacing:0;
-  left:50%;/*45%;*/
+  left:56%;/*45%;*/
 	top:20%;
   transform: translate(-35%,0%);
 }

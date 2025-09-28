@@ -25,20 +25,12 @@ export class PwaService {
         this.openPromptComponent('android');
       });
     }
-    /*
-    if (this.platform.IOS) {
-      console.log('ios');
-      const isInStandaloneMode = ('standalone' in window.navigator) && (window.navigator['standalone']);
-      if (!isInStandaloneMode) {
-        this.openPromptComponent('ios');
-      }
-    }
-    console.log('endchoose');*/
+
   }
 
   private openPromptComponent(mobileType: 'ios' | 'android') {
 
-    timer(2000)
+    timer(1000)
       .pipe(take(1))
       .subscribe(() => this.bottomSheet.open(PromptComponent, { data: { mobileType, promptEvent: this.promptEvent } }));
   }

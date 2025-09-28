@@ -22,21 +22,19 @@ export class SelectComponent {
     /*const installTest = document.getElementByClassName('install');
     //installTest!.style.display="none";
     installTest!.style.visibility="hidden";*/
-    //this.platform.ANDROID
-    //this.platform.IOS
 
     if (this.platform.IOS) {this.hidInstText=false; this.hidInstBut=true;}
     if (this.platform.ANDROID) {this.hidInstText=true; this.hidInstBut=false;}
 
     window.addEventListener("appinstalled", () => {
       this.disableInAppInstallPrompt();
+      this.hidInstBut=true;
     });
 
     window.addEventListener('beforeinstallprompt', (event: any) => {
       event.preventDefault();
       this.promptEvent = event;
-      //event.prompt();
-      console.log("promptEvent");
+      //console.log("promptEvent");
 
     });
 
