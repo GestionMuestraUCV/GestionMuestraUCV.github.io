@@ -5,10 +5,8 @@
 
 <div  class="loginBox">
 
-  <form #loginForm="ngForm" (ngSubmit)="handleRegister(loginForm.value)">
+  <form #loginForm="ngForm" >
     <div class="main" >
-
-
       <div class="input-fields">
         <span  class="Text">Codigo:</span>
         <span class="input-field" > {{item.codigo}}</span>
@@ -67,27 +65,6 @@
 
 
       <div class="input-fields">
-        <span class="Text">Fotos:</span>
-      </div>
-
-      <div class="input-fields" *ngIf="fotoUrls.inicial">
-        <span class="Text">Inicial:</span>
-        <img [src]="fotoUrls.inicial" alt="Foto Inicial" style="width: 200px; height: auto;">
-      </div>
-
-      <div class="input-fields" *ngIf="fotoUrls.tipico">
-        <span class="Text">Típico:</span>
-        <img [src]="fotoUrls.tipico" alt="Foto Típica" style="width: 200px; height: auto;">
-      </div>
-
-      <div class="input-fields" *ngIf="fotoUrls.tardios">
-        <span class="Text">Tardíos:</span>
-        <img [src]="fotoUrls.tardios" alt="Foto Tardía" style="width: 200px; height: auto;">
-      </div>
-
-
-
-      <div class="input-fields">
         <span  class="Text">Síntomas:</span>
         <span class="input-field"> {{item.sintomas}}</span>
       </div>
@@ -100,6 +77,37 @@
       </div>
 
     </div>
+
+    <div class="foto-field">
+
+        <div class="input-fields">
+          <span class="Text">Fotos de Sintomas:</span>
+        </div>
+
+        <div  class="input-fields" *ngIf="fotoUrls.inicial && mostrarFotoInicial" >
+          <!--<span class="Text">Inicial:</span>-->
+          <img [src]="fotoUrls.inicial" class="foto" alt="Foto Inicial" style="width: 250px; height: 300px;">
+        </div>
+
+
+
+        <div class="input-fields" *ngIf="fotoUrls.tipico && mostrarFotoTipico">
+          <!--<span class="Text">Típico:</span>-->
+          <img [src]="fotoUrls.tipico" class="foto" alt="Foto Típica" style="width: 250px; height: 300px;">
+        </div>
+
+        <div class="input-fields" *ngIf="fotoUrls.tardios && mostrarFotoTardios">
+          <!--<span class="Text">Tardíos:</span>-->
+          <img [src]="fotoUrls.tardios" class="foto" alt="Foto Tardía" style="width: 250px; height: 300px;">
+        </div>
+
+
+        <button class="fotoSec" (click)="alternarFotoInicial()">Iniciales</button>
+        <button class="fotoSec" (click)="alternarFotoTipico()">Típicos</button>
+        <button class="fotoSec" (click)="alternarFotoTardios()">Tardíos</button>
+
+      </div>
+
 
 
   </form>

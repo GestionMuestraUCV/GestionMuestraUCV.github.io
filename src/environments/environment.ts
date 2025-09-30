@@ -4,6 +4,22 @@
 
 export const environment = {
   firebase: {
+    apiKey: "AIzaSyD0Py3MA2BD1yEsMg4wM9RDhbNgmEAxZPk",
+    authDomain: "gestion-de-muestras-de-c-fabe0.firebaseapp.com",
+    databaseURL: "https://gestion-de-muestras-de-c-fabe0-default-rtdb.firebaseio.com",
+    projectId: "gestion-de-muestras-de-c-fabe0",
+    storageBucket: "gestion-de-muestras-de-c-fabe0.firebasestorage.app",
+    messagingSenderId: "881625861704",
+    appId: "1:881625861704:web:1da279954953bf7e3ad27d",
+    measurementId: "G-PTHV8B640J"
+
+  },
+  production: false
+};
+
+
+
+    /*
     projectId: 'gestion-de-muestras-de-c-fabe0',
     appId: '1:881625861704:web:1da279954953bf7e3ad27d',
     databaseURL:'https://gestion-de-muestras-de-c-fabe0-default-rtdb.firebaseio.com',
@@ -11,11 +27,8 @@ export const environment = {
     apiKey: 'AIzaSyD0Py3MA2BD1yEsMg4wM9RDhbNgmEAxZPk',
     authDomain: 'gestion-de-muestras-de-c-fabe0.firebaseapp.com',
     messagingSenderId: '881625861704',
-    measurementId: 'G-PTHV8B640J',
-
-  },
-  production: false
-};
+    measurementId: 'G-PTHV8B640J'
+    */
 
 /*
  * For easier debugging in development mode, you can import the following file

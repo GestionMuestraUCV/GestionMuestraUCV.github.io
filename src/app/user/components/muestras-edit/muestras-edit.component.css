@@ -2,11 +2,11 @@
   box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
   padding-top: 2px;
-  width: 65%; /*75%;*/
-  min-height: 680px;
+  width: 65%;
+  min-height: 780px;
   flex-shrink: 0;
   position:absolute;
-  left:50%;/*15%;*/
+  left:50%;
   top:24%;
   transform: translate(-30%,0%);
 
@@ -52,7 +52,14 @@ textarea{
 
 .input-field{
   margin: 10px;
-  width: 85%;
+  width: 100%;
+  height: 20px;
+  left: 92px;
+}
+
+#SelectEstadoDiag{
+  margin: 10px;
+  width: 80%;
   height: 20px;
   left: 92px;
 }
@@ -114,22 +121,33 @@ button{
 
 .Text{
   color:rgba(0, 0, 0, 1);
-	width:25%;
+	width:30%;
 	height:25px;
 	font-family: Arial;
 	font-size:20px;
 	letter-spacing:0;
 }
 
+#Text-Sintomas{
+  width:25%;
+}
+
+
+
 .subTituloSeccion {
   color:black;
   font-family:Verdana;
-  font-size:20px;
+  font-size:18px;
   text-align: left;
   margin-top: 8px;
   margin-bottom: 10px;
   left: 0;
   width: 100%;
+}
+
+.block-foto{
+  margin-left: 40px;
+  margin-bottom: 15px;
 }
 
 

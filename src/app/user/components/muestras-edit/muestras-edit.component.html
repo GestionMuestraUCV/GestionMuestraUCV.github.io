@@ -81,6 +81,15 @@
         <input name="repeticion" ngModel placeholder="Repeticion" id="repeticion" type="repeticion" class="input-field" [(ngModel)]= "item.repeticion"/>
       </div>
 
+      <div class="input-fields">
+        <span  class="Text" id="EstadoDiag">Estado de Diagnostico:</span>
+        <select  list="estadoDiag" name="estadoDiag" ngModel placeholder="Estado de Diagnostico" type="estadoDiag" class="input-field" id="SelectEstadoDiag" [(ngModel)]= "item.estadoDiag" >
+          <option value="" disabled selected>Seleccione un Estado de Diagnostico</option>
+          <option value="Hongos"> Sin Procesar </option>
+          <option value="Bacterias"> En Proceso </option>
+          <option value="Virus"> Finalizado </option>
+        </select>
+      </div>
 
       <div class="input-fields">
         <span  class="Text">Coordenadas:</span>
@@ -89,43 +98,42 @@
       </div>
 
 
+      <div class="subTituloSeccion">Soporte Fotográfico: </div>
 
-      <h2 class="subTituloSeccion">Soporte Fotográfico</h2>
+      <div class="block-foto">
 
-      <div class="input-fields">
-        <span class="Text">Iniciales:</span>
-        <input name="foto-inicial" type="file" (change)="onFileSelected($event, 'inicial')" class="input-field-2">
-      </div>
+        <div class="input-fields" style="margin-bottom:10px;">
+          <span class="Text" id="Text-Sintomas">Sintomas Iniciales:</span>
+          <input name="foto-inicial" type="file" (change)="onFileSelected($event, 'inicial')" class="input-field-2">
+        </div>
 
-      <div class="input-fields">
-        <span class="Text">Típico:</span>
-        <input name="foto-tipico" type="file" (change)="onFileSelected($event, 'tipico')" class="input-field-2">
-      </div>
+        <div class="input-fields" style="margin-bottom: 10px;">
+          <span class="Text" id="Text-Sintomas">Sintomas Típico:</span>
+          <input name="foto-tipico" type="file" (change)="onFileSelected($event, 'tipico')" class="input-field-2">
+        </div>
 
-      <div class="input-fields">
-        <span class="Text">Tardíos:</span>
-        <input name="foto-tardios" type="file" (change)="onFileSelected($event, 'tardios')" class="input-field-2">
+        <div class="input-fields" style="margin-bottom: 10px;">
+          <span class="Text" id="Text-Sintomas">Sintomas Tardíos:</span>
+          <input name="foto-tardios" type="file" (change)="onFileSelected($event, 'tardios')" class="input-field-2">
+        </div>
+
       </div>
 
 
       <div class="input-fields">
         <span  class="Text">Síntomas:</span>
         <input name="sintomas" ngModel placeholder="Síntomas" id="sintomas" type="sintomas" class="input-field" [(ngModel)]= "item.sintomas"/>
-        <!-- <textarea name="sintomas" ngModel placeholder="Síntomas" id="sintomas"  rows="4" cols="50" [(ngModel)]= "item.sintomas" ></textarea> -->
       </div>
-
-
 
       <div class="input-fields">
-
         <span  class="Text">Comentarios:</span>
-
         <input name="comentarios" ngModel placeholder="Comentarios" id="comentarios" type="comentarios" class="input-field" [(ngModel)]= "item.comentarios"/>
-        <!-- <textarea name="comentarios" ngModel placeholder="Comentarios" id="comentarios"  rows="4" cols="50" [(ngModel)]= "item.comentarios" > </textarea> -->
       </div>
 
-
-
+      <div class="input-fields">
+        <span  class="Text">Resultados:</span>
+        <input name="resultados" ngModel placeholder="Resultados" id="resultados" type="resultados" class="input-field" [(ngModel)]= "item.resultados"/>
+      </div>
 
 
 

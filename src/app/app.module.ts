@@ -34,6 +34,8 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { PromptComponent } from './prompt/prompt.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ImageControlComponent } from "./image-control/image-control.component";
 
 
 
@@ -76,6 +78,7 @@ export function basicLoader(){
   imports: [
     MatToolbarModule,
     MatIconModule,
+    MatFormFieldModule,
     MatCardModule,
     MatIconModule,
     MatButtonModule,
@@ -86,30 +89,30 @@ export function basicLoader(){
     AppRoutingModule,
     FormsModule,
     AuthModule,
-
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
     provideFirestore(() => //getFirestore()),
-      {
+     {
         const firestore = getFirestore();
         //connectFirestoreEmulator(firestore, 'localhost', 8080);
         enableIndexedDbPersistence(firestore);
         //persistentLocalCache({ tabManager: persistentSingleTabManager({}) });
         return firestore;
-      }),
+    }),
     provideFunctions(() => getFunctions()),
     UserModule,
     AdminModule,
     ClientModule,
     NgxScannerQrcodeModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: !isDevMode(),
-      // Register the ServiceWorker as soon as the application is stable
-      // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
-    })
-  ],
+        enabled: !isDevMode(),
+        // Register the ServiceWorker as soon as the application is stable
+        // or after 30 seconds (whichever comes first).
+        registrationStrategy: 'registerWhenStable:30000'
+    }),
+    ImageControlComponent
+],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy},
     {provide: APP_INITIALIZER, useFactory: initializer, deps: [PwaService], multi: true},

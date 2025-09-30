@@ -1,58 +1,34 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
-<!--<div  class="navbar">
-
-  <div  class="tituloBox"><span  class="tituloText">Gestion de Muestras</span></div>
-  <div  class="logoCiens"></div>
-  <div  class="logoUcv"></div>
-
-  <div  class="homeBox">
-    <span  class="homeText">Home</span>
-  </div>
-
-</div>
-
--->
-
-
-<!--<div class="base">-->
-
 <router-outlet></router-outlet>
-<!--</div>-->
-
-
-
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <!--
+<router-outlet></router-outlet>
+ <mat-toolbar color="primary"> Angular Image Cropper </mat-toolbar>
 
-  <div class="container"></div>
+    <mat-form-field>
+      <input
+        ngModel
+        matInput
+        placeholder="Enter image height..."
+      />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        ngModel
+        matInput
+        placeholder="Enter image width..."
+      />
+    </mat-form-field>
 
 
-<form #loginForm="ngForm" (ngSubmit)="handleLogin(loginForm.value)">
-  <div class="main">
-    <div class="input-fields">
-        <input name="email" ngModel placeholder="Email" id="email" type="email" class="input-field" />
+    <div class="container">
+      <app-image-control
+      [width]="0"
+      [height]="0"
+      path="/profile-images/my-image"
+
+      />
+
+
     </div>
-    <div class="input-fields">
-        <input name="password" ngModel placeholder="Password" id="password" type="password" class="input-field" />
-    </div>
-
-
-    <button>Sign In</button>
-    <button>Sign Up</button>
-  </div>
-</form>
-
-<button onclick = "window.location.href='www.linktothepage.com';">HOME</button>
-
-
-<a href="#/auth/login">Log In </a>
-<div></div>
-<a href="#/auth/signup">Sign Up </a>
-
 -->

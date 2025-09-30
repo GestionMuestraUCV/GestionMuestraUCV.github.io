@@ -35,8 +35,6 @@ export class MuestrasEditComponent {
   ngOnInit(): void {
     this.route.params.subscribe(param =>{
       this.x=param['id'];
-      //console.log(param);
-      //console.log(param['id']);
       //this.generateBarcode(param);
 
     })
@@ -71,15 +69,11 @@ export class MuestrasEditComponent {
 
 
   handleRegister(value: any){
-    //console.log(value);
-    //this.addData(value);
     this.addData( { ...value, fotos: this.fotoUrls });
     this.Home();
   }
 
   async addData(value: any) {
-    //const dbInstance = collection(this.firestore, 'users');
-    //console.log(value);
     const dbInstance = doc(this.firestore, 'muestras', value.codigo);
     value.fecha= this.datePipe.transform(value.fecha, 'dd/MM/yyyy')
 
@@ -96,8 +90,11 @@ export class MuestrasEditComponent {
         sintomas: value.sintomas,
         comentarios: value.comentarios,
         lote: value.lote,
-        fotos: value.fotos
-        //project: this.pid
+        fotos: value.fotos,
+        resultados: value.resultados,
+        estadoDiag: value.estadoDiag
+
+
       }
 
       )
@@ -108,7 +105,6 @@ export class MuestrasEditComponent {
       .catch((err) => {
         alert(err.message)
       })
-      //console.log(this.pid)
 
 
   }
@@ -143,8 +139,6 @@ export class MuestrasEditComponent {
 
   showPosition(position: any) {
 
-    //console.log(position.coords.latitude);
-    //console.log(position.coords.longitude);
 
 
     var latitud = position.coords.latitude;
@@ -158,12 +152,8 @@ export class MuestrasEditComponent {
 
     let direction = '';
     direction = x >= 0 ? 'N' : 'S';
-
     const formattedLatitude = `${degrees}° ${minutes}' ${seconds.toFixed(2)}'' ${direction}`;
-
-
-    console.log("x:");
-    console.log(formattedLatitude);*/
+    */
 
 
     var x = latitud.toFixed(6);
@@ -185,10 +175,8 @@ export class MuestrasEditComponent {
 
   async getLocation() {
     //d1.nativeElement.insertAdjacentHTML('beforeend', '<div class="two">two</div>');
-    //console.log("click");
     var test = "...";
     this.res=test;
-    //console.log(this.res);
 
 
 
@@ -203,7 +191,6 @@ export class MuestrasEditComponent {
     }
     setTimeout(() => {
       this.res= MuestrasEditComponent.text;
-      //console.log(this.res);
       }
       ,1000);
 
@@ -219,21 +206,8 @@ export class MuestrasEditComponent {
     const querySnapshot = await getDocs(q);
     if(!querySnapshot.empty){
       querySnapshot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
         this.item=doc.data();
-        //console.log(doc.id, " => ", doc.data());
 
-        /*if (this.item.fecha) {
-          this.item.fecha = this.datePipe.transform(this.item.fecha.toDate(), 'yyyy-MM-dd');
-        }*/
-        //
-        /*
-        const date = this.item.fecha.toDate();
-        const formattedDate = date.toISOString().split('T')[0];
-        this.item.fecha = formattedDate;
-       */
-
-        //
 
         this.res=this.item.coordenadas;
         this.pid=this.item.project;
@@ -246,27 +220,18 @@ export class MuestrasEditComponent {
     }
 
 
-  /*
-    <div class="one" [innerHtml]="htmlToAdd"></div>
-    this.htmlToAdd = '<div class="two">two</div>';
-  */
 
   deleteData(id: string) {
 
 
     let text = "Seguro que desea eliminar esta Muestra?";
     if (confirm(text) == true) {
-      //text = "You pressed OK!";
       let str=this.x;
       const dataToDelete = doc(this.firestore, 'muestras', str);
-      //console.log(id);
-      //console.log(dataToDelete);
+
       deleteDoc(dataToDelete)
       .then(() => {
         alert('Data Deleted');
-        //this.getData()
-        //this.router.navigate(['user/muestras/'+this.pid]);
-        //this.router.navigate(['user/unidad-produccion-all']);
         this.Home();
       })
       .catch((err) => {

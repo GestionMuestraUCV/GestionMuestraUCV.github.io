@@ -88,7 +88,9 @@ export class MuestrasNewComponent {
         comentarios: value.comentarios,
         unidad: this.pid,
         lote: value.lote,
-        fotos: value.fotos
+        fotos: value.fotos,
+        resultados: value.resultados,
+        estadoDiag: value.estadoDiag
       }
 
       )

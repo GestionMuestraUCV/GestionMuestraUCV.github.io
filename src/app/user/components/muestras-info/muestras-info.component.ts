@@ -16,6 +16,11 @@ export class MuestrasInfoComponent {
   public res: any;
   public item: any;
   public text: any;
+
+  public mostrarFotoInicial: boolean = true;
+  public mostrarFotoTipico: boolean = false;
+  public mostrarFotoTardios: boolean = false;
+
   public fotoUrls: { inicial?: string; tipico?: string; tardios?: string } = {}; // Nueva propiedad
 
   @ViewChild('geo') geo: any;//ElementRef | undefined;
@@ -40,6 +45,25 @@ export class MuestrasInfoComponent {
     this.MyQuery();
 
   }
+
+  alternarFotoInicial() {
+    this.mostrarFotoInicial = true;
+    this.mostrarFotoTipico = false;
+    this.mostrarFotoTardios = false;
+  }
+
+  alternarFotoTipico() {
+    this.mostrarFotoInicial = false;
+    this.mostrarFotoTipico = true;
+    this.mostrarFotoTardios = false;
+  }
+
+  alternarFotoTardios() {
+    this.mostrarFotoInicial = false;
+    this.mostrarFotoTipico = false;
+    this.mostrarFotoTardios = true;
+  }
+
 
   handleRegister(value: any){
      this.addData(value);
@@ -119,9 +143,9 @@ export class MuestrasInfoComponent {
         this.item=doc.data();
 
         this.fotoUrls = {
-          inicial: this.item.fotoInicial,
-          tipico: this.item.fotoTipico,
-          tardios: this.item.fotoTardios
+          inicial: this.item.fotos['inicial'] ,
+          tipico: this.item.fotos['tipico'] ,
+          tardios: this.item.fotos['tardios']
         };
 
 
