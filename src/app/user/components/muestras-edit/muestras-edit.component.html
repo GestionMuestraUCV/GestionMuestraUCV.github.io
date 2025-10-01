@@ -104,17 +104,17 @@
 
         <div class="input-fields" style="margin-bottom:10px;">
           <span class="Text" id="Text-Sintomas">Sintomas Iniciales:</span>
-          <input name="foto-inicial" type="file" (change)="onFileSelected($event, 'inicial')" class="input-field-2">
+          <input name="foto-inicial" type="file" (change)="onFileSelected($event, 'inicial')" class="input-field-2" [(ngModel)]="fotoUrls.inicial">
         </div>
 
         <div class="input-fields" style="margin-bottom: 10px;">
           <span class="Text" id="Text-Sintomas">Sintomas Típico:</span>
-          <input name="foto-tipico" type="file" (change)="onFileSelected($event, 'tipico')" class="input-field-2">
+          <input name="foto-tipico" type="file" (change)="onFileSelected($event, 'tipico')" class="input-field-2" [(ngModel)]="fotoUrls.tipico">
         </div>
 
         <div class="input-fields" style="margin-bottom: 10px;">
           <span class="Text" id="Text-Sintomas">Sintomas Tardíos:</span>
-          <input name="foto-tardios" type="file" (change)="onFileSelected($event, 'tardios')" class="input-field-2">
+          <input name="foto-tardios" type="file" (change)="onFileSelected($event, 'tardios')" class="input-field-2" [(ngModel)]="fotoUrls.tardios">
         </div>
 
       </div>

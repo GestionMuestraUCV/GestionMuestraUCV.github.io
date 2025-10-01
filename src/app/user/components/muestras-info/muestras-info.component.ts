@@ -36,8 +36,8 @@ export class MuestrasInfoComponent {
   ngOnInit(): void {
     this.route.params.subscribe(param =>{
       this.text=param['id'];
-      console.log(param);
-      console.log(param['id']);
+      //console.log(param);
+      //console.log(param['id']);
       //this.generateBarcode(param);
 
     })
@@ -97,8 +97,8 @@ export class MuestrasInfoComponent {
 
   showPosition(position: any) {
 
-    console.log(position.coords.latitude);
-    console.log(position.coords.longitude);
+    //console.log(position.coords.latitude);
+    //onsole.log(position.coords.longitude);
 
     var x = position.coords.latitude;
     var y = position.coords.longitude;
@@ -141,6 +141,7 @@ export class MuestrasInfoComponent {
     if(!querySnapshot.empty){
       querySnapshot.forEach((doc) => {
         this.item=doc.data();
+        //console.log(this.item);
 
         this.fotoUrls = {
           inicial: this.item.fotos['inicial'] ,

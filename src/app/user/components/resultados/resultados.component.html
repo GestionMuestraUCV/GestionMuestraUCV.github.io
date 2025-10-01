@@ -13,6 +13,7 @@
       <th> Fecha </th>
       <th> Cultivo </th>
       <th> Estado </th>
+      <th> Resultados </th>
       <th> </th>
 
     </tr>
@@ -23,6 +24,8 @@
       <td >{{ item.fecha }}</td>
       <td>{{ item.cultivo}}</td>
       <td>{{ item.estadoDiag}}</td>
+      <td>{{ item.resultados}}</td>
+
 
       <td>
         <button class="detalles" (click)="infoMuestra(item.codigo)">

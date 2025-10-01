@@ -46,8 +46,9 @@ export class MuestrasEditComponent {
 
   async onFileSelected(event: any, etapa: 'inicial' | 'tipico' | 'tardios') {
       const file: File = event.target.files[0];
-      console.log(etapa);
-      console.log(file);
+
+      /*console.log(etapa);
+      console.log(file);*/
       if (file) {
         const storage = getStorage();
         const storageRef = ref(storage, `muestras/${etapa}/${file.name}`);
@@ -69,7 +70,9 @@ export class MuestrasEditComponent {
 
 
   handleRegister(value: any){
+
     this.addData( { ...value, fotos: this.fotoUrls });
+
     this.Home();
   }
 
@@ -211,6 +214,14 @@ export class MuestrasEditComponent {
 
         this.res=this.item.coordenadas;
         this.pid=this.item.project;
+
+        this.fotoUrls = {
+          inicial: this.item.fotos['inicial'] ,
+          tipico: this.item.fotos['tipico'] ,
+          tardios: this.item.fotos['tardios']
+        };
+
+
       });
     }
   }

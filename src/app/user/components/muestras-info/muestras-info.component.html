@@ -84,12 +84,18 @@
           <span class="Text">Fotos de Sintomas:</span>
         </div>
 
+        <div class="BlockfotoSec">
+
+        <button class="fotoSec" (click)="alternarFotoInicial()">Iniciales</button>
+        <button class="fotoSec" (click)="alternarFotoTipico()">Típicos</button>
+        <button class="fotoSec" (click)="alternarFotoTardios()">Tardíos</button>
+
+        </div>
+
         <div  class="input-fields" *ngIf="fotoUrls.inicial && mostrarFotoInicial" >
           <!--<span class="Text">Inicial:</span>-->
           <img [src]="fotoUrls.inicial" class="foto" alt="Foto Inicial" style="width: 250px; height: 300px;">
         </div>
-
-
 
         <div class="input-fields" *ngIf="fotoUrls.tipico && mostrarFotoTipico">
           <!--<span class="Text">Típico:</span>-->
@@ -102,9 +108,10 @@
         </div>
 
 
-        <button class="fotoSec" (click)="alternarFotoInicial()">Iniciales</button>
-        <button class="fotoSec" (click)="alternarFotoTipico()">Típicos</button>
-        <button class="fotoSec" (click)="alternarFotoTardios()">Tardíos</button>
+
+
+
+
 
       </div>
 

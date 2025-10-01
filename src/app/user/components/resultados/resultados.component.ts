@@ -87,32 +87,26 @@ export class ResultadosComponent {
         // An error happened.
       });
       this.router.navigate(['auth/select']);
-      //window.location.href='#/auth/login';
     }
 
     newMuestra(){
       this.router.navigate(['user/muestras-new']);
-      //window.location.href='#/auth/login';
     }
 
     editMuestra(id: any){
       this.router.navigate(['user/muestras-edit/'+ id]);
-      //window.location.href='#/auth/login';
     }
 
     infoProject(id: any){
       this.router.navigate(['user/project-edit/'+ id]);
-      //window.location.href='#/auth/login';
     }
 
     infoMuestra(id: any){
       this.router.navigate(['user/muestras-info/'+ id]);
-      //window.location.href='#/auth/login';
     }
 
     Barcode(id: any){
       this.router.navigate(['user/barcode/'+ id]);
-      //window.location.href='#/auth/login';
     }
 
 
@@ -140,9 +134,6 @@ export class ResultadosComponent {
         })
 
 
-
-
-
       /*const querySnapshot = await getDocs(q);
       querySnapshot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
@@ -156,11 +147,9 @@ export class ResultadosComponent {
         querySnapshot.forEach((doc) => {
           // doc.data() is never undefined for query doc snapshots
           console.log(doc.id, " => ", doc.data());
-          //console.log("here2");
           //this.list= doc;
           //this.data=doc;
         });
-        //console.log("done");
 
 
     }

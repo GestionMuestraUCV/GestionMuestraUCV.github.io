@@ -28,11 +28,14 @@ button{
 
 .navbar { /*Titulo box*/
 	background-color:#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
-	width:100%;
+	width:clamp(1280px,100%,100%);
 	height:6.75em;
   position:absolute;
 	left:0%; /*20%;*/
 	top:0%;
+
+  /*display: flex;
+  flex-direction: row;*/
 }
 
 .tituloBox { /*Titulo box*/
@@ -162,7 +165,7 @@ button{
   height: 100vh;  /*100%;*/
   /* This sets the height to 100% of the viewport height */
   width: 320px;
-  position: fixed; /*absolute;*/
+  position: absolute; /*absolute;*/
   /* Keeps the navbar in place even when the user scrolls */
   top: 0;
   left: 0;
@@ -285,6 +288,12 @@ img{
 @media only screen and (max-width: 768px) {
 
 
+.navbar{
+    width: 100%;
+    position: absolute;
+  }
+
+
 .homeBox {
     border-right: 4px solid white;
     width:20%;
@@ -382,17 +391,7 @@ img{
 
 
   .homeLogo { /*Home text*/
-    /*position:relative;
 
-    top:30%;
-    left:25%;
-
-    width:36px;
-    height:36px;
-    text-align:center;
-    background-image:url(../../assets/home.png);
-    background-repeat:no-repeat;
-    background-size:cover;*/
 
     display: none;
 

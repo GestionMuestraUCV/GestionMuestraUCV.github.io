@@ -4,9 +4,10 @@
 
 .list{
   position: absolute;
-  left:55%;/*34%;*/
+  left: clamp(330px, calc(50% - 170px), 100%);/*55%;/*34%;*/
 	top:30%;
-  transform: translate(-30%,0%);
+  /*transform: translate(-30%,0%);*/
+  min-width: 710px;
 }
 
 
@@ -127,9 +128,9 @@ table {
 	font-family:Verdana;
 	font-size:48px;
 	letter-spacing:0;
-  left:56%;/*45%;*/
+  left: clamp(330px, calc(50% - 135px), 100%);/*56%;/*45%;*/
 	top:20%;
-  transform: translate(-35%,0%);
+  /*transform: translate(-35%,0%);*/
 }
 
 
