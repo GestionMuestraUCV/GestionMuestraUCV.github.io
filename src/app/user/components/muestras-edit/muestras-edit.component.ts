@@ -72,8 +72,8 @@ export class MuestrasEditComponent {
   handleRegister(value: any){
 
     this.addData( { ...value, fotos: this.fotoUrls });
-
-    this.Home();
+    this.backPage();
+    /*this.Home();*/
   }
 
   async addData(value: any) {

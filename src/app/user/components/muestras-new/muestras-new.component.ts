@@ -20,6 +20,12 @@ export class MuestrasNewComponent {
   public static text: string = "";
   public email: string ="";
 
+  public fotosSeleccionadas: { [key: string]: File | null } = {
+    inicial: null,
+    tipico: null,
+    tardios: null
+  };
+
   public fotoUrls: { inicial?: string; tipico?: string; tardios?: string } = {};
 
 
@@ -45,8 +51,15 @@ export class MuestrasNewComponent {
 
   async onFileSelected(event: any, etapa: 'inicial' | 'tipico' | 'tardios') {
     const file: File = event.target.files[0];
-    if (file) {
-      const storage = getStorage();
+      if (file) {
+        const file: File = event.target.files[0];
+      if (file) {
+          this.fotosSeleccionadas[etapa] = file; // Almacena el archivo en la nueva propiedad
+      } else {
+          this.fotosSeleccionadas[etapa] = null;
+      }
+
+      /*const storage = getStorage();
       const storageRef = ref(storage, `muestras/${this.res}/${etapa}/${file.name}`);
       try {
         const uploadResult = await uploadBytes(storageRef, file);
@@ -59,13 +72,43 @@ export class MuestrasNewComponent {
       } catch (error) {
         console.error("Error al subir la imagen:", error);
         alert("Ocurrió un error al guardar la imagen.");
-      }
+      }*/
+
     }
   }
 
-  handleRegister(value:any){
+  async upLoadFiles(value:any){
+    const storage = getStorage();
+    const fotoUrls: { [key: string]: string } = {};
+     for (const tipo in this.fotosSeleccionadas) {
+        const file = this.fotosSeleccionadas[tipo];
+        if (file) {
+            const filePath = `muestras/${value.codigo}/${tipo}_${file.name}`;
+            const storageRef = ref(storage, filePath);
+
+            try {
+                // Sube el archivo
+                const snapshot = await uploadBytes(storageRef, file);
+                // Obtiene la URL de descarga
+                const url = await getDownloadURL(snapshot.ref);
+                fotoUrls[tipo] = url;
+
+                /*console.log(`Foto ${tipo} subida con éxito. URL: ${url}`);*/
+            } catch (error) {
+                console.error(`Error al subir la foto ${tipo}:`, error);
+                alert(`Error al subir la foto ${tipo}.`);
+                return; // Detiene el registro si la subida falla
+            }
+        }
+    }
+  }
+
+
+  async handleRegister(value:any){
+    this.upLoadFiles(value);
+
      this.addData( { ...value, fotos: this.fotoUrls });
-     this.Home();
+     this.backPage();
   }
 
   addData(value: any) {
@@ -95,7 +138,7 @@ export class MuestrasNewComponent {
 
       )
       .then(() => {
-        alert('Data Sent')
+        alert('Datos guardados con éxito.')
       })
       .catch((err) => {
         alert(err.message)
