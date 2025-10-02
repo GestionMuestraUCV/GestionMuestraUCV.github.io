@@ -31,8 +31,8 @@ export class ClientsInfoComponent {
   ngOnInit(): void {
     this.route.params.subscribe(param =>{
       this.text=param['id'];
-      console.log(param);
-      console.log(param['id']);
+      //console.log(param);
+      //console.log(param['id']);
       //this.generateBarcode(param);
 
     })
@@ -137,7 +137,6 @@ export class ClientsInfoComponent {
       querySnapshot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
         this.item=doc.data();
-        console.log(doc.id, " => ", doc.data());
       });
     }
 
@@ -145,7 +144,9 @@ export class ClientsInfoComponent {
 
   editClients(){
     let str=this.text;
-    this.router.navigate(['user/clientes-edit/'+ str]);
+
+    //console.log(str);
+    this.router.navigate(['user/clients-edit/'+ str]);
     //window.location.href='#/auth/login';
   }
 

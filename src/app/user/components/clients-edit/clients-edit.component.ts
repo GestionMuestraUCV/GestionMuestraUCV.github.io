@@ -45,7 +45,8 @@ export class ClientsEditComponent {
   handleRegister(value: any){
     //console.log(value);
     this.addData(value);
-    this.Home();
+    this.backPage()
+    //this.Home();
   }
 
   async addData(value: any) {
@@ -186,7 +187,7 @@ export class ClientsEditComponent {
 
   Home(){
 
-    this.router.navigate(['user/projects']);
+    this.router.navigate(['user/unidad-produccion-all']);
     //window.location.href='#/auth/login';
   }
 

@@ -28,7 +28,7 @@ button{
 
 .navbar { /*Titulo box*/
 	background-color:#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
-	width:clamp(1280px,100%,100%);
+	width:clamp(1280px,100%,100%); /*1024px*/
 	height:6.75em;
   position:absolute;
 	left:0%; /*20%;*/

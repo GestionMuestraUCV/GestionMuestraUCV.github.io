@@ -1,8 +1,10 @@
 .list{
   position: absolute;
 	top:30%;
-  left:55%;/*38%;*/
-  transform: translate(-40%,0%);
+  /*left:55%;
+  transform: translate(-40%,0%);*/
+  min-width: 542px;
+  left: clamp(350px, calc(50% - 240px), 100%);
 }
 
 
@@ -124,8 +126,11 @@ table {
 	font-size:48px;
 	letter-spacing:0;
 	top:20%;
-  left:55%;/*45%;*/
-  transform: translate(-40%,0%);
+  /*left:55%;
+  transform: translate(-40%,0%);*/
+  text-align: center;
+  min-width: 542px;
+  left: clamp(350px, calc(50% - 240px), 100%);
 }
 
 

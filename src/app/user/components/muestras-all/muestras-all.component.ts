@@ -76,7 +76,7 @@ export class MuestrasAllComponent {
 
   Home(){
 
-    this.router.navigate(['user/projects']);
+    this.router.navigate(['user/unidad-produccion-all']);
     //window.location.href='#/auth/login';
   }
 
@@ -131,24 +131,7 @@ export class MuestrasAllComponent {
         this.data = [...response.docs.map((item) => {
           return { ...item.data(), id: item.id }
         })]
-        //console.log(this.data.length);
-        /*if(this.data.length==0){
-          //alert(err.message);
-          console.log("empty");
-
-        };*/
       })
-
-
-
-
-
-    /*const querySnapshot = await getDocs(q);
-    querySnapshot.forEach((doc) => {
-      // doc.data() is never undefined for query doc snapshots
-      console.log(doc.id, " => ", doc.data());
-
-    });*/
 
 
     const querySnapshot = await getDocs(q)
@@ -156,11 +139,8 @@ export class MuestrasAllComponent {
       querySnapshot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
         console.log(doc.id, " => ", doc.data());
-        //console.log("here2");
-        //this.list= doc;
-        //this.data=doc;
+
       });
-      //console.log("done");
 
 
   }

@@ -59,21 +59,6 @@ export class MuestrasNewComponent {
           this.fotosSeleccionadas[etapa] = null;
       }
 
-      /*const storage = getStorage();
-      const storageRef = ref(storage, `muestras/${this.res}/${etapa}/${file.name}`);
-      try {
-        const uploadResult = await uploadBytes(storageRef, file);
-        const imageUrl = await getDownloadURL(uploadResult.ref);
-
-        // Guardar la URL en la propiedad del componente
-        this.fotoUrls[etapa] = imageUrl;
-
-        alert(`Imagen de ${etapa} subida con éxito.`);
-      } catch (error) {
-        console.error("Error al subir la imagen:", error);
-        alert("Ocurrió un error al guardar la imagen.");
-      }*/
-
     }
   }
 
