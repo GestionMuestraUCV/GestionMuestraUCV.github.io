@@ -86,15 +86,16 @@
 
         <div class="BlockfotoSec">
 
-        <button class="fotoSec" (click)="alternarFotoInicial()">Iniciales</button>
-        <button class="fotoSec" (click)="alternarFotoTipico()">Típicos</button>
-        <button class="fotoSec" (click)="alternarFotoTardios()">Tardíos</button>
+          <button class="fotoSec" (click)="alternarFotoInicial()">Iniciales</button>
+          <button class="fotoSec" (click)="alternarFotoTipico()">Típicos</button>
+          <button class="fotoSec" (click)="alternarFotoTardios()">Tardíos</button>
 
         </div>
 
+
         <div  class="input-fields" *ngIf="fotoUrls.inicial && mostrarFotoInicial" >
           <!--<span class="Text">Inicial:</span>-->
-          <img [src]="fotoUrls.inicial" class="foto" alt="Foto Inicial" style="width: 250px; height: 300px;">
+          <img [src]="fotoUrls.inicial" class="foto" alt="Foto Inicial" style="width: 250px; height: 300px;" onerror="this.src='../../../../assets/landscape-placeholder.jpg';">
         </div>
 
         <div class="input-fields" *ngIf="fotoUrls.tipico && mostrarFotoTipico">
@@ -106,6 +107,13 @@
           <!--<span class="Text">Tardíos:</span>-->
           <img [src]="fotoUrls.tardios" class="foto" alt="Foto Tardía" style="width: 250px; height: 300px;">
         </div>
+
+        <div class="input-fields"  *ngIf="!fotoUrls.inicial && !fotoUrls.tipico && !fotoUrls.tardios" >
+          <!--<span class="Text">Tardíos:</span>-->
+          <img [src]="'assets/landscape-placeholder.jpg'" class="foto" id="placeholder" alt="placeholder" style="width: 250px; height: 300px;">
+        </div>
+
+
 
 
 

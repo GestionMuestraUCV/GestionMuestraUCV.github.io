@@ -85,10 +85,9 @@ button{
 	font-family:Verdana;
 	font-size:48px;
 	letter-spacing:0;
-  min-width: 375px;
 	top:18%;
   text-align: center;
-  min-width: 620px;
+  width: 620px;
   left: clamp(350px, calc(50% - 310px), 100%);
 
 }
@@ -244,42 +243,72 @@ img{
   top: 0%
 }
 
+#volver{
+  font-size: 16px;
+  position: absolute;
+  left:0%;
+  top: 170px;
+
+  background:none;
+  margin-left: 20px;
+
+  border: none;
+  width:50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-image:url(../../../../assets/back-button-Edit4.png);
+
+
+}
+
 
 @media only screen and (max-width: 768px) {
 
   .loginBox { /*login box*/
     box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
-    width: 75%;
-    height: 35%;
+
+    min-height: 110px;
     flex-shrink: 0;
     position:absolute;
+    min-width: 0px;
+    width: calc(90% - 40px);
     /*left:15%;
     top:30%;*/
-    top:45%;
+    top: 35%;
+    left: 5%;
 
   }
 
   .input-fields{
-    font-size: 12px;
+    margin: 6px;
+    margin-left: 15px;
+    height: 20px;
+    /*width: 50%;*/
+    left: 92px;
+    color:rgba(0, 0, 0, 1);
+    font-family: Arial;
+    font-size:16px;
+    letter-spacing:0;
+    text-overflow: ellipsis;
   }
 
   .main{
-    width: 75%;
-    height: 35%;
-    flex-shrink: 0;
-    margin-left: 5px;
+    justify-content: center;
+    flex-direction: column;
     position:absolute;
-    top:45%;
+    left: 5%;
+    top: 5%;
 
   }
 
   .Text{
     color:rgba(0, 0, 0, 1);
-    width:25%;
-    height:25px;
+    height:20px;
     font-family: Arial;
-    font-size:14px;
+    font-size:16px;
     letter-spacing:0;
   }
 
@@ -397,7 +426,6 @@ img{
     color:#0A9217;
     text-shadow: 2px 2px 5px black;
 
-    position:absolute;
     margin: 0px;
     width:100%;
     height:64px;
@@ -405,8 +433,10 @@ img{
     text-align: center;
     font-size:32px;
     letter-spacing:0;
-    left:35%;
+    position:absolute;
+    left:0%;
     top:30%;
+    width:100%;
   }
 
 
@@ -455,6 +485,10 @@ img{
     height:10%;
     left: 0%;
     top: 0%
+  }
+
+  #volver{
+    top: 110%;
   }
 
 

@@ -42,14 +42,7 @@
           <option value="Clone"> Clone </option>
         </select>
 
-        <!--
-        <input list="tipos" name="tipo" ngModel placeholder="Tipo" id="tipo" type="tipo" class="input-field" [(ngModel)]= "item.tipo">
-        <datalist id="tipos">
-          <option value="Hibrido">
-          <option value="Variedad">
-          <option value="Clone">
-        </datalist>
-        -->
+
       </div>
 
 
@@ -64,12 +57,6 @@
       </div>
 
 
-      <!--
-      <div class="input-fields">
-        <span  class="Text">Estado:</span>
-        <input name="estado" ngModel placeholder="Estado" id="estado" type="estado" class="input-field" [(ngModel)]= "item.estado"  />
-      </div>
-    -->
 
       <div class="input-fields">
         <span  class="Text">Lote:</span>
@@ -139,7 +126,9 @@
 
 
 
-      <button class="boton">Guardar</button>
+      <button class="boton" (click)="backPage()">Finalizar Edición</button>
+
+      <button class="boton" id="Guardar"> Guardar</button>
 
       <button type="button" class="boton" id="volver" (click)="backPage()"></button>
 
@@ -158,21 +147,3 @@
 </div>
 
 
-<!--
-<ul>
-  <li *ngFor="let item of data" >
-    <p contenteditable="true">
-    {{ item.codigo }}
-    {{ item.owner }}
-    {{ item.integrantes }}
-    </p>
-    <button >
-      Update
-    </button>
-
-    <button >
-      Delete
-    </button>
-  </li>
-</ul>
--->

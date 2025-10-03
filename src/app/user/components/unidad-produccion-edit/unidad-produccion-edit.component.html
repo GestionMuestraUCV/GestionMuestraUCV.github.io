@@ -87,26 +87,28 @@
 
 
       <div class="input-fields">
-        <span  class="Text">Temperaturas Máximas:</span>
+        <span  class="Text-2">Temperaturas Máximas:</span>
         <input name="tempmax" ngModel placeholder="Temperaturas Máximas" id="tempmax" type="tempmax" class="input-field" [(ngModel)]= "item.tempmax"/>
       </div>
 
 
       <div class="input-fields">
-        <span  class="Text">Temperaturas Mínimas:</span>
+        <span  class="Text-2">Temperaturas Mínimas:</span>
         <input name="tempmin" ngModel placeholder="Temperaturas Mínimas" id="tempmin" type="tempmin" class="input-field" [(ngModel)]= "item.tempmin"/>
       </div>
 
 
       <div class="input-fields">
-        <span  class="Text">Precipitación:</span>
+        <span  class="Text-2">Promedio Precipitación Anual:</span>
         <input name="precipitacion" ngModel placeholder="Precipitación" id="precipitacion" type="precipitacion" class="input-field" [(ngModel)]= "item.precipitacion" />
       </div>
 
 
 
 
-      <button class="boton">Guardar</button>
+      <button class="boton" (click)="backPage()">Finalizar Edición</button>
+
+      <button class="boton" id="Guardar"> Guardar</button>
 
       <button type="button" class="botonrojo" (click)="deleteData(item.id)">
         Eliminar

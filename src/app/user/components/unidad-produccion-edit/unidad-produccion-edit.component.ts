@@ -45,7 +45,7 @@ export class UnidadProduccionEditComponent {
   handleRegister(value: any){
     //console.log(value);
     this.addData(value);
-    this.Home();
+    /*this.Home();*/
   }
 
   async addData(value: any) {

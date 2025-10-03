@@ -89,46 +89,22 @@ export class ClientsEditComponent {
 
 
   showPosition(position: any) {
-    /*
-      const p: HTMLParagraphElement = this.renderer.createElement('p');
-      p.innerHTML = "add new"
-      this.renderer.appendChild(this.div.nativeElement, p)
-    */
+
     console.log(position.coords.latitude);
     console.log(position.coords.longitude);
-    //console.log(res);
-    //MuestrasNewComponent.lat= position.coords.latitude;
-    //this.somethingChange.emit(position.coords.latitude);
-    //console.log(position.coords.longitude);
-    //this.something=position.coords.latitude;
-    //this.somethingChange.emit(this.something);
-    //var text = position.coords.latitude;
-    //this.geo=text;
+
     var x = position.coords.latitude;
     var y = position.coords.longitude;
     ClientsEditComponent.text = x+", "+ y;
-    //console.log(MuestrasNewComponent.text);
 
-
-
-
-    //x.innerHTML = "Latitude: " + position.coords.latitude +
-    //"<br>Longitude: " + position.coords.longitude;
   }
 
   async getLocation() {
-    //d1.nativeElement.insertAdjacentHTML('beforeend', '<div class="two">two</div>');
-    //console.log("click");
     var test = "...";
     this.res=test;
-    //console.log(this.res);
-
-
 
     if (navigator.geolocation) {
       await navigator.geolocation.getCurrentPosition(this.showPosition);
-
-
 
     } else {
       //x.innerHTML = "Geolocation is not supported by this browser.";
@@ -139,8 +115,6 @@ export class ClientsEditComponent {
       console.log(this.res);
       }
       ,1000);
-
-
 
   }
 
@@ -163,16 +137,11 @@ export class ClientsEditComponent {
   }
 
 
-  /*
-    <div class="one" [innerHtml]="htmlToAdd"></div>
-    this.htmlToAdd = '<div class="two">two</div>';
-  */
 
   deleteData(id: string) {
     let str=this.x;
     const dataToDelete = doc(this.firestore, 'clientes', str);
-    //console.log(id);
-    //console.log(dataToDelete);
+
     deleteDoc(dataToDelete)
     .then(() => {
       alert('Data Deleted');

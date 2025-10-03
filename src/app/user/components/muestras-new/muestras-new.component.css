@@ -5,7 +5,7 @@
   min-height: 740px;
   position:absolute;
   top:25%;
-  min-width: 850px; /*976px*/
+  width: 850px; /*976px*/
   left: clamp(350px, calc(50% - 425px), 100%);
 
   margin: 25px auto; /* Centra el div horizontalmente y añade un margen */
@@ -103,7 +103,7 @@ button{
   /*left:50%;
   transform: translate(-50%,0%);*/
   text-align: center;
-  min-width: 850px;
+  width: 850px;
   left: clamp(350px, calc(50% - 425px), 100%);
 
 }

@@ -284,8 +284,10 @@ table {
 
   .list{
     position: absolute;
+    min-width: 0px;
+    width: 90%;
     left: 5%;
-    top:45%;
+    top:35%;
     text-overflow: ellipsis;
   }
 
@@ -308,6 +310,7 @@ table {
 
   table {
     border-collapse: collapse;
+    width: 100%;
   }
 
   .integrantes {
@@ -376,7 +379,7 @@ table {
   .boton {
     /*box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);*/
     position: absolute;
-    left: 80%;
+    right: 0px;
     top: 100%;
     border: none;
     float: right;
@@ -409,11 +412,13 @@ table {
     position:absolute;
     margin: 0px;
     /*width:300px;*/
+    min-width: 0px;
+    width:100vw;
     height:64px;
     font-family:Verdana;
     font-size:32px;
     letter-spacing:0;
-    left:30%;
+    left:0%;
     top:27%;
   }
 

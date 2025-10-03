@@ -185,10 +185,12 @@ table {
   .list{
     transform: none;
     position: absolute;
-    left: 2%;
-    width: 94%;
-    top:40%;
+    left: 5%;
     text-overflow: ellipsis;
+
+    top:35%;
+    width: 90%;
+    min-width: 0px;
   }
 
 
@@ -279,7 +281,7 @@ table {
     /*box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);*/
     transform: none;
     position: absolute;
-    left: 80%;
+    right: 0%;
     top: 100%;
     border: none;
     float: right;
@@ -301,15 +303,25 @@ table {
     transform: none;
     color:#0A9217; /*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
     text-shadow: 2px 2px 5px black;
-    position:absolute;
     margin: 0px;
     /*width:300px;*/
     height:64px;
     font-family:Verdana;
     font-size:32px;
     letter-spacing:0;
-    left:30%;
-    top:30%;
+    transform: none;
+    position:absolute;
+
+    text-align: center;
+    top:27%;
+    left:0%;
+    min-width: 0px;
+    width:100vw;
+
+  }
+
+  .blockBotones{
+    width:45px;
   }
 
 

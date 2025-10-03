@@ -5,7 +5,7 @@
   background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
   width: 65%;
   min-height: 550px;
-  min-width: 936px;
+  width: 936px;
   flex-shrink: 0;
   position:absolute;
   top:25%;
@@ -77,7 +77,7 @@ button{
 	top:17%;
 
   text-align: center;
-  min-width: 936px;
+  width: 936px;
   left: clamp(350px, calc(50% - 468px), 100%);
 
 }
@@ -108,7 +108,16 @@ button{
 
 .Text{
   color:rgba(0, 0, 0, 1);
-	width:25%;
+	width: 150px;
+	height:25px;
+	font-family: Arial;
+	font-size:20px;
+	letter-spacing:0;
+}
+
+.Text-2{
+  color:rgba(0, 0, 0, 1);
+	width: 370px;
 	height:25px;
 	font-family: Arial;
 	font-size:20px;
@@ -206,6 +215,10 @@ img{
   top: 100%;
 }
 
+#Guardar{
+  left:70%;
+}
+
 .botonrojo { /*boton*/
   background-color:rgb(194, 62, 62);
   color:rgba(255, 255, 255, 1);
@@ -218,7 +231,7 @@ img{
   border-bottom-left-radius:30px;
   border-bottom-right-radius:30px;
   font-size:16px;
-  left:70%;
+  left:55%;
   top: 100%;
 }
 
@@ -327,15 +340,29 @@ img{
     margin-bottom: 10px;
   }
 
+  .Text-2{
+    color:rgba(0, 0, 0, 1);
+    /*width:25%;*/
+    height:fit-content;
+    font-family: Arial;
+    font-size:16px;
+    letter-spacing:0;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+
   .loginBox { /*login box*/
     box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
-    width: 95%;
-    height: 550px;
+    min-width: 90%;
+    width: 90%;
+    height: 620px;
     flex-shrink: 0;
     position:absolute;
     left:2.5%;
     top:35%;
+
 
   }
 
@@ -450,6 +477,12 @@ img{
     border-bottom-right-radius:30px;
   }
 
+  #Guardar{
+  left: 73%;
+  top: 125%;
+
+}
+
   .botonrojo { /*boton*/
     background-color:rgb(194, 62, 62);
     color:rgba(255, 255, 255, 1);
@@ -461,8 +494,8 @@ img{
     border-bottom-left-radius:30px;
     border-bottom-right-radius:30px;
     font-size:12px;
-    left:50%;
-    top: 110%;
+    left:77%;
+    top: 140%;
   }
 
 
@@ -541,9 +574,9 @@ img{
   #volver{
   position: absolute;
   left: 0%;
-  top: 110%;
-  width: 35px;
-  height:35px;
+  top: 125%;
+  width: 50px;
+  height:50px;
 
 }
 
@@ -554,7 +587,7 @@ img{
 
 @media only screen and (min-width: 1536px){
 
-
+/*
   .loginBox {
     box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
@@ -588,7 +621,7 @@ img{
     transform: translate(0px, 15px);
 
   }
-
+*/
 
 }
 

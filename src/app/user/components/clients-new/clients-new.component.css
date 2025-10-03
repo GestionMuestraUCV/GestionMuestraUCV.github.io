@@ -1,13 +1,12 @@
 .loginBox { /*login box*/
   box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
-  width: 65%;
-  height:30%;
+  width: 760px;
+  height: 260px;
   flex-shrink: 0;
   position:absolute;
-  left:50%;
+  left:clamp(350px, calc( 50% - 380px), 100%);
   top:25%;
-  transform: translate(-30%,0%);
 
 }
 
@@ -238,6 +237,24 @@ img{
   height:10%;
   left: 0%;
   top: 0%
+}
+
+#volver{
+  font-size: 16px;
+  position: absolute;
+  left:5%;
+  top: 100%;
+  background:none;
+
+  border: none;
+  width:50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-image:url(../../../../assets/back-button-Edit4.png);
+
+
 }
 
 
@@ -475,6 +492,10 @@ img{
     top: 0%
   }
 
+  #volver{
+    top: 96%;
+  }
+
 
 
 }
@@ -484,7 +505,7 @@ img{
 
 @media only screen and (min-width: 1536px){
 
-
+  /*
   .loginBox {
     box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
@@ -505,7 +526,7 @@ img{
     position: absolute;
     left:50%;
     transform: translate(-50%, 0%);
-  }
+  }*/
 
   /*
   .boton {

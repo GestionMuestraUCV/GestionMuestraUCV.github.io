@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core
 import { Auth } from '@angular/fire/auth';
 import { Firestore, collection, doc, getDocs, setDoc } from '@angular/fire/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-clients-new',
@@ -20,16 +21,13 @@ export class ClientsNewComponent {
   @Input() something !: any;
   @Output() somethingChange= new EventEmitter<any>();
 
-  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore){
+  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore, private location: Location){
     //this.getData();
   }
   ngOnInit(): void {
     this.route.params.subscribe(param =>{
       this.pid=param['id'];
       //this.pid=param['id'];
-
-      //console.log(param);
-      //console.log(param['id']);
       //this.generateBarcode(param);
 
     })
@@ -81,46 +79,23 @@ export class ClientsNewComponent {
 
 
   showPosition(position: any) {
-    /*
-      const p: HTMLParagraphElement = this.renderer.createElement('p');
-      p.innerHTML = "add new"
-      this.renderer.appendChild(this.div.nativeElement, p)
-    */
+
     console.log(position.coords.latitude);
     console.log(position.coords.longitude);
-    //console.log(res);
-    //MuestrasNewComponent.lat= position.coords.latitude;
-    //this.somethingChange.emit(position.coords.latitude);
-    //console.log(position.coords.longitude);
-    //this.something=position.coords.latitude;
-    //this.somethingChange.emit(this.something);
-    //var text = position.coords.latitude;
-    //this.geo=text;
+
     var x = position.coords.latitude;
     var y = position.coords.longitude;
     ClientsNewComponent.text = x+", "+ y;
     console.log(ClientsNewComponent.text);
 
-
-
-
-    //x.innerHTML = "Latitude: " + position.coords.latitude +
-    //"<br>Longitude: " + position.coords.longitude;
   }
 
   async getLocation() {
-    //d1.nativeElement.insertAdjacentHTML('beforeend', '<div class="two">two</div>');
-    //console.log("click");
     var test = "...";
     this.res=test;
-    //console.log(this.res);
-
-
 
     if (navigator.geolocation) {
       await navigator.geolocation.getCurrentPosition(this.showPosition);
-
-
 
     } else {
       //x.innerHTML = "Geolocation is not supported by this browser.";
@@ -132,14 +107,11 @@ export class ClientsNewComponent {
       }
       ,1000);
 
-
-
   }
 
+  backPage(){
+    this.location.back();
+  }
 
-  /*
-    <div class="one" [innerHtml]="htmlToAdd"></div>
-    this.htmlToAdd = '<div class="two">two</div>';
-  */
 
 }

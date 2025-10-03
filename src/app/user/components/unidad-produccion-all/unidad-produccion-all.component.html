@@ -22,13 +22,12 @@
       <td>{{ item.altitud}}</td>
       <td>{{ item.coordenadas}}</td>
 
-      <td>
+      <td class="blockBotones">
 
 
         <button class="muestras"(click)="Muestras( item.project, item.codigo)">
           <div class="muestras-tip">Listar Muestras</div>
         </button>
-
 
         <button class="detalles" (click)="infoUnidad(item.codigo)">
           <div class="detalles-tip">Información</div>

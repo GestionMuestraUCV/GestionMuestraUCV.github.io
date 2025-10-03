@@ -259,10 +259,11 @@ table {
   .list{
     position: absolute;
     left: 5%;
-    top:48%;
+    top:35%;
     text-overflow: ellipsis;
     transform: none;
     width: 90%;
+    min-width: 0px;
   }
 
 
@@ -384,8 +385,10 @@ table {
     font-family:Verdana;
     font-size:32px;
     letter-spacing:0;
-    left:30%;
-    top:28%;
+    top:27%;
+    left:0%;
+    min-width: 0px;
+    width:100vw;
   }
 
 

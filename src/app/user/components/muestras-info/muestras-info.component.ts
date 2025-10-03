@@ -23,10 +23,15 @@ export class MuestrasInfoComponent {
 
   public fotoUrls: { inicial?: string; tipico?: string; tardios?: string } = {}; // Nueva propiedad
 
+  placeholderUrl: string = '../../../../assets/landscape-placeholder.jpg';
+
+
   @ViewChild('geo') geo: any;//ElementRef | undefined;
   public htmlToAdd: any;
   @Input() something !: any;
   @Output() somethingChange= new EventEmitter<any>();
+
+
 
   constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore, private location: Location){
     this.getData();
