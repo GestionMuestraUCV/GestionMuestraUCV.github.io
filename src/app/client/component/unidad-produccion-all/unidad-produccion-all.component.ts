@@ -24,8 +24,8 @@ export class UnidadProduccionAllComponent {
     this.route.params.subscribe(param =>{
       this.item=param['id'];
 
-      console.log(param);
-      console.log(param['id']);
+      //console.log(param);
+      //console.log(param['id']);
       //this.generateBarcode(param);
 
     })
@@ -138,7 +138,7 @@ export class UnidadProduccionAllComponent {
           //console.log(temail == "giorgosmorakis@hotmail.com");
 
           //const q = query(collection(this.firestore, "projects"), where("cliente", "==", temail));
-          const q = query(collection(this.firestore, "unidad-produccion"), where("cliente", "==", temail));
+          const q = query(collection(this.firestore, "unidad-produccion"), where("clienteEmail", "==", temail));
           getDocs(q)
           .then((response) => {
             this.data= [...response.docs.map((item) => {

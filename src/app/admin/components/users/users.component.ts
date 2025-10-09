@@ -62,9 +62,19 @@ export class UsersComponent {
 
 
 
-  updateData(id: string) {
+  updateData(id: string, value:any) {
+    //let value= this.data['id'];
+    console.log(value);
     const dataToUpdate = doc(this.firestore, 'users', id);
-    updateDoc(dataToUpdate, {})
+    console.log(dataToUpdate);
+
+    updateDoc(dataToUpdate, {
+      email: value.email,
+      nombre: value.nombre,
+      password: value.password,
+      role: value.role
+
+    })
       .then(() => {
         alert('Data updated');
         this.getData()
