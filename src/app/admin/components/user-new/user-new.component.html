@@ -14,11 +14,12 @@
 
       <div class="input-fields">
         <span  class="roleText">Roles:</span>
-        <input list="roles" name="role" ngModel placeholder="Roles" id="role" type="role" class="input-field">
-        <datalist id="roles">
-          <option value="Investigador">
-          <option value="Cliente">
-        </datalist>
+        <select list="roles" name="role" ngModel placeholder="Roles" id="role" type="role" class="input-field">
+          <option value="" disabled selected>Seleccione un Rol del usuario</option>
+          <option value="Investigador"> Investigador </option>
+          <option value="Cliente"> Cliente </option>
+          <option value="Administrador"> Administrador </option>
+        </select>
     </div>
 
       <div class="input-fields">
@@ -31,14 +32,17 @@
       </div>
 
 
-
-
-
-
       <button class="boton">Sign Up</button>
+      <button type="button" class="boton" id="volver" (click)="backPage()"></button>
+
+
     </div>
 </form>
 
+
+<!--
 <button class="salir" (click)="Salir()">
 </button>
+-->
+
 

@@ -8,33 +8,13 @@
     <br>
     Cerrar Sesión
   </div>
-  <!--
-  <div class="navbar2Text" id="UnidadText" >
-    <img src="../../assets/shovel2.png" alt="Shovel" width="50" height="50">
-    <br>
-    Unidades de Producción
-  </div>
-  -->
-  <!--
-  <div class="navbar2Text" id="MuestrasText" (click)="Muestras()">
-    <img src="../../assets/prueba-de-sangre.png" alt="Shovel" width="50" height="50">
-    <br>
-    Muestras
-  </div>
-  -->
+
   <div class="navbar2Text" id="ClientesText"  (click)="Users()">
     <img src="../../assets/Users.png" alt="Users" width="50" height="50">
     <br>
     Usuarios
   </div>
 
-  <!--
-  <div class="navbar2Text" id="CodigoText" >
-    <img src="../../assets/Scan.png" alt="Shovel" width="50" height="50">
-    <br>
-    Generar Codigo
-  </div>
-  -->
 
 
 </div>
@@ -58,7 +38,7 @@
   <div  class="homeBox" >
     <div  class="UserLogo"></div>
 
-    <span  class="homeText">Usuario</span>
+    <span  class="homeText">Administador</span>
     <div  class="homeLogo"></div>
   </div>
 
@@ -66,28 +46,3 @@
 
 <router-outlet></router-outlet>
 
-<!--
-<h1 class="subTituloText">Usuarios</h1>
-
-<div class="list">
-  <table>
-    <tr>
-      <th> Email </th>
-      <th> Role </th>
-      <th> </th>
-    </tr>
-    <tr *ngFor="let item of data" >
-
-      <td contenteditable="true">{{ item.email }}</td>
-      <td contenteditable="true">{{ item.role}}</td>
-      <td>
-        <button (click)="updateData(item.id)">
-          Update
-        </button>
-      </td>
-    </tr>
-  </table>
-
-</div>
-
- -->

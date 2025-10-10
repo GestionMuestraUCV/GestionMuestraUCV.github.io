@@ -8,13 +8,14 @@ import { NgxScannerQrcodeModule } from 'ngx-scanner-qrcode';
 import { RouterModule } from '@angular/router';
 import { UsersComponent } from './components/users/users.component';
 import { UserNewComponent } from './components/user-new/user-new.component';
-
+import { UserEditComponent } from './components/user-edit/user-edit.component';
 
 
 @NgModule({
   declarations: [
     AdminComponent,
     UsersComponent,
+    UserEditComponent,
     UserNewComponent
   ],
   imports: [

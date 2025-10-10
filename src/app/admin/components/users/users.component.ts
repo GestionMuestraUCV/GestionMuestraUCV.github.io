@@ -64,9 +64,9 @@ export class UsersComponent {
 
   updateData(id: string, value:any) {
     //let value= this.data['id'];
-    console.log(value);
+    //console.log(value);
     const dataToUpdate = doc(this.firestore, 'users', id);
-    console.log(dataToUpdate);
+    //console.log(dataToUpdate);
 
     updateDoc(dataToUpdate, {
       email: value.email,
@@ -134,6 +134,12 @@ export class UsersComponent {
     this.router.navigate(['admin']);
     //window.location.href='#/auth/login';
   }
+
+  editUser(id: any){
+    this.router.navigate(['admin/user-edit/' + id]);
+    //window.location.href='#/auth/login';
+  }
+
 
 
 

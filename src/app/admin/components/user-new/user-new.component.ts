@@ -11,6 +11,7 @@ import {
   deleteDoc
 } from '@angular/fire/firestore'
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-user-new',
@@ -21,7 +22,7 @@ export class UserNewComponent {
   title = 'gestion-de-muestras-de-campo';
   public data: any = []
 
-  constructor(public auth: Auth, public firestore: Firestore, private router: Router){
+  constructor(public auth: Auth, public firestore: Firestore, private router: Router, private location: Location ){
     this.getData();
 
   }
@@ -91,5 +92,10 @@ export class UserNewComponent {
     this.router.navigate(['auth/select']);
     //window.location.href='#/auth/login';
   }
+
+  backPage(){
+    this.location.back();
+  }
+
 
 }
