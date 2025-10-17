@@ -40,7 +40,6 @@
   width: 600px;
   height: 500px;
 
-
   position: absolute;
   left:50%;
 	top:50%;
@@ -75,6 +74,32 @@
 	background-repeat:no-repeat;
 	background-size:cover;
 }
+
+.footer {
+  /*visibility: hidden;
+	height:30%;*/
+  margin: 0px;
+  width:112px;
+  position:absolute;
+  bottom:50px;
+  left: calc(50% - 56px);
+
+
+}
+
+.Orange{
+  cursor: pointer;
+  font-family:Arial;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size:16px;
+}
+
+.Orange:hover{
+  text-decoration: underline;
+  color: orange;
+}
+
 
 /*.detalles{
   border: none;

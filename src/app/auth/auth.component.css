@@ -21,7 +21,9 @@
   flex-direction: column; /* Stacks children vertically */
   justify-content: center; /* Centers items along the main axis (vertically in this case) */
   align-items: center; /* Centers items along the cross axis (horizontally in this case) */
+  cursor: pointer;
 }
+
 .tituloText { /*Titulo Texto*/
 	color:rgba(255, 255, 255, 1);
 	display: block;
@@ -30,8 +32,8 @@
   font-weight: bold;
 	font-size:40px;
 	letter-spacing:0;
-  /*cursor: pointer;
-  position:absolute;
+
+  /*position:absolute;
   left:40%;*/
 }
 .tituloSubText { /*Titulo Texto*/

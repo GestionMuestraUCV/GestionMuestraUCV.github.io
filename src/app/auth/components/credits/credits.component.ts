@@ -22,4 +22,9 @@ export class CreditsComponent {
     //window.location.href='#/auth/login';
   }
 
+  Home(){
+    this.router.navigate(['auth/select']);
+    //window.location.href='#/auth/login';
+  }
+
 }
