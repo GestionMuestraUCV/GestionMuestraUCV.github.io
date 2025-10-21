@@ -23,41 +23,19 @@ button{
   cursor: pointer;
 }
 
-.main{
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.input-fields{
-  margin: 10px;
-}
-
-
-.input-field{
-  width: 300px;
-  height: 20px;
-}
-
-button{
-  width: 100px;
-  height: 40px;
-  margin: 10px;
-  cursor: pointer;
-}
-
 /**/
 
 
 .navbar { /*Titulo box*/
 	background-color:#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
-	width:100%;
+	width:clamp(1280px,100%,100%); /*1024px*/
 	height:6.75em;
   position:absolute;
 	left:0%; /*20%;*/
 	top:0%;
+
+  /*display: flex;
+  flex-direction: row;*/
 }
 
 .tituloBox { /*Titulo box*/
@@ -67,21 +45,30 @@ button{
 	position:absolute;
 	left:0%; /*20%;*/
 	top:0%;
-	text-align:center;
+  display: flex; /* Enables Flexbox */
+  flex-direction: column; /* Stacks children vertically */
+  justify-content: center; /* Centers items along the main axis (vertically in this case) */
+  align-items: center; /* Centers items along the cross axis (horizontally in this case) */
 }
 .tituloText { /*Titulo Texto*/
 	color:rgba(255, 255, 255, 1);
-	display: inline-block;
-  	vertical-align: middle;
-  	line-height: 2.4em;
+	display: block;
+  line-height: 0.5;
 	font-family:Verdana;
   font-weight: bold;
 	font-size:40px;
 	letter-spacing:0;
-  cursor: pointer;
-  /*position:absolute;
-  left:40%;*/
 }
+.tituloSubText { /*Titulo Texto*/
+	color:rgba(255, 255, 255, 1);
+	display: block;
+  line-height: 1.2;
+	font-family:Verdana;
+  font-weight: bold;
+	font-size:20px;
+	letter-spacing:0;
+}
+
 
 .logoAgro { /*Logo Ciens*/ /*Logo Agro*/
 	width:100px;
@@ -133,7 +120,7 @@ button{
   position:absolute;
 
   top: 1.85em;
-  right:10.94em;
+  right:150px;
 
   width:36px;
   height:36px;
@@ -252,7 +239,7 @@ img{
   top:20px;
 }
 
-br{
+.break{
   display: none;
 }
 
@@ -262,8 +249,13 @@ br{
 
 
 
-  .homeBox {/*Home box*/
-    /*background-color:#0A9217;*/
+  .navbar{
+    width: 100%;
+    position: absolute;
+  }
+
+
+ .homeBox {
     border-right: 4px solid white;
     width:20%;
     height:6.75em;
@@ -272,14 +264,7 @@ br{
     top:0%;
 
   }
-  .homeText { /*Home text*/
-    /*color:rgba(255, 255, 255, 1);
-    display: inline-block;
-      vertical-align: middle;
-      line-height: 250%;
-    font-family:Verdana;
-    font-size:32px;
-    letter-spacing:0;*/
+  .homeText {
 
     display: none;
 
@@ -308,59 +293,66 @@ br{
     width:45px;
     height:35px;
     position:absolute;
-    left: 84%;
-    top: 2.2em;
+    left: 88%;
+    top: 3.7em;
     background-image:url(../../assets/Logo-Agronomia2.png);
     background-repeat:no-repeat;
     background-size:cover;
   }
+
   .logoUcv { /*Logo Ucv*/
     width:35px;
     height:35px;
     position:absolute;
-    left: 24%;
-    top: 2.2em;
+    left: 23%;
+    top: 3.7em;
     background-image:url(../../assets/logo_ucv_bg2_1.png);
     background-repeat:no-repeat;
     background-size:cover;
   }
 
 
-  .tituloBox { /*Titulo box*/
-    /*background-color:#0A9217;*//*#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
-    width:80%;
-    height:6.75em;
-    position:absolute;
-    left:20%;
-    top:0%;
-    text-align:center;
+
+  .tituloBox {
+    width: 80%;
+    height: 6.75em;
+    position: absolute;
+    left: 20%;
+    top: 0%;
+    /* Add flexbox properties for consistent centering */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  .tituloText { /*Titulo Texto*/
-    color:rgba(255, 255, 255, 1);
-    line-height: 1.6;
-    display: inline-block;
-      vertical-align: middle;
-      /*line-height: 250%;*/
-    font-family:Verdana;
-    font-size:32px;
-    letter-spacing:0px;
+
+  .tituloText {
+    /* Simplified styles to work with flexbox */
+    color: rgba(255, 255, 255, 1);
+    font-family: Verdana;
+    font-size: 32px;
+    letter-spacing: 0px;
+    line-height: normal; /* Use normal to let flexbox handle spacing */
+    display: block;
+    text-align: center; /* Ensure horizontal alignment */
+  }
+
+  .tituloSubText {
+    /* Simplified styles to work with flexbox */
+    color: rgba(255, 255, 255, 1);
+    font-family: Verdana;
+    font-size: 20px;
+    letter-spacing: 0px;
+    line-height: normal; /* Use normal to let flexbox handle spacing */
+    display: block;
+    text-align: center; /* Ensure horizontal alignment */
   }
 
 
 
 
   .homeLogo { /*Home text*/
-    /*position:relative;
 
-    top:30%;
-    left:25%;
-
-    width:36px;
-    height:36px;
-    text-align:center;
-    background-image:url(../../assets/home.png);
-    background-repeat:no-repeat;
-    background-size:cover;*/
 
     display: none;
 
@@ -495,7 +487,7 @@ br{
 
   }
 
-  br{
+ .break{
     display: inline;
   }
 

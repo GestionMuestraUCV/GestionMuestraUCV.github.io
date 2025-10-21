@@ -87,11 +87,14 @@ button{
 
 .navbar { /*Titulo box*/
 	background-color:#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
-	width:100%;
+	width:clamp(1280px,100%,100%); /*1024px*/
 	height:6.75em;
   position:absolute;
 	left:0%; /*20%;*/
 	top:0%;
+
+  /*display: flex;
+  flex-direction: row;*/
 }
 
 .tituloBox { /*Titulo box*/
@@ -101,21 +104,30 @@ button{
 	position:absolute;
 	left:0%; /*20%;*/
 	top:0%;
-	text-align:center;
+  display: flex; /* Enables Flexbox */
+  flex-direction: column; /* Stacks children vertically */
+  justify-content: center; /* Centers items along the main axis (vertically in this case) */
+  align-items: center; /* Centers items along the cross axis (horizontally in this case) */
 }
 .tituloText { /*Titulo Texto*/
 	color:rgba(255, 255, 255, 1);
-	display: inline-block;
-  	vertical-align: middle;
-  	line-height: 2.4em;
+	display: block;
+  line-height: 0.5;
 	font-family:Verdana;
   font-weight: bold;
 	font-size:40px;
 	letter-spacing:0;
-  cursor: pointer;
-  /*position:absolute;
-  left:40%;*/
 }
+.tituloSubText { /*Titulo Texto*/
+	color:rgba(255, 255, 255, 1);
+	display: block;
+  line-height: 1.2;
+	font-family:Verdana;
+  font-weight: bold;
+	font-size:20px;
+	letter-spacing:0;
+}
+
 
 .logoAgro { /*Logo Ciens*/ /*Logo Agro*/
 	width:100px;
@@ -159,7 +171,7 @@ button{
 	font-size:32px;
 	letter-spacing:0;
 	position:absolute;
-  right:0.3em;
+  right:0.75em;
 	top:30%;
 
 }
@@ -167,7 +179,7 @@ button{
   position:absolute;
 
   top: 1.85em;
-  right:14.5em;
+  right:15.5em;
 
   width:36px;
   height:36px;
@@ -326,9 +338,10 @@ img{
   top:20px;
 }
 
-br{
+.break{
   display: none;
 }
+
 
 
 
@@ -342,7 +355,7 @@ br{
   }
 
 
-.homeBox {
+ .homeBox {
     border-right: 4px solid white;
     width:20%;
     height:6.75em;
@@ -569,7 +582,7 @@ br{
 
 
 
-.salir{
+ .salir{
     cursor: pointer;
     border: none;
     background: none;
@@ -590,7 +603,7 @@ br{
 
   }
 
-  br{
+ .break{
     display: inline;
   }
 
