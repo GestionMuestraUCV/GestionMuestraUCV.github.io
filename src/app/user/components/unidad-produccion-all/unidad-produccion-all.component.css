@@ -394,10 +394,11 @@ table {
     margin: 0px;
     height:100px;
     font-family:Verdana;
-    font-size:28px;
+    font-size:26px;
     letter-spacing:0;
     transform: none;
     position:absolute;
+    padding-top: 8px;
 
     text-align: center;
     top:27%;

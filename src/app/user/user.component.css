@@ -359,26 +359,29 @@ img{
     align-items: center;
   }
 
-  .tituloText {
-    /* Simplified styles to work with flexbox */
-    color: rgba(255, 255, 255, 1);
-    font-family: Verdana;
-    font-size: 32px;
-    letter-spacing: 0px;
-    line-height: normal; /* Use normal to let flexbox handle spacing */
-    display: block;
-    text-align: center; /* Ensure horizontal alignment */
+  .tituloText { /*Titulo Texto*/
+    color:rgba(255, 255, 255, 1);
+    line-height: 1.6;
+    display: inline-block;
+      vertical-align: middle;
+      /*line-height: 250%;*/
+    font-family:Verdana;
+    font-size:28px;
+    letter-spacing:0px;
+    padding-top:10px ;
+
   }
 
   .tituloSubText {
     /* Simplified styles to work with flexbox */
     color: rgba(255, 255, 255, 1);
     font-family: Verdana;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0px;
     line-height: normal; /* Use normal to let flexbox handle spacing */
     display: block;
     text-align: center; /* Ensure horizontal alignment */
+    padding-bottom: 16px ;
   }
 
 
@@ -473,9 +476,9 @@ img{
 
   #ResultText{
     cursor: pointer;
-    width: 12%;/*17%;*/
+    width: 14%;/*17%;*/
     position:absolute;
-    left:45%;
+    left:44%;
     top:13.5em;
 
   }
@@ -501,9 +504,9 @@ img{
   }
   #ScanText{
     cursor: pointer;
-    width: 10%;
+    width: 12%;
     position:absolute;
-    left:87%;
+    left:85%;
     top: 13.5em;
 
   }
