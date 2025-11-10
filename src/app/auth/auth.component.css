@@ -97,12 +97,12 @@
   top: 1.85em;
   right:10.94em;
 
-  width:36px;
-  height:36px;
+  width:46px;
+  height:46px;
   text-align:center;
-  background-image:url(../../assets/userWhite.png);
+  background-image:url(../../assets/LoginIconWhite.png);
   background-repeat:no-repeat;
-  background-size:cover;
+  background-size:contain;
 
   /*display: none;*/
 
@@ -141,7 +141,7 @@
     width:36px;
     height:36px;
     text-align:center;
-    background-image:url(../../assets/userWhite.png);
+    background-image:url(../../assets/LoginIconWhite.png);
     background-repeat:no-repeat;
     background-size:cover;
 
