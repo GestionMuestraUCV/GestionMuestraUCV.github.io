@@ -289,53 +289,61 @@ img{
 
   }
 
-  .logoAgro { /*Logo Ciens*/
-    width:45px;
-    height:35px;
+
+  /**/
+
+  .logoCiens { /*Logo Ciens*/
+    width:25px;
+    height:25px;
     position:absolute;
-    left: 88%;
-    top: 3.7em;
+    top: 80px;
+    left:clamp(calc(20% + 50px), calc(60% - 16px), 100%);
+    background-image:url(../../assets/logoCiens.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+  .logoAgro { /*Logo Ciens*/
+    width:40px;
+    height:30px;
+    position:absolute;
+    left: calc(100% - 50px);
+    top: 77px;
     background-image:url(../../assets/Logo-Agronomia2.png);
     background-repeat:no-repeat;
     background-size:cover;
   }
 
   .logoUcv { /*Logo Ucv*/
-    width:35px;
-    height:35px;
+    width:30px;
+    height:30px;
     position:absolute;
     left: 23%;
-    top: 3.7em;
+    top: 75px;
     background-image:url(../../assets/logo_ucv_bg2_1.png);
     background-repeat:no-repeat;
     background-size:cover;
   }
 
+  .tituloBox { /*Titulo box*/
+    width:80%;
+    height:80px;
+    position:absolute;
+    left:20%;
 
-
-  .tituloBox {
-    width: 80%;
-    height: 6.75em;
-    position: absolute;
-    left: 20%;
-    top: 0%;
-    /* Add flexbox properties for consistent centering */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    top:0%;
+    text-align:center;
   }
 
   .tituloText { /*Titulo Texto*/
     color:rgba(255, 255, 255, 1);
-    line-height: 1.6;
+    line-height: 1;
     display: inline-block;
       vertical-align: middle;
       /*line-height: 250%;*/
     font-family:Verdana;
     font-size:28px;
     letter-spacing:0px;
-    padding-top:10px ;
+    padding-top:5px ;
 
   }
 
@@ -348,9 +356,15 @@ img{
     line-height: normal; /* Use normal to let flexbox handle spacing */
     display: block;
     text-align: center; /* Ensure horizontal alignment */
-    padding-bottom: 16px ;
+    padding-top:10px ;
+
   }
 
+  .space{
+
+    display: none;
+
+  }
 
 
 
