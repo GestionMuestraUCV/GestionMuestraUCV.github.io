@@ -9,7 +9,7 @@ import { PrintComponent } from './print/print.component';
 import { ClientComponent } from './client/client.component';
 
 const routes: Routes = [
-  {path:'', redirectTo: 'auth/select', pathMatch: 'full'},
+  {path:'', redirectTo: 'auth/login', pathMatch: 'full'},
   {path:'home', component: HomeComponent},
   {path:'admin', component: AdminComponent, canActivate: [AuthGuard]},
   {path:'auth', component: AuthComponent},

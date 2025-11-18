@@ -1,29 +1,59 @@
+<div class="base">
+
+  <div >
+    <button [hidden]="hidInstBut" class="installButton"  (click)="installPwa()">Instalar</button>
+  </div>
+  <div [hidden]="hidInstText" class="install">
+    <span>Para instalar en tu dispositivo móvil, pulsa el boton de inicio “Compartir”
+    <img id="share" src="../../../../assets/share.png" alt="share">
+    y selecionar “Agregar a Inicio”</span>
+  </div>
+
+  <div class="infoText">
+    <span>
+      El sistema de Gestión de Muestras de Campo es un proyecto que tiene como objetivo
+      desarrollar una Aplicación Web Progresiva para la gestión de muestras de campo de la Clínica de Enfermedades
+      de Plantas de la Universidad Central de Venezuela
+    </span>
+  </div>
+
+
+  <div class="footer">
+    <div class="footerText">
+      <span>Universidad Central de Venezuela (UCV) · Facultad Ciencias · </span>
+      <span class="Orange" (click)="Credits()">Créditos</span>
+    </div>
+  </div>
+
+</div>
+
+
+
+
 <!--<p>login works!</p> -->
 
-<button class="salir" (click)="Salir()">
-</button>
+<!--<button class="salir" (click)="Salir()">
+</button>-->
 
-<!--
-<div>
-  <button id="signup" (click)= "Signup()">Sign up</button>
-</div>
--->
 
-<div  class="loginBox"></div>
-<span  class="loginTile">Iniciar Sesión</span>
-<div  class="lineBlack"></div>
+<div  class="loginBox">
+  <span  class="loginTile">Iniciar Sesión</span>
+  <div  class="lineBlack"></div>
 
-<form #loginForm="ngForm" (ngSubmit)="handleLogin(loginForm.value)">
-    <div class="main">
-      <div class="input-fields">
-        <span  class="userText">Email: </span>
+  <form #loginForm="ngForm" (ngSubmit)="handleLogin(loginForm.value)">
+      <div class="main">
+        <div class="input-fields">
+          <p  class="userText">Email: </p>
           <input name="email" ngModel placeholder="Email" id="email" type="email" class="input-field" />
-      </div>
-      <div class="input-fields">
-        <span  class="claveText">Clave: </span>
+        </div>
+        <div class="input-fields">
+          <p class="claveText">Clave: </p>
           <input name="password" ngModel placeholder="Password" id="password" type="password" class="input-field" />
-      </div>
+        </div>
 
-      <button class="boton">Log In</button>
-    </div>
-</form>
+        <button class="boton">Log In</button>
+      </div>
+  </form>
+
+</div>
+

@@ -221,7 +221,6 @@ p{
 	letter-spacing:0;
   font-weight: bold;
 
-
 }
 
 
@@ -269,18 +268,6 @@ p{
 	background-size:cover;
 }
 
-/*
-.detalles{
-  border: none;
-  background-color: #D9D9D9;
-  width:25px;
-  height: 25px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  background-image:url(../../../../assets/info.png);
-}
-*/
 
 
 

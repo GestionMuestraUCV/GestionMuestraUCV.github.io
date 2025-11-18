@@ -19,9 +19,6 @@ export class SelectComponent {
 
 
   constructor(public auth: Auth, private router: Router, private platform: Platform){
-    /*const installTest = document.getElementByClassName('install');
-    //installTest!.style.display="none";
-    installTest!.style.visibility="hidden";*/
 
     if (this.platform.IOS) {this.hidInstText=false; this.hidInstBut=true;}
     if (this.platform.ANDROID) {this.hidInstText=true; this.hidInstBut=false;}
@@ -38,21 +35,11 @@ export class SelectComponent {
 
     });
 
-
-
-    /*
-
-    */
-
-
-
   }
 
 
 
   disableInAppInstallPrompt() {
-    //installPrompt = null;
-    //installButton.setAttribute("hidden", "");
     this.hidInstBut=true;
   }
 
@@ -71,14 +58,6 @@ export class SelectComponent {
   }
 
   public installPwa(): void {
-    //console.log("click");
-    /*window.addEventListener('beforeinstallprompt', (event: any) => {
-      event.preventDefault();
-      this.promptEvent = event;
-      //event.prompt();
-      console.log("prompt");
-
-    });*/
     this.promptEvent.prompt();
   }
 
