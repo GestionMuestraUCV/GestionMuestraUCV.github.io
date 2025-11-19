@@ -4,7 +4,7 @@
 .navbar { /*Titulo box*/
 	background-color:#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
 	width:100%;
-	height:110px;
+	height:120px;
   position:absolute;
 	left:0%; /*20%;*/
 	top:0%;
@@ -12,21 +12,23 @@
 
 .tituloBox { /*Titulo box*/
 	width:100%;
-	height:6.75em;
+	height:120px;
 	position:absolute;
-	left:0%; /*20%;*/
+	left:0%;
 	top:0%;
   display: flex; /* Enables Flexbox */
   flex-direction: column; /* Stacks children vertically */
   justify-content: center; /* Centers items along the main axis (vertically in this case) */
   align-items: center; /* Centers items along the cross axis (horizontally in this case) */
-  cursor: pointer;
+  font-size:10px;
+
 }
+
 
 .tituloText { /*Titulo Texto*/
 	color:rgba(255, 255, 255, 1);
 	display: block;
-  line-height: 0.5em;
+  /*line-height: 1.2em;*/
 	font-family:Verdana;
   font-weight: bold;
 	font-size:40px;
@@ -35,10 +37,13 @@
   /*position:absolute;
   left:40%;*/
 }
+
+
+
 .tituloSubText { /*Titulo Texto*/
 	color:rgba(255, 255, 255, 1);
 	display: block;
-  line-height: 1.2em;
+  /*line-height: 1.2em;*/
 	font-family:Verdana;
   font-weight: bold;
 	font-size:20px;
@@ -48,35 +53,35 @@
 
 
 .logoUcv { /*Logo Ucv*/
-	width:69px;
-	height:69px;
+	width:100px;
+	height:100px;
 	position:absolute;
-	left: 20px;
-	top: 16px;
+	left: 40px;
+	top: 10px;
 	background-image:url(../../assets/logo_ucv_bg2_1.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
 .logoCiens { /*Logo Ucv*/
-	width:69px;
-	height:69px;
+	width:100px;
+	height:100px;
   display: inline-block;
   position:absolute;
-  left: 110px;
-  top:16px;
+  left: 180px;
+  top:10px;
   /*margin-left: 60px;*/
 
 	background-image:url(../../assets/logoCiens.png);
 	background-repeat:no-repeat;
-	background-size:cover;
+	background-size:contain;
 }
 .logoAgro { /*Logo Ciens*/ /*Logo Agro*/
-	width:100px;
-	height:69px;
+	width:150px;
+	height:100px;
 	position:absolute;
-	left: 190px;
-	top: 16px;
-	background-image:url(../../assets/Logo-Agronomia2.png);
+	right: 40px;
+	top: 10px;
+	background-image:url(../../assets/Logo-Agronomia-Stroke.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -167,41 +172,43 @@
   }
 
 
-  .logoCiens { /*Logo Ciens*/
-    width:25px;
-    height:25px;
-    position:absolute;
-    top: 80px;
-    left:clamp(calc(20% + 50px), calc(60% - 16px), 100%);
-    background-image:url(../../assets/logoCiens.png);
-    background-repeat:no-repeat;
-    background-size:cover;
-  }
-  .logoAgro { /*Logo Ciens*/
-    width:40px;
-    height:30px;
-    position:absolute;
-    left: calc(100% - 50px);
-    top: 80px;
-    background-image:url(../../assets/Logo-Agronomia2.png);
-    background-repeat:no-repeat;
-    background-size:cover;
-  }
   .logoUcv { /*Logo Ucv*/
     width:30px;
     height:30px;
     position:absolute;
-    left: 23%;
-    top: 77px;
-    background-image:url(../../assets/logo_ucv_bg2_1.png);
+    top: 15px;
+    left: 5px;
+
+    background-image:url(../../assets/logo_ucv_Small.png);
     background-repeat:no-repeat;
     background-size:cover;
   }
+  .logoCiens { /*Logo Ciens*/
+    width:30px;
+    height:30px;
+    position:absolute;
+    top: 15px;
+    left: 45px;
+    background-image:url(../../assets/logoCiens-Small.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+  .logoAgro { /*Logo Ciens*/
+    width:58px;
+    height:40px;
+    position:absolute;
+    top: 60px;
+    left: 12px;
+    background-image:url(../../assets/Logo-Agronomia-Stroke-Small.png);
+    background-repeat:no-repeat;
+    background-size:contain;
+  }
+
 
 
   .tituloBox { /*Titulo box*/
     width:80%;
-    height:80px;
+    height:120px;
     position:absolute;
     left:20%;
 

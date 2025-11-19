@@ -23,121 +23,6 @@ button{
   cursor: pointer;
 }
 
-/**/
-
-
-.navbar { /*Titulo box*/
-	background-color:#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
-	width:clamp(1280px,100%,100%); /*1024px*/
-	height:6.75em;
-  position:absolute;
-	left:0%; /*20%;*/
-	top:0%;
-
-  /*display: flex;
-  flex-direction: row;*/
-}
-
-.tituloBox { /*Titulo box*/
-	/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
-	width:100%;
-	height:6.75em;
-	position:absolute;
-	left:0%; /*20%;*/
-	top:0%;
-  display: flex; /* Enables Flexbox */
-  flex-direction: column; /* Stacks children vertically */
-  justify-content: center; /* Centers items along the main axis (vertically in this case) */
-  align-items: center; /* Centers items along the cross axis (horizontally in this case) */
-}
-.tituloText { /*Titulo Texto*/
-	color:rgba(255, 255, 255, 1);
-	display: block;
-  line-height: 0.5;
-	font-family:Verdana;
-  font-weight: bold;
-	font-size:40px;
-	letter-spacing:0;
-}
-.tituloSubText { /*Titulo Texto*/
-	color:rgba(255, 255, 255, 1);
-	display: block;
-  line-height: 1.2;
-	font-family:Verdana;
-  font-weight: bold;
-	font-size:20px;
-	letter-spacing:0;
-}
-
-
-.logoAgro { /*Logo Ciens*/ /*Logo Agro*/
-	width:100px;
-	height:69px;
-	position:absolute;
-	left: 140px;
-	top: 1em;
-	background-image:url(../../assets/Logo-Agronomia2.png);
-	background-repeat:no-repeat;
-	background-size:cover;
-}
-.logoUcv { /*Logo Ucv*/
-	width:69px;
-	height:69px;
-	position:absolute;
-	left: 30px;
-	top: 1em;
-	background-image:url(../../assets/logo_ucv_bg2_1.png);
-	background-repeat:no-repeat;
-	background-size:cover;
-}
-
-
-.homeBox {/*Home box*/
-	/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
-	/*border-right: 4px solid white;*/
-	width:25%;
-	height:10%;
-	position:absolute;
-  cursor: pointer;
-	left:75%;/*0px;*/
-	top:0%;
-	text-align:center;
-}
-.homeText { /*Home text*/
-	color:rgba(255, 255, 255, 1);
-	display: inline-block;
-  	vertical-align: middle;
-  	line-height: 2.8em;
-	font-family:Verdana;
-	font-size:32px;
-	letter-spacing:0;
-	position:absolute;
-  right:0.75em;
-	top:30%;
-
-}
-.UserLogo { /*Home text*/
-  position:absolute;
-
-  top: 1.85em;
-  right:15em;
-
-  width:36px;
-  height:36px;
-  text-align:center;
-  background-image:url(../../assets/userWhite.png);
-  background-repeat:no-repeat;
-  background-size:cover;
-
-  /*display: none;*/
-
-}
-/**/
-
-
-
-
-
 
 
 
@@ -153,23 +38,20 @@ button{
 
 .navbar2Box{
   background: #ffffff;
-  box-shadow: 0px 0px 6px 10px rgba(0, 0, 0, 0.25); /*2px 2px 5px black;*/
-  /*border-top: 4px solid white;*/
+  box-shadow: 0px 0px 6px 10px rgba(0, 0, 0, 0.25);
 
-  height: 100vh;  /*100%;*/
-  /* This sets the height to 100% of the viewport height */
+  height: 100vh;
   width: 320px;
-  position: absolute; /*absolute;*/
-  /* Keeps the navbar in place even when the user scrolls */
+  position: absolute;
   top: 0;
   left: 0;
 
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Aligns content to the start of the container */
-  align-items: center; /* Horizontally centers the items */
-  padding-top: 15em; /* Add top padding to move the first element down */
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 15em;
 
   z-index: -10;
 }
@@ -424,7 +306,7 @@ img{
     box-shadow: 0px 0px 6px 10px rgba(0, 0, 0, 0.25);
     position:absolute;
     left:0%;
-    top:6.75em;
+    top: 110px;
     padding-top: 0em;
   }
 
@@ -461,7 +343,7 @@ img{
     width: 10%; /*15%;*/
     position:absolute;
     left:0%;
-    top:13.5em;
+    top:110px;
     padding-left: 3%;
     border-right: 2px solid white;
   }
@@ -472,7 +354,7 @@ img{
     width: 15%;
     position:absolute;
     left:15%;/*32%;*/
-    top:13.5em;
+    top:110px;
     border-right: 2px solid white;
 
   }
@@ -482,7 +364,7 @@ img{
     width: 15%; /*17%;*/
     position:absolute;
     left:30%;/*49%;*/
-    top:13.5em;
+    top:110px;
     border-right: 2px solid white;
   }
 
@@ -491,7 +373,7 @@ img{
     width: 14%;/*17%;*/
     position:absolute;
     left:44%;
-    top:13.5em;
+    top:110px;
 
   }
 
@@ -500,7 +382,7 @@ img{
     width: 13%;
     position:absolute;
     left:58%;
-    top:13.5em;
+    top:110px;
     border-right: 2px solid white;
   }
 
@@ -510,7 +392,7 @@ img{
     width: 10%;
     position:absolute;
     left:70%;
-    top:13.5em;
+    top:110px;
     padding-left: 3%;
 
   }
@@ -519,7 +401,7 @@ img{
     width: 12%;
     position:absolute;
     left:85%;
-    top: 13.5em;
+    top: 110px;
 
   }
 

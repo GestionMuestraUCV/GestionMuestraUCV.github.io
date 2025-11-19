@@ -1,21 +1,220 @@
-.base{
-  margin: 0px;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  background-repeat: repeat;
-  background-image:url(../assets/CaptureLeafRepeatOpacity10.png);
+.navbar { /*Titulo box*/
+	background-color:#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
+	width:100%;
+	height:120px;
+  position:absolute;
+	left:0%; /*20%;*/
+	top:0%;
+}
+
+.tituloBox { /*Titulo box*/
+	width:100%;
+	height:120px;
+	position:absolute;
+	left:0%;
+	top:0%;
+  display: flex; /* Enables Flexbox */
+  flex-direction: column; /* Stacks children vertically */
+  justify-content: center; /* Centers items along the main axis (vertically in this case) */
+  align-items: center; /* Centers items along the cross axis (horizontally in this case) */
+  font-size:10px;
+
+}
+
+
+.tituloText { /*Titulo Texto*/
+	color:rgba(255, 255, 255, 1);
+	display: block;
+  /*line-height: 1.2em;*/
+	font-family:Verdana;
+  font-weight: bold;
+	font-size:40px;
+	letter-spacing:0;
+
+  /*position:absolute;
+  left:40%;*/
+}
+
+
+
+.tituloSubText { /*Titulo Texto*/
+	color:rgba(255, 255, 255, 1);
+	display: block;
+  /*line-height: 1.2em;*/
+	font-family:Verdana;
+  font-weight: bold;
+	font-size:20px;
+	letter-spacing:0;
+
+}
+
+
+.logoUcv { /*Logo Ucv*/
+	width:100px;
+	height:100px;
+	position:absolute;
+	left: 40px;
+	top: 10px;
+	background-image:url(../assets/logo_ucv_bg2_1.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.logoCiens { /*Logo Ucv*/
+	width:100px;
+	height:100px;
+  display: inline-block;
+  position:absolute;
+  left: 180px;
+  top:10px;
+  /*margin-left: 60px;*/
+
+	background-image:url(../assets/logoCiens.png);
+	background-repeat:no-repeat;
+	background-size:contain;
+}
+.logoAgro { /*Logo Ciens*/ /*Logo Agro*/
+	width:150px;
+	height:100px;
+	position:absolute;
+	right: 40px;
+	top: 10px;
+	background-image:url(../assets/Logo-Agronomia-Stroke.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+
+.homeBox {/*Home box*/
+	width:25%;
+	height:10%;
+	position:absolute;
+  cursor: pointer;
+	left:75%;/*0px;*/
+	top:0%;
+	text-align:center;
+}
+.homeText { /*Home text*/
+	color:rgba(255, 255, 255, 1);
+	display: inline-block;
+  	vertical-align: middle;
+  	line-height: 2.8em;
+	font-family:Verdana;
+	font-size:32px;
+	letter-spacing:0;
+	position:absolute;
+  right:0.75em;
+	top:30%;
+
+}
+.UserLogo { /*Home text*/
+  position:absolute;
+
+  top: 1.85em;
+  right:10.94em;
+
+  width:46px;
+  height:46px;
+  text-align:center;
+  background-image:url(../assets/LoginIconWhite.png);
+  background-repeat:no-repeat;
+  background-size:contain;
+
+  /*display: none;*/
 
 }
 
 
 
-.container {
-  position: absolute;
-  top: 20%;
-  padding: 24px;
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+  .navbar { /*Titulo box*/
+    height: 110px;
+  }
+
+  .logoUcv { /*Logo Ucv*/
+    width:30px;
+    height:30px;
+    position:absolute;
+    top: 15px;
+    left: 5px;
+    background-image:url(../assets/logo_ucv_Small.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+  .logoCiens { /*Logo Ciens*/
+    width:30px;
+    height:30px;
+    position:absolute;
+    top: 15px;
+    left: 45px;
+    background-image:url(../assets/logoCiens-Small.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+  .logoAgro { /*Logo Ciens*/
+    width:58px;
+    height:40px;
+    position:absolute;
+    top: 60px;
+    left: 12px;
+    background-image:url(../assets/Logo-Agronomia-Stroke-Small.png);
+    background-repeat:no-repeat;
+    background-size:contain;
+  }
+
+  .tituloBox { /*Titulo box*/
+    width:80%;
+    height:110px;
+    position:absolute;
+    left:20%;
+    top:0%;
+    text-align:center;
+  }
+
+  .tituloText { /*Titulo Texto*/
+    color:rgba(255, 255, 255, 1);
+    line-height: 1;
+    display: inline-block;
+      vertical-align: middle;
+    font-family:Verdana;
+    font-size:28px;
+    letter-spacing:0px;
+    padding-top:5px ;
+
+  }
+
+  .tituloSubText {
+    color: rgba(255, 255, 255, 1);
+    font-family: Verdana;
+    font-size: 18px;
+    letter-spacing: 0px;
+    line-height: normal;
+    display: block;
+    text-align: center;
+    padding-top:10px ;
+
+  }
+
+  .space{
+    display: none;
+  }
+
+  .homeLogo {
+    display: none;
+  }
+
+
+
+
+
+
 
 }
+
 
 
