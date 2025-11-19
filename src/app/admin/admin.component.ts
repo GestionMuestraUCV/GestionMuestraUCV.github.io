@@ -16,12 +16,6 @@ export class AdminComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    //console.log(history.state.user);
-    //console.log(this.router);
-    //console.log(this.route);
-    /*this.route.params.subscribe(param =>{
-      console.log(param);
-    })*/
 
 
   }
@@ -74,7 +68,7 @@ export class AdminComponent implements OnInit {
       console.log("here");
       // An error happened.
     });
-    this.router.navigate(['auth/select']);
+    this.router.navigate(['auth/login']);
 
   }
 

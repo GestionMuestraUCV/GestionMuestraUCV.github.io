@@ -1,57 +1,38 @@
-<p>client works!</p>
+
+<div class="navbar2Box"></div>
+
+  <div class="navbar2" >
+
+    <div class="navbar2Text" id="cerrarText" (click)="handleSignOut()">
+      <img src="../../assets/logout-2.png" alt="Out" width="50" height="50">
+      <br class="break">
+      Cerrar Sesión
+    </div>
+
+    <div class="navbar2Text" id="UnidadText" (click)="Unidad()">
+      <img src="../../assets/shovel2.png" alt="Shovel" width="50" height="50">
+      <br class="break">
+      Unidades de Producción
+    </div>
+
+    <div class="navbar2Text" id="MuestrasText" (click)="Muestras()">
+      <img src="../../assets/prueba-de-sangre.png" alt="Shovel" width="50" height="50">
+      <br class="break">
+      Muestras
+    </div>
 
 
-
-<div class="navbar2">
-  <div class="navbar2Box" ></div>
-
-  <div class="navbar2Text" id="cerrarText" (click)="handleSignOut()">
-    <img src="../../assets/logout-2.png" alt="Out" width="50" height="50">
-    <br class="break">
-    Cerrar Sesión
   </div>
 
-  <div class="navbar2Text" id="UnidadText" (click)="Unidad()">
-    <img src="../../assets/shovel2.png" alt="Shovel" width="50" height="50">
-    <br class="break">
-    Unidades de Producción
-  </div>
-
-  <div class="navbar2Text" id="MuestrasText" (click)="Muestras()">
-    <img src="../../assets/prueba-de-sangre.png" alt="Shovel" width="50" height="50">
-    <br class="break">
-    Muestras
-  </div>
-
-
-</div>
 
 
 
 
 
-<div  class="navbar">
-
-
-  <div  class="tituloBox">
-    <span  class="tituloText">Clínica de Plantas</span>
-    <br class="space"/>
-    <span  class="tituloSubText">Gestión de Muestras</span>
-
-  </div>
-  <div  class="logoAgro"></div>
-  <div class="logoCiens"></div>
-  <div  class="logoUcv"></div>
 
 
 
-  <div  class="homeBox" (click)="Perfil()">
-    <div  class="UserLogo"></div>
 
-    <span  class="homeText">Cliente </span>
-    <div  class="homeLogo"></div>
-  </div>
 
-</div>
 <router-outlet></router-outlet>
 

@@ -24,7 +24,7 @@ export class ClientComponent {
       console.log("here");
       // An error happened.
     });
-    this.router.navigate(['auth/select']);
+    this.router.navigate(['auth/login']);
 
   }
 
