@@ -9,6 +9,13 @@ import { RouterModule } from '@angular/router';
 import { UsersComponent } from './components/users/users.component';
 import { UserNewComponent } from './components/user-new/user-new.component';
 import { UserEditComponent } from './components/user-edit/user-edit.component';
+import { ScanComponent } from './components/scan/scan.component';
+import { BarcodeComponent } from './components/barcode/barcode.component';
+import { MuestrasAllComponent } from './components/muestras-all/muestras-all.component';
+import { ResultadosComponent } from './components/resultados/resultados.component';
+import { ClientsComponent } from './components/clients/clients.component';
+import { BarcodeNewComponent } from './components/barcode-new/barcode-new.component';
+import { UnidadProduccionAllComponent } from './components/unidad-produccion-all/unidad-produccion-all.component';
 
 
 @NgModule({
@@ -16,7 +23,15 @@ import { UserEditComponent } from './components/user-edit/user-edit.component';
     AdminComponent,
     UsersComponent,
     UserEditComponent,
-    UserNewComponent
+    UserNewComponent,
+    ScanComponent,
+    BarcodeComponent,
+    MuestrasAllComponent,
+    ResultadosComponent,
+    ClientsComponent,
+    BarcodeNewComponent,
+    UnidadProduccionAllComponent
+
   ],
   imports: [
     AdminRoutingModule,

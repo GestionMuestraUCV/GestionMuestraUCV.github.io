@@ -1,0 +1,87 @@
+<p >barcode works!</p>
+
+
+
+<!-- (ngSubmit)="generateBarcode(loginForm.value)"" -->
+
+<!--
+
+<h1 id="test"></h1>
+
+<br>
+
+<form #loginForm="ngForm" (ngSubmit)="generateBarcode(item)">
+  <div class="main">
+
+    <div class="input-fields">
+        <input name="txt_input" ngModel placeholder=" " id="txt_input" type="text" class="input-field" />
+    </div>
+
+    <br>
+
+
+
+    <button id="btn_generate" class="barcode">Generar Codigo de Barras</button>
+  </div>
+</form>
+
+<br><br>
+ -->
+
+ <!-- <svg onclick="window.print(this)" id="barcode0"></svg> -->
+<!--
+<div id="codes">
+  <div class="subcodes">
+
+    <svg id="barcode" ></svg>
+    <br><br>
+  </div>
+
+
+  <div class="subcodes">
+    <svg id="barcode0"></svg>
+  </div>
+
+  <div class="subcodes">
+    <svg id="barcode1"></svg>
+  </div>
+
+  <div class="subcodes">
+    <svg id="barcode2"></svg>
+  </div>
+
+  <div class="subcodes">
+    <svg id="barcode2"></svg>
+  </div>
+
+  <div class="subcodes">
+    <svg id="barcode4"></svg>
+  </div>
+
+  <div class="subcodes">
+    <svg id="barcode5"></svg>
+  </div>
+
+</div>
+-->
+
+<svg id="barcode" ></svg>
+
+<form #loginForm="ngForm" (ngSubmit)="handleRegister(loginForm.value)">
+  <div class="main" >
+    <div class="input-fields">
+      <span  class="Text">Cantidad: </span>
+      <input name="cantidad" ngModel placeholder="N°" id="cantidad" type="number" min="1" max="5" class="input-field" [(ngModel)]= "num"/>
+    </div>
+
+
+    <button class="print">Imprimir</button>
+  </div>
+</form>
+
+<button id="volver" (click)="backPage()"></button>
+
+
+<!--<button class="print" (click)="toPrint()">Print</button>-->
+
+

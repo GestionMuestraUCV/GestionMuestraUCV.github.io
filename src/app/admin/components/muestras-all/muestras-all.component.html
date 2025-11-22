@@ -1,0 +1,45 @@
+
+
+<h1 class="subTituloText">Muestras</h1>
+
+
+
+<div class="list">
+  <table>
+    <tr>
+      <th> Codigo </th>
+      <th> Fecha </th>
+      <th> Cultivo</th>
+      <th> Coordenadas </th>
+      <th> </th>
+
+    </tr>
+    <tr *ngFor="let item of data" >
+
+
+      <td>{{ item.codigo  }}</td>
+      <td >{{ item.fecha }}</td>
+      <td>{{ item.cultivo}}</td>
+      <td>{{ item.coordenadas}}</td>
+
+      <td>
+        <button class="detalles" (click)="infoMuestra(item.codigo)">
+          <div class="detalles-tip">Información</div>
+        </button>
+        <button class="edit" (click)="editMuestra(item.codigo)">
+          <div class="edit-tip">Editar</div>
+        </button>
+        <button class="imprimir" (click)="Barcode(item.codigo)">
+          <div class="imprimir-tip">Imprimir</div>
+        </button>
+
+      </td>
+
+    </tr>
+  </table>
+
+
+</div>
+
+
+

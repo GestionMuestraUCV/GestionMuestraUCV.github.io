@@ -89,4 +89,30 @@ export class AdminComponent implements OnInit {
     //window.location.href='#/auth/login';
   }
 
+  Resultados(){
+
+    this.router.navigate(['admin/resultados']);
+    //window.location.href='#/auth/login';
+  }
+
+  Clientes(){
+    this.router.navigate(['admin/clients']);
+
+  }
+
+  Unidades(){
+    this.router.navigate(['admin/unidad-produccion-all']);
+
+  }
+
+  Codigo(){
+    this.router.navigate(['admin/barcode-new']);
+
+  }
+
+  Scan(){
+    this.router.navigate(['admin/scan']);
+  }
+
+
 }

@@ -259,38 +259,9 @@ button{
 
 
 
-#ProyectosText{
-  visibility: hidden;
-  cursor: pointer;
-  width: 17%; /*17%;*/
-  position:absolute;
-  left:20%; /*15%;*/
-  top:10%;
-  border-right: 4px solid white;
-}
-
-#UnidadText{
-  cursor: pointer;
-  width: 300; /*17%;*/
-  position:absolute;
-  left:0%;/*20%;/*32%;*/
-  top:12%;
-  /*border-right: 4px solid white;*/
-
-}
-
-#MuestrasText{
-  cursor: pointer;
-  width: 300; /*17%;*/
-  position:absolute;
-  left:0%;/*40%;/*49%;*/
-  top:22%;
-  /*border-right: 4px solid white;*/
-}
 
 
-
-#ClientesText{
+#UsersText{
   cursor: pointer;
   width: 300;/*17%;*/
   position:absolute;
@@ -300,24 +271,71 @@ button{
 
 }
 
-#CodigoText{
+
+
+#UnidadText{
+  cursor: pointer;
+  width: 300; /*17%;*/
+  position:absolute;
+  left:0%;/*20%;/*32%;*/
+  top:12em;
+  /*border-right: 4px solid white;*/
+
+}
+
+#MuestrasText{
+  cursor: pointer;
+  width: 300; /*17%;*/
+  position:absolute;
+  left:0%;/*40%;/*49%;*/
+  top: 16em;
+  /*border-right: 4px solid white;*/
+}
+
+#ResultText{
+  cursor: pointer;
+  width: 300;/*17%;*/
+  position:absolute;
+  left:0%;
+  top:20em;
+}
+
+
+#ClientesText{
   cursor: pointer;
   width: 300; /*17%;*/
   position:absolute;
   left:0%;/*80%;/*83%;*/
-  top:42%;
-
+  top:24em;
 }
 
+#CodigoText{
+  cursor: pointer;
+  width: 300; /*15%;*/
+  position:absolute;
+  left:0%;
+  top:28em;
+}
+
+#ScanText{
+  cursor: pointer;
+  width: 300; /*17%;*/
+  position:absolute;
+  left:0%;/*20%;/*32%;*/
+  top: 32em;
+  /*border-right: 4px solid white;*/
+
+}
 
 #cerrarText{
   cursor: pointer;
   width: 300; /*15%;*/
   position:absolute;
   left:0%;
-  top:22%;/*52%;*/
+  top: 36em;/*52%;*/
   /*border-right: 4px solid white;*/
 }
+
 
 
 
@@ -390,95 +408,11 @@ img{
   }
   /**/
 
-  .logoCiens { /*Logo Ciens*/
-    width:25px;
-    height:25px;
-    position:absolute;
-    top: 80px;
-    left:clamp(calc(20% + 50px), calc(60% - 16px), 100%);
-    background-image:url(../../assets/logoCiens.png);
-    background-repeat:no-repeat;
-    background-size:cover;
-  }
-  .logoAgro { /*Logo Ciens*/
-    width:40px;
-    height:30px;
-    position:absolute;
-    left: calc(100% - 50px);
-    top: 77px;
-    background-image:url(../../assets/Logo-Agronomia2.png);
-    background-repeat:no-repeat;
-    background-size:cover;
-  }
 
-  .logoUcv { /*Logo Ucv*/
-    width:30px;
-    height:30px;
-    position:absolute;
-    left: 23%;
-    top: 75px;
-    background-image:url(../../assets/logo_ucv_bg2_1.png);
-    background-repeat:no-repeat;
-    background-size:cover;
-  }
-
-  .tituloBox { /*Titulo box*/
-    width:80%;
-    height:80px;
-    position:absolute;
-    left:20%;
-
-    top:0%;
-    text-align:center;
-  }
-
-  .tituloText { /*Titulo Texto*/
-    color:rgba(255, 255, 255, 1);
-    line-height: 1;
-    display: inline-block;
-      vertical-align: middle;
-      /*line-height: 250%;*/
-    font-family:Verdana;
-    font-size:28px;
-    letter-spacing:0px;
-    padding-top:5px ;
+  .navbar2 {
+    width: 100%;
 
   }
-
-  .tituloSubText {
-    /* Simplified styles to work with flexbox */
-    color: rgba(255, 255, 255, 1);
-    font-family: Verdana;
-    font-size: 18px;
-    letter-spacing: 0px;
-    line-height: normal; /* Use normal to let flexbox handle spacing */
-    display: block;
-    text-align: center; /* Ensure horizontal alignment */
-    padding-top:10px ;
-
-  }
-
-  .space{
-
-    display: none;
-
-  }
-
-
-  .homeLogo { /*Home text*/
-
-
-    display: none;
-
-  }
-
-
-/**/
-
-.navbar2 {
-  width: 100%;
-
-}
 
 
 
@@ -520,9 +454,6 @@ img{
   }
 
 
-
-
-
   #cerrarText{
     cursor: pointer;
     width: 10%; /*15%;*/
@@ -562,7 +493,7 @@ img{
 
   }
 
-  #ClientesText{
+  #UsersText{
     cursor: pointer;
     width: 50px;
     position:absolute;
