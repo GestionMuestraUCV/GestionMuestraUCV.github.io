@@ -85,7 +85,7 @@ export class AdminComponent implements OnInit {
   }
   Muestras(){
 
-    this.router.navigate(['admin']);
+    this.router.navigate(['admin/muestras-all']);
     //window.location.href='#/auth/login';
   }
 

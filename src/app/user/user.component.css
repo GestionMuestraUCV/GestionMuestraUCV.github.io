@@ -157,6 +157,11 @@ img{
   top:20px;
 }
 
+.mobile-slider-nav {
+  display: none;
+}
+
+
 
 
 
@@ -164,135 +169,11 @@ img{
 @media only screen and (max-width: 768px) {
 
 
-.navbar{
-    width: 100%;
-    position: absolute;
-  }
-
-
-.homeBox {
-    border-right: 4px solid white;
-    width:20%;
-    height:6.75em;
-    position:absolute;
-    left:0px;
-    top:0%;
-
-  }
-  .homeText {
-
-    display: none;
-
-  }
-
-
-  .UserLogo { /*Home text*/
-    position:absolute;
-
-    top:2.2em;
-    /*right:175px;*/
-    left:25%;
-
-    width:36px;
-    height:36px;
-    text-align:center;
-    background-image:url(../../assets/userWhite.png);
-    background-repeat:no-repeat;
-    background-size:cover;
-
-    /*display: none;*/
-
-  }
-
-/**/
-
-  .logoCiens { /*Logo Ciens*/
-    width:25px;
-    height:25px;
-    position:absolute;
-    top: 80px;
-    left:clamp(calc(20% + 50px), calc(60% - 16px), 100%);
-    background-image:url(../../assets/logoCiens.png);
-    background-repeat:no-repeat;
-    background-size:cover;
-  }
-  .logoAgro { /*Logo Ciens*/
-    width:40px;
-    height:30px;
-    position:absolute;
-    left: calc(100% - 50px);
-    top: 77px;
-    background-image:url(../../assets/Logo-Agronomia2.png);
-    background-repeat:no-repeat;
-    background-size:cover;
-  }
-
-  .logoUcv { /*Logo Ucv*/
-    width:30px;
-    height:30px;
-    position:absolute;
-    left: 23%;
-    top: 75px;
-    background-image:url(../../assets/logo_ucv_bg2_1.png);
-    background-repeat:no-repeat;
-    background-size:cover;
-  }
-
-  .tituloBox { /*Titulo box*/
-    width:80%;
-    height:80px;
-    position:absolute;
-    left:20%;
-
-    top:0%;
-    text-align:center;
-  }
-
-  .tituloText { /*Titulo Texto*/
-    color:rgba(255, 255, 255, 1);
-    line-height: 1;
-    display: inline-block;
-      vertical-align: middle;
-      /*line-height: 250%;*/
-    font-family:Verdana;
-    font-size:28px;
-    letter-spacing:0px;
-    padding-top:5px ;
-
-  }
-
-  .tituloSubText {
-    /* Simplified styles to work with flexbox */
-    color: rgba(255, 255, 255, 1);
-    font-family: Verdana;
-    font-size: 18px;
-    letter-spacing: 0px;
-    line-height: normal; /* Use normal to let flexbox handle spacing */
-    display: block;
-    text-align: center; /* Ensure horizontal alignment */
-    padding-top:10px ;
-
-  }
-
-  .space{
-
-    display: none;
-
-  }
-
-
-  .homeLogo { /*Home text*/
-
-
-    display: none;
-
-  }
-
-
 /**/
 
 .navbar2 {
   width: 100%;
+  display: none;
 
 }
 
@@ -308,6 +189,7 @@ img{
     left:0%;
     top: 110px;
     padding-top: 0em;
+    display: none;
   }
 
   .navbar2Text{
@@ -435,6 +317,59 @@ img{
   br{
     display: inline;
   }
+
+  .mobile-slider-nav {
+    display: inline;
+    position: absolute;
+    top: 110px;
+    left: 0;
+
+    height:  55px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    z-index: 40;
+    padding-bottom: 8px; /* Vertical padding */
+
+    /* Enable horizontal scrolling and hide scrollbar */
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .mobile-menu-container {
+    display: flex;
+    /* Ensures items stay on one line for sliding effect */
+    white-space: nowrap;
+    padding: 0px 0.5rem; /* Horizontal padding for the container */
+  }
+
+  .mobile-slider-nav a {
+    display: inline-block; /* Essential for flex-nowrap to work with padding */
+      vertical-align: middle;
+      line-height: 1.6;
+    color: #000000;
+    font-size: 8px;
+    font-family: Verdana;
+    font-weight: 600;
+    word-wrap: break-word;
+    text-align: center;
+    display: inline-block;
+
+    flex-shrink: 0;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0px 16px;
+    padding-top: 8px;
+    margin-right: 8px; /* Spacing between buttons */
+    border-radius: 9999px; /* Full rounded corners */
+
+
+
+
+  }
+
 
 
 
