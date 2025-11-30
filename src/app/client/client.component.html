@@ -3,20 +3,25 @@
 
   <div class="navbar2" >
 
+    <div class="navbar2Text" id="HogarText" (click)="Home()">
+      <img src="../../assets/homeResize.png" alt="Out" width="50" height="50">
+      Hogar
+    </div>
+
     <div class="navbar2Text" id="cerrarText" (click)="handleSignOut()">
-      <img src="../../assets/logout-2.png" alt="Out" width="50" height="50">
+      <img src="../../assets/logout-Resize.png" alt="Out" width="50" height="50">
       <br class="break">
       Cerrar Sesión
     </div>
 
     <div class="navbar2Text" id="UnidadText" (click)="Unidad()">
-      <img src="../../assets/shovel2.png" alt="Shovel" width="50" height="50">
+      <img src="../../assets/shovelResize.png" alt="Shovel" width="50" height="50">
       <br class="break">
       Unidades de Producción
     </div>
 
     <div class="navbar2Text" id="MuestrasText" (click)="Muestras()">
-      <img src="../../assets/prueba-de-sangre.png" alt="Shovel" width="50" height="50">
+      <img src="../../assets/prueba-de-sangre-Resize.png" alt="Shovel" width="50" height="50">
       <br class="break">
       Muestras
     </div>
@@ -25,6 +30,36 @@
   </div>
 
 
+
+  <nav class="mobile-slider-nav">
+    <div class="mobile-menu-container">
+
+    <a  (click)="Home()">
+      <img src="../../assets/home.png" alt="Out" width="50" height="50">
+      <br class="break">
+      Hogar
+    </a>
+
+    <a (click)="Unidades()">
+      <img src="../../assets/shovelResize.png" alt="Shovel" width="50" height="50">
+      <br class="break">
+      Unidades de <br class="break"> Producción
+    </a>
+    <a  (click)="Muestras()">
+      <img src="../../assets/prueba-de-sangre-Resize.png" alt="Shovel" width="50" height="50">
+      <br class="break">
+      Muestras
+    </a>
+    <a  (click)="handleSignOut()">
+      <img src="../../assets/logout-Resize.png" alt="Out" width="50" height="50">
+      <br class="break">
+      Cerrar Sesión
+    </a>
+
+
+  </div>
+
+</nav>
 
 
 

@@ -28,17 +28,7 @@ export class ClientComponent {
 
   }
 
-  Home(){
 
-    this.router.navigate(['client/projects']);
-    //window.location.href='#/auth/login';
-  }
-
-  Projectos(){
-
-    this.router.navigate(['client/projects']);
-    //window.location.href='#/auth/login';
-  }
 
   Perfil(){
 
@@ -57,6 +47,34 @@ export class ClientComponent {
     this.router.navigate(['client/unidad-produccion-all']);
     //window.location.href='#/auth/login';
   }
+
+
+  Home(){
+
+    this.router.navigate(['client/land']);
+    //window.location.href='#/auth/login';
+  }
+
+  Resultados(){
+
+    this.router.navigate(['client/resultados']);
+    //window.location.href='#/auth/login';
+  }
+
+  Unidades(){
+    this.router.navigate(['client/unidad-produccion-all']);
+
+  }
+
+  Codigo(){
+    this.router.navigate(['user/barcode-new']);
+
+  }
+
+  Scan(){
+    this.router.navigate(['user/scan']);
+  }
+
 
 
 }

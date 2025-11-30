@@ -68,12 +68,21 @@ button{
   padding-left: 20px;
 }
 
+#HogarText{
+  cursor: pointer;
+  width: 300;
+  position:absolute;
+  left:0%;
+  top: 128px;
+
+}
+
 #UnidadText{
   cursor: pointer;
   width: 300;
   position:absolute;
   left:0%;
-  top: 7em;
+  top: 192px;
 
 }
 
@@ -82,56 +91,53 @@ button{
   width: 300;
   position:absolute;
   left:0%;
-  top: 12em;
+  top: 256px;
 }
 
 
 
 #ResultText{
   cursor: pointer;
-  width: 300;/*17%;*/
+  width: 300;
   position:absolute;
   left:0%;
-  top:16em;
+  top:320px;
 
 }
 
 #ClientesText{
   cursor: pointer;
-  width: 300; /*17%;*/
+  width: 300;
   position:absolute;
-  left:0%;/*80%;/*83%;*/
-  top:20em;
+  left:0%;
+  top:384px;
 
 }
 
 
 #CodigoText{
   cursor: pointer;
-  width: 300; /*15%;*/
+  width: 300;
   position:absolute;
   left:0%;
-  top:24em;
-  /*border-right: 4px solid white;*/
+  top:448px;
 }
 
 #ScanText{
   cursor: pointer;
-  width: 300; /*17%;*/
+  width: 300;
   position:absolute;
-  left:0%;/*20%;/*32%;*/
-  top: 28em;
-  /*border-right: 4px solid white;*/
+  left:0%;
+  top: 512px;
 
 }
 
 #cerrarText{
   cursor: pointer;
-  width: 300;/*17%;*/
+  width: 300;
   position:absolute;
-  left:0%;/*60%; /*66%;*/
-  top:32em;
- /* border-right: 4px solid white;*/
+  left:0%;
+  top:576px;
 
 }
 
@@ -171,11 +177,11 @@ img{
 
 /**/
 
-.navbar2 {
-  width: 100%;
-  display: none;
+  .navbar2 {
+    width: 100%;
+    display: none;
 
-}
+  }
 
 
 
@@ -334,8 +340,8 @@ img{
     /* Enable horizontal scrolling and hide scrollbar */
     overflow-x: scroll;
     overflow-y: hidden;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    /*-ms-overflow-style: none;
+    scrollbar-width: none;*/
   }
 
   .mobile-menu-container {

@@ -1,6 +1,7 @@
 .navbar { /*Titulo box*/
 	background-color:#0A9217;/*rgba(62.00000010430813, 194.00000363588333, 143.00000667572021, 1);*/
 	width:100%;
+  min-width: 1024px;
 	height:120px;
   position:absolute;
 	left:0%; /*20%;*/
@@ -50,22 +51,22 @@
 
 
 .logoUcv { /*Logo Ucv*/
-	width:100px;
-	height:100px;
+	width:80px;
+	height:80px;
 	position:absolute;
-	left: 40px;
-	top: 10px;
+	right: 40px;
+	top: 20px;
 	background-image:url(../assets/logo_ucv_bg2_1.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
 .logoCiens { /*Logo Ucv*/
-	width:100px;
-	height:100px;
+	width:80px;
+	height:80px;
   display: inline-block;
   position:absolute;
-  left: 180px;
-  top:10px;
+  right: 160px;
+  top:20px;
   /*margin-left: 60px;*/
 
 	background-image:url(../assets/logoCiens.png);
@@ -73,11 +74,11 @@
 	background-size:contain;
 }
 .logoAgro { /*Logo Ciens*/ /*Logo Agro*/
-	width:150px;
-	height:100px;
+	width:120px;
+	height:80px;
 	position:absolute;
-	right: 40px;
-	top: 10px;
+	left: 90px;
+	top: 20px;
 	background-image:url(../assets/Logo-Agronomia-Stroke.png);
 	background-repeat:no-repeat;
 	background-size:cover;
@@ -128,12 +129,11 @@
 
 
 
-
-
 @media only screen and (max-width: 768px) {
 
   .navbar { /*Titulo box*/
     height: 110px;
+    min-width: 0px;
   }
 
   .logoUcv { /*Logo Ucv*/
@@ -141,7 +141,8 @@
     height:30px;
     position:absolute;
     top: 15px;
-    left: 5px;
+    right: 5px;
+    left: auto;
     background-image:url(../assets/logo_ucv_Small.png);
     background-repeat:no-repeat;
     background-size:cover;
@@ -150,29 +151,31 @@
     width:30px;
     height:30px;
     position:absolute;
-    top: 15px;
-    left: 45px;
+    top: 60px;
+    right: 5px;
+    left: auto;
     background-image:url(../assets/logoCiens-Small.png);
     background-repeat:no-repeat;
     background-size:cover;
   }
   .logoAgro { /*Logo Ciens*/
-    width:58px;
-    height:40px;
+    width:52px;
+    height:35px;
     position:absolute;
-    top: 60px;
-    left: 12px;
+    top: 38px;
+    right: auto;
+    left: 5px;
     background-image:url(../assets/Logo-Agronomia-Stroke-Small.png);
     background-repeat:no-repeat;
     background-size:contain;
   }
 
   .tituloBox { /*Titulo box*/
-    width:80%;
+    width:259px;
     height:110px;
     position:absolute;
-    left:20%;
-    top:0%;
+    left: clamp(57px, calc(50% - 129px), 100%);
+    top:0px;
     text-align:center;
   }
 
@@ -182,21 +185,22 @@
     display: inline-block;
       vertical-align: middle;
     font-family:Verdana;
-    font-size:28px;
+    font-size:26px;
     letter-spacing:0px;
-    padding-top:5px ;
+    padding-bottom:10px;
+
 
   }
 
   .tituloSubText {
     color: rgba(255, 255, 255, 1);
     font-family: Verdana;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 0px;
     line-height: normal;
     display: block;
     text-align: center;
-    padding-top:10px ;
+    padding-bottom:10px ;
 
   }
 

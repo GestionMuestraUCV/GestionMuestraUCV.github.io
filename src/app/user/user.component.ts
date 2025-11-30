@@ -23,13 +23,13 @@ export class UserComponent {
       console.log("here");
       // An error happened.
     });
-    this.router.navigate(['auth//login']);
+    this.router.navigate(['auth/login']);
 
   }
 
   Home(){
 
-    this.router.navigate(['user/projects']);
+    this.router.navigate(['user/land']);
     //window.location.href='#/auth/login';
   }
 

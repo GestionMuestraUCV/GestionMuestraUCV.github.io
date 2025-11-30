@@ -105,12 +105,12 @@ export class LoginComponent {
         let info=doc.data();
 
         if(info['role']=="Adminitrador"){
-          this.router.navigate(['/admin/users']);
+          this.router.navigate(['/admin/land']); // /admin/users
         }else if(info['role']=="Investigador"){
-          this.router.navigate(['/user/unidad-produccion-all']); // '/user/projects'
+          this.router.navigate(['/user/land']); // '/user/projects' '/user/unidad-produccion-all'
         }
         else if(info['role']=="Cliente"){
-          this.router.navigate(['/client/unidad-produccion-all']); // '/client/projects'
+          this.router.navigate(['/client/land']); // '/client/projects' '/client/unidad-produccion-all'
         }
         else{
           ;

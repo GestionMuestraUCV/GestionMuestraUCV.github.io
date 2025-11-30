@@ -29,7 +29,7 @@ export class UnidadProduccionAllComponent {
       //this.generateBarcode(param);
 
     })
-    this.getData();
+    //this.getData();
     this.MyQuery();
 
   }

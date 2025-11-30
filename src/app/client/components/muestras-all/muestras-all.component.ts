@@ -25,12 +25,9 @@ export class MuestrasAllComponent {
     this.route.params.subscribe(param =>{
       this.item=param['id'];
 
-      //console.log(param);
-      //console.log(param['id']);
-      //this.generateBarcode(param);
 
     })
-    this.getData();
+    //this.getData();
     this.MyQuery();
 
   }
@@ -121,16 +118,13 @@ export class MuestrasAllComponent {
     let temail: string;
     let arrTemp:any=[];
     temail="";
-    console.log(gauth);
+    //console.log(gauth);
     onAuthStateChanged(gauth, async (user) => {
       if (user) {
         console.log(user.email);
         if(user.email){
           temail =user.email;
 
-          //console.log(temail);
-          //email="giorgosmorakis@hotmail.com";
-          //console.log(temail == "giorgosmorakis@hotmail.com");
 
           const q = query(collection(this.firestore, "projects"), where("cliente", "==", temail));
 
@@ -147,11 +141,7 @@ export class MuestrasAllComponent {
 
           const querySnapshot = await getDocs(q)
           querySnapshot.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            //console.log(doc.id, " => ", doc.data());
-            //console.log("here2");
-            //this.list= doc;
-            //this.data=doc;
+
           });
           console.log(this.dataTem.length);
           //console.log(this.data);
@@ -187,36 +177,18 @@ export class MuestrasAllComponent {
           this.data = [...response.docs.map((item) => {
             return { ...item.data(), id: item.id }
           })]
-          //console.log(this.data.length);
-          /*if(this.data.length==0){
-            //alert(err.message);
-            console.log("empty");
-
-          };*/
         })
 
 
 
 
 
-      /*const querySnapshot = await getDocs(q);
-      querySnapshot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
-        console.log(doc.id, " => ", doc.data());
-
-      });*/
-
-
       const querySnapshot = await getDocs(p)
 
         querySnapshot.forEach((doc) => {
-          // doc.data() is never undefined for query doc snapshots
           console.log(doc.id, " => ", doc.data());
-          //console.log("here2");
-          //this.list= doc;
-          //this.data=doc;
+
         });
-        //console.log("done");
 
 
 

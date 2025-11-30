@@ -3,6 +3,11 @@
 
 <div class="navbar2">
 
+  <div class="navbar2Text" id="HogarText" (click)="Home()">
+    <img src="../../assets/homeResize.png" alt="Out" width="50" height="50">
+    Hogar
+  </div>
+
   <div class="navbar2Text" id="UnidadText" (click)="Unidades()">
     <img src="../../assets/shovelResize.png" alt="Shovel" width="50" height="50">
     Unidades de Producción
@@ -45,7 +50,7 @@
 <nav class="mobile-slider-nav">
   <div class="mobile-menu-container">
 
-    <a  (click)="Unidades()">
+    <a  (click)="Home()">
       <img src="../../assets/home.png" alt="Out" width="50" height="50">
       <br class="break">
       Hogar

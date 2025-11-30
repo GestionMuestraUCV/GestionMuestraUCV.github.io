@@ -20,7 +20,7 @@ import { ClientsInfoComponent } from './components/clients-info/clients-info.com
 import { BarcodeCantidadComponent } from './components/barcode-cantidad/barcode-cantidad.component';
 import { BarcodeNewComponent } from './components/barcode-new/barcode-new.component';
 import { ResultadosComponent } from './components/resultados/resultados.component';
-
+import { LandComponent } from './components/land/land.component';
 
 const routes: Routes = [
   {
@@ -43,6 +43,7 @@ const routes: Routes = [
     {path:'clients-edit/:id', component:ClientsEditComponent},
     {path:'clients-info/:id', component:ClientsInfoComponent},
     {path:'resultados', component:ResultadosComponent},
+    {path:'land', component:LandComponent},
     {path: 'scan', component:ScanComponent}
 
   ]}

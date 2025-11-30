@@ -17,6 +17,7 @@ import { ClientsEditComponent } from '../user/components/clients-edit/clients-ed
 import { ClientsInfoComponent } from '../user/components/clients-info/clients-info.component';
 import { ResultadosComponent } from './components/resultados/resultados.component';
 import { ScanComponent } from './components/scan/scan.component';
+import { LandComponent } from './components/land/land.component';
 
 const routes: Routes = [
   {
@@ -37,7 +38,8 @@ const routes: Routes = [
     {path:'clients-edit/:id', component:ClientsEditComponent},
     {path:'clients-info/:id', component:ClientsInfoComponent},
     {path:'resultados', component:ResultadosComponent},
-    {path: 'scan', component:ScanComponent}
+    {path: 'scan', component:ScanComponent},
+    {path: 'land', component:LandComponent}
 
 
   ]}
