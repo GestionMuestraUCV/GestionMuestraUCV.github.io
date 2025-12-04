@@ -16,6 +16,15 @@ import { ResultadosComponent } from './components/resultados/resultados.componen
 import { ClientsComponent } from './components/clients/clients.component';
 import { BarcodeNewComponent } from './components/barcode-new/barcode-new.component';
 import { UnidadProduccionAllComponent } from './components/unidad-produccion-all/unidad-produccion-all.component';
+import { MuestrasNewComponent } from './components/muestras-new/muestras-new.component';
+import { MuestrasEditComponent } from './components/muestras-edit/muestras-edit.component';
+import { MuestrasInfoComponent } from './components/muestras-info/muestras-info.component';
+import { ClientsNewComponent } from './components/clients-new/clients-new.component';
+import { ClientsEditComponent } from './components/clients-edit/clients-edit.component';
+import { ClientsInfoComponent } from './components/clients-info/clients-info.component';
+import { UnidadProduccionNewComponent } from './components/unidad-produccion-new/unidad-produccion-new.component';
+import { UnidadProduccionEditComponent } from './components/unidad-produccion-edit/unidad-produccion-edit.component';
+import { UnidadProduccionInfoComponent } from './components/unidad-produccion-info/unidad-produccion-info.component';
 
 
 @NgModule({
@@ -27,10 +36,19 @@ import { UnidadProduccionAllComponent } from './components/unidad-produccion-all
     ScanComponent,
     BarcodeComponent,
     MuestrasAllComponent,
+    MuestrasNewComponent,
+    MuestrasEditComponent,
+    MuestrasInfoComponent,
     ResultadosComponent,
     ClientsComponent,
+    ClientsNewComponent,
+    ClientsEditComponent,
     BarcodeNewComponent,
-    UnidadProduccionAllComponent
+    ClientsInfoComponent,
+    UnidadProduccionAllComponent,
+    UnidadProduccionNewComponent,
+    UnidadProduccionEditComponent,
+    UnidadProduccionInfoComponent
 
   ],
   imports: [
