@@ -4,7 +4,7 @@
 
 <div  class="loginBox">
 
-  <form #loginForm="ngForm" (ngSubmit)="handleRegister(loginForm.value)">
+  <form #loginForm="ngForm" (ngSubmit)="handleRegister(loginForm.value)" *ngIf="item.codigo">
     <div class="main" >
 
 
@@ -65,17 +65,7 @@
 
       <div class="input-fields">
         <span  class="Text">Repetición:</span>
-        <input name="repeticion" ngModel placeholder="Repeticion" id="repeticion" type="repeticion" class="input-field" [(ngModel)]= "item.repeticion"/>
-      </div>
-
-      <div class="input-fields">
-        <span  class="Text" id="EstadoDiag">Estado de Diagnostico:</span>
-        <select  list="estadoDiag" name="estadoDiag" ngModel placeholder="Estado de Diagnostico" type="estadoDiag" class="input-field" id="SelectEstadoDiag" [(ngModel)]= "item.estadoDiag" >
-          <option value="" disabled selected>Seleccione un Estado de Diagnostico</option>
-          <option value="Hongos"> Sin Procesar </option>
-          <option value="Bacterias"> En Proceso </option>
-          <option value="Virus"> Finalizado </option>
-        </select>
+        <input name="repeticion" ngModel placeholder="Repetición" id="repeticion" type="repeticion" class="input-field" [(ngModel)]= "item.repeticion"/>
       </div>
 
       <div class="input-fields">
@@ -108,19 +98,31 @@
 
 
       <div class="input-fields">
-        <span  class="Text">Síntomas:</span>
-        <input name="sintomas" ngModel placeholder="Síntomas" id="sintomas" type="sintomas" class="input-field" [(ngModel)]= "item.sintomas"/>
+        <span  class="Text" id="EstadoDiag">Estado de Diagnóstico:</span>
+        <select  list="estadoDiag" name="estadoDiag" ngModel placeholder="Estado de Diagnostico" type="estadoDiag" class="input-field" id="SelectEstadoDiag" [(ngModel)]= "item.estadoDiag" >
+          <option value="" disabled selected>Seleccione un Estado de Diagnostico</option>
+          <option value="Sin Procesar"> Sin Procesar </option>
+          <option value="En Proceso"> En Proceso </option>
+          <option value="Finalizado"> Finalizado </option>
+        </select>
       </div>
 
       <div class="input-fields">
-        <span  class="Text">Comentarios:</span>
-        <input name="comentarios" ngModel placeholder="Comentarios" id="comentarios" type="comentarios" class="input-field" [(ngModel)]= "item.comentarios"/>
+        <span  class="Text">Síntomas:</span>
+        <input name="sintomas" ngModel placeholder="Síntomas" id="sintomas" type="sintomas" class="input-field" [(ngModel)]= "item.sintomas"/>
       </div>
 
       <div class="input-fields">
         <span  class="Text">Resultados:</span>
         <input name="resultados" ngModel placeholder="Resultados" id="resultados" type="resultados" class="input-field" [(ngModel)]= "item.resultados"/>
       </div>
+
+
+      <div class="input-fields">
+        <span  class="Text">Comentarios:</span>
+        <input name="comentarios" ngModel placeholder="Comentarios" id="comentarios" type="comentarios" class="input-field" [(ngModel)]= "item.comentarios"/>
+      </div>
+
 
 
 
