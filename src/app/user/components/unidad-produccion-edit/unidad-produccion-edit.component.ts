@@ -14,7 +14,17 @@ export class UnidadProduccionEditComponent {
   title = 'gestion-de-muestras-de-campo';
   public data: any = []
   public res: any = "";
-  public item: any;
+  public item: any = {
+    codigo: null, // Usar null/vacío para que el *ngIf funcione si es necesario
+    cliente: "",
+    localidad: "",
+    estado: "",
+    altitud: "",
+    coordenadas: "",
+    tempmax: "",
+    tempmin: "",
+    precipitacion: ""
+  };
   public x: any;
   public pid: any;
   public static text: string = "";
@@ -32,10 +42,6 @@ export class UnidadProduccionEditComponent {
   ngOnInit(): void {
     this.route.params.subscribe(param =>{
       this.x=param['id'];
-      //console.log(param);
-      //console.log(param['id']);
-      //this.generateBarcode(param);
-
     })
     this.getData();
     this.MyQuery();
@@ -43,14 +49,10 @@ export class UnidadProduccionEditComponent {
   }
 
   handleRegister(value: any){
-    //console.log(value);
     this.addData(value);
-    /*this.Home();*/
   }
 
   async addData(value: any) {
-    //const dbInstance = collection(this.firestore, 'users');
-    console.log(value);
     const dbInstance = doc(this.firestore, 'unidad-produccion', value.codigo);
 
     updateDoc(dbInstance,
@@ -110,8 +112,6 @@ export class UnidadProduccionEditComponent {
     if (navigator.geolocation) {
       await navigator.geolocation.getCurrentPosition(this.showPosition);
 
-
-
     } else {
       console.log("error");
     }
@@ -133,12 +133,40 @@ export class UnidadProduccionEditComponent {
     const querySnapshot = await getDocs(q);
     if(!querySnapshot.empty){
       querySnapshot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
-        this.item=doc.data();
-        //console.log(doc.id, " => ", doc.data());
+        const data = doc.data();
+        this.item = data;
+        this.item.id = doc.id;
+
+        if (!this.item.cliente) {
+          this.item.cliente = "";
+        }
+        if (!this.item.localidad) {
+          this.item.localidad=  "";
+        }
+        if (!this.item.estado) {
+          this.item.estado =  "";
+        }
+        if (!this.item.tipo) {
+          this.item.tipo =  "";
+        }
+        if (!this.item.altitud) {
+          this.item.altitud =  "";
+        }
+        if (!this.item.coordenadas) {
+          this.item.coordenadas =  "";
+        }
+        if (!this.item.tempmax) {
+          this.item.tempmax =  "";
+        }
+        if (!this.item.tempmin) {
+          this.item.tempmin =  "";
+        }
+        if (!this.item.precipitacion) {
+          this.item.precipitacion =  "";
+        }
+
         //
         this.res=this.item.coordenadas;
-        //this.pid=this.item.project;
       });
     }
   }

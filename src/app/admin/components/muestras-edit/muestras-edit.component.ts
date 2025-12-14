@@ -15,12 +15,26 @@ export class MuestrasEditComponent {
   title = 'gestion-de-muestras-de-campo';
   public data: any = []
   public res: any = "";
-  public item: any;
+  public fotoUrls: { inicial?: string; tipico?: string; tardios?: string } = {inicial: "", tipico: "", tardios: ""};
+  public item: any = {
+    codigo: null, // Usar null/vacío para que el *ngIf funcione si es necesario
+    cliente: "",
+    fecha: "",
+    cultivo: "",
+    tipo: "",
+    fitopatogeno: "",
+    lote: "",
+    repeticion:"",
+    coordenadas: "",
+    estadoDiag: "",
+    sintomas: "",
+    resultados: "",
+    comentarios: "",
+    fotos: this.fotoUrls // Asegurar que fotos sea un objeto si se accede a fotos.inicial, etc.
+  };
   public x: any;
   public pid: any;
   public static text: string = "";
-
-  public fotoUrls: { inicial?: string; tipico?: string; tardios?: string } = {};
 
   @ViewChild('geo') geo: any;//ElementRef | undefined;
   public htmlToAdd: any;
@@ -72,13 +86,19 @@ export class MuestrasEditComponent {
   handleRegister(value: any){
 
     this.addData( { ...value, fotos: this.fotoUrls });
-    this.backPage();
+    /*this.backPage();*/
     /*this.Home();*/
   }
 
   async addData(value: any) {
     const dbInstance = doc(this.firestore, 'muestras', value.codigo);
-    value.fecha= this.datePipe.transform(value.fecha, 'dd/MM/yyyy')
+    value.fecha= this.datePipe.transform(value.fecha, 'dd/MM/yyyy');
+
+    const cleanedFotos = {
+        inicial: value.fotos.inicial || null, // Usa null si es undefined o falsy (como "")
+        tipico: value.fotos.tipico || null,
+        tardios: value.fotos.tardios || null,
+    };
 
     updateDoc(dbInstance,
       {
@@ -96,8 +116,6 @@ export class MuestrasEditComponent {
         fotos: value.fotos,
         resultados: value.resultados,
         estadoDiag: value.estadoDiag
-
-
       }
 
       )
@@ -142,37 +160,14 @@ export class MuestrasEditComponent {
 
   showPosition(position: any) {
 
-
-
     var latitud = position.coords.latitude;
     var longitud = position.coords.longitude;
-
-
-    /*const degrees = Math.floor(Math.abs(latitud));
-    const minutesDecimal = (Math.abs(latitud) - degrees) * 60;
-    const minutes = Math.floor(minutesDecimal);
-    const seconds = (minutesDecimal - minutes) * 60;
-
-    let direction = '';
-    direction = x >= 0 ? 'N' : 'S';
-    const formattedLatitude = `${degrees}° ${minutes}' ${seconds.toFixed(2)}'' ${direction}`;
-    */
-
 
     var x = latitud.toFixed(6);
     var y = longitud.toFixed(6);
 
 
     MuestrasEditComponent.text = x+", "+ y;
-
-    //const formattedLatitude = this.convertDecimalToDMS(latitud, true);
-    //const formattedLongitude = this.convertDecimalToDMS(longitud, false);
-
-
-    //MuestrasEditComponent.text = `${formattedLatitude}, ${formattedLongitude}`;
-
-
-
 
   }
 
@@ -209,18 +204,65 @@ export class MuestrasEditComponent {
     const querySnapshot = await getDocs(q);
     if(!querySnapshot.empty){
       querySnapshot.forEach((doc) => {
-        this.item=doc.data();
+        const data = doc.data();
+        this.item = data;
+        this.item.id = doc.id;
 
+
+        if (!this.item.cliente) {
+          this.item.cliente = "";
+        }
+        if (!this.item.fecha) {
+          this.item.fecha=  "";
+        }
+        if (!this.item.cultivo) {
+          this.item.cultivo =  "";
+        }
+        if (!this.item.tipo) {
+          this.item.tipo =  "";
+        }
+        if (!this.item.fitopatogeno) {
+          this.item.fitopatogeno =  "";
+        }
+        if (!this.item.lote) {
+          this.item.lote =  "";
+        }
+        if (!this.item.repeticion) {
+          this.item.repeticion =  "";
+        }
+        if (!this.item.coordenadas) {
+          this.item.coordenadas =  "";
+        }
+        if (!this.item.estadoDiag) {
+          this.item.estadoDiag =  "";
+        }
+        if (!this.item.sintomas) {
+          this.item.sintomas =  "";
+        }
+        if (!this.item.resultados) {
+          this.item.resultados =  "";
+        }
+        if (!this.item.comentarios) {
+          this.item.comentarios =  "";
+        }
+
+
+        this.fotoUrls = {
+          inicial: this.item.fotos?.['inicial'] || "", // Reemplaza undefined con cadena vacía
+          tipico: this.item.fotos?.['tipico'] || "",
+          tardios: this.item.fotos?.['tardios'] || ""
+        };
+
+        if (!this.item.fotos) {
+          this.item.fotos = {};
+        }
+
+        if (this.item.fecha && this.item.fecha.toDate) {
+            this.item.fecha = this.datePipe.transform(this.item.fecha.toDate(), 'yyyy-MM-dd');
+        }
 
         this.res=this.item.coordenadas;
         this.pid=this.item.project;
-
-        this.fotoUrls = {
-          inicial: this.item.fotos['inicial'] ,
-          tipico: this.item.fotos['tipico'] ,
-          tardios: this.item.fotos['tardios']
-        };
-
 
       });
     }

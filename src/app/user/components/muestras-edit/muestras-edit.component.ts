@@ -94,7 +94,7 @@ export class MuestrasEditComponent {
 
   async addData(value: any) {
     const dbInstance = doc(this.firestore, 'muestras', value.codigo);
-    value.fecha= this.datePipe.transform(value.fecha, 'dd/MM/yyyy')
+    value.fecha= this.datePipe.transform(value.fecha, 'dd/MM/yyyy');
 
     const cleanedFotos = {
         inicial: value.fotos.inicial || null, // Usa null si es undefined o falsy (como "")
@@ -118,7 +118,6 @@ export class MuestrasEditComponent {
         fotos: cleanedFotos,
         resultados: value.resultados,
         estadoDiag: value.estadoDiag
-
 
       }
 
@@ -216,8 +215,6 @@ export class MuestrasEditComponent {
         const data = doc.data();
         this.item = data;
         this.item.id = doc.id;
-
-
 
 
         if (!this.item.cliente) {
