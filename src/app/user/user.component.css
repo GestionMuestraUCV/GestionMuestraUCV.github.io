@@ -51,7 +51,7 @@ button{
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 15em;
+  padding-top: 20em;
 
   z-index: -10;
 }

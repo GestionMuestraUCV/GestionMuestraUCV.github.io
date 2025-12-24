@@ -1,13 +1,9 @@
-
-
-
-
 .list{
   position: absolute;
-  left: clamp(350px, calc(50% - 336px), 100%);/*55%;/*34%;*/
 	top:30%;
   /*transform: translate(-30%,0%);*/
-  min-width:672px;
+  min-width:558px;
+  left: clamp(350px, calc(50% - 279px), 100%);/*55%;/*34%;*/
 }
 
 
