@@ -117,7 +117,7 @@ export class MuestrasNewComponent {
         unidad: this.pid,
         lote: value.lote,
         fotos: value.fotos,
-        resultados: value.resultados,
+        //resultados: value.resultados,
         estadoDiag: value.estadoDiag
       }
 
