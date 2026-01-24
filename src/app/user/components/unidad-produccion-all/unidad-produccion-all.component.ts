@@ -11,60 +11,23 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class UnidadProduccionAllComponent {
 
-
   public data: any = [];
   public item: any;
   public pid: any;
-  //public tooltip: any;
-  //public tooltipComponent: any;
 
   constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore, private elem: ElementRef) {
     //this.pid=" ";
     this.getData();
-
-
-    //this.MyQuery();
   }
-
-  //@ViewChild('#cdk-describedby-message-ng-1-2', {static: true, read: MatTooltip}) tooltipComponent: MatTooltip | undefined;
-
-  //@ViewChild('ElementRefName') element: ElementRef | undefined;
-
-
-
-  /*setTooltip(event: MouseEvent): void {
-
-    //this.tooltip = tooltip;
-      let elements = document.querySelectorAll('.cdk-describedby-message-container');
-      console.log(elements[0]);
-      //var el = new Element(document.querySelectorAll('.cdk-describedby-message-container'));
-      elements = this.elem.nativeElement.querySelectorAll('.list');
-      console.log(elements[0]);
-      let el =elements[0];
-      //let rect= el.getBoundingClientRect();
-      //console.log(rect);
-      let rect=el.getClientRects();
-      console.log(rect);
-      //console.log(this.tooltipComponent);
-      console.log(event.clientX);
-      //this.tooltipComponent?.show(0, {x: event.clientX, y: event.clientY });
-  }*/
 
   ngOnInit(): void {
     this.route.params.subscribe(param =>{
       //this.item=param['id'];
       this.pid=param['id'];
 
-
-
     })
-
-
-
-
     //this.getData();
     //.MyQuery();
-
   }
 
   getData() {
@@ -76,6 +39,13 @@ export class UnidadProduccionAllComponent {
           return { ...item.data(), id: item.id }
         })]
       })
+
+    /*
+      this.dataSync.samples$.subscribe((samples) => {
+        this.data = samples;
+        console.log("Muestras loaded from sync service");
+      });
+    */
   }
 
 
@@ -104,21 +74,15 @@ export class UnidadProduccionAllComponent {
   }
 
   Scan(){
-
     this.router.navigate(['user/scan']);
-    //window.location.href='#/auth/login';
   }
 
   Home(){
-
     this.router.navigate(['user/projects']);
-    //window.location.href='#/auth/login';
   }
 
   Muestras(id: any, up:any){
-
-    this.router.navigate(['user/muestras/'+ up ]); //+ id+'/'+ up
-    //window.location.href='#/auth/login';
+    this.router.navigate(['user/muestras/'+ up ]);
   }
 
   logOut(){
@@ -128,27 +92,22 @@ export class UnidadProduccionAllComponent {
       // An error happened.
     });
     this.router.navigate(['auth/select']);
-    //window.location.href='#/auth/login';
   }
 
   newUnidad(id: string){
     this.router.navigate(['user/unidad-produccion-new']);
-    //window.location.href='#/auth/login';
   }
 
   editUnidad(id: any){
     this.router.navigate(['user/unidad-produccion-edit/'+ id]);
-    //window.location.href='#/auth/login';
   }
 
   infoProject(id: any){
     this.router.navigate(['user/project-info/'+ id]);
-    //window.location.href='#/auth/login';
   }
 
   infoUnidad(id: any){
     this.router.navigate(['user/unidad-produccion-info/'+ id]);
-    //window.location.href='#/auth/login';
   }
 
 
@@ -157,46 +116,22 @@ export class UnidadProduccionAllComponent {
     //let str="Project 10";
     let str=this.pid;
     //this.pid=str;
-    //console.log(str);
     const q = query(collection(this.firestore, "unidad-produccion"), where("project", "==",str));
-
 
     getDocs(q)
       .then((response) => {
         this.data = [...response.docs.map((item) => {
           return { ...item.data(), id: item.id }
         })]
-        //console.log(this.data.length);
-        /*if(this.data.length==0){
-          //alert(err.message);
-          console.log("empty");
-
-        };*/
-
       })
 
 
-
-
-
-    /*const querySnapshot = await getDocs(q);
+    const querySnapshot = await getDocs(q)
     querySnapshot.forEach((doc) => {
       // doc.data() is never undefined for query doc snapshots
-      console.log(doc.id, " => ", doc.data());
-
-    });*/
-
-
-    const querySnapshot = await getDocs(q)
-
-      querySnapshot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
-        //console.log(doc.id, " => ", doc.data());
-        //console.log("here2");
-        //this.list= doc;
-        //this.data=doc;
-      });
-      //console.log("done");
+      //this.list= doc;
+      //this.data=doc;
+    });
 
 
   }
