@@ -21,7 +21,7 @@ export class DataSyncService {
 
   async fetchAllData() {
     this.isSyncing.next(true);
-    console.log("🚀 Starting Full Sync...");
+    //console.log("🚀 Starting Full Sync...");
 
     try {
       // Fetch everything in parallel

@@ -18,7 +18,7 @@ export class PwaService {
   public initPwaPrompt() {
     //console.log("chosing");
     if (this.platform.ANDROID) {
-      console.log('android');
+      //console.log('android');
       window.addEventListener('beforeinstallprompt', (event: any) => {
         event.preventDefault();
         this.promptEvent = event;

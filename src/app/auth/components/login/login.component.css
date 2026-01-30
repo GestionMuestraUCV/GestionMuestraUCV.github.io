@@ -69,7 +69,7 @@
 	/*height: 115px;*/
 	position:absolute;
 	top:clamp( 110px, calc( 50% - 130px), 100% );
-  left: clamp(10px, calc(50% - 450px), 100%);
+  left: clamp(10px, calc(50% - 550px), 100%);
 
 	font-family:Arial;
 	text-align:left;
@@ -126,11 +126,11 @@
 .loginBox { /*login box*/
 	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
 	background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
-	width:350px;
-	height:260px;
+	width:400px;
+	height:265px;
 	position:absolute;
 	top:clamp( 110px, calc( 50% - 130px), 100% );
-  left: clamp( 570px, calc( 50% + 110px), 100% );
+  left: clamp( 570px, calc( 50% + 30px), 100% );
 }
 
 .loginTile { /*Iniciar Sesion text*/
@@ -178,7 +178,7 @@
 
 
 #email {
-	width:300px;
+	width:350px;
   height: 26px;
 
 }
@@ -191,7 +191,7 @@
 
 }
 #password { /*clave box*/
-  width:300px;
+  width:350px;
   height: 26px;
 }
 .claveText{ /*clave text*/
