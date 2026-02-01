@@ -16,7 +16,7 @@ const routes: Routes = [
     path:'client', component: ClientComponent, children:[
     {path: 'projects', component: ProjectsComponent},
     {path: 'muestras-all', component: MuestrasAllComponent},
-    {path: 'muestras/:id', component: MuestrasComponent},
+    {path: 'muestras/:up', component: MuestrasComponent},
     {path: 'unidad-produccion-all', component: UnidadProduccionAllComponent},
     {path: 'muestras-info/:id', component: MuestrasInfoComponent},
     {path: 'unidad-produccion-info/:id', component: UnidadProduccionInfoComponent},
