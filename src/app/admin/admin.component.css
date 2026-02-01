@@ -142,81 +142,89 @@ button{
 
 
 
-#UsersText{
+
+
+#HogarText{
   cursor: pointer;
-  width: 300;/*17%;*/
+  width: 300;
   position:absolute;
-  left:0%;/*60%; /*66%;*/
-  top:12%;/*32%;*/
- /* border-right: 4px solid white;*/
+  left:0%;
+  top: 128px;
 
 }
 
+#UsersText{
+  cursor: pointer;
+  width: 300;
+  position:absolute;
+  left:0%;
+  top: 192px;
 
+}
 
 #UnidadText{
   cursor: pointer;
-  width: 300; /*17%;*/
+  width: 300;
   position:absolute;
-  left:0%;/*20%;/*32%;*/
-  top:12em;
-  /*border-right: 4px solid white;*/
-
+  left:0%;
+  top: 256px;
 }
+
+
 
 #MuestrasText{
   cursor: pointer;
-  width: 300; /*17%;*/
+  width: 300;
   position:absolute;
-  left:0%;/*40%;/*49%;*/
-  top: 16em;
-  /*border-right: 4px solid white;*/
+  left:0%;
+  top:320px;
+
 }
 
 #ResultText{
   cursor: pointer;
-  width: 300;/*17%;*/
+  width: 300;
   position:absolute;
   left:0%;
-  top:20em;
+  top:384px;
+
 }
 
 
 #ClientesText{
   cursor: pointer;
-  width: 300; /*17%;*/
+  width: 300;
   position:absolute;
-  left:0%;/*80%;/*83%;*/
-  top:24em;
+  left:0%;
+  top:448px;
 }
 
 #CodigoText{
   cursor: pointer;
-  width: 300; /*15%;*/
+  width: 300;
   position:absolute;
   left:0%;
-  top:28em;
+  top: 512px;
+
 }
 
 #ScanText{
   cursor: pointer;
-  width: 300; /*17%;*/
+  width: 300;
   position:absolute;
-  left:0%;/*20%;/*32%;*/
-  top: 32em;
-  /*border-right: 4px solid white;*/
+  left:0%;
+  top:576px;
 
 }
 
 #cerrarText{
   cursor: pointer;
-  width: 300; /*15%;*/
+  width: 300;
   position:absolute;
   left:0%;
-  top: 36em;/*52%;*/
-  /*border-right: 4px solid white;*/
-}
+  top:640px;
 
+}
 
 
 
