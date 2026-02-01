@@ -17,7 +17,7 @@ export class MuestrasAllComponent {
   public pid: any;
 
   constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore) {
-    //this.getData();
+    this.getData();
     //this.MyQuery();
   }
 
@@ -28,11 +28,11 @@ export class MuestrasAllComponent {
 
     })
     //this.getData();
-    this.MyQuery();
+    //this.MyQuery();
 
   }
 
-  getData() {
+   getData() {
     //console.log(this.auth.currentUser)
     const dbInstance = collection(this.firestore, 'muestras');
     getDocs(dbInstance)
