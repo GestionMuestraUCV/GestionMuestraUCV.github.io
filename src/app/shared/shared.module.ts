@@ -17,11 +17,7 @@ import { ScanComponent } from './components/scan/scan.component';
 
   ],
   imports: [
-    AppRoutingModule,
-    CommonModule,
-    FormsModule,
-    NgxScannerQrcodeModule,
-    RouterModule
+    CommonModule
   ]
 })
 export class SharedModule  {
