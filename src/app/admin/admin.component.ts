@@ -74,7 +74,7 @@ export class AdminComponent implements OnInit {
 
   Home(){
 
-    this.router.navigate(['admin/land']);
+    this.router.navigate(['admin']);
     //window.location.href='#/auth/login';
   }
 
