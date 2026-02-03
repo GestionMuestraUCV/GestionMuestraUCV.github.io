@@ -9,22 +9,24 @@ import { RouterModule } from '@angular/router';
 import { UsersComponent } from './components/users/users.component';
 import { UserNewComponent } from './components/user-new/user-new.component';
 import { UserEditComponent } from './components/user-edit/user-edit.component';
-import { ScanComponent } from './components/scan/scan.component';
-import { BarcodeComponent } from './components/barcode/barcode.component';
-import { MuestrasAllComponent } from './components/muestras-all/muestras-all.component';
-import { ResultadosComponent } from './components/resultados/resultados.component';
-import { ClientsComponent } from './components/clients/clients.component';
-import { BarcodeNewComponent } from './components/barcode-new/barcode-new.component';
-import { UnidadProduccionAllComponent } from './components/unidad-produccion-all/unidad-produccion-all.component';
-import { MuestrasNewComponent } from './components/muestras-new/muestras-new.component';
-import { MuestrasEditComponent } from './components/muestras-edit/muestras-edit.component';
-import { MuestrasInfoComponent } from './components/muestras-info/muestras-info.component';
-import { ClientsNewComponent } from './components/clients-new/clients-new.component';
-import { ClientsEditComponent } from './components/clients-edit/clients-edit.component';
-import { ClientsInfoComponent } from './components/clients-info/clients-info.component';
-import { UnidadProduccionNewComponent } from './components/unidad-produccion-new/unidad-produccion-new.component';
-import { UnidadProduccionEditComponent } from './components/unidad-produccion-edit/unidad-produccion-edit.component';
-import { UnidadProduccionInfoComponent } from './components/unidad-produccion-info/unidad-produccion-info.component';
+import { ScanComponent } from '../shared/components/scan/scan.component';
+import { BarcodeComponent } from '../shared/components/barcode/barcode.component';
+import { MuestrasAllComponent } from '../shared/components/muestras-all/muestras-all.component';
+import { ResultadosComponent } from '../shared/components/resultados/resultados.component';
+import { ClientsComponent } from '../shared/components/clients/clients.component';
+import { BarcodeNewComponent } from '../shared/components/barcode-new/barcode-new.component';
+import { UnidadProduccionAllComponent } from '../shared/components/unidad-produccion-all/unidad-produccion-all.component';
+import { MuestrasNewComponent } from '../shared/components/muestras-new/muestras-new.component';
+import { MuestrasEditComponent } from '../shared/components/muestras-edit/muestras-edit.component';
+import { MuestrasInfoComponent } from '../shared/components/muestras-info/muestras-info.component';
+import { ClientsNewComponent } from '../shared/components/clients-new/clients-new.component';
+import { ClientsEditComponent } from '../shared/components/clients-edit/clients-edit.component';
+import { ClientsInfoComponent } from '../shared/components/clients-info/clients-info.component';
+import { UnidadProduccionNewComponent } from '../shared/components/unidad-produccion-new/unidad-produccion-new.component';
+import { UnidadProduccionEditComponent } from '../shared/components/unidad-produccion-edit/unidad-produccion-edit.component';
+import { UnidadProduccionInfoComponent } from '../shared/components/unidad-produccion-info/unidad-produccion-info.component';
+import { MuestrasComponent } from '../shared/components/muestras/muestras.component';
+import { BarcodeCantidadComponent } from '../shared/components/barcode-cantidad/barcode-cantidad.component';
 
 
 @NgModule({
@@ -35,6 +37,8 @@ import { UnidadProduccionInfoComponent } from './components/unidad-produccion-in
     UserNewComponent,
     ScanComponent,
     BarcodeComponent,
+    BarcodeCantidadComponent,
+    MuestrasComponent,
     MuestrasAllComponent,
     MuestrasNewComponent,
     MuestrasEditComponent,

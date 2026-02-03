@@ -15,6 +15,7 @@ export class ResultadosComponent {
 
     constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore) {
       this.getData();
+      //console.log("res shared");
       //this.MyQuery();
     }
 
@@ -22,8 +23,8 @@ export class ResultadosComponent {
       this.route.params.subscribe(param =>{
         this.item=param['id'];
 
-        console.log(param);
-        console.log(param['id']);
+        //console.log(param);
+        //console.log(param['id']);
         //this.generateBarcode(param);
 
       })
