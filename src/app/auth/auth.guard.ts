@@ -9,6 +9,13 @@ import { ActivatedRouteSnapshot, CanActivate, CanActivateFn, Router, RouterState
 export class AuthGuard implements CanActivate{
   constructor( private auth: Auth, private router: Router) {}
 
+  canActivateChild(
+    next: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot): boolean {
+
+    return this.checkLogin(state.url);
+  }
+
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): boolean {

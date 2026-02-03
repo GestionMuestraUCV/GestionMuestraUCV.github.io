@@ -11,7 +11,7 @@ import { ClientComponent } from './client/client.component';
 const routes: Routes = [
   {path:'', redirectTo: 'auth/login', pathMatch: 'full'},
   {path:'home', component: HomeComponent},
-  {path:'admin', component: AdminComponent, canActivate: [AuthGuard]},
+  {path:'admin', component: AdminComponent/*, canActivate: [AuthGuard]*/},
   {path:'auth', component: AuthComponent},
   {path: 'user', component: UserComponent},
   {path: 'client', component: ClientComponent},

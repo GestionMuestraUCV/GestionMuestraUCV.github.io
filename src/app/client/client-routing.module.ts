@@ -10,10 +10,11 @@ import { PerfilComponent } from './components/perfil/perfil.component';
 import { PerfilEditComponent } from './components/perfil-edit/perfil-edit.component';
 import { MuestrasInfoComponent } from './components/muestras-info/muestras-info.component';
 import { LandComponent } from './components/land/land.component';
+import { AuthGuard } from '../services/guard';
 
 const routes: Routes = [
   {
-    path:'client', component: ClientComponent, children:[
+    path:'client', component: ClientComponent,canActivate: [AuthGuard], canActivateChild: [AuthGuard], children:[
     {path: 'projects', component: ProjectsComponent},
     {path: 'muestras-all', component: MuestrasAllComponent},
     {path: 'muestras/:up', component: MuestrasComponent},
