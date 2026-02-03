@@ -1,0 +1,51 @@
+
+<h1 class="subTituloText">Generar Codigo</h1>
+
+<div  class="loginBox">
+
+  <form #loginForm="ngForm" (ngSubmit)="handleRegister(loginForm.value)">
+    <div class="main" >
+
+      <div class="group1">
+
+
+        <div class="input-fields">
+          <span  class="Text">Unidad de Producción: </span>
+          <select list="Unidad" name="ud" ngModel placeholder="Unidad de Producción" id="ud" type="ud" class="input-field" >
+            <option value="" disabled selected></option>
+            <option *ngFor="let nombre of unidadProduccionNombres" [value]="nombre">{{ nombre }}</option>
+          </select>
+        </div>
+
+
+      </div>
+
+
+
+
+      <!--
+      <div class="input-fields">
+        <input name="txt_input" ngModel placeholder=" " id="txt_input" type="text" class="input-field" />
+      </div>
+      -->
+
+      <div class="group2">
+        <div class="input-fields">
+          <span  class="Text"> Codigo: </span>
+          <input name="codigo" ngModel placeholder="Codigo" id="codigo" type="codigo" class="input-field"/>
+          <span  class="red"> * (obligatorio) </span>
+        </div>
+
+      </div>
+
+      <button class="print">Generar</button>
+
+      <button type="button" id="volver" (click)="backPage()"></button>
+
+    </div>
+  </form>
+</div>
+
+
+
+

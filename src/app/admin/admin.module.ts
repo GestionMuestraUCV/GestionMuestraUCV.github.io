@@ -62,7 +62,7 @@ import { UnidadProduccionInfoComponent } from './components/unidad-produccion-in
 })
 export class AdminModule {
   public Hello(){
-    console.log("hello")
+    //console.log("hello")
   }
 
 }
