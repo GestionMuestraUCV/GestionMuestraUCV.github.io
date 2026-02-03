@@ -21,10 +21,12 @@ import { BarcodeCantidadComponent } from './components/barcode-cantidad/barcode-
 import { BarcodeNewComponent } from './components/barcode-new/barcode-new.component';
 import { ResultadosComponent } from './components/resultados/resultados.component';
 import { LandComponent } from './components/land/land.component';
+import { AuthGuard } from '../services/guard';
+
 
 const routes: Routes = [
   {
-    path:'user', component: UserComponent, children:[
+    path:'user', component: UserComponent, canActivate: [AuthGuard], canActivateChild: [AuthGuard], children:[
     {path: 'barcode/:id', component:BarcodeComponent},
     {path: 'barcode-cantidad/:id', component:BarcodeCantidadComponent},
     {path: 'barcode-new', component:BarcodeNewComponent},

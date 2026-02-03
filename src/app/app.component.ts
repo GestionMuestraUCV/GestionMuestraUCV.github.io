@@ -8,6 +8,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { DataSyncService } from './services/data-sync.service';
+//import { AuthGuard } from './auth/auth.guard';
+
 
 
 @Component({
@@ -19,13 +21,14 @@ export class AppComponent {
   title = 'gestion-muestras';
 
 
-  constructor(public auth: Auth, private router: Router, firestore: Firestore, private dataSync: DataSyncService){
+  constructor(public auth: Auth, private router: Router, private firestore: Firestore, private dataSync: DataSyncService/*, private guard:AuthGuard*/){
 
   }
 
   ngOnInit() {
     // Start downloading data as soon as the app opens
     this.dataSync.fetchAllData();
+    //this.guard.canActivate();
 
     /*
       this.onlineSubscription = fromEvent(window, 'online').subscribe(() => {

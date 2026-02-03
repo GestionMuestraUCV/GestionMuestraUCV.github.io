@@ -18,10 +18,11 @@ import { ClientsInfoComponent } from '../user/components/clients-info/clients-in
 import { ResultadosComponent } from './components/resultados/resultados.component';
 import { ScanComponent } from './components/scan/scan.component';
 import { LandComponent } from './components/land/land.component';
+import { AdminGuard } from './admin.guard';
 
 const routes: Routes = [
   {
-    path:'admin', component: AdminComponent, children:[
+    path:'admin', component: AdminComponent, canActivate: [AdminGuard], canActivateChild: [AdminGuard], children:[
     {path: 'users', component: UsersComponent},
     {path: 'user-new', component: UserNewComponent},
     {path: 'user-edit/:id', component: UserEditComponent},
