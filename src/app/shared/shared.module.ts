@@ -1,5 +1,3 @@
-
-
 import { SharedRoutingModule } from './shared-routing.module';
 
 import { NgModule } from '@angular/core';
@@ -17,12 +15,15 @@ import { ScanComponent } from './components/scan/scan.component';
 
   ],
   imports: [
-    CommonModule
+    AppRoutingModule,
+    CommonModule,
+    FormsModule,
+    NgxScannerQrcodeModule,
+    RouterModule
   ]
 })
 export class SharedModule  {
   public Hello(){
-    console.log("hello")
+    //console.log("hello")
   }
-
 }
