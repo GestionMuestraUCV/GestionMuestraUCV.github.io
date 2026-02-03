@@ -1,0 +1,48 @@
+<p>user-new works!</p>
+
+
+<div  class="loginBox"></div>
+<span  class="loginTile">Registrar</span>
+<div  class="lineBlack"></div>
+
+<form #loginForm="ngForm" (ngSubmit)="handleRegister(loginForm.value)">
+    <div class="main">
+      <div class="input-fields">
+        <span  class="userText">Email:</span>
+          <input name="email" ngModel placeholder="Email" id="email" type="email" class="input-field" />
+      </div>
+
+      <div class="input-fields">
+        <span  class="roleText">Roles:</span>
+        <select list="roles" name="role" ngModel placeholder="Roles" id="role" type="role" class="input-field">
+          <option value="" disabled selected>Seleccione un Rol del usuario</option>
+          <option value="Investigador"> Investigador </option>
+          <option value="Cliente"> Cliente </option>
+          <option value="Administrador"> Administrador </option>
+        </select>
+    </div>
+
+      <div class="input-fields">
+        <span  class="claveText">Clave:</span>
+          <input name="password" ngModel placeholder="Clave" id="password" type="password" class="input-field" />
+      </div>
+      <div class="input-fields">
+        <span  class="clave2Text">Confirmar Clave:</span>
+        <input name="confirmpassword" ngModel placeholder="Confirmar Clave" id="confirmpassword" type="password" class="input-field" />
+      </div>
+
+
+      <button class="boton">Sign Up</button>
+      <button type="button" class="boton" id="volver" (click)="backPage()"></button>
+
+
+    </div>
+</form>
+
+
+<!--
+<button class="salir" (click)="Salir()">
+</button>
+-->
+
+
