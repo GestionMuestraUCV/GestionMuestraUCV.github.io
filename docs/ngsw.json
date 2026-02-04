@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1770183270189,
+  "timestamp": 1770186241293,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -12,7 +12,7 @@
       },
       "urls": [
         "/index.html",
-        "/main.ff9f3ad3b2f31524.js",
+        "/main.0ec9e1b9a5b67a30.js",
         "/manifest.json",
         "/manifest.webmanifest",
         "/polyfills.08125764f6ea2508.js",
@@ -215,13 +215,13 @@
     "/back-button-Edit4.8567daeed3ab1418.png": "dcbd472de8c207b0d1f4cea2f26b87c6f87fd4ff",
     "/clipboard.008357a0b24034e8.png": "2b85200774157c9e502d1c039fe871586be2f660",
     "/image_7.2e20c6c16e8ce206.png": "221e1a0bcfde3fc18fb2e367f405497c64b748a3",
-    "/index.html": "8ea0fa36da5d26088728275a2aaa20949fa1deb1",
+    "/index.html": "127809b1248b5d192ad2d6b0ad74786039ce4d65",
     "/info.f631e6664ac6fa77.png": "9de63dca797b8e77bd7e2ffea58f77d88c605854",
     "/logoCiens-Small.2065c0f07c6bbc86.png": "332f2948f84b898a33f7541964547376203ecf71",
     "/logoCiens.9fc55f935ab1cd6b.png": "7168665e4e94f0a76bb88f3d2ad793c697aab216",
     "/logo_ucv_Small.c918acfda6fcd024.png": "8f5eff276e97d4351820a4cce0b6338ff4651a53",
     "/logo_ucv_bg2_1.32a61806277cba42.png": "5f4ff5044ce5402244fab3de3c0668dbb4c092e6",
-    "/main.ff9f3ad3b2f31524.js": "8a02ef9bc9db77b1223f9028ff70f8dd82f7a3b1",
+    "/main.0ec9e1b9a5b67a30.js": "99bc37ecf1d89952e66ce45c8c0877ea5c4c4d8f",
     "/manifest.json": "aec25172baa8c694224a57c7741fafda93f6bc87",
     "/manifest.webmanifest": "c24f3e460ec1453c89cc396d786119a704e5bb73",
     "/polyfills.08125764f6ea2508.js": "146d606ae1ee7def015c137600a85bcc307b90bf",

@@ -276,7 +276,6 @@ export class MuestrasEditComponent {
 
   deleteData(id: string) {
 
-
     let text = "Seguro que desea eliminar esta Muestra?";
     if (confirm(text) == true) {
       let str=this.x;

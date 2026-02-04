@@ -6,15 +6,17 @@ import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { NgxScannerQrcodeModule } from 'ngx-scanner-qrcode';
 import { RouterModule } from '@angular/router';
-import { ScanComponent } from './components/scan/scan.component';
+//import { ScanComponent } from './components/scan/scan.component';
 
 
 
 @NgModule({
   declarations: [
+    //ScanComponent
 
   ],
   imports: [
+    SharedRoutingModule,
     AppRoutingModule,
     CommonModule,
     FormsModule,

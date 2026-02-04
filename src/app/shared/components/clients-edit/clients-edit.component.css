@@ -216,6 +216,23 @@ img{
   top: 100%;
 }
 
+.botonrojo { /*boton*/
+  margin: 2%;
+  background-color:rgb(194, 62, 62);
+  color:rgba(255, 255, 255, 1);
+  /*width:10%;
+  height:4%;*/
+  position:absolute;
+  border-width: 0;
+  border-top-left-radius:30px;
+  border-top-right-radius:30px;
+  border-bottom-left-radius:30px;
+  border-bottom-right-radius:30px;
+  font-size:16px;
+  left:55%;
+  top: 100%;
+}
+
 .botonText { /*registrar text*/
   color:rgba(255, 255, 255, 1);
   width:10%;
@@ -416,6 +433,25 @@ img{
     border-bottom-left-radius:30px;
     border-bottom-right-radius:30px;
   }
+
+  .botonrojo { /*boton*/
+    background-color:rgb(194, 62, 62);
+    color:rgba(255, 255, 255, 1);
+    /*width:10%;
+    height:4%;*/
+    position:absolute;
+    /*margin: 10px 0px;*/
+    /*padding: 5px;*/
+    border-width: 0;
+    border-top-left-radius:30px;
+    border-top-right-radius:30px;
+    border-bottom-left-radius:30px;
+    border-bottom-right-radius:30px;
+    font-size:16px;
+    left: 0%;
+    top: 650px;
+  }
+
 
   .subTituloText { /*SubTitulo Texto*/
     color:#0A9217;

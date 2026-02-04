@@ -146,7 +146,7 @@ export class ClientsEditComponent {
     .then(() => {
       alert('Data Deleted');
       //this.getData()
-      this.router.navigate(['user/muestras/'+this.pid]);
+      this.backPage();
     })
     .catch((err) => {
       alert(err.message)
