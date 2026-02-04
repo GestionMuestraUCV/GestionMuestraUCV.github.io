@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { Auth, signOut } from '@angular/fire/auth';
 import { Firestore, collection, deleteDoc, doc, getDocs, query, updateDoc, where } from '@angular/fire/firestore';
 import { MatTooltip } from '@angular/material/tooltip';
@@ -105,7 +105,7 @@ export class UnidadProduccionAllComponent {
 
   Scan(){
 
-    this.router.navigate(['user/scan']);
+    this.router.navigate(['admin/scan']);
     //window.location.href='#/auth/login';
   }
 
@@ -116,8 +116,18 @@ export class UnidadProduccionAllComponent {
   }
 
   Muestras(id: any, up:any){
+    /*
+    // 1. Get the current URL (e.g., "/admin/muestras-all" or "/user/muestras-all")
+    const currentUrl = this.router.url;
+    // 2. Determine the module prefix
+    const prefix = currentUrl.includes('/admin') ? 'admin' : 'user';
+    // 3. Navigate relative to that prefix
+    this.router.navigate([`${prefix}/muestras`]);
+    */
 
-    this.router.navigate(['user/muestras/'+ up ]); //+ id+'/'+ up
+    this.router.navigate(['../muestras/'+ up ], { relativeTo: this.route });
+
+    //this.router.navigate(['admin/muestras/'+ up ]); //+ id+'/'+ up
     //window.location.href='#/auth/login';
   }
 
@@ -132,11 +142,14 @@ export class UnidadProduccionAllComponent {
   }
 
   newUnidad(id: string){
-    this.router.navigate(['user/unidad-produccion-new']);
+     this.router.navigate(['../unidad-produccion-new'], { relativeTo: this.route });
+    //this.router.navigate(['user/unidad-produccion-new']);
     //window.location.href='#/auth/login';
   }
 
   editUnidad(id: any){
+     this.router.navigate(['../unidad-produccion-edit/'+ id], { relativeTo: this.route });
+
     this.router.navigate(['user/unidad-produccion-edit/'+ id]);
     //window.location.href='#/auth/login';
   }
@@ -147,6 +160,8 @@ export class UnidadProduccionAllComponent {
   }
 
   infoUnidad(id: any){
+     this.router.navigate(['../unidad-produccion-info/'+ id], { relativeTo: this.route });
+
     this.router.navigate(['user/unidad-produccion-info/'+ id]);
     //window.location.href='#/auth/login';
   }

@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
-import { MuestrasComponent } from './components/muestras/muestras.component';
 import { UsersComponent } from './components/users/users.component';
 import { UserNewComponent } from './components/user-new/user-new.component';
 import { UserEditComponent } from './components/user-edit/user-edit.component';
 import { UnidadProduccionComponent } from '../shared/components/unidad-produccion/unidad-produccion.component';
+import { MuestrasComponent } from '../shared/components/muestras/muestras.component';
 import { MuestrasAllComponent } from '../shared/components/muestras-all/muestras-all.component';
+import { MuestrasNewComponent } from '../shared/components/muestras-new/muestras-new.component';
+import { MuestrasEditComponent } from '../shared/components/muestras-edit/muestras-edit.component';
+import { MuestrasInfoComponent } from '../shared/components/muestras-info/muestras-info.component';
 import { BarcodeCantidadComponent } from '../shared/components/barcode-cantidad/barcode-cantidad.component';
 import { BarcodeComponent } from '../shared/components/barcode/barcode.component';
 import { BarcodeNewComponent } from '../shared/components/barcode-new/barcode-new.component';
@@ -27,8 +30,11 @@ const routes: Routes = [
     {path: 'users', component: UsersComponent},
     {path: 'user-new', component: UserNewComponent},
     {path: 'user-edit/:id', component: UserEditComponent},
-    {path: 'muestras', component: MuestrasComponent},
+    {path: 'muestras/:up', component: MuestrasComponent},
     {path: 'muestras-all', component: MuestrasAllComponent},
+    {path: 'muestras-new/:id', component:MuestrasNewComponent},
+    {path: 'muestras-edit/:id', component:MuestrasEditComponent},
+    {path: 'muestras-info/:id', component:MuestrasInfoComponent},
 
     {path: 'barcode/:id', component:BarcodeComponent},
     {path: 'barcode-cantidad/:id', component:BarcodeCantidadComponent},

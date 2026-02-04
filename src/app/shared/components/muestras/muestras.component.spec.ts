@@ -15,45 +15,43 @@ describe('MuestrasComponent', () => {
   let component: MuestrasComponent;
   let fixture: ComponentFixture<MuestrasComponent>;
   firestoreMock = { // Create the mock Firestore object
-    collection: () => ({
-      valueChanges: () => of([{ id: 1, name: 'Item 1' }, { id: 2, name: 'Item 2' }]) // Mock valueChanges()
-    })
-  };
+        collection: () => ({
+          valueChanges: () => of([{ id: 1, name: 'Item 1' }, { id: 2, name: 'Item 2' }]) // Mock valueChanges()
+        })
+      };
 
-  authMock = { // Mock Firebase Auth
-    authState: of({ // Mock the authState Observable
-      uid: 'mockUserId', // Example: Mock a logged-in user
-      // ... other user properties you might need
-    }),
-    currentUser: Promise.resolve({
-        uid: 'mockUserId',
-        displayName: 'Mock User'
-    }),
-  };
+      authMock = { // Mock Firebase Auth
+        authState: of({ // Mock the authState Observable
+          uid: 'mockUserId', // Example: Mock a logged-in user
+          // ... other user properties you might need
+        }),
+        currentUser: Promise.resolve({
+            uid: 'mockUserId',
+            displayName: 'Mock User'
+        }),
+      };
 
-  activatedRouteMock = { // Mock ActivatedRoute
-    params: of({ // Mock paramMap (for route parameters)
-      get: (paramName: string) => {
-        if (paramName === 'id') { // Example: Mock 'id' parameter
-          return '123';
-        }
-        return null; // Or return a different value for other params
-      }
-    })
-  };
+      activatedRouteMock = { // Mock ActivatedRoute
+        params: of({ // Mock paramMap (for route parameters)
+          get: (paramName: string) => {
+            if (paramName === 'id') { // Example: Mock 'id' parameter
+              return '123';
+            }
+            return null; // Or return a different value for other params
+          }
+        })
+      };
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [MuestrasComponent, FormsModule ],
-        providers: [
-          { provide: Firestore, useValue: firestoreMock },
-          { provide: Auth, useValue: authMock },
-          { provide: ActivatedRoute, useValue: activatedRouteMock }
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [MuestrasComponent],
+      providers: [
+        { provide: Firestore, useValue: firestoreMock },
+        { provide: Auth, useValue: authMock },
+        { provide: ActivatedRoute, useValue: activatedRouteMock }
 
-        ]
-    })
-    .compileComponents();
-
+      ]
+    });
     fixture = TestBed.createComponent(MuestrasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
