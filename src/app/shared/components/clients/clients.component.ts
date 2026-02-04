@@ -91,17 +91,23 @@ export class ClientsComponent {
   }
 
   newClients(){
-    this.router.navigate(['user/clients-new']);
+    this.router.navigate(['../clients-new/'], { relativeTo: this.route });
+
+    //this.router.navigate(['user/clients-new']);
     //window.location.href='#/auth/login';
   }
 
   editClients(id: any){
-    this.router.navigate(['user/clients-edit/'+ id]);
+    this.router.navigate(['../clients-edit/'+ id], { relativeTo: this.route });
+
+    //this.router.navigate(['user/clients-edit/'+ id]);
     //window.location.href='#/auth/login';
   }
 
   infoClients(id: any){
-    this.router.navigate(['user/clients-info/'+ id]);
+    this.router.navigate(['../clients-info/'+ id], { relativeTo: this.route });
+
+    //this.router.navigate(['user/clients-info/'+ id]);
     //window.location.href='#/auth/login';
   }
 

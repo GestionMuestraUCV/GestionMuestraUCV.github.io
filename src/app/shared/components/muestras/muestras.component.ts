@@ -92,27 +92,32 @@ export class MuestrasComponent {
   }
 
   newMuestra(id: string){
-    this.router.navigate(['user/muestras-new/'+ id]);
+    this.router.navigate(['../muestras-new/'+ id], { relativeTo: this.route });
+    //this.router.navigate(['user/muestras-new/'+ id]);
     //window.location.href='#/auth/login';
   }
 
   editMuestra(id: any){
-    this.router.navigate(['user/muestras-edit/'+ id]);
+    this.router.navigate(['../muestras-edit/'+ id], { relativeTo: this.route });
+    //this.router.navigate(['user/muestras-edit/'+ id]);
     //window.location.href='#/auth/login';
   }
 
   infoUnidad(id: any){
-    this.router.navigate(['user/unidad-produccion-info/'+ id]);
+    this.router.navigate(['../unidad-produccion-info/'+ id], { relativeTo: this.route });
+    //this.router.navigate(['user/unidad-produccion-info/'+ id]);
     //window.location.href='#/auth/login';
   }
 
   infoMuestra(id: any){
-    this.router.navigate(['user/muestras-info/'+ id]);
+    this.router.navigate(['../muestras-info/'+ id], { relativeTo: this.route });
+    //this.router.navigate(['user/muestras-info/'+ id]);
     //window.location.href='#/auth/login';
   }
 
   Barcode(id: any){
-    this.router.navigate(['user/barcode/'+ id]);
+    this.router.navigate(['../barcode/'+ id], { relativeTo: this.route });
+    //this.router.navigate(['user/barcode/'+ id]);
     //window.location.href='#/auth/login';
   }
 

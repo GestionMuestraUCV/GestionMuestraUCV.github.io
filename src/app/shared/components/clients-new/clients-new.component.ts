@@ -38,6 +38,7 @@ export class ClientsNewComponent {
 
   handleRegister(value: any){
      this.addData(value);
+     this.backPage();
   }
 
   addData(value: any) {
@@ -50,7 +51,6 @@ export class ClientsNewComponent {
       {
         email: value.email,
         nombre: value.nombre,
-        fecha: value.fecha,
         telefono: value.telefono,
         direccion: value.direccion
       }

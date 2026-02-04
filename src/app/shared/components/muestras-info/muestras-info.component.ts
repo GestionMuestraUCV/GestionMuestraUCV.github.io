@@ -41,9 +41,6 @@ export class MuestrasInfoComponent {
   ngOnInit(): void {
     this.route.params.subscribe(param =>{
       this.text=param['id'];
-      //console.log(param);
-      //console.log(param['id']);
-      //this.generateBarcode(param);
 
     })
     this.getData();
@@ -102,9 +99,6 @@ export class MuestrasInfoComponent {
 
   showPosition(position: any) {
 
-    //console.log(position.coords.latitude);
-    //onsole.log(position.coords.longitude);
-
     var x = position.coords.latitude;
     var y = position.coords.longitude;
     //MuestrasNewComponent.text = x+", "+ y;
@@ -162,7 +156,9 @@ export class MuestrasInfoComponent {
 
   editMuestra(){
     let str=this.text;
-    this.router.navigate(['user/muestras-edit/'+ str]);
+    this.router.navigate(['../muestras-edit/'+ str], { relativeTo: this.route });
+
+    //this.router.navigate(['user/muestras-edit/'+ str]);
     //window.location.href='#/auth/login';
   }
 

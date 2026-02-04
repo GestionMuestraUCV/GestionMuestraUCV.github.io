@@ -54,7 +54,7 @@ export class PrintComponent {
 
     for(let i=1;i<=number; i++){
       let str= "#barcode" + i;
-      console.log(str);
+      //console.log(str);
       JsBarcode(str, text, {//"#barcode"
           format: "CODE128"
       });

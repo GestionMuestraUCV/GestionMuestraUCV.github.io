@@ -91,27 +91,36 @@ export class MuestrasAllComponent {
   }
 
   newMuestra(){
-    this.router.navigate(['user/muestras-new']);
+    this.router.navigate(['../muestras-new'], { relativeTo: this.route });
+
+    //this.router.navigate(['user/muestras-new']);
     //window.location.href='#/auth/login';
   }
 
   editMuestra(id: any){
-    this.router.navigate(['user/muestras-edit/'+ id]);
+     this.router.navigate(['../muestras-edit/'+ id], { relativeTo: this.route });
+
+    //this.router.navigate(['user/muestras-edit/'+ id]);
     //window.location.href='#/auth/login';
   }
 
   infoProject(id: any){
+
     this.router.navigate(['user/project-edit/'+ id]);
     //window.location.href='#/auth/login';
   }
 
   infoMuestra(id: any){
-    this.router.navigate(['user/muestras-info/'+ id]);
+    this.router.navigate(['../muestras-info/'+ id], { relativeTo: this.route });
+
+    //this.router.navigate(['user/muestras-info/'+ id]);
     //window.location.href='#/auth/login';
   }
 
   Barcode(id: any){
-    this.router.navigate(['user/barcode/'+ id]);
+    this.router.navigate(['../barcode/'+ id], { relativeTo: this.route });
+
+    //this.router.navigate(['user/barcode/'+ id]);
     //window.location.href='#/auth/login';
   }
 

@@ -146,7 +146,8 @@ export class BarcodeNewComponent {
   }
 
   Barcode(id: any){
-    this.router.navigate(['user/barcode/'+ id]);
+    this.router.navigate(['../barcode/'+ id], { relativeTo: this.route });
+    //this.router.navigate(['user/barcode/'+ id]);
     //window.location.href='#/auth/login';
   }
 

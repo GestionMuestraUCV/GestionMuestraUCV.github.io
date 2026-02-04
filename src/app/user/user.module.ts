@@ -3,28 +3,10 @@ import { CommonModule, DatePipe } from '@angular/common';
 
 import { UserRoutingModule } from './user-routing.module';
 import { UserComponent } from './user.component';
-import { FormsModule } from '@angular/forms';
-import { MuestrasComponent } from './components/muestras/muestras.component';
-import { MuestrasNewComponent } from './components/muestras-new/muestras-new.component';
-import { ScanComponent } from './components/scan/scan.component';
-import { BarcodeComponent } from './components/barcode/barcode.component';
+import { FormsModule } from '@angular/forms';;
 
 import { NgxScannerQrcodeModule, LOAD_WASM } from 'ngx-scanner-qrcode';
 import { SafePipe } from './safe.pipe';
-import { MuestrasEditComponent } from './components/muestras-edit/muestras-edit.component';
-import { MuestrasInfoComponent } from './components/muestras-info/muestras-info.component';
-import { MuestrasAllComponent } from './components/muestras-all/muestras-all.component';
-import { UnidadProduccionNewComponent } from './components/unidad-produccion-new/unidad-produccion-new.component';
-import { UnidadProduccionEditComponent } from './components/unidad-produccion-edit/unidad-produccion-edit.component';
-import { UnidadProduccionInfoComponent } from './components/unidad-produccion-info/unidad-produccion-info.component';
-import { UnidadProduccionComponent } from './components/unidad-produccion/unidad-produccion.component';
-import { ClientsComponent } from './components/clients/clients.component';
-import { ClientsNewComponent } from './components/clients-new/clients-new.component';
-import { ClientsEditComponent } from './components/clients-edit/clients-edit.component';
-import { ClientsInfoComponent } from './components/clients-info/clients-info.component';
-import { UnidadProduccionAllComponent } from './components/unidad-produccion-all/unidad-produccion-all.component';
-import { BarcodeNewComponent } from './components/barcode-new/barcode-new.component';
-import { ResultadosComponent } from './components/resultados/resultados.component';
 
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -43,25 +25,7 @@ import {provideNativeDateAdapter} from '@angular/material/core';
 @NgModule({
   declarations: [
     UserComponent,
-    MuestrasComponent,
-    MuestrasNewComponent,
-    ScanComponent,
-    BarcodeComponent,
-    SafePipe,
-    MuestrasEditComponent,
-    MuestrasInfoComponent,
-    MuestrasAllComponent,
-    ResultadosComponent,
-    UnidadProduccionComponent,
-    UnidadProduccionNewComponent,
-    UnidadProduccionEditComponent,
-    UnidadProduccionInfoComponent,
-    ClientsComponent,
-    ClientsNewComponent,
-    ClientsEditComponent,
-    BarcodeNewComponent,
-    ClientsInfoComponent,
-    UnidadProduccionAllComponent,
+    SafePipe
 
   ],
   providers: [provideNativeDateAdapter(),DatePipe],

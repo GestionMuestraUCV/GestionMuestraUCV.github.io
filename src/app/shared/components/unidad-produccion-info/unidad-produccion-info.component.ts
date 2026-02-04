@@ -75,12 +75,8 @@ export class UnidadProduccionInfoComponent {
       p.innerHTML = "add new"
       this.renderer.appendChild(this.div.nativeElement, p)
     */
-    console.log(position.coords.latitude);
-    console.log(position.coords.longitude);
-    //console.log(res);
     //unidad-produccionNewComponent.lat= position.coords.latitude;
     //this.somethingChange.emit(position.coords.latitude);
-    //console.log(position.coords.longitude);
     //this.something=position.coords.latitude;
     //this.somethingChange.emit(this.something);
     //var text = position.coords.latitude;
@@ -88,7 +84,6 @@ export class UnidadProduccionInfoComponent {
     var x = position.coords.latitude;
     var y = position.coords.longitude;
     //unidad-produccionNewComponent.text = x+", "+ y;
-    //console.log(unidad-produccionNewComponent.text);
 
 
 
@@ -143,7 +138,9 @@ export class UnidadProduccionInfoComponent {
 
   editMuestra(){
     let str=this.text;
-    this.router.navigate(['user/unidad-produccion-edit/'+ str]);
+    this.router.navigate(['../unidad-produccion-edit/'+ str], { relativeTo: this.route });
+
+    //this.router.navigate(['user/unidad-produccion-edit/'+ str]);
     //window.location.href='#/auth/login';
   }
 

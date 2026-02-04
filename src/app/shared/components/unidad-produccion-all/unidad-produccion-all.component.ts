@@ -142,29 +142,31 @@ export class UnidadProduccionAllComponent {
   }
 
   newUnidad(id: string){
-     this.router.navigate(['../unidad-produccion-new'], { relativeTo: this.route });
+    this.router.navigate(['../unidad-produccion-new'], { relativeTo: this.route });
     //this.router.navigate(['user/unidad-produccion-new']);
     //window.location.href='#/auth/login';
   }
 
   editUnidad(id: any){
-     this.router.navigate(['../unidad-produccion-edit/'+ id], { relativeTo: this.route });
+    this.router.navigate(['../unidad-produccion-edit/'+ id], { relativeTo: this.route });
 
-    this.router.navigate(['user/unidad-produccion-edit/'+ id]);
+    //this.router.navigate(['user/unidad-produccion-edit/'+ id]);
     //window.location.href='#/auth/login';
   }
+
+  infoUnidad(id: any){
+    this.router.navigate(['../unidad-produccion-info/'+ id], { relativeTo: this.route });
+
+    //this.router.navigate(['user/unidad-produccion-info/'+ id]);
+    //window.location.href='#/auth/login';
+  }
+
 
   infoProject(id: any){
     this.router.navigate(['user/project-info/'+ id]);
     //window.location.href='#/auth/login';
   }
 
-  infoUnidad(id: any){
-     this.router.navigate(['../unidad-produccion-info/'+ id], { relativeTo: this.route });
-
-    this.router.navigate(['user/unidad-produccion-info/'+ id]);
-    //window.location.href='#/auth/login';
-  }
 
 
 
