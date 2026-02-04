@@ -27,6 +27,7 @@ import { UnidadProduccionEditComponent } from '../shared/components/unidad-produ
 import { UnidadProduccionInfoComponent } from '../shared/components/unidad-produccion-info/unidad-produccion-info.component';
 import { MuestrasComponent } from '../shared/components/muestras/muestras.component';
 import { BarcodeCantidadComponent } from '../shared/components/barcode-cantidad/barcode-cantidad.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -35,15 +36,15 @@ import { BarcodeCantidadComponent } from '../shared/components/barcode-cantidad/
     UsersComponent,
     UserEditComponent,
     UserNewComponent,
-    ScanComponent,
-    BarcodeComponent,
+    //ScanComponent,
+    /*BarcodeComponent,
     BarcodeCantidadComponent,
     MuestrasComponent,
     MuestrasAllComponent,
     MuestrasNewComponent,
     MuestrasEditComponent,
-    MuestrasInfoComponent,
-    ResultadosComponent,
+    MuestrasInfoComponent,*/
+    /*ResultadosComponent,
     ClientsComponent,
     ClientsNewComponent,
     ClientsEditComponent,
@@ -52,7 +53,7 @@ import { BarcodeCantidadComponent } from '../shared/components/barcode-cantidad/
     UnidadProduccionAllComponent,
     UnidadProduccionNewComponent,
     UnidadProduccionEditComponent,
-    UnidadProduccionInfoComponent
+    UnidadProduccionInfoComponent*/
 
   ],
   imports: [
@@ -61,6 +62,7 @@ import { BarcodeCantidadComponent } from '../shared/components/barcode-cantidad/
     CommonModule,
     FormsModule,
     NgxScannerQrcodeModule,
+    SharedModule,
     RouterModule
   ]
 })

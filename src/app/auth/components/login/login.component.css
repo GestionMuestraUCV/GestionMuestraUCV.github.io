@@ -243,7 +243,7 @@ button{
 @media only screen and (max-width: 768px) {
 
   .loginBox {
-    width:350px;
+    width:400px;
     height:260px;
     position:absolute;
     top:  360px;

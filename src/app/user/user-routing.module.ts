@@ -20,7 +20,7 @@ import { ClientsInfoComponent } from '../shared/components/clients-info/clients-
 import { BarcodeCantidadComponent } from '../shared/components/barcode-cantidad/barcode-cantidad.component';
 import { BarcodeNewComponent } from '../shared/components/barcode-new/barcode-new.component';
 import { ResultadosComponent } from '../shared/components/resultados/resultados.component';
-import { LandComponent } from './components/land/land.component';
+import { LandUserComponent } from './components/land-user/land.component';
 import { AuthGuard } from '../services/guard';
 
 const routes: Routes = [
@@ -44,7 +44,7 @@ const routes: Routes = [
     {path:'clients-edit/:id', component:ClientsEditComponent},
     {path:'clients-info/:id', component:ClientsInfoComponent},
     {path:'resultados', component:ResultadosComponent},
-    {path:'land', component:LandComponent},
+    {path:'land', component:LandUserComponent},
     {path: 'scan', component:ScanComponent}
 
   ]}

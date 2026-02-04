@@ -9,7 +9,7 @@ import { UnidadProduccionInfoComponent } from './components/unidad-produccion-in
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { PerfilEditComponent } from './components/perfil-edit/perfil-edit.component';
 import { MuestrasInfoComponent } from './components/muestras-info/muestras-info.component';
-import { LandComponent } from './components/land/land.component';
+import { LandClientComponent } from './components/land-client/land.component';
 import { AuthGuard } from '../services/guard';
 
 const routes: Routes = [
@@ -23,7 +23,7 @@ const routes: Routes = [
     {path: 'unidad-produccion-info/:id', component: UnidadProduccionInfoComponent},
     {path: 'perfil', component: PerfilComponent},
     {path: 'perfil-edit', component: PerfilEditComponent},
-    {path: 'land', component:LandComponent}
+    {path: 'land', component:LandClientComponent}
 
   ]}
 ];

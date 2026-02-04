@@ -9,7 +9,7 @@ import { FirebaseApp, initializeApp,provideFirebaseApp } from '@angular/fire/app
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
-import { provideFirestore,getFirestore, enableIndexedDbPersistence, connectFirestoreEmulator, persistentLocalCache, persistentSingleTabManager} from '@angular/fire/firestore';
+import { provideFirestore,getFirestore, enableIndexedDbPersistence, initializeFirestore, connectFirestoreEmulator, persistentLocalCache, persistentSingleTabManager} from '@angular/fire/firestore';
 import { provideFunctions,getFunctions } from '@angular/fire/functions';
 import { UserModule } from './user/user.module';
 import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
@@ -94,9 +94,16 @@ export function basicLoader(){
     provideDatabase(() => getDatabase()),
     provideFirestore(() => //getFirestore()),
      {
-        const firestore = getFirestore();
+        //const firestore = getFirestore();
         //connectFirestoreEmulator(firestore, 'localhost', 8080);
-        enableIndexedDbPersistence(firestore);
+        //enableIndexedDbPersistence(firestore);
+
+        const app = initializeApp(environment.firebase);
+        const firestore = initializeFirestore(app, {
+          localCache: persistentLocalCache({
+            tabManager: persistentSingleTabManager({})
+          })
+        });
         //persistentLocalCache({ tabManager: persistentSingleTabManager({}) });
         return firestore;
     }),
