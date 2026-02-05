@@ -19,6 +19,7 @@ export class DataSyncService {
 
   constructor(private firestore: Firestore) {}
 
+
   async fetchAllData() {
     this.isSyncing.next(true);
     //console.log("🚀 Starting Full Sync...");
@@ -26,7 +27,7 @@ export class DataSyncService {
     try {
       // Fetch everything in parallel
       const [unitsSnap, clientsSnap, samplesSnap] = await Promise.all([
-        getDocs(query(collection(this.firestore, 'unidades_produccion'))),
+        getDocs(query(collection(this.firestore, 'unidad-produccion'))),
         getDocs(query(collection(this.firestore, 'clientes'))),
         getDocs(query(collection(this.firestore, 'muestras')))
       ]);
@@ -43,4 +44,24 @@ export class DataSyncService {
       this.isSyncing.next(false);
     }
   }
+
+  getDataUnits(): any[] {
+    return this.unitsSubject.value;
+  }
+
+  getDataClients(): any[] {
+    return this.clientsSubject.value;
+  }
+
+  getDataSamples(): any[] {
+    return this.samplesSubject.value;
+  }
+
+
+
 }
+
+
+
+
+

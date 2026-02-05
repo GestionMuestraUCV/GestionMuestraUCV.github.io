@@ -8,6 +8,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { DataSyncService } from './services/data-sync.service';
+import { fromEvent, Subscription } from 'rxjs';
+
 
 
 @Component({
@@ -17,25 +19,34 @@ import { DataSyncService } from './services/data-sync.service';
 })
 export class AppComponent {
   title = 'gestion-muestras';
+  private onlineSubscription!: Subscription;
 
 
-  constructor(public auth: Auth, private router: Router, firestore: Firestore, private dataSync: DataSyncService){
+  constructor(public auth: Auth, private router: Router, firestore: Firestore, public dataSync: DataSyncService){
 
   }
 
   ngOnInit() {
     // Start downloading data as soon as the app opens
+    // 1. Initial fetch when the app first loads
     this.dataSync.fetchAllData();
+    //console.log('here');
 
-    /*
+
+      // 2. Listen for the moment the browser goes back online
       this.onlineSubscription = fromEvent(window, 'online').subscribe(() => {
-        console.log('🌐 Internet restored! Re-syncing data...');
+        //console.log('🌐 Internet restored! Re-syncing data...');
         this.dataSync.fetchAllData();
 
         // Optional: You could trigger a notification here
-        // alert('Conexión restaurada. Sincronizando datos...');
+        //alert('Conexión restaurada. Sincronizando datos...');
       });
-    */
+
+      /*fromEvent(window, 'offline').subscribe(() => {
+        console.log('🚫 Internet lost! Working in offline mode...');
+        // You could set a UI variable here to show a "Disconnected" icon
+      });*/
+
 
   }
 
@@ -59,13 +70,13 @@ export class AppComponent {
   /* */
 
 
-  /*
+
   ngOnDestroy() {
     // Clean up the listener when the app is closed
     if (this.onlineSubscription) {
       this.onlineSubscription.unsubscribe();
     }
-  }*/
+  }
 
 
 }
