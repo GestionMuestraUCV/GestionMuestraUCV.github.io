@@ -36,10 +36,12 @@ export class AppComponent {
       // 2. Listen for the moment the browser goes back online
       this.onlineSubscription = fromEvent(window, 'online').subscribe(() => {
         //console.log('🌐 Internet restored! Re-syncing data...');
-        this.dataSync.fetchAllData();
 
+
+        this.dataSync.fetchAllData();
         // Optional: You could trigger a notification here
         //alert('Conexión restaurada. Sincronizando datos...');
+
       });
 
       /*fromEvent(window, 'offline').subscribe(() => {

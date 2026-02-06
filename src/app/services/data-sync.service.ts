@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collection, getDocs, query } from '@angular/fire/firestore';
+import { Firestore, collection, doc, getDocs, query, setDoc } from '@angular/fire/firestore';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
@@ -56,6 +56,52 @@ export class DataSyncService {
   getDataSamples(): any[] {
     return this.samplesSubject.value;
   }
+
+  saveDataClients(newClient: any) {
+    // Get the current list of clients from the Subject
+    const currentClients = this.clientsSubject.value;
+
+    // Check if the client already exists to avoid duplicates
+    const index = currentClients.findIndex(c => c.email === newClient.email);
+
+    let updatedClients;
+    if (index > -1) {
+      // Update existing client
+      updatedClients = [...currentClients];
+      updatedClients[index] = newClient;
+    } else {
+      // Add new client to the array
+      updatedClients = [...currentClients, newClient];
+    }
+
+    // Push the updated list to all subscribers (Instant UI update)
+    this.clientsSubject.next(updatedClients);
+    console.log("Client saved locally in DataSyncService");
+  }
+
+
+
+  async uploadClient(client: any) {
+    const docRef = doc(this.firestore, 'clientes', client.email);
+    return setDoc(docRef, client);
+  }
+
+
+  async syncAllLocalToCloud() {
+    this.isSyncing.next(true);
+    const clients = this.getDataClients();
+
+    try {
+      // Pushes all local clients to the cloud in parallel
+      await Promise.all(clients.map(c => this.uploadClient(c)));
+      console.log('Cloud sync successful');
+    } catch (error) {
+      console.error('Cloud sync failed', error);
+    } finally {
+      this.isSyncing.next(false);
+    }
+  }
+
 
 
 

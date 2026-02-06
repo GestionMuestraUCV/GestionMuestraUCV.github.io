@@ -208,7 +208,6 @@ export class MuestrasEditComponent {
         this.item = data;
         this.item.id = doc.id;
 
-
         if (!this.item.cliente) {
           this.item.cliente = "";
         }
@@ -262,7 +261,7 @@ export class MuestrasEditComponent {
         }
 
         this.res=this.item.coordenadas;
-        this.pid=this.item.project;
+        //this.pid=this.item.project;
 
       });
     }
