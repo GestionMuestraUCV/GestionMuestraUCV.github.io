@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Auth, signOut } from '@angular/fire/auth';
 import { Firestore, collection, deleteDoc, doc, getDocs, query, updateDoc, where } from '@angular/fire/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
+import { DataSyncService } from 'src/app/services/data-sync.service';
 
 @Component({
   selector: 'app-clients',
@@ -13,7 +14,7 @@ export class ClientsComponent {
   public item: any;
   public pid: any;
 
-  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore) {
+  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore, private dataSync: DataSyncService) {
     this.getData();
     //this.MyQuery();
   }
@@ -33,14 +34,14 @@ export class ClientsComponent {
   }
 
   getData() {
-    //console.log(this.auth.currentUser)
-    const dbInstance = collection(this.firestore, 'clientes');
-    getDocs(dbInstance)
-      .then((response) => {
-        this.data = [...response.docs.map((item) => {
-          return { ...item.data() as any, id: item.id }
-        })]
-      })
+    if (navigator.onLine) {
+      this.dataSync.fetchAllData();
+      this.data = this.dataSync.getDataClients();
+    }else {
+      // Directly gets the clean array from the service's memory
+      this.data = this.dataSync.getDataClients();
+      console.log("View updated with local sync data");
+    }
   }
 
 

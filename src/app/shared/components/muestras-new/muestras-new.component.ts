@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { DatePickerComponent } from 'ng2-date-picker/lib/date-picker.module';
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { Location } from '@angular/common';
+import { DataSyncService } from 'src/app/services/data-sync.service';
 
 
 @Component({
@@ -34,7 +35,7 @@ export class MuestrasNewComponent {
   @Input() something !: any;
   @Output() somethingChange= new EventEmitter<any>();
 
-  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore, private location: Location){
+  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore, private location: Location, private dataSync: DataSyncService){
     //this.getData();
   }
   ngOnInit(): void {
@@ -90,7 +91,7 @@ export class MuestrasNewComponent {
 
 
   async handleRegister(value:any){
-    this.upLoadFiles(value);
+    await this.upLoadFiles(value);
 
      this.addData( { ...value, fotos: this.fotoUrls });
      this.backPage();
@@ -98,39 +99,42 @@ export class MuestrasNewComponent {
 
   addData(value: any) {
 
+    const muestraData ={
+      codigo: value.codigo,
+      cliente: value.cliente,
+      fecha: value.fecha,
+      cultivo: value.cultivo,
+      tipo: value.tipo,
+      fitopatogeno: value.fitopatogeno,
+      repeticion: value.repeticion,
+      coordenadas: value.coordenadas,
+      sintomas: value.sintomas,
+      comentarios: value.comentarios,
+      unidad: this.pid,
+      lote: value.lote,
+      fotos: value.fotos,
+      //resultados: value.resultados,
+      estadoDiag: value.estadoDiag
+    };
 
+    this.dataSync.saveDataSamples(muestraData);
 
-    const dbInstance = doc(this.firestore, 'muestras', value.codigo);
-
-    setDoc(dbInstance,
-      {
-        codigo: value.codigo,
-        cliente: value.cliente,
-        fecha: value.fecha,
-        cultivo: value.cultivo,
-        tipo: value.tipo,
-        fitopatogeno: value.fitopatogeno,
-        repeticion: value.repeticion,
-        coordenadas: value.coordenadas,
-        sintomas: value.sintomas,
-        comentarios: value.comentarios,
-        unidad: this.pid,
-        lote: value.lote,
-        fotos: value.fotos,
-        //resultados: value.resultados,
-        estadoDiag: value.estadoDiag
-      }
-
-      )
+    if (navigator.onLine) {
+    this.dataSync.uploadClient(muestraData)
       .then(() => {
-        alert('Datos guardados con éxito.')
+        alert('Datos enviados a la nube con éxito.e')
+        // Optional: you could show a success toast here
       })
       .catch((err) => {
-        alert(err.message)
-      })
-      //console.log(value.comentarios)
+        alert("Guardado localmente, se sincronizará luego: " + err.message);
+        // Note: The local data remains available even if cloud sync fails temporarily
+      });
+    }else {
+      alert("Guardado localmente, se sincronizará luego");
+    }
 
   }
+
 
   getData() {
     const dbInstance = collection(this.firestore, 'muestras');

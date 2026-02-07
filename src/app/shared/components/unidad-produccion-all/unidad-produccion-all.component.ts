@@ -3,6 +3,7 @@ import { Auth, signOut } from '@angular/fire/auth';
 import { Firestore, collection, deleteDoc, doc, getDocs, query, updateDoc, where } from '@angular/fire/firestore';
 import { MatTooltip } from '@angular/material/tooltip';
 import { ActivatedRoute, Router } from '@angular/router';
+import { DataSyncService } from 'src/app/services/data-sync.service';
 
 @Component({
   selector: 'app-unidad-produccion-all',
@@ -18,7 +19,7 @@ export class UnidadProduccionAllComponent {
   //public tooltip: any;
   //public tooltipComponent: any;
 
-  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore, private elem: ElementRef) {
+  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore, private elem: ElementRef, private dataSync: DataSyncService) {
     //this.pid=" ";
     this.getData();
 
@@ -59,23 +60,33 @@ export class UnidadProduccionAllComponent {
 
     })
 
-
-
-
     //this.getData();
     //.MyQuery();
 
   }
 
   getData() {
-    //console.log(this.auth.currentUser)
-    const dbInstance = collection(this.firestore, 'unidad-produccion');
-    getDocs(dbInstance)
-      .then((response) => {
-        this.data = [...response.docs.map((item) => {
-          return { ...item.data(), id: item.id }
-        })]
-      })
+
+    if (navigator.onLine) {
+      /*const dbInstance = collection(this.firestore, 'unidad-produccion');
+      getDocs(dbInstance)
+        .then((response) => {
+          this.data = [...response.docs.map((item) => {
+            return { ...item.data(), id: item.id }
+          })]
+        })*/
+
+      this.dataSync.fetchAllData();
+      this.data = this.dataSync.getDataUnits();
+
+    }else {
+      // Directly gets the clean array from the service's memory
+      this.data = this.dataSync.getDataUnits();
+      console.log("View updated with local sync data");
+    }
+
+
+
   }
 
 

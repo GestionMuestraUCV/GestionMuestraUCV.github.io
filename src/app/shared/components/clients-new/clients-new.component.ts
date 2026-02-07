@@ -42,8 +42,10 @@ export class ClientsNewComponent {
      this.backPage();
   }
 
+
+
   addData(value: any) {
-    // 2. Format the data object
+    // 1. Format the data object
     const clientData = {
       email: value.email,
       nombre: value.nombre,
@@ -55,17 +57,24 @@ export class ClientsNewComponent {
     // 3. Save locally FIRST in the DataSyncService
     this.dataSync.saveDataClients(clientData);
 
-    // 4. Send to Firestore in the background
-    const dbInstance = doc(this.firestore, 'clientes', value.email);
-    setDoc(dbInstance, clientData)
+    // 3. Send to Firestore in the background
+    //const dbInstance = doc(this.firestore, 'clientes', value.email);
+    //setDoc(dbInstance, clientData)
+
+    //3. Send to cloud via the service
+    if (navigator.onLine) {
+    this.dataSync.uploadClient(clientData)
       .then(() => {
-        alert('Data Sent')
+        alert('Datos enviada a la nube con éxito.e')
         // Optional: you could show a success toast here
       })
       .catch((err) => {
-        alert("Error syncing to cloud: " + err.message);
+        alert("Guardado localmente, se sincronizará luego: " + err.message);
         // Note: The local data remains available even if cloud sync fails temporarily
       });
+    }else {
+      alert("Guardado localmente, se sincronizará luego");
+    }
 
   }
 

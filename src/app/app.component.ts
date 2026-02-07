@@ -30,26 +30,22 @@ export class AppComponent {
     // Start downloading data as soon as the app opens
     // 1. Initial fetch when the app first loads
     this.dataSync.fetchAllData();
-    //console.log('here');
-
 
       // 2. Listen for the moment the browser goes back online
       this.onlineSubscription = fromEvent(window, 'online').subscribe(() => {
         //console.log('🌐 Internet restored! Re-syncing data...');
-
+        this.dataSync.syncAllLocalToCloud();
 
         this.dataSync.fetchAllData();
         // Optional: You could trigger a notification here
-        //alert('Conexión restaurada. Sincronizando datos...');
+        alert('Conexión restaurada. Sincronizando datos...');
 
       });
 
-      /*fromEvent(window, 'offline').subscribe(() => {
+      fromEvent(window, 'offline').subscribe(() => {
         console.log('🚫 Internet lost! Working in offline mode...');
         // You could set a UI variable here to show a "Disconnected" icon
-      });*/
-
-
+      });
   }
 
   handleSignOut(){

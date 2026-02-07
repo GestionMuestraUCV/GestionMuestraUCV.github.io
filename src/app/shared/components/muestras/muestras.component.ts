@@ -3,6 +3,7 @@ import { Auth, signOut } from '@angular/fire/auth';
 import { Firestore, collection, deleteDoc, doc, getDocs, updateDoc, query, where } from '@angular/fire/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { DataSyncService } from 'src/app/services/data-sync.service';
 
 @Component({
   selector: 'app-muestras',
@@ -15,7 +16,7 @@ export class MuestrasComponent {
   public pid: any;
   public up: any;
 
-  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore, private location: Location) {
+  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore, private location: Location, private dataSync: DataSyncService) {
     //this.getData();
     //this.MyQuery();
   }
@@ -35,13 +36,16 @@ export class MuestrasComponent {
   }
 
   getData() {
-    const dbInstance = collection(this.firestore, 'muestras');
-    getDocs(dbInstance)
-      .then((response) => {
-        this.data = [...response.docs.map((item) => {
-          return { ...item.data(), id: item.id }
-        })]
-      })
+    if (navigator.onLine) {
+
+      this.dataSync.fetchAllData();
+      this.data = this.dataSync.getDataSamples();
+
+    }else {
+      // Directly gets the clean array from the service's memory
+      this.data = this.dataSync.getDataSamples();
+      console.log("View updated with local sync data");
+    }
   }
 
 

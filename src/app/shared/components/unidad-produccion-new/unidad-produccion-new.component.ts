@@ -3,6 +3,7 @@ import { Auth, getAuth, onAuthStateChanged } from '@angular/fire/auth';
 import { Firestore, collection, doc, getDocs, setDoc } from '@angular/fire/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { DataSyncService } from 'src/app/services/data-sync.service';
 
 @Component({
   selector: 'app-unidad-produccion-new',
@@ -22,16 +23,13 @@ export class UnidadProduccionNewComponent {
   @Output() somethingChange= new EventEmitter<any>();
   public email: string ="";
 
-  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore, private location: Location){
+  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore, private location: Location, private dataSync: DataSyncService){
     //this.getData();
   }
   ngOnInit(): void {
     this.route.params.subscribe(param =>{
       this.pid=param['id'];
       //this.pid=param['id'];
-
-      //console.log(param);
-      //console.log(param['id']);
       //this.generateBarcode(param);
 
     })
@@ -58,30 +56,35 @@ export class UnidadProduccionNewComponent {
       }
     });
 
-    //setDoc(dbInstance, value)
-    setDoc(dbInstance,
-      {
-        codigo: value.codigo,
-        cliente: value.cliente,
-        localidad: value.localidad,
-        estado: value.estado,
-        altitud: value.altitud,
-        coordenadas: value.coordenadas,
-        tempmax: value.tempmax,
-        tempmin: value.tempmin,
-        precipitacion: value.precipitacion
-        //project: this.pid
-      }
+    const unitData ={
+      codigo: value.codigo,
+      cliente: value.cliente,
+      localidad: value.localidad,
+      estado: value.estado,
+      altitud: value.altitud,
+      coordenadas: value.coordenadas,
+      tempmax: value.tempmax,
+      tempmin: value.tempmin,
+      precipitacion: value.precipitacion
+      //project: this.pid
+      //createdBy: this.auth.currentUser?.email || 'unknown'
+    };
 
-      )
+    this.dataSync.saveDataUnits(unitData);
+
+    if (navigator.onLine) {
+    this.dataSync.uploadClient(unitData)
       .then(() => {
-
-        alert('Data Sent')
+        alert('Datos enviados a la nube con éxito.e')
       })
       .catch((err) => {
-        alert(err.message)
-      })
-      console.log(value.comentarios)
+        alert("Guardado localmente, se sincronizará luego: " + err.message);
+      });
+    }else {
+      alert("Guardado localmente, se sincronizará luego");
+    }
+
+
 
   }
 
@@ -102,12 +105,11 @@ export class UnidadProduccionNewComponent {
       p.innerHTML = "add new"
       this.renderer.appendChild(this.div.nativeElement, p)
     */
+
     console.log(position.coords.latitude);
     console.log(position.coords.longitude);
-    //console.log(res);
     //unidad-produccionNewComponent.lat= position.coords.latitude;
     //this.somethingChange.emit(position.coords.latitude);
-    //console.log(position.coords.longitude);
     //this.something=position.coords.latitude;
     //this.somethingChange.emit(this.something);
     //var text = position.coords.latitude;
@@ -116,9 +118,6 @@ export class UnidadProduccionNewComponent {
     var y = position.coords.longitude;
     UnidadProduccionNewComponent.text = x+", "+ y;
     console.log(UnidadProduccionNewComponent.text);
-
-
-
 
     //x.innerHTML = "Latitude: " + position.coords.latitude +
     //"<br>Longitude: " + position.coords.longitude;
@@ -132,11 +131,8 @@ export class UnidadProduccionNewComponent {
     //console.log(this.res);
 
 
-
     if (navigator.geolocation) {
       await navigator.geolocation.getCurrentPosition(this.showPosition);
-
-
 
     } else {
       //x.innerHTML = "Geolocation is not supported by this browser.";
@@ -147,8 +143,6 @@ export class UnidadProduccionNewComponent {
       console.log(this.res);
       }
       ,1000);
-
-
 
   }
 
