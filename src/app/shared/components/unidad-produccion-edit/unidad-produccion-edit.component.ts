@@ -3,6 +3,7 @@ import { Auth } from '@angular/fire/auth';
 import { Firestore, collection, deleteDoc, doc, getDocs, getFirestore, query, setDoc, updateDoc, where } from '@angular/fire/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { DataSyncService } from 'src/app/services/data-sync.service';
 
 @Component({
   selector: 'app-unidad-produccion-edit',
@@ -34,7 +35,7 @@ export class UnidadProduccionEditComponent {
   @Input() something !: any;
   @Output() somethingChange= new EventEmitter<any>();
 
-  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore, private location: Location){
+  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore, private location: Location, private dataSync: DataSyncService){
     //this.getData();
     //this.MyQuery();
   }
@@ -59,29 +60,34 @@ export class UnidadProduccionEditComponent {
     console.log(value);
     const dbInstance = doc(this.firestore, 'unidad-produccion', value.codigo);
 
-    updateDoc(dbInstance,
-      {
-        codigo: value.codigo,
-        cliente: value.cliente,
-        localidad: value.localidad,
-        estado: value.estado,
-        altitud: value.altitud,
-        coordenadas: value.coordenadas,
-        tempmax: value.tempmax,
-        tempmin: value.tempmin,
-        precipitacion: value.precipitacion
-        //project: this.pid
-      }
+    const unitData = {
+      codigo: value.codigo,
+      cliente: value.cliente,
+      localidad: value.localidad,
+      estado: value.estado,
+      altitud: value.altitud,
+      coordenadas: value.coordenadas,
+      tempmax: value.tempmax,
+      tempmin: value.tempmin,
+      precipitacion: value.precipitacion
+      //project: this.pid
+    };
 
-      )
-      .then(() => {
+    this.dataSync.updateUnitDoc(value.codigo, unitData);
 
-        alert('Data Sent')
-      })
-      .catch((err) => {
-        alert(err.message)
-      })
-      //console.log(this.pid)
+    if (navigator.onLine) {
+      this.dataSync.uploadMuestras(unitData)
+        .then(() => {
+          alert('Datos enviados a la nube con éxito.e')
+          // Optional: you could show a success toast here
+        })
+        .catch((err) => {
+          alert("Guardado localmente, se sincronizará luego: " + err.message);
+          // Note: The local data remains available even if cloud sync fails temporarily
+        });
+    }else {
+      alert("Guardado localmente, se sincronizará luego");
+    }
 
 
   }
@@ -198,6 +204,8 @@ export class UnidadProduccionEditComponent {
       .catch((err) => {
         alert(err.message)
       })
+
+
 
 
     } else {

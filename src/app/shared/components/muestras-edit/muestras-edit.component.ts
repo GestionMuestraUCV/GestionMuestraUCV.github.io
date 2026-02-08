@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { DatePipe } from '@angular/common';
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { DataSyncService } from 'src/app/services/data-sync.service';
 
 @Component({
   selector: 'app-muestras-edit',
@@ -41,7 +42,7 @@ export class MuestrasEditComponent {
   @Input() something !: any;
   @Output() somethingChange= new EventEmitter<any>();
 
-  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore,  private location: Location, private datePipe: DatePipe){
+  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore,  private location: Location, private datePipe: DatePipe, private dataSync: DataSyncService){
     //this.getData();
     //this.MyQuery();
   }
@@ -100,8 +101,7 @@ export class MuestrasEditComponent {
         tardios: value.fotos.tardios || null,
     };
 
-    updateDoc(dbInstance,
-      {
+    const muestraData = {
         codigo: value.codigo,
         cliente: value.cliente,
         fecha: value.fecha,
@@ -116,16 +116,31 @@ export class MuestrasEditComponent {
         fotos: value.fotos,
         resultados: value.resultados,
         estadoDiag: value.estadoDiag
-      }
+      };
 
-      )
+   /* updateDoc(dbInstance,muestraData)
       .then(() => {
-
         alert('Data Sent')
       })
       .catch((err) => {
         alert(err.message)
-      })
+      })*/
+
+     this.dataSync.updateSampleDoc(value.codigo, muestraData);
+
+    if (navigator.onLine) {
+      this.dataSync.uploadMuestras(muestraData)
+        .then(() => {
+          alert('Datos enviados a la nube con éxito.e')
+          // Optional: you could show a success toast here
+        })
+        .catch((err) => {
+          alert("Guardado localmente, se sincronizará luego: " + err.message);
+          // Note: The local data remains available even if cloud sync fails temporarily
+        });
+    }else {
+      alert("Guardado localmente, se sincronizará luego");
+    }
 
 
   }
@@ -180,8 +195,6 @@ export class MuestrasEditComponent {
 
     if (navigator.geolocation) {
       await navigator.geolocation.getCurrentPosition(this.showPosition);
-
-
 
     } else {
       //x.innerHTML = "Geolocation is not supported by this browser.";
@@ -288,6 +301,11 @@ export class MuestrasEditComponent {
       .catch((err) => {
         alert(err.message)
       })
+
+      //this.dataSync.deleteSample(str);
+
+
+      this.Home();
 
 
     } else {

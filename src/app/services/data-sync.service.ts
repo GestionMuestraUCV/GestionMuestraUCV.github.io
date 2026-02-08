@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collection, deleteDoc, doc, getDocs, query, setDoc } from '@angular/fire/firestore';
+import { Firestore, collection, deleteDoc, doc, getDocs, query, setDoc, updateDoc } from '@angular/fire/firestore';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
@@ -132,7 +132,7 @@ export class DataSyncService {
     this.isSyncing.next(true);
     const clients = this.getDataClients();
     const samples = this.getDataSamples();
-  const units = this.getDataUnits();
+    const units = this.getDataUnits();
 
     try {
       // Sync each collection using their respective data arrays
@@ -151,10 +151,7 @@ export class DataSyncService {
 
 
 
-  /**
-   * DELETE CLIENT
-   * Removes from Firestore and updates the local list instantly.
-   */
+
   async deleteClient(email: string) {
     const docRef = doc(this.firestore, 'clientes', email);
 
@@ -166,9 +163,6 @@ export class DataSyncService {
     return deleteDoc(docRef);
   }
 
-  /**
-   * DELETE SAMPLE (MUESTRA)
-   */
   async deleteSample(codigo: string) {
     const docRef = doc(this.firestore, 'muestras', codigo);
 
@@ -178,9 +172,6 @@ export class DataSyncService {
     return deleteDoc(docRef);
   }
 
-  /**
-   * DELETE PRODUCTION UNIT
-   */
   async deleteUnit(codigo: string) {
     const docRef = doc(this.firestore, 'unidad-produccion', codigo);
 
@@ -190,6 +181,60 @@ export class DataSyncService {
     return deleteDoc(docRef);
   }
 
+  //
+  /**
+   * UPDATE CLIENT
+   * Updates specific fields in Firestore and the local state.
+   */
+  async updateClientDoc(email: string, data: Partial<any>) {
+    const docRef = doc(this.firestore, 'clientes', email);
+
+    // Update local UI state (Optimistic UI)
+    const current = this.clientsSubject.value;
+    const index = current.findIndex(c => c.email === email);
+    if (index > -1) {
+      const updatedList = [...current];
+      updatedList[index] = { ...updatedList[index], ...data };
+      this.clientsSubject.next(updatedList);
+    }
+
+    // Update Cloud document
+    return updateDoc(docRef, data);
+  }
+
+  /**
+   * UPDATE SAMPLE (MUESTRA)
+   */
+  async updateSampleDoc(codigo: string, data: Partial<any>) {
+    const docRef = doc(this.firestore, 'muestras', codigo);
+
+    const current = this.samplesSubject.value;
+    const index = current.findIndex(m => m.codigo === codigo);
+    if (index > -1) {
+      const updatedList = [...current];
+      updatedList[index] = { ...updatedList[index], ...data };
+      this.samplesSubject.next(updatedList);
+    }
+
+    return updateDoc(docRef, data);
+  }
+
+  /**
+   * UPDATE PRODUCTION UNIT
+   */
+  async updateUnitDoc(codigo: string, data: Partial<any>) {
+    const docRef = doc(this.firestore, 'unidad-produccion', codigo);
+
+    const current = this.unitsSubject.value;
+    const index = current.findIndex(u => u.codigo === codigo);
+    if (index > -1) {
+      const updatedList = [...current];
+      updatedList[index] = { ...updatedList[index], ...data };
+      this.unitsSubject.next(updatedList);
+    }
+
+    return updateDoc(docRef, data);
+  }
 
 
 }

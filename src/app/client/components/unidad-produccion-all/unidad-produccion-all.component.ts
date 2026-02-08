@@ -158,19 +158,19 @@ export class UnidadProduccionAllComponent {
             //this.list= doc;
             //this.data=doc;
           });
-          console.log(this.dataTem.length);
-          console.log(this.data);
-          console.log(this.dataTem[0].name);
+          //console.log(this.dataTem.length);
+          //console.log(this.data);
+          //console.log(this.dataTem[0].name);
           let lengthArr = this.dataTem.length;
-          console.log(lengthArr );
+          //console.log(lengthArr );
 
 
           for(let i=0;i< lengthArr; i++){
-            console.log(this.dataTem[i].name);
+            //console.log(this.dataTem[i].name);
             arrTemp.push(this.dataTem[i].name);
 
           }
-          console.log(arrTemp);
+          //console.log(arrTemp);
 
 
 

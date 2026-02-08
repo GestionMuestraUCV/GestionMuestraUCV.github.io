@@ -41,9 +41,9 @@
   height: 500px;
 
   position: absolute;
-  left:50%;
-	top:50%;
-  transform: translate(-50%,-50%);
+  left:clamp(312px, calc( 50% - 300px ), 100% );
+	top:clamp(140px, calc( 50% - 250px ), 100% );
+
 }
 
 .logoUcv { /*Logo Ucv*/
@@ -82,7 +82,7 @@
   width:112px;
   position:absolute;
   bottom:50px;
-  left: calc(50% - 56px);
+  left: clamp(556px, calc( 50% - 56px ), 100% );
 
 
 }
