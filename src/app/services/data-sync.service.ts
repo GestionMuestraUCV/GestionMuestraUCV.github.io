@@ -153,14 +153,15 @@ export class DataSyncService {
 
 
   async deleteClient(email: string) {
-    const docRef = doc(this.firestore, 'clientes', email);
+    //const docRef = doc(this.firestore, 'clientes', email);
 
     // Update local UI first (Optimistic)
     const current = this.clientsSubject.value;
     this.clientsSubject.next(current.filter(c => c.email !== email));
 
     // Delete from Cloud
-    return deleteDoc(docRef);
+    //return deleteDoc(docRef);
+
   }
 
   async deleteSample(codigo: string) {

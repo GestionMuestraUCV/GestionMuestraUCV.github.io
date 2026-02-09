@@ -3,7 +3,7 @@ import { Auth } from '@angular/fire/auth';
 import { ActivatedRouteSnapshot, CanActivate, CanActivateChild, CanActivateFn, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 
-import { Firestore, collection, deleteDoc, doc, getDocs, query, updateDoc, where } from '@angular/fire/firestore';
+import { Firestore, collection, deleteDoc, doc, getDoc, getDocs, query, updateDoc, where } from '@angular/fire/firestore';
 
 
 
@@ -45,11 +45,19 @@ export class AdminGuard implements CanActivate, CanActivateChild {
 
   async checkRole(res: any): Promise<boolean> {
     //console.log(res)
-    const q = query(collection(this.firestore, "users"), where("email", "==", res));
+    //const q = query(collection(this.firestore, "users"), where("email", "==", res));
+    //const querySnapshot = await getDocs(q);
     let p = false;
 
-    const querySnapshot = await getDocs(q);
-    querySnapshot.forEach((doc) => {
+    const docRef = doc(this.firestore, "users", res);
+    const docSnap = await getDoc(docRef);
+    let info=docSnap.data();
+    if(info &&info['role']=="Adminitrador"){
+      p= true;
+    }
+
+
+    /*querySnapshot.forEach((doc) => {
       let info=doc.data();
 
       if(info['role']=="Adminitrador"){
@@ -57,7 +65,16 @@ export class AdminGuard implements CanActivate, CanActivateChild {
         p= true;
       }
 
-    });
+    });*/
+
+    /*for (const doc of querySnapshot.docs) {
+      //console.log(doc.id, " => ", doc.data());
+      if (doc.id === res) {
+        p= true;
+        break; // This works
+      }
+    }*/
+
 
     return p;
 
