@@ -24,51 +24,45 @@ export class ScanComponent implements AfterViewInit {
     constraints: {
       video: {
         width: window.innerWidth
+        /*facingMode: 'environment', // Force back camera on phones
+        width: { ideal: 1280 },
+        height: { ideal: 720 }*/
       },
     },
-    // canvasStyles: [
-    //   { /* layer */
-    //     lineWidth: 1,
-    //     fillStyle: '#00950685',
-    //     strokeStyle: '#00950685',
-    //   },
-    //   { /* text */
-    //     font: '17px serif',
-    //     fillStyle: '#ff0000',
-    //     strokeStyle: '#ff0000',
-    //   }
-    // ],
   };
 
   public qrCodeResult: ScannerQRCodeSelectedFiles[] = [];
   public qrCodeResult2: ScannerQRCodeSelectedFiles[] = [];
 
   @ViewChild('action') action!: NgxScannerQrcodeComponent;
+  //public isReady = false;
 
   constructor(private qrcode: NgxScannerQrcodeService, private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore) {
     this.getData();
     console.log("Shared Scan");
+
    }
 
   ngAfterViewInit(): void {
     this.action.isReady.subscribe((res: any) => {
-      // this.handle(this.action, 'start');
+      this.handle(this.action, 'start');
+      //this.isReady = res;this.isReady = res;
+      //this.handle(this.action, 'stop');
+
     });
 
   }
 
   public onEvent(e: ScannerQRCodeResult[], action?: any): void {
-    // e && action && action.pause();
-    //console.log(e);
-    console.log(e[0].value);
     this.item=e[0].value;
     this.MyQuery();
   }
 
   public handle(action: any, fn: string): void {
+    //console.log('here')
     const playDeviceFacingBack = (devices: any[]) => {
       // front camera or back camera check here!
-      const device = devices.find(f => (/back|rear|environment/gi.test(f.label))); // Default Back Facing Camera
+      const device = devices.find(f => (/back|rear|environment/gi.test(f.label)));
       action.playDevice(device ? device.deviceId : devices[0].deviceId);
     }
 
@@ -77,6 +71,7 @@ export class ScanComponent implements AfterViewInit {
     } else {
       action[fn]().subscribe((r: any) => console.log(fn, r), alert);
     }
+
   }
 
   public onDowload(action: NgxScannerQrcodeComponent) {
@@ -97,7 +92,6 @@ export class ScanComponent implements AfterViewInit {
   }
 
   getData() {
-    //console.log(this.auth.currentUser)
     const dbInstance = collection(this.firestore, 'muestras');
     getDocs(dbInstance)
       .then((response) => {
@@ -119,12 +113,9 @@ export class ScanComponent implements AfterViewInit {
         this.data = [...response.docs.map((item) => {
           return { ...item.data(), id: item.id }
         })]
-        //console.log(this.data.length);
         if(this.data.length!=0){
-          //alert(err.message);
           this.handle(this.action, 'stop');
           this.router.navigate(['user/muestras-info/'+ str]);
-          //console.log("not empty");
 
         };
       })

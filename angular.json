@@ -25,7 +25,12 @@
               "src/assets",
               "src/web.config",
               "src/manifest.webmanifest",
-              "src/manifest.json"
+              "src/manifest.json",
+              {
+                "glob": "**/*",
+                "input": "node_modules/ngx-scanner-qrcode/wasm",
+                "output": "/assets/wasm/"
+              }
             ],
             "styles": [
               "src/styles.css"
