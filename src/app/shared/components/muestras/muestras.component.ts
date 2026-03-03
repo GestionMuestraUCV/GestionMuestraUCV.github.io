@@ -16,13 +16,13 @@ export class MuestrasComponent {
   public pid: any;
   public up: any;
 
-  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore, private location: Location, private dataSync: DataSyncService) {
+  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore, private location: Location, private dataSync: DataSyncService) { //private dataSync: DataSyncService
     //this.getData();
     //this.MyQuery();
   }
 
   ngOnInit(): void {
-    console.log(this.route.url);
+    //console.log(this.route.url);
     this.route.params.subscribe(param =>{
 
       this.up=param['up'];
@@ -36,6 +36,14 @@ export class MuestrasComponent {
   }
 
   getData() {
+    /*const dbInstance = collection(this.firestore, 'muestras');
+    getDocs(dbInstance)
+      .then((response) => {
+        this.data = [...response.docs.map((item) => {
+          return { ...item.data(), id: item.id }
+        })]
+      })*/
+
     if (navigator.onLine) {
 
       this.dataSync.fetchAllData();
@@ -44,7 +52,7 @@ export class MuestrasComponent {
     }else {
       // Directly gets the clean array from the service's memory
       this.data = this.dataSync.getDataSamples();
-      console.log("View updated with local sync data");
+      //console.log("View updated with local sync data");
     }
   }
 

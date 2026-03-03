@@ -192,7 +192,6 @@ export class MuestrasEditComponent {
     this.res=test;
 
 
-
     if (navigator.geolocation) {
       await navigator.geolocation.getCurrentPosition(this.showPosition);
 
@@ -206,8 +205,21 @@ export class MuestrasEditComponent {
       ,1000);
 
 
-
   }
+
+  getFileName(url: string | undefined): string {
+    if (!url) return 'No se ha seleccionado ningún archivo';
+
+    // This logic extracts the filename from a Firebase Storage URL
+    try {
+      const decodedUrl = decodeURIComponent(url);
+      const parts = decodedUrl.split('/');
+      const fileNameWithParams = parts[parts.length - 1];
+      return fileNameWithParams.split('?')[0].split('%2F').pop() || 'Ver archivo';
+    } catch (e) {
+      return 'Ver archivo';
+    }
+}
 
 
   async MyQuery(){
@@ -217,7 +229,8 @@ export class MuestrasEditComponent {
     const querySnapshot = await getDocs(q);
     if(!querySnapshot.empty){
       querySnapshot.forEach((doc) => {
-        const data = doc.data();
+        //const data = doc.data();
+        const data = querySnapshot.docs[0].data();
         this.item = data;
         this.item.id = doc.id;
 
@@ -269,8 +282,13 @@ export class MuestrasEditComponent {
           this.item.fotos = {};
         }
 
-        if (this.item.fecha && this.item.fecha.toDate) {
+       /*if (this.item.fecha && this.item.fecha.toDate) {
             this.item.fecha = this.datePipe.transform(this.item.fecha.toDate(), 'yyyy-MM-dd');
+        }*/
+
+        if (this.item.fecha && this.item.fecha.includes('/')) {
+          const [day, month, year] = this.item.fecha.split('/');
+          this.item.fecha = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
         }
 
         this.res=this.item.coordenadas;

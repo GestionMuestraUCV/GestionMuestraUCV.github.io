@@ -34,8 +34,8 @@ export class MuestrasInfoComponent {
 
 
   constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore, private location: Location){
-    this.getData();
-    this.MyQuery();
+    //this.getData();
+    //this.MyQuery();
   }
 
   ngOnInit(): void {
@@ -43,7 +43,7 @@ export class MuestrasInfoComponent {
       this.text=param['id'];
 
     })
-    this.getData();
+    //this.getData();
     this.MyQuery();
 
   }
@@ -139,7 +139,8 @@ export class MuestrasInfoComponent {
     const querySnapshot = await getDocs(q);
     if(!querySnapshot.empty){
       querySnapshot.forEach((doc) => {
-        this.item=doc.data();
+        //this.item=doc.data();
+        this.item= querySnapshot.docs[0].data();
         //console.log(this.item);
 
         this.fotoUrls = {
@@ -156,7 +157,7 @@ export class MuestrasInfoComponent {
 
   editMuestra(){
     let str=this.text;
-    this.router.navigate(['../muestras-edit/'+ str], { relativeTo: this.route });
+    this.router.navigate(['../../muestras-edit/'+ str], { relativeTo: this.route });
 
     //this.router.navigate(['user/muestras-edit/'+ str]);
     //window.location.href='#/auth/login';

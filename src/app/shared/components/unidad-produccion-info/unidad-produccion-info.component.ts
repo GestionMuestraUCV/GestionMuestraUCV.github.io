@@ -22,15 +22,15 @@ export class UnidadProduccionInfoComponent {
   @Output() somethingChange= new EventEmitter<any>();
 
   constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore, private location: Location){
-    this.getData();
-    this.MyQuery();
+    //this.getData();
+    //this.MyQuery();
   }
 
   ngOnInit(): void {
     this.route.params.subscribe(param =>{
       this.text=param['id'];
-      console.log(param);
-      console.log(param['id']);
+      //console.log(param);
+      //console.log(param['id']);
       //this.generateBarcode(param);
 
     })
@@ -54,7 +54,7 @@ export class UnidadProduccionInfoComponent {
       .catch((err) => {
         alert(err.message)
       })
-      console.log(value.comentarios)
+      //console.log(value.comentarios)
 
   }
 
@@ -129,8 +129,9 @@ export class UnidadProduccionInfoComponent {
     if(!querySnapshot.empty){
       querySnapshot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
-        this.item=doc.data();
-        console.log(doc.id, " => ", doc.data());
+        // this.item=doc.data();
+        this.item= querySnapshot.docs[0].data();
+        //console.log(doc.id, " => ", doc.data());
       });
     }
 
@@ -138,7 +139,7 @@ export class UnidadProduccionInfoComponent {
 
   editMuestra(){
     let str=this.text;
-    this.router.navigate(['../unidad-produccion-edit/'+ str], { relativeTo: this.route });
+    this.router.navigate(['../../unidad-produccion-edit/'+ str], { relativeTo: this.route });
 
     //this.router.navigate(['user/unidad-produccion-edit/'+ str]);
     //window.location.href='#/auth/login';

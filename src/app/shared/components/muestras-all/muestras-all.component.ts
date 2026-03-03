@@ -23,8 +23,8 @@ export class MuestrasAllComponent {
     this.route.params.subscribe(param =>{
       this.item=param['id'];
 
-      console.log(param);
-      console.log(param['id']);
+      //console.log(param);
+      //console.log(param['id']);
       //this.generateBarcode(param);
 
     })
@@ -52,7 +52,7 @@ export class MuestrasAllComponent {
     }else {
       // Directly gets the clean array from the service's memory
       this.data = this.dataSync.getDataSamples();
-      console.log("View updated with local sync data");
+      //console.log("View updated with local sync data");
     }
 
   }
@@ -145,7 +145,7 @@ export class MuestrasAllComponent {
     //let str="Project 10";
     let str=this.item;
     this.pid=str;
-    console.log(str);
+    //console.log(str);
     const q = query(collection(this.firestore, "muestras"), where("project", "==",str));
 
 
@@ -161,7 +161,7 @@ export class MuestrasAllComponent {
 
       querySnapshot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
-        console.log(doc.id, " => ", doc.data());
+        //console.log(doc.id, " => ", doc.data());
 
       });
 

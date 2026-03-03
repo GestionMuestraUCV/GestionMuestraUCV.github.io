@@ -39,7 +39,7 @@ export class UnidadProduccionNewComponent {
   }
 
   handleRegister(value: any){
-    console.log(value);
+    //console.log(value);
      this.addData(value);
      this.Home();
   }
