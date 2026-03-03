@@ -29,16 +29,19 @@ const routes: Routes = [
     {path: 'barcode/:id', component:BarcodeComponent},
     {path: 'barcode-cantidad/:id', component:BarcodeCantidadComponent},
     {path: 'barcode-new', component:BarcodeNewComponent},
+
     {path: 'muestras/:up', component:MuestrasComponent}, ///:id/:up
     {path: 'muestras-new/:id', component:MuestrasNewComponent},
     {path: 'muestras-edit/:id', component:MuestrasEditComponent},
     {path: 'muestras-info/:id', component:MuestrasInfoComponent},
     {path: 'muestras-all', component:MuestrasAllComponent},
+
     {path: 'unidad-produccion/:id', component:UnidadProduccionComponent},
     {path: 'unidad-produccion-new', component:UnidadProduccionNewComponent},
     {path: 'unidad-produccion-edit/:id', component:UnidadProduccionEditComponent},
     {path: 'unidad-produccion-info/:id', component:UnidadProduccionInfoComponent},
     {path: 'unidad-produccion-all', component:UnidadProduccionAllComponent},
+
     {path:'clients', component:ClientsComponent},
     {path:'clients-new', component:ClientsNewComponent},
     {path:'clients-edit/:id', component:ClientsEditComponent},

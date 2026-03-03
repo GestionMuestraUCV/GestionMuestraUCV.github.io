@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
-import { UsersComponent } from './components/users/users.component';
-import { UserNewComponent } from './components/user-new/user-new.component';
-import { UserEditComponent } from './components/user-edit/user-edit.component';
 import { UnidadProduccionComponent } from '../shared/components/unidad-produccion/unidad-produccion.component';
 import { MuestrasComponent } from '../shared/components/muestras/muestras.component';
 import { MuestrasAllComponent } from '../shared/components/muestras-all/muestras-all.component';
@@ -23,6 +20,12 @@ import { ScanComponent } from '../shared/components/scan/scan.component';
 import { LandComponent } from './components/land/land.component';
 import { AuthGuard } from '../auth/auth.guard';
 import { AdminGuard } from './admin.guard';
+import { UnidadProduccionNewComponent } from '../shared/components/unidad-produccion-new/unidad-produccion-new.component';
+import { UnidadProduccionInfoComponent } from '../shared/components/unidad-produccion-info/unidad-produccion-info.component';
+import { UnidadProduccionEditComponent } from '../shared/components/unidad-produccion-edit/unidad-produccion-edit.component';
+import { UsersComponent } from './components/users/users.component';
+import { UserNewComponent } from './components/user-new/user-new.component';
+import { UserEditComponent } from './components/user-edit/user-edit.component';
 
 const routes: Routes = [
   {
@@ -30,6 +33,7 @@ const routes: Routes = [
     {path: 'users', component: UsersComponent},
     {path: 'user-new', component: UserNewComponent},
     {path: 'user-edit/:id', component: UserEditComponent},
+
     {path: 'muestras/:up', component: MuestrasComponent},
     {path: 'muestras-all', component: MuestrasAllComponent},
     {path: 'muestras-new/:id', component:MuestrasNewComponent},
@@ -41,6 +45,11 @@ const routes: Routes = [
     {path: 'barcode-new', component:BarcodeNewComponent},
 
     {path: 'unidad-produccion-all', component:UnidadProduccionAllComponent},
+    {path: 'unidad-produccion-new', component:UnidadProduccionNewComponent},
+    {path: 'unidad-produccion-edit/:id', component:UnidadProduccionEditComponent},
+    {path: 'unidad-produccion-info/:id', component:UnidadProduccionInfoComponent},
+    {path: 'unidad-produccion-all', component:UnidadProduccionAllComponent},
+
     {path:'clients', component:ClientsComponent},
     {path:'clients-new', component:ClientsNewComponent},
     {path:'clients-edit/:id', component:ClientsEditComponent},
