@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Auth } from '@angular/fire/auth';
-import { Firestore, collection, doc, getDocs, setDoc } from '@angular/fire/firestore';
+import { Firestore, collection, doc, getDocs, query, setDoc, where } from '@angular/fire/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as JsBarcode from 'jsbarcode';
 import { Location } from '@angular/common';
@@ -36,10 +36,17 @@ export class BarcodeNewComponent {
 
   }
 
-  handleRegister(value: any){
+  async handleRegister(value: any){
     //console.log(value.codigo);
-    this.addData(value);
-    this.Barcode(value.codigo);
+
+    const isUnique = await this.checkExistence(value.codigo);
+
+    if (isUnique) {
+      this.addData(value);
+      this.Barcode(value.codigo);
+
+    }
+
 
   }
 
@@ -76,6 +83,25 @@ export class BarcodeNewComponent {
     });
   */
 
+
+async checkExistence(codigo: string): Promise<boolean> {
+  const muestrasRef = collection(this.firestore, 'muestras');
+  const q = query(muestrasRef, where("codigo", "==", codigo));
+
+  try {
+    const querySnapshot = await getDocs(q);
+    if (!querySnapshot.empty) {
+      // If the snapshot is NOT empty, the sample exists
+      alert("Error: El código de muestra ya existe. Intente con otro.");
+      return false;
+    }
+    return true; // Code is unique, proceed!
+  } catch (error) {
+    console.error("Error verifying existence:", error);
+    alert("Error de conexión al verificar el código.");
+    return false;
+  }
+}
 
 //
   generateSVG(number:any, value: any){

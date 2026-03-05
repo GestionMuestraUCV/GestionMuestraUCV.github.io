@@ -1,6 +1,6 @@
 import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { Auth, getAuth, onAuthStateChanged } from '@angular/fire/auth';
-import { Firestore, getFirestore, collection, doc, getDocs, setDoc } from '@angular/fire/firestore';
+import { Firestore, getFirestore, collection, doc, getDocs, setDoc, query, where } from '@angular/fire/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DatePickerComponent } from 'ng2-date-picker/lib/date-picker.module';
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
@@ -91,10 +91,38 @@ export class MuestrasNewComponent {
 
 
   async handleRegister(value:any){
-    await this.upLoadFiles(value);
 
-     this.addData( { ...value, fotos: this.fotoUrls });
-     this.backPage();
+    const isUnique = await this.checkExistence(value.codigo);
+
+    if (isUnique) {
+      await this.upLoadFiles(value);
+      this.addData( { ...value, fotos: this.fotoUrls });
+      this.backPage();
+
+    }
+
+
+  }
+
+
+
+  async checkExistence(codigo: string): Promise<boolean> {
+    const muestrasRef = collection(this.firestore, 'muestras');
+    const q = query(muestrasRef, where("codigo", "==", codigo));
+
+    try {
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        // If the snapshot is NOT empty, the sample exists
+        alert("Error: El código de muestra ya existe. Intente con otro.");
+        return false;
+      }
+      return true; // Code is unique, proceed!
+    } catch (error) {
+      console.error("Error verifying existence:", error);
+      alert("Error de conexión al verificar el código.");
+      return false;
+    }
   }
 
   addData(value: any) {
