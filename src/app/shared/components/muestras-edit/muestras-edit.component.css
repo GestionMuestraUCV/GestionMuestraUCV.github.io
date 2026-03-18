@@ -321,7 +321,7 @@ img{
 }
 
 
-  .custom-file-wrapper {
+.custom-file-wrapper {
   display: flex;
   align-items: center;
   /*background-color: #f8f9fa;
@@ -383,6 +383,22 @@ img{
     text-overflow: ellipsis;
   }
 
+
+  .input-field-2{
+    width: 200px;
+  }
+
+  #file-tipico{
+    width: 200px;
+
+  }
+
+  #file-tardios{
+    width: 200px;
+
+  }
+
+
   textarea{
     resize: none;
     left: 92px;
@@ -417,7 +433,7 @@ img{
     box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
     width: 87%;
-    min-height: 770px;
+    height: 850px;
     flex-shrink: 0;
     position:absolute;
     left:1.5%;
@@ -516,12 +532,31 @@ img{
   }
 
 
+  .block-foto{
+    margin-left: 10px;
+    margin-bottom: 15px;
+  }
+
+  .custom-file-text {
+    display: none;
+  }
+
+
+  .custom-file-wrapper {
+    width:200px;
+  }
+
+  .Text-Sintomas {
+    font-size: 14px;
+  }
+
+
 
   .boton {
     /*box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);*/
     position: absolute;
     left: 67%;
-    top: 725px;
+    top: 775px;
     border: none;
     float: right;
     background-color:rgba(62.00000010430813, 179.000004529953, 194.00000363588333, 1);
@@ -540,7 +575,7 @@ img{
 
   #Guardar{
     left: 67%;
-    top: 650px;
+    top: 700px;
   }
 
 
@@ -559,13 +594,13 @@ img{
     border-bottom-right-radius:30px;
     font-size:16px;
     left: 0%;
-    top: 650px;
+    top: 700px;
   }
 
 
   #volver{
   position: absolute;
-  top: 720px;/*60%;*/
+  top: 770px;/*60%;*/
 
 
 }

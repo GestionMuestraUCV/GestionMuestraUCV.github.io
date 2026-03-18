@@ -93,32 +93,30 @@
           <span class="Text" id="Text-Sintomas">Sintomas Iniciales:</span>
           <!--<input name="foto-inicial" type="file" (change)="onFileSelected($event, 'inicial')" class="input-field-2" [(ngModel)]="fotoUrls.inicial">-->
           <div class="custom-file-wrapper">
-             <input name="foto-inicial" type="file" (change)="onFileSelected($event, 'inicial')" style="display: none;" class="input-field-2">
-              <label for="file-inicial" class="custom-file-button">Seleccionar Archivo</label>
-              <span class="custom-file-text">
-                {{ getFileName(fotoUrls.inicial) }}
-              </span>
+             <input name="foto-inicial" type="file" (change)="onFileSelected($event, 'inicial')" class="input-field-2">
+              <!--<label for="file-inicial" class="custom-file-button">Seleccionar Archivo</label>--> <!--style="display: none;"-->
+              <span class="custom-file-text"> Archivo actual: {{ getFileName(fotoUrls.inicial) }} </span>
             </div>
 
         </div>
 
         <div class="input-fields" style="margin-bottom: 10px;">
           <span class="Text" id="Text-Sintomas">Sintomas Típico:</span>
-          <!--<input name="foto-tipico" type="file" (change)="onFileSelected($event, 'tipico')" class="input-field-2" >-->
+          <!--<input name="foto-tipico" type="file" (change)="onFileSelected($event, 'tipico')" class="input-field-2" >--> <!--style="display: none;"-->
           <div class="custom-file-wrapper">
-            <input id="file-tipico" type="file" (change)="onFileSelected($event, 'tipico')" style="display: none;">
-            <label for="file-tipico" class="custom-file-button">Seleccionar Archivo</label>
-            <span class="custom-file-text">{{ getFileName(fotoUrls.tipico) }}</span>
+            <input id="file-tipico" type="file" (change)="onFileSelected($event, 'tipico')" >
+            <!--<label for="file-tipico" class="custom-file-button">Seleccionar Archivo</label>-->
+            <span class="custom-file-text">Archivo actual: {{ getFileName(fotoUrls.tipico) }}</span>
           </div>
         </div>
 
         <div class="input-fields" style="margin-bottom: 10px;">
           <span class="Text" id="Text-Sintomas">Sintomas Tardíos:</span>
-          <!--<input name="foto-tardios" type="file" (change)="onFileSelected($event, 'tardios')" class="input-field-2" >-->
+          <!--<input name="foto-tardios" type="file" (change)="onFileSelected($event, 'tardios')" class="input-field-2" >--> <!--style="display: none;"-->
           <div class="custom-file-wrapper">
-            <input id="file-tardios" type="file" (change)="onFileSelected($event, 'tardios')" style="display: none;">
-            <label for="file-tardios" class="custom-file-button">Seleccionar Archivo</label>
-            <span class="custom-file-text">{{ getFileName(fotoUrls.tardios) }}</span>
+            <input id="file-tardios" type="file" (change)="onFileSelected($event, 'tardios')" >
+            <!--<label for="file-tardios" class="custom-file-button">Seleccionar Archivo</label>-->
+            <span class="custom-file-text">Archivo actual: {{ getFileName(fotoUrls.tardios) }}</span>
           </div>
         </div>
 

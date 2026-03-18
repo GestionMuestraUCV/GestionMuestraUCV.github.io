@@ -131,7 +131,7 @@ export class MuestrasEditComponent {
     if (navigator.onLine) {
       this.dataSync.uploadMuestras(muestraData)
         .then(() => {
-          alert('Datos enviados a la nube con éxito.e')
+          alert('Datos enviados a la nube con éxito')
           // Optional: you could show a success toast here
         })
         .catch((err) => {
