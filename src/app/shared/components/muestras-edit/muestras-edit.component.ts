@@ -301,8 +301,8 @@ export class MuestrasEditComponent {
   }
 
   backPage(){
-      this.location.back();
-    }
+    this.location.back();
+  }
 
 
 

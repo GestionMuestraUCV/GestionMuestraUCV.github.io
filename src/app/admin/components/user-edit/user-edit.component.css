@@ -7,8 +7,7 @@
   min-width: 620px;
   flex-shrink: 0;
   position:absolute;
-  left:50%;
-  top:27%;
+  top: 286px;
   left: clamp(350px, calc(50% - 310px), 100%);
 
   margin: 25px auto;
@@ -83,7 +82,7 @@ button{
 	font-size:48px;
 	letter-spacing:0;
   min-width: 375px;
-	top:18%;
+	top:190px;
   text-align: center;
   min-width: 620px;
   left: clamp(350px, calc(50% - 310px), 100%);

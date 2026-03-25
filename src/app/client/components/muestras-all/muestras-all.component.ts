@@ -17,8 +17,8 @@ export class MuestrasAllComponent {
   public pid: any;
 
   constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore) {
-    this.getData();
-    //this.MyQuery();
+    //this.getData();
+    this.MyQuery();
   }
 
   ngOnInit(): void {
@@ -121,12 +121,12 @@ export class MuestrasAllComponent {
     //console.log(gauth);
     onAuthStateChanged(gauth, async (user) => {
       if (user) {
-        console.log(user.email);
+        //console.log(user.email);
         if(user.email){
           temail =user.email;
 
 
-          const q = query(collection(this.firestore, "projects"), where("cliente", "==", temail));
+          const q = query(collection(this.firestore, "unidad-produccion"), where("cliente", "==", temail));
 
           getDocs(q)
           .then((response) => {
@@ -141,21 +141,22 @@ export class MuestrasAllComponent {
 
           const querySnapshot = await getDocs(q)
           querySnapshot.forEach((doc) => {
-
+            //console.log(doc.id, " => ", doc.data());
           });
-          console.log(this.dataTem.length);
+
+          //console.log(this.dataTem.length);
           //console.log(this.data);
-          console.log(this.dataTem[0].name);
+          //console.log(this.dataTem[0].codigo);
           let lengthArr = this.dataTem.length;
-          console.log(lengthArr );
+          //console.log(lengthArr );
 
 
           for(let i=0;i< lengthArr; i++){
-            console.log(this.dataTem[i].name);
-            arrTemp.push(this.dataTem[i].name);
+            //console.log(this.dataTem[i].codigo);
+            arrTemp.push(this.dataTem[i].codigo);
 
           }
-          console.log(arrTemp);
+          //console.log(arrTemp);
 
 
         }
@@ -164,12 +165,12 @@ export class MuestrasAllComponent {
 
       //
 
-      console.log("next");
-      console.log(arrTemp);
+      //console.log("next");
+      //console.log(arrTemp);
       let str=this.item;
       this.pid=str;
       //console.log(str);
-      const p = query(collection(this.firestore, "muestras"), where("project", "in",arrTemp));
+      const p = query(collection(this.firestore, "muestras"), where("unidad", "in",arrTemp));
 
 
       getDocs(p)
@@ -185,10 +186,9 @@ export class MuestrasAllComponent {
 
       const querySnapshot = await getDocs(p)
 
-        querySnapshot.forEach((doc) => {
-          console.log(doc.id, " => ", doc.data());
-
-        });
+      querySnapshot.forEach((doc) => {
+        //console.log(doc.id, " => ", doc.data());
+      });
 
 
 

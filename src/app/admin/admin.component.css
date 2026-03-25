@@ -101,7 +101,7 @@ button{
   background: #ffffff;
   box-shadow: 0px 0px 6px 10px rgba(0, 0, 0, 0.25);
 
-  height: 100vh;
+  height: 1216px;
   width: 320px;
   position: absolute;
   top: 0;
@@ -119,7 +119,6 @@ button{
 
 .navbar2Text{
   /*background: #3EC28F;*/
-  height: 4.5%;
   color: #000000;
   font-size: 16px;
   font-family: Verdana;
@@ -135,6 +134,9 @@ button{
 
 }
 
+img:hover{
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
 
 
 

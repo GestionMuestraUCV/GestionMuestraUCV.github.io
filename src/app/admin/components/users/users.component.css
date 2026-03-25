@@ -46,6 +46,7 @@ button {
 
 .subTituloText { /*SubTitulo Texto*/
 	color:#0A9217;
+  text-shadow: 2px 2px 5px black;
 	position:absolute;
   width:526px;
 	height:10%;

@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core
 import { Auth } from '@angular/fire/auth';
 import { Firestore, collection, deleteDoc, doc, getDocs, query, setDoc, where } from '@angular/fire/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-muestras-info',
@@ -20,7 +21,7 @@ export class MuestrasInfoComponent {
   @Input() something !: any;
   @Output() somethingChange= new EventEmitter<any>();
 
-  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore){
+  constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore, private location: Location){
     this.getData();
     this.MyQuery();
   }
@@ -155,6 +156,11 @@ export class MuestrasInfoComponent {
       alert(err.message)
     })
   }
+
+  backPage(){
+    this.location.back();
+  }
+
 
 }
 

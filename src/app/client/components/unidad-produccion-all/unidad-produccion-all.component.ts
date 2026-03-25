@@ -137,8 +137,8 @@ export class UnidadProduccionAllComponent {
           //email="giorgosmorakis@hotmail.com";
           //console.log(temail == "giorgosmorakis@hotmail.com");
 
-          //const q = query(collection(this.firestore, "projects"), where("cliente", "==", temail));
-          const q = query(collection(this.firestore, "unidad-produccion"), where("clienteEmail", "==", temail));
+          //const q = query(collection(this.firestore, "projects"), where("clienteEmail", "==", temail));
+          const q = query(collection(this.firestore, "unidad-produccion"), where("cliente", "==", temail));
           getDocs(q)
           .then((response) => {
             this.data= [...response.docs.map((item) => {

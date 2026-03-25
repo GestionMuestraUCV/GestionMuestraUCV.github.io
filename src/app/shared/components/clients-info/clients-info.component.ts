@@ -146,7 +146,7 @@ export class ClientsInfoComponent {
     let str=this.text;
 
     //console.log(str);
-    this.router.navigate(['../clients-edit/'+ str], { relativeTo: this.route });
+    this.router.navigate(['../../clients-edit/'+ str], { relativeTo: this.route });
 
     //this.router.navigate(['user/clients-edit/'+ str]);
     //window.location.href='#/auth/login';

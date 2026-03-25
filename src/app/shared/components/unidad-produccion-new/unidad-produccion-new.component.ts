@@ -73,9 +73,9 @@ export class UnidadProduccionNewComponent {
     this.dataSync.saveDataUnits(unitData);
 
     if (navigator.onLine) {
-    this.dataSync.uploadClient(unitData)
+    this.dataSync.uploadUnits(unitData)
       .then(() => {
-        alert('Datos enviados a la nube con éxito.e')
+        alert('Datos enviados a la nube con éxito')
       })
       .catch((err) => {
         alert("Guardado localmente, se sincronizará luego: " + err.message);
@@ -106,18 +106,21 @@ export class UnidadProduccionNewComponent {
       this.renderer.appendChild(this.div.nativeElement, p)
     */
 
-    console.log(position.coords.latitude);
-    console.log(position.coords.longitude);
+    //console.log(position.coords.latitude);
+    //console.log(position.coords.longitude);
     //unidad-produccionNewComponent.lat= position.coords.latitude;
     //this.somethingChange.emit(position.coords.latitude);
     //this.something=position.coords.latitude;
     //this.somethingChange.emit(this.something);
     //var text = position.coords.latitude;
     //this.geo=text;
-    var x = position.coords.latitude;
-    var y = position.coords.longitude;
+    var latitud = position.coords.latitude;
+    var longitud = position.coords.longitude;
+
+    var x = latitud.toFixed(6);
+    var y = longitud.toFixed(6);
     UnidadProduccionNewComponent.text = x+", "+ y;
-    console.log(UnidadProduccionNewComponent.text);
+    //console.log(UnidadProduccionNewComponent.text);
 
     //x.innerHTML = "Latitude: " + position.coords.latitude +
     //"<br>Longitude: " + position.coords.longitude;

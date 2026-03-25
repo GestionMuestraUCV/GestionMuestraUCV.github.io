@@ -64,6 +64,7 @@ export class UnidadProduccionEditComponent {
       codigo: value.codigo,
       cliente: value.cliente,
       localidad: value.localidad,
+      municipio: value.municipio,
       estado: value.estado,
       altitud: value.altitud,
       coordenadas: value.coordenadas,
@@ -76,9 +77,9 @@ export class UnidadProduccionEditComponent {
     this.dataSync.updateUnitDoc(value.codigo, unitData);
 
     if (navigator.onLine) {
-      this.dataSync.uploadMuestras(unitData)
+      this.dataSync.uploadUnits(unitData)
         .then(() => {
-          alert('Datos enviados a la nube con éxito.e')
+          alert('Datos enviados a la nube con éxito')
           // Optional: you could show a success toast here
         })
         .catch((err) => {
@@ -106,8 +107,11 @@ export class UnidadProduccionEditComponent {
 
   showPosition(position: any) {
 
-    var x = position.coords.latitude;
-    var y = position.coords.longitude;
+   var latitud = position.coords.latitude;
+    var longitud = position.coords.longitude;
+
+    var x = latitud.toFixed(6);
+    var y = longitud.toFixed(6);
     UnidadProduccionEditComponent.text = x+", "+ y;
 
   }

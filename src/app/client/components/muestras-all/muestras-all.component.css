@@ -1,7 +1,8 @@
 .list{
   position: absolute;
-  left:38%;
-	top:38%;
+  min-width: 460px;
+  left: clamp(350px, calc(50% - 230px), 100%);
+	top: 286px;
 }
 
 
@@ -111,13 +112,13 @@ table {
   text-shadow: 2px 2px 5px black;
 	position:absolute;
   margin: 0px;
-  width:300px;
+  width: 247px;
 	height:64px;
 	font-family:Verdana;
 	font-size:48px;
 	letter-spacing:0;
-  left:45%;
-	top:20%;
+  left: clamp(350px, calc(50% - 124px), 100%);
+	top: 190px;
 }
 
 
@@ -172,6 +173,7 @@ table {
 
   .list{
     position: absolute;
+    min-width: 0px;
     left: 5%;
     top:40%;
     text-overflow: ellipsis;
