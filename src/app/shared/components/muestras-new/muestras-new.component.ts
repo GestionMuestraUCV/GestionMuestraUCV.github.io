@@ -41,9 +41,8 @@ export class MuestrasNewComponent {
   ngOnInit(): void {
     this.route.params.subscribe(param =>{
       this.pid=param['id'];
-
-
     })
+    console.log(this.pid);
     //this.getData();
     //this.MyQuery();
 
@@ -148,7 +147,16 @@ export class MuestrasNewComponent {
     this.dataSync.saveDataSamples(muestraData);
 
     if (navigator.onLine) {
-    this.dataSync.uploadClient(muestraData)
+      const dbInstance = doc(this.firestore, 'muestras', value.codigo);
+      setDoc(dbInstance,muestraData)
+      .then(() => {
+        alert('Datos guardados con éxito.')
+      })
+      .catch((err) => {
+        alert(err.message)
+      })
+
+    /*this.dataSync.uploadMuestras(muestraData)
       .then(() => {
         alert('Datos enviados a la nube con éxito.e')
         // Optional: you could show a success toast here
@@ -157,9 +165,11 @@ export class MuestrasNewComponent {
         alert("Guardado localmente, se sincronizará luego: " + err.message);
         // Note: The local data remains available even if cloud sync fails temporarily
       });
-    }else {
-      alert("Guardado localmente, se sincronizará luego");
-    }
+    }*/
+  }
+  /*else {
+    alert("Guardado localmente, se sincronizará luego");
+  }*/
 
   }
 

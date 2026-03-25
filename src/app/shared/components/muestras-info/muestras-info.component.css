@@ -6,7 +6,7 @@
   height: 640px;
   flex-shrink: 0;
   position:absolute;
-  top:28%;
+  top: 286px;
   /*transform: translate(-35%,0%);*/
   width: 850px;
   left: clamp(350px, calc(50% - 425px), 100%);
@@ -136,7 +136,7 @@ button{
 	font-size:48px;
 	letter-spacing:0;
   /*left:40%;*/
-	top:20%;
+	top: 190px;
 
   text-align: center;
   width: 850px;

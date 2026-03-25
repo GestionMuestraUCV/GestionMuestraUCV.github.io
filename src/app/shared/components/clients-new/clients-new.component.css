@@ -6,7 +6,7 @@
   flex-shrink: 0;
   position:absolute;
   left:clamp(350px, calc( 50% - 380px), 100%);
-  top:25%;
+  top: 286px;
 
 }
 
@@ -84,7 +84,7 @@ button{
 	font-size:48px;
 	letter-spacing:0;
   left:50%;/*35%;*/
-	top:17%;
+	top: 190px;
   transform: translate(-50%,0%);
 
 }

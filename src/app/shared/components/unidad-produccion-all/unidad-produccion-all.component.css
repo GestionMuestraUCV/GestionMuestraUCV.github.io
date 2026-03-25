@@ -1,11 +1,8 @@
 
-
-
-
 .list{
   position: absolute;
   left: clamp(350px, calc(50% - 336px), 100%);/*55%;/*34%;*/
-	top:30%;
+	top:286px;
   /*transform: translate(-30%,0%);*/
   min-width:672px;
 }
@@ -129,7 +126,7 @@ table {
 	font-size:48px;
 	letter-spacing:0;
   left: clamp(350px, calc(50% - 325px), 100%);/*56%;/*45%;*/
-	top:20%;
+	top:190px;
   /*transform: translate(-35%,0%);*/
 }
 

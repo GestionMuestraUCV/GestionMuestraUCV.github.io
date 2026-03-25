@@ -126,8 +126,6 @@ export class DataSyncService {
 
 
 
-
-
   async syncAllLocalToCloud() {
     this.isSyncing.next(true);
     const clients = this.getDataClients();

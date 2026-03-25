@@ -8,7 +8,7 @@
   width: 936px;
   flex-shrink: 0;
   position:absolute;
-  top:25%;
+  top:286px;
   left: clamp(350px, calc(50% - 468px), 100%);
 
 }
@@ -74,7 +74,7 @@ button{
 	font-family:Verdana;
 	font-size:48px;
 	letter-spacing:0;
-	top:17%;
+	top:190px;
 
   text-align: center;
   width: 936px;

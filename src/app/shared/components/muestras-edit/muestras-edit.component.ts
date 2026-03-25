@@ -115,7 +115,8 @@ export class MuestrasEditComponent {
         lote: value.lote,
         fotos: value.fotos,
         resultados: value.resultados,
-        estadoDiag: value.estadoDiag
+        estadoDiag: value.estadoDiag,
+        unidad: this.pid
       };
 
    /* updateDoc(dbInstance,muestraData)
@@ -135,7 +136,7 @@ export class MuestrasEditComponent {
           // Optional: you could show a success toast here
         })
         .catch((err) => {
-          alert("Guardado localmente, se sincronizará luego: " + err.message);
+          alert(err.message);
           // Note: The local data remains available even if cloud sync fails temporarily
         });
     }else {
@@ -150,7 +151,7 @@ export class MuestrasEditComponent {
     getDocs(dbInstance)
       .then((response) => {
         this.data = [...response.docs.map((item) => {
-          return { ...item.data(), id: item.id }
+          return { ...item.data(), id: item.id}
         })]
       })
 
@@ -233,6 +234,7 @@ export class MuestrasEditComponent {
         const data = querySnapshot.docs[0].data();
         this.item = data;
         this.item.id = doc.id;
+        this.pid= this.item.unidad;
 
         if (!this.item.cliente) {
           this.item.cliente = "";

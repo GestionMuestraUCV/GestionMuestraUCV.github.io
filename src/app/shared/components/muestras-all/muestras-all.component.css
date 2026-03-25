@@ -1,6 +1,6 @@
 .list{
   position: absolute;
-	top:30%;
+	top: 286px;
   /*left:55%;
   transform: translate(-40%,0%);*/
   min-width: 542px;
@@ -125,7 +125,7 @@ table {
 	font-family:Verdana;
 	font-size:48px;
 	letter-spacing:0;
-	top:20%;
+	top: 190px;
   /*left:55%;
   transform: translate(-40%,0%);*/
   text-align: center;

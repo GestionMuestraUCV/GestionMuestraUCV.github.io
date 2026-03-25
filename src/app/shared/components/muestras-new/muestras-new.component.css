@@ -4,7 +4,7 @@
   background-color:rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
   min-height: 740px;
   position:absolute;
-  top:25%;
+  top: 286px;
   width: 850px; /*976px*/
   left: clamp(350px, calc(50% - 425px), 100%);
 
@@ -99,7 +99,7 @@ button{
 	font-family:Verdana;
 	font-size:48px;
 	letter-spacing:0;
-	top:17%;
+	top: 190px;
   /*left:50%;
   transform: translate(-50%,0%);*/
   text-align: center;

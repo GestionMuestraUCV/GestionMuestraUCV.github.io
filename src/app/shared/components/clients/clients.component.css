@@ -1,7 +1,7 @@
 .list{
   position: absolute;
   /*min-width: max-content;*/
-	top:32%;
+	top:286px;
   /*left:50%;
   transform: translate(-25%,0%);*/
   min-width: 665px;
@@ -123,7 +123,7 @@ table {
 	font-family:Verdana;
 	font-size:48px;
 	letter-spacing:0;
-	top:20%;
+	top: 190px;
   /*left:55%;
   transform: translate(-50%,0%);*/
   min-width: 665px;

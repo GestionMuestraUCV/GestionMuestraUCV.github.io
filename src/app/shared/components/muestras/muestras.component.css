@@ -1,7 +1,7 @@
 .list{
   position: absolute;
   /*left:38%;*/
-	top:30%;
+	top:286px;
   min-width: 519px;
   left: clamp(350px, calc(50% - 260px), 100%);
 }
@@ -144,7 +144,7 @@ table {
   min-width: 519px;
   text-align: center;
   left: clamp(350px, calc(50% - 260px), 100%);
-	top:20%;
+	top:190px;
 }
 
 

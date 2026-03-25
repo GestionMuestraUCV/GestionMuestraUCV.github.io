@@ -4,8 +4,8 @@
   justify-content: center;
   flex-direction: column;
   position:absolute;
-  left: 40%;
-  top: 50%;
+  left: clamp(350px, calc(50% - 180px), 100%);
+  top: 476px;
 }
 
 
@@ -76,8 +76,8 @@ textarea{
 
 svg{
   position:absolute;
-  left: 44%;
-  top: 32%;
+  left: clamp(350px, calc(50% - 130px), 100%);
+  top: 305px;
 
 }
 
@@ -105,8 +105,8 @@ button {
 #volver{
   font-size: 16px;
   position: absolute;
-  left: 35%;
-  top: 20%; /*55%*/
+  left: clamp(350px, calc(50% - 180px), 100%);
+  top: 210px; /*55%*/
 
   border: none;
   width:50px;

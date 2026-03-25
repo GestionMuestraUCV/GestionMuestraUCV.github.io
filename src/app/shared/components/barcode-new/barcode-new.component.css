@@ -23,9 +23,8 @@
 	font-size:56px;
 	letter-spacing:0;
   text-shadow: 2px 2px 5px black;
-  left:65%;
-	top:20%;
-  transform: translate(-40%,0%);
+	top: 190px;
+  left: clamp(350px, calc(50% - 313px), 100%);
 }
 
 .loginBox { /*login box*/
@@ -36,9 +35,8 @@
 
   flex-shrink: 0;
   position:absolute;
-  top: 55%;
-  left: 65%;
-  transform: translate(-50%, -50%);
+  top: 286px;
+  left: clamp(350px, calc(50% - 313px), 100%);
 
 }
 
