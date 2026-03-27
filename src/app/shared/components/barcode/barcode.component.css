@@ -1,6 +1,4 @@
 .main{
-  /*display: flex;
-  height: 100vh;*/
   justify-content: center;
   flex-direction: column;
   position:absolute;
@@ -232,13 +230,6 @@ button {
 
   }
 
-  /*#barcode0{
-    position:relative;
-    top: 200px;
-    height: 500px;
-    display: none;
-
-  }*/
 
 
  #barcode{
