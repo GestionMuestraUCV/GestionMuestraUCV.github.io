@@ -67,7 +67,7 @@ export class ClientsEditComponent {
       this.dataSync.updateClientDoc(value.codigo, unitData);
 
       if (navigator.onLine) {
-      this.dataSync.uploadMuestras(unitData)
+      this.dataSync.uploadClient(unitData)
         .then(() => {
           alert('Datos enviados a la nube con éxito.e')
           // Optional: you could show a success toast here
@@ -146,18 +146,32 @@ export class ClientsEditComponent {
 
 
   deleteData(id: string) {
-    let str=this.x;
-    const dataToDelete = doc(this.firestore, 'clientes', str);
+    let text = "Seguro que desea eliminar este Cliente?";
+    if (confirm(text) == true) {
+      let str=this.x;
+      const dataToDelete = doc(this.firestore, 'clientes', str);
 
-    deleteDoc(dataToDelete)
-    .then(() => {
-      alert('Data Deleted');
-      //this.getData()
-      this.backPage();
-    })
-    .catch((err) => {
-      alert(err.message)
-    })
+      this.dataSync.deleteClient(str);
+
+      if (navigator.onLine) {
+
+        deleteDoc(dataToDelete)
+        .then(() => {
+          alert('Data Deleted');
+          //this.getData()
+          this.backPage();
+        })
+        .catch((err) => {
+          alert(err.message)
+        })
+      }
+
+      this.Home();
+
+    } else {
+      //text = "You canceled!";
+      ;
+    }
 
   }
 

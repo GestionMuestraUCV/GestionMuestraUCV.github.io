@@ -193,24 +193,28 @@ export class UnidadProduccionEditComponent {
   */
 
   deleteData(id: string) {
-
     let text = "Seguro que desea eliminar esta Unidad de Producción?";
     if (confirm(text) == true) {
       //text = "You pressed OK!";
       let str=this.x;
       const dataToDelete = doc(this.firestore, 'unidad-produccion', str);
-      deleteDoc(dataToDelete)
-      .then(() => {
-        alert('Data Deleted');
-        //this.getData()
-        this.router.navigate(['user/unidad-produccion-all']);
-      })
-      .catch((err) => {
-        alert(err.message)
-      })
 
+      this.dataSync.deleteUnit(str);
 
+      if (navigator.onLine) {
+        deleteDoc(dataToDelete)
+        .then(() => {
+          alert('Data Deleted');
+          //this.getData()
+          this.router.navigate(['user/unidad-produccion-all']);
+        })
+        .catch((err) => {
+          alert(err.message)
+        })
 
+      }
+
+      this.Home();
 
     } else {
       //text = "You canceled!";

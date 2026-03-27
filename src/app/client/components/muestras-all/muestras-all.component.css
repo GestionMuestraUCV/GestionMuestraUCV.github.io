@@ -174,7 +174,8 @@ table {
   .list{
     position: absolute;
     min-width: 0px;
-    left: 5%;
+    width:96%;
+    left: 2%;
     top:40%;
     text-overflow: ellipsis;
   }
@@ -197,7 +198,8 @@ table {
   }
 
   table {
-    border-collapse: collapse;
+    /*border-collapse: collapse;*/
+    width:100%;
   }
 
   .integrantes {

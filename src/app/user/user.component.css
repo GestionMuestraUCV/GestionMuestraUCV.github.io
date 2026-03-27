@@ -31,129 +31,6 @@ button{
 
 
 
-
-/**/
-.navbar2 {
-  height: 100vh;
-  width: 320px;
-  position: absolute;/*fixed;*/
-  top: 0;
-  left: 0;
-}
-
-
-.navbar2Box{
-  background: #ffffff;
-  box-shadow: 0px 0px 6px 10px rgba(0, 0, 0, 0.25);
-
-  height: 1216px; /*707px*/
-  width: 320px;
-  position: absolute;
-  top: 120px;
-  left: 0;
-
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  /*padding-top: 20em; /*320px*/
-
-  z-index: -10;
-}
-
-.navbar2Text{
-  /*height: fit-content;*/
-  color: #000000;
-  font-size: 16px;
-  font-family: Verdana;
-  font-weight: 600;
-  word-wrap: break-word;
-  text-align: center;
-  padding-top: 5px;
-  padding-left: 20px;
-}
-
-/*.navbar2Text:hover{
-  color: #0A9217;
-}*/
-
-#HogarText{
-  cursor: pointer;
-  width: 300;
-  position:absolute;
-  left:0%;
-  top: 128px;
-
-}
-
-#UnidadText{
-  cursor: pointer;
-  width: 300;
-  position:absolute;
-  left:0%;
-  top: 192px;
-
-}
-
-#MuestrasText{
-  cursor: pointer;
-  width: 300;
-  position:absolute;
-  left:0%;
-  top: 256px;
-}
-
-
-
-#ResultText{
-  cursor: pointer;
-  width: 300;
-  position:absolute;
-  left:0%;
-  top:320px;
-
-}
-
-#ClientesText{
-  cursor: pointer;
-  width: 300;
-  position:absolute;
-  left:0%;
-  top:384px;
-
-}
-
-
-#CodigoText{
-  cursor: pointer;
-  width: 300;
-  position:absolute;
-  left:0%;
-  top:448px;
-}
-
-#ScanText{
-  cursor: pointer;
-  width: 300;
-  position:absolute;
-  left:0%;
-  top: 512px;
-
-}
-
-#cerrarText{
-  cursor: pointer;
-  width: 300;
-  position:absolute;
-  left:0%;
-  top:576px;
-
-}
-
-
-
-
 .salir{
   cursor: pointer;
   border: none;
@@ -170,12 +47,75 @@ button{
 
 img{
   position: relative;
-  top:20px;
+  /*top:20px;*/
 }
 
-.mobile-slider-nav {
-  display: none;
+.break{
+  display: none; /*block;*/
 }
+
+
+.slider-nav {
+    display: block;
+    position: absolute;
+    top: 120px;
+    left: 0;
+
+    /*height: 100%;*/
+    height: 1216px;
+    width: 260px; /*320px;*/
+    background-color: white;
+    box-shadow: 0px 0px 6px 10px rgba(0, 0, 0, 0.25);
+    z-index: -1;
+    padding-bottom: 8px; /* Vertical padding */
+
+    /* Enable horizontal scrolling and hide scrollbar */
+    overflow-y: auto;
+
+  }
+
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px 10px;
+  }
+
+  .slider-nav a {
+   cursor: pointer;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+    color: #000000;
+    font-size: 16px;
+    font-family: Verdana;
+    font-weight: 600;
+    text-align: left;
+
+    flex-shrink: 0;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0px 16px;
+    margin-top: 20px;
+    margin-right: 8px; /* Spacing between buttons */
+    transition: background-color 0.2s;
+    border-radius: 9999px; /* Full rounded corners */
+
+
+  }
+
+  .slider-nav a:hover {
+    background-color: #f2f2f2; /* Subtle hover effect */
+    color: #0A9217;
+
+
+  }
+
+  .slider-nav a img {
+    margin-bottom: 5px;
+    margin-right: 15px;
+
+  }
 
 
 
@@ -303,12 +243,6 @@ img{
 
   }
 
-
-
-
-
-
-
 .salir{
     cursor: pointer;
     border: none;
@@ -321,21 +255,22 @@ img{
   }
 
 
-
   img{
     position: relative;
     top:0px;
     width:20px;
     height:20px;
+    margin-right: 0px;
 
   }
 
-  br{
+ .break{
     display: inline;
   }
 
-  .mobile-slider-nav {
-    display: inline;
+
+  .slider-nav {
+    display: block;
     position: absolute;
     top: 110px;
     left: 0;
@@ -350,21 +285,22 @@ img{
     /* Enable horizontal scrolling and hide scrollbar */
     overflow-x: scroll;
     overflow-y: hidden;
-    /*-ms-overflow-style: none;
-    scrollbar-width: none;*/
-  }
-
-  .mobile-menu-container {
-    display: flex;
-    /* Ensures items stay on one line for sliding effect */
     white-space: nowrap;
-    padding: 0px 0.5rem; /* Horizontal padding for the container */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
-  .mobile-slider-nav a {
-    display: inline-block; /* Essential for flex-nowrap to work with padding */
-      vertical-align: middle;
-      line-height: 1.6;
+  .menu-container {
+    display: flex;
+    flex-direction: row; /* Horizontal for mobile */
+    align-items: center;
+    white-space: nowrap;
+    padding: 0 10px;
+    height: 100%;
+  }
+
+  .slider-nav a {
+    flex-direction:column;
     color: #000000;
     font-size: 8px;
     font-family: Verdana;
@@ -378,11 +314,17 @@ img{
     font-weight: 600;
     padding: 0px 16px;
     padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 0px;
     margin-right: 8px; /* Spacing between buttons */
     border-radius: 9999px; /* Full rounded corners */
 
 
+  }
 
+  .slider-nav a img {
+    margin-bottom: 5px;
+    margin-right: 0px;
 
   }
 

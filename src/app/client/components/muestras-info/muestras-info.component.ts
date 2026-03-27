@@ -16,27 +16,53 @@ export class MuestrasInfoComponent {
   public item: any;
   public text: any;
 
+  public mostrarFotoInicial: boolean = true;
+  public mostrarFotoTipico: boolean = false;
+  public mostrarFotoTardios: boolean = false;
+
+  public fotoUrls: { inicial?: string; tipico?: string; tardios?: string } = {}; // Nueva propiedad
+
+  placeholderUrl: string = '../../../../assets/landscape-placeholder.jpg';
+
   @ViewChild('geo') geo: any;//ElementRef | undefined;
   public htmlToAdd: any;
   @Input() something !: any;
   @Output() somethingChange= new EventEmitter<any>();
 
   constructor(private router: Router, private route: ActivatedRoute, public auth: Auth, public firestore: Firestore, private location: Location){
-    this.getData();
-    this.MyQuery();
+    //this.getData();
+    //this.MyQuery();
   }
 
   ngOnInit(): void {
     this.route.params.subscribe(param =>{
       this.text=param['id'];
-      console.log(param);
-      console.log(param['id']);
+      //console.log(param);
+      //console.log(param['id']);
       //this.generateBarcode(param);
 
     })
-    this.getData();
+    //this.getData();
     this.MyQuery();
 
+  }
+
+  alternarFotoInicial() {
+    this.mostrarFotoInicial = true;
+    this.mostrarFotoTipico = false;
+    this.mostrarFotoTardios = false;
+  }
+
+  alternarFotoTipico() {
+    this.mostrarFotoInicial = false;
+    this.mostrarFotoTipico = true;
+    this.mostrarFotoTardios = false;
+  }
+
+  alternarFotoTardios() {
+    this.mostrarFotoInicial = false;
+    this.mostrarFotoTipico = false;
+    this.mostrarFotoTardios = true;
   }
 
   handleRegister(value: any){
@@ -75,8 +101,8 @@ export class MuestrasInfoComponent {
       p.innerHTML = "add new"
       this.renderer.appendChild(this.div.nativeElement, p)
     */
-    console.log(position.coords.latitude);
-    console.log(position.coords.longitude);
+    //console.log(position.coords.latitude);
+    //console.log(position.coords.longitude);
     //console.log(res);
     //MuestrasNewComponent.lat= position.coords.latitude;
     //this.somethingChange.emit(position.coords.latitude);
@@ -131,31 +157,31 @@ export class MuestrasInfoComponent {
     const q = query(collection(this.firestore, "muestras"), where("codigo", "==",str));
 
     const querySnapshot = await getDocs(q);
-    querySnapshot.forEach((doc) => {
-      // doc.data() is never undefined for query doc snapshots
-      this.item=doc.data();
-      console.log(doc.id, " => ", doc.data());
-    });
+    if(!querySnapshot.empty){
+      querySnapshot.forEach((doc) => {
+        // doc.data() is never undefined for query doc snapshots
+        //this.item=doc.data();
+        this.item= querySnapshot.docs[0].data();
+        //console.log(this.item);
+        //this.item=doc.data();
+        //console.log(doc.id, " => ", doc.data());
+
+        this.fotoUrls = {
+          inicial: this.item.fotos['inicial'] ,
+          tipico: this.item.fotos['tipico'] ,
+          tardios: this.item.fotos['tardios']
+        };
+      });
+    }
+
 
   }
-
 
   /*
     <div class="one" [innerHtml]="htmlToAdd"></div>
     this.htmlToAdd = '<div class="two">two</div>';
   */
 
-  deleteData(id: string) {
-    const dataToDelete = doc(this.firestore, 'users', id);
-    deleteDoc(dataToDelete)
-    .then(() => {
-      alert('Data Deleted');
-      this.getData()
-    })
-    .catch((err) => {
-      alert(err.message)
-    })
-  }
 
   backPage(){
     this.location.back();

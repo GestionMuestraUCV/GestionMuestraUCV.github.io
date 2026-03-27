@@ -33,6 +33,7 @@ button{
 }
 
 .navbar2Box{
+  display: none;
   background: #ffffff;
   box-shadow: 0px 0px 6px 10px rgba(0, 0, 0, 0.25);
 
@@ -43,7 +44,7 @@ button{
   left: 0;
 
 
-  display: flex;
+  /*display: flex;*/
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -108,7 +109,6 @@ button{
 }
 
 
-
 .salir{
   cursor: pointer;
   border: none;
@@ -121,21 +121,95 @@ button{
 }
 
 
-
-
-
 img{
   position: relative;
-  top:20px;
+  /*top:20px;*/
 }
+
+/*.
+.slider-nav {
+  display: noe;
+}*/
 
 .break{
-  display: none;
+  display: none; /*block;*/
 }
 
-.mobile-slider-nav {
-  display: none;
-}
+
+.slider-nav {
+    display: block;
+    position: absolute;
+    top: 120px;
+    left: 0;
+
+    /*height: 100%;*/
+    height: 1216px;
+    width: 260px; /*320px;*/
+    background-color: white;
+    box-shadow: 0px 0px 6px 10px rgba(0, 0, 0, 0.25); /*0px 6px 10px rgba(0, 0, 0, 0.25);*/
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);*/
+    z-index: -1;
+    padding-bottom: 8px; /* Vertical padding */
+
+    /* Enable horizontal scrolling and hide scrollbar */
+    overflow-y: auto;
+    /*overflow-x: scroll;
+    overflow-y: hidden;
+    /*-ms-overflow-style: none;
+    scrollbar-width: none;*/
+  }
+
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+    /* Stacks items vertically */
+    /* By default, Flexbox aligns the items stay on one line for sliding effect */
+    /*white-space: nowrap;*/
+    padding: 20px 10px;
+  }
+
+  .slider-nav a {
+   cursor: pointer;
+   /*display: inline-block;*/
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+      /*vertical-align: middle;
+      line-height: 1.6;*/
+    /* Essential for flex-nowrap to work with padding */
+    color: #000000;
+    font-size: 16px;
+    font-family: Verdana;
+    font-weight: 600;
+    /*word-wrap: break-word;*/
+    text-align: left;
+
+    flex-shrink: 0;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0px 16px;
+    /*padding-top: 20px;*/
+    margin-top: 20px;
+    margin-right: 8px; /* Spacing between buttons */
+    transition: background-color 0.2s;
+    border-radius: 9999px; /* Full rounded corners */
+
+
+  }
+
+  .slider-nav a:hover {
+    background-color: #f2f2f2; /* Subtle hover effect */
+    color: #0A9217;
+
+  }
+
+  .slider-nav a img {
+    margin-bottom: 5px; /* Space between icon and text */
+    margin-right: 15px; /* Adds space between the image and the text */
+   /* flex-shrink: 0; /* Prevents the image from squishing */
+
+  }
+
 
 
 @media only screen and (max-width: 768px) {
@@ -254,18 +328,13 @@ img{
   }
 
   .space{
-
     display: none;
-
   }
 
 
 
   .homeLogo { /*Home text*/
-
-
     display: none;
-
   }
 
 
@@ -382,9 +451,6 @@ img{
 
   }
 
-
-
-
   .salir{
     cursor: pointer;
     border: none;
@@ -397,14 +463,12 @@ img{
   }
 
 
-
-
-
   img{
     position: relative;
     top:0px;
     width:20px;
     height:20px;
+    margin-right: 0px;
 
   }
 
@@ -413,11 +477,8 @@ img{
   }
 
 
-
-
-
-  .mobile-slider-nav {
-    display: inline;
+  .slider-nav {
+    display: block;
     position: absolute;
     top: 110px;
     left: 0;
@@ -432,21 +493,25 @@ img{
     /* Enable horizontal scrolling and hide scrollbar */
     overflow-x: scroll;
     overflow-y: hidden;
-    /*-ms-overflow-style: none;
-    scrollbar-width: none;*/
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
-  .mobile-menu-container {
+  .menu-container {
     display: flex;
     /* Ensures items stay on one line for sliding effect */
-    white-space: nowrap;
+   /* white-space: nowrap;
     padding: 0px 0.5rem; /* Horizontal padding for the container */
+    flex-direction: row; /* Horizontal for mobile */
+    align-items: center;
+    white-space: nowrap;
+    padding: 0 10px;
+    height: 100%;
   }
 
-  .mobile-slider-nav a {
-    display: inline-block; /* Essential for flex-nowrap to work with padding */
-      vertical-align: middle;
-      line-height: 1.6;
+  .slider-nav a {
+    flex-direction:column;
     color: #000000;
     font-size: 8px;
     font-family: Verdana;
@@ -460,11 +525,18 @@ img{
     font-weight: 600;
     padding: 0px 16px;
     padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 0px;
     margin-right: 8px; /* Spacing between buttons */
     border-radius: 9999px; /* Full rounded corners */
 
 
+  }
 
+  .slider-nav a img {
+    margin-bottom: 5px; /* Space between icon and text */
+    margin-right: 0px; /* Adds space between the image and the text */
+   /* flex-shrink: 0; /* Prevents the image from squishing */
 
   }
 

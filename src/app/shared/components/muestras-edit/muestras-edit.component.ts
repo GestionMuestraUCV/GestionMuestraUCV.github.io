@@ -12,6 +12,7 @@ import { DataSyncService } from 'src/app/services/data-sync.service';
   templateUrl: './muestras-edit.component.html',
   styleUrls: ['./muestras-edit.component.css']
 })
+
 export class MuestrasEditComponent {
   title = 'gestion-de-muestras-de-campo';
   public data: any = []
@@ -313,17 +314,18 @@ export class MuestrasEditComponent {
       let str=this.x;
       const dataToDelete = doc(this.firestore, 'muestras', str);
 
-      deleteDoc(dataToDelete)
-      .then(() => {
-        alert('Data Deleted');
-        this.Home();
-      })
-      .catch((err) => {
-        alert(err.message)
-      })
+      this.dataSync.deleteSample(str);
 
-      //this.dataSync.deleteSample(str);
-
+      if (navigator.onLine) {
+        deleteDoc(dataToDelete)
+        .then(() => {
+          alert('Data Deleted');
+          this.Home();
+        })
+        .catch((err) => {
+          alert(err.message)
+        })
+      }
 
       this.Home();
 

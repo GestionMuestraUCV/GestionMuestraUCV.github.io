@@ -36,7 +36,7 @@ export class MuestrasAllComponent {
   getData() {
 
     if (navigator.onLine) {
-      /*
+
       const dbInstance = collection(this.firestore, 'muestras');
       getDocs(dbInstance)
         .then((response) => {
@@ -44,10 +44,10 @@ export class MuestrasAllComponent {
             return { ...item.data(), id: item.id }
           })]
         })
-      */
+
 
       this.dataSync.fetchAllData();
-      this.data = this.dataSync.getDataSamples();
+      /*this.data = this.dataSync.getDataSamples();*/
 
     }else {
       // Directly gets the clean array from the service's memory
