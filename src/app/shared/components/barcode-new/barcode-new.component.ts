@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Auth } from '@angular/fire/auth';
 import { Firestore, collection, doc, getDocs, query, setDoc, where } from '@angular/fire/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
-import * as JsBarcode from 'jsbarcode';
+import JsBarcode from 'jsbarcode';
 import { Location } from '@angular/common';
 
 @Component({

@@ -80,7 +80,6 @@ export function basicLoader(){
     MatIconModule,
     MatFormFieldModule,
     MatCardModule,
-    MatIconModule,
     MatButtonModule,
     BrowserAnimationsModule,
     CommonModule,
@@ -89,51 +88,40 @@ export function basicLoader(){
     AppRoutingModule,
     FormsModule,
     AuthModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
-    provideDatabase(() => getDatabase()),
-    provideFirestore(() => //getFirestore()),
-     {
-        //const firestore = getFirestore();
-        //connectFirestoreEmulator(firestore, 'localhost', 8080);
-        //enableIndexedDbPersistence(firestore);
-
-        const app = initializeApp(environment.firebase);
-        const firestore = initializeFirestore(app, {
-          localCache: persistentLocalCache({
-            tabManager: persistentSingleTabManager({})
-          })
-        });
-        //persistentLocalCache({ tabManager: persistentSingleTabManager({}) });
-        return firestore;
-    }),
-    provideFunctions(() => getFunctions()),
     UserModule,
     AdminModule,
     ClientModule,
     NgxScannerQrcodeModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
         enabled: !isDevMode(),
-        // Register the ServiceWorker as soon as the application is stable
-        // or after 30 seconds (whichever comes first).
         registrationStrategy: 'registerWhenStable:30000'
-    }),
-    ImageControlComponent
-],
+    })
+    // Note: I removed ImageControlComponent from here.
+    // If it is NOT a standalone component, it should be in declarations.
+  ],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy},
     {provide: APP_INITIALIZER, useFactory: initializer, deps: [PwaService], multi: true},
-    //{provide: MAT_BOTTOM_SHEET_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}},
 
-
-    //{provide: APP_INITIALIZER, useFactory: initializerZ, deps: [PwaService], multi: true},
-
-   //
-    //{provide: APP_INITIALIZER, useFactory: basicLoader, deps: [], multi: true}
-
+    // --- FIREBASE PROVIDERS START HERE ---
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideDatabase(() => getDatabase()),
+    provideFirestore(() => {
+        const app = initializeApp(environment.firebase);
+        const firestore = initializeFirestore(app, {
+          localCache: persistentLocalCache({
+            tabManager: persistentSingleTabManager({})
+          })
+        });
+        return firestore;
+    }),
+    provideFunctions(() => getFunctions())
+    // --- FIREBASE PROVIDERS END HERE ---
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {
 
   //constructor(pwaService: PwaService){pwaService.initPwaPrompt();}

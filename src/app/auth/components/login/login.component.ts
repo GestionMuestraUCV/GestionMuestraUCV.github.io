@@ -4,9 +4,9 @@ import { Firestore, collection, deleteDoc, doc, getDocs, query, updateDoc, where
 import { Router } from '@angular/router';
 
 import { Platform } from '@angular/cdk/platform';
-import { AdminModule } from 'src/app/admin/admin.module';
+/*simport { AdminModule } from 'src/app/admin/admin.module';
 import { PromptComponent } from 'src/app/prompt/prompt.component';
-import { PwaService } from 'src/app/services/pwa.service';
+import { PwaService } from 'src/app/services/pwa.service';*/
 
 
 @Component({

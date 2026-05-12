@@ -15,8 +15,8 @@ import { SelectComponent } from './components/select/select.component';
   declarations: [
     LoginComponent,
     SignupComponent,
-    AuthComponent,
-    SelectComponent
+    AuthComponent
+    //SelectComponent
   ],
   imports: [
     CommonModule,

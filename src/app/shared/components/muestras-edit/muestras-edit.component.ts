@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { DatePipe } from '@angular/common';
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { DataSyncService } from 'src/app/services/data-sync.service';
+import { DataSyncService } from '../../../services/data-sync.service';
 
 @Component({
   selector: 'app-muestras-edit',

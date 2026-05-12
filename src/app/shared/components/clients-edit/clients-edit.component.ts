@@ -3,7 +3,7 @@ import { Auth } from '@angular/fire/auth';
 import { Firestore, collection, deleteDoc, doc, getDocs, query, setDoc, updateDoc, where } from '@angular/fire/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
-import { DataSyncService } from 'src/app/services/data-sync.service';
+import { DataSyncService } from '../../../services/data-sync.service';
 
 @Component({
   selector: 'app-clients-edit',
