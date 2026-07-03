@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1774587951208,
+  "timestamp": 1783050808466,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -12,12 +12,12 @@
       },
       "urls": [
         "/index.html",
-        "/main.3747106ff009fa34.js",
+        "/main.7e8212e493a3e54a.js",
         "/manifest.json",
         "/manifest.webmanifest",
-        "/polyfills.08125764f6ea2508.js",
-        "/runtime.c5808586f4bfcd67.js",
-        "/styles.e6eb54aefd3449e4.css"
+        "/polyfills.4ac7829d097c9770.js",
+        "/runtime.a1a5338509d22ab9.js",
+        "/styles.cc139d29957d4ccf.css"
       ],
       "patterns": []
     },
@@ -225,18 +225,18 @@
     "/back-button-Edit4.8567daeed3ab1418.png": "dcbd472de8c207b0d1f4cea2f26b87c6f87fd4ff",
     "/clipboard.008357a0b24034e8.png": "2b85200774157c9e502d1c039fe871586be2f660",
     "/image_7.2e20c6c16e8ce206.png": "221e1a0bcfde3fc18fb2e367f405497c64b748a3",
-    "/index.html": "769f4077384b2f18602745924f50e64d20ce4848",
+    "/index.html": "8098506bd6ec8f4898f96584ce8c1921082ad9ae",
     "/info.f631e6664ac6fa77.png": "9de63dca797b8e77bd7e2ffea58f77d88c605854",
     "/logoCiens-Small.2065c0f07c6bbc86.png": "332f2948f84b898a33f7541964547376203ecf71",
     "/logoCiens.9fc55f935ab1cd6b.png": "7168665e4e94f0a76bb88f3d2ad793c697aab216",
     "/logo_ucv_Small.c918acfda6fcd024.png": "8f5eff276e97d4351820a4cce0b6338ff4651a53",
     "/logo_ucv_bg2_1.32a61806277cba42.png": "5f4ff5044ce5402244fab3de3c0668dbb4c092e6",
-    "/main.3747106ff009fa34.js": "8489af1bffe58bb28c032c41ed5e66cb4f3a75a5",
+    "/main.7e8212e493a3e54a.js": "bf174e8bf71686ca75d114f90b29cde9b9d7d073",
     "/manifest.json": "aec25172baa8c694224a57c7741fafda93f6bc87",
     "/manifest.webmanifest": "c24f3e460ec1453c89cc396d786119a704e5bb73",
-    "/polyfills.08125764f6ea2508.js": "146d606ae1ee7def015c137600a85bcc307b90bf",
-    "/runtime.c5808586f4bfcd67.js": "2d26abc7ac531329fbc8cf14786dfc0b8b94f003",
-    "/styles.e6eb54aefd3449e4.css": "795acc6fbb9385ddb0d9f90e402c436141b80769",
+    "/polyfills.4ac7829d097c9770.js": "c2cc31e77942bd9a2ef59275e1dfad9e6a946b41",
+    "/runtime.a1a5338509d22ab9.js": "6f2fc7f7bcf43840f0594e5a00bf193a51e456b3",
+    "/styles.cc139d29957d4ccf.css": "48ed2feb56a60838011ee96592c16d1a250f3a85",
     "/userWhite.1acab0fe6d96dff4.png": "e95ef3b29abaa14f138422722dffb1a6b1cdebc0"
   },
   "navigationUrls": [
